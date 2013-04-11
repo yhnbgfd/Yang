@@ -48,6 +48,7 @@ namespace WindowsFormsApplication1
                             };
         private Color[] allColor = { Color.Red, Color.Orange, Color.Yellow, Color.Green, Color.Blue, Color.Indigo, Color.Purple, 
                                      Color.Black, Color.Gray, Color.Maroon, Color.Chocolate, Color.Wheat };
+        //private Dictionary<Color, bool> ExistColor = new Dictionary<Color, bool>();      //有用去标记的颜色的集合
 
         private bool isGenerate = false;
 
@@ -95,6 +96,16 @@ namespace WindowsFormsApplication1
             }
         }
 
+        /*/初始化ExistColor
+        private void initExistColor()
+        {
+            ExistColor.Clear();
+            foreach (Color col in allColor)
+            {
+                ExistColor.Add(col, false);
+            }
+        }
+        */
         /* 特殊五角星 @param arr tvalue  @param ctab ctab */
         private void SpecialStar(int local, int ctab)
         {
