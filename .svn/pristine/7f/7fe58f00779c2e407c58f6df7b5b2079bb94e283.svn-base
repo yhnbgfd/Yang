@@ -1,0 +1,88 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Xml;
+using System.Drawing;
+
+namespace WindowsFormsApplication1.Method
+{
+    class LoadData
+    {
+        private int n = 0;
+        private int m = 0;
+        private int[] FilterStatistics;
+        List<int[]> l_totalDataBase = new List<int[]>(); 
+
+        public int LoadN(string Path)
+        {
+            XmlDocument xmldoc = new XmlDocument();
+            xmldoc.Load(Path);
+            XmlNode xmlNL = xmldoc.SelectSingleNode("//list");
+            n = int.Parse(xmlNL.Attributes["n"].Value);
+            return n;
+        }
+
+        public int LoadM(string Path)
+        {
+            XmlDocument xmldoc = new XmlDocument();
+            xmldoc.Load(Path);
+            XmlNode xmlNL = xmldoc.SelectSingleNode("//list");
+            m = int.Parse(xmlNL.Attributes["m"].Value);
+            return m;
+        }
+
+        public List<int[]> LoadArray(string Path)
+        {
+            XmlTextReader reader = new XmlTextReader(Path);
+            while (reader.Read())
+            {
+                if (reader.Name == "array")
+                {
+                    int[] idata = new int[n];
+                    string[] kk = reader.ReadString().Split(new string[] { "," }, StringSplitOptions.None);
+                    for (int j = 0; j < n; j++)
+                    {
+                        idata[j] = int.Parse(kk[j]);
+                    }
+                    l_totalDataBase.Add(idata);
+                }
+            }
+            reader.Close();
+            return l_totalDataBase;
+        }
+
+        public List<int> LoadChoice(string Path)
+        {
+            List<int> choiceDate = new List<int>();
+            XmlDocument xmldoc = new XmlDocument();
+            xmldoc.Load(Path);
+            XmlNode xmlNL = xmldoc.SelectSingleNode("//list");
+            string[] dd = xmlNL.InnerText.Split(new string[] { "," }, StringSplitOptions.None);
+            for (int i = 0; i < dd.Length - 1; i++ )
+            {
+                choiceDate.Add( int.Parse(dd[i]) );
+            }
+            return choiceDate;
+        }
+
+        public int[] LoadCtab(string Path)
+        {
+            GenerateData gd = new GenerateData();
+            FilterStatistics = new int[gd.CountTotalData(m, n)];
+            XmlTextReader reader = new XmlTextReader(Path);
+            int i = 0;
+            while(reader.Read())
+            {
+                if(reader.Name == "array")
+                {
+                    if (reader.GetAttribute("ctab") == null)
+                        continue;
+                    FilterStatistics[i] = int.Parse(reader.GetAttribute("ctab"));
+                    i++;
+                }
+            }
+            return FilterStatistics;
+        }
+    }
+}

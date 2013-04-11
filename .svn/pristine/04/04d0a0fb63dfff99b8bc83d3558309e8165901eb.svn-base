@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WindowsFormsApplication1.DataDef
+{
+    public class totalDataBase
+    {
+        public int Tag = 0;                     //标志
+        public int[] TValue;                    //数据
+        public Color[] ColorValue;              //数据颜色
+        public bool IsReject = false;           //五星定位，是否剔除
+        public int DiffColorNum = 0;            //不同颜色的数量
+    }
+}

@@ -1,0 +1,42 @@
+﻿using System;
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace WindowsFormsApplication1.Method
+{
+    class Record
+    {
+        /* 保存记录到文件 */
+        public void SaveRecord()
+        {
+            System.DateTime currentTime = new System.DateTime();
+            currentTime = System.DateTime.Now; ;
+            string RecordFile = ("record " + currentTime.ToString() + ".xml").Replace(":", "-").Replace("/", "-");
+
+            FileStream fs = File.Create(@"\" + RecordFile);
+            StreamWriter sw = new StreamWriter(fs);
+            sw.Write("hello world");
+            fs.Close();
+        }
+
+        /* 读取记录 */
+        public void ReadRecord()
+        { 
+            
+        }
+
+        /* 读取记录列表 */
+        public void ReadRecordList()
+        { 
+            
+        }
+
+        /* 临时记录，每次操作都调用这个方法保存到内存 */
+        public void TemporaryRecord()
+        { 
+            
+        }
+    }
+}

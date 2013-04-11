@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace WindowsFormsApplication1.Method
+{
+    class Dichotomy
+    {
+        /**
+         * 二分法 
+         */
+        public int Find(int[] WinNum, List<int[]> l_totalDataBase, int totalData)
+        {
+            int Location = 0;
+            int min = 0;
+            int max = totalData - 1;
+            int middle = (max-min) / 2 + min;
+
+
+
+            return Location;
+        }
+    }
+}

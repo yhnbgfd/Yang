@@ -1,0 +1,83 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Xml;
+using System.Drawing;
+using WindowsFormsApplication1.DataDef;
+
+namespace WindowsFormsApplication1.Method
+{
+    class LoadData
+    {
+
+
+        public int LoadN(string Path)
+        {
+            int n = 0;
+            XmlDocument xmldoc = new XmlDocument();
+            xmldoc.Load(Path);
+            XmlNode xmlNL = xmldoc.SelectSingleNode("//list");
+            n = int.Parse(xmlNL.Attributes["n"].Value);
+            return n;
+        }
+
+        public int LoadM(string Path)
+        {
+            int m = 0;
+            XmlDocument xmldoc = new XmlDocument();
+            xmldoc.Load(Path);
+            XmlNode xmlNL = xmldoc.SelectSingleNode("//list");
+            m = int.Parse(xmlNL.Attributes["m"].Value);
+            return m;
+        }
+
+        public Dictionary<int, totalDataBase> LoadArray(string Path)
+        {
+            int n = 0;
+            Dictionary<int, totalDataBase> m_totalDataBase = new Dictionary<int, totalDataBase>();
+            totalDataBase DataValue;
+            XmlTextReader reader = new XmlTextReader(Path);
+            while (reader.Read())
+            {
+                if(reader.Name == "list")
+                {
+                    string str = reader.GetAttribute("n");
+                    if(str != null)
+                        n = int.Parse(str);
+                }
+                if (reader.Name == "array")
+                {
+                    DataValue = new totalDataBase();
+                    DataValue.Tag = int.Parse(reader.GetAttribute("ctab"));
+                    DataValue.TValue = new int[n];
+                    DataValue.ColorValue = new Color[n];
+                    string[] kk = reader.ReadString().Split(new string[] { "," }, StringSplitOptions.None);
+                    for (int j = 0; j < n; j++)
+                    {
+                        DataValue.TValue[j] = int.Parse(kk[j]);
+                        DataValue.ColorValue[j] = Color.White;
+                    }
+                    
+                    m_totalDataBase.Add(m_totalDataBase.Count() + 1, DataValue);
+                }
+            }
+            reader.Close();
+            return m_totalDataBase;
+        }
+
+        public List<int> LoadChoice(string Path)
+        {
+            List<int> choiceDate = new List<int>();
+            XmlDocument xmldoc = new XmlDocument();
+            xmldoc.Load(Path);
+            XmlNode xmlNL = xmldoc.SelectSingleNode("//list");
+            string[] dd = xmlNL.InnerText.Split(new string[] { "," }, StringSplitOptions.None);
+            for (int i = 0; i < dd.Length - 1; i++ )
+            {
+                choiceDate.Add( int.Parse(dd[i]) );
+            }
+            return choiceDate;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace WindowsFormsApplication1.Method
+{
+    class Dichotomy
+    {
+        /* 二分法 */
+        public void Find()
+        { 
+            
+        }
+    }
+}
