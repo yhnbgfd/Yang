@@ -56,7 +56,6 @@ namespace WindowsFormsApplication1
         private int[] FilterStatistics;
         private int[] SpecialMark;      //特殊五角星标记
         private int[] DiffColorNum;
-        private List<Color[]> ColorValue = new List<Color[]>();
         List<int[]> l_totalDataBase = new List<int[]>();
 
         Logging savelog = new Logging();
@@ -395,7 +394,6 @@ namespace WindowsFormsApplication1
             /* 清空各种数据 */
             D_ColorTemptDict.Clear();                           //清空颜色记录
             l_totalDataBase.Clear();                            //总库清空
-            ColorValue.Clear();
             /* 获取选择数据 */
             SelectNum = int.Parse(comboBox5.Text);              //M取N，获取N
             choiceDate = checkchoice_checkedListBox();          //获取勾选的数字，赋值TotalNum
@@ -406,7 +404,6 @@ namespace WindowsFormsApplication1
             gData.dataSets = choiceDate;                        //选择的数据集
             //生成数据
             l_totalDataBase = gData.run2();                     // 生成数据总库
-            ColorValue = gData.runColor();                      // 生成颜色数据总库
             totalData = gData.CountTotalData(TotalNum, SelectNum);  //总库的数据总量
             InitFilterStatisticsAndDiffColorNum(totalData);     //初始化总库 筛选统计数组、不同颜色统计数组
 
@@ -807,15 +804,16 @@ namespace WindowsFormsApplication1
                 for (int i = 0; i < totalData; i++)
                 {
                     int temptCount = 0;
+                    Color[] ColorValue = new Color[SelectNum];
                     for (int i2 = 0; i2 < SelectNum; i2++)
                     {
-                        ColorValue[i][i2] = Color.White;   //  先设成白色？好像不需要
+                        ColorValue[i2] = Color.White;   //  先设成白色？好像不需要
                         if (D_ColorTemptDict.ContainsKey(l_totalDataBase[i][i2]) && D_ColorTemptDict[l_totalDataBase[i][i2]] != Color.White)//如果这个数字有颜色
                         {
-                            ColorValue[i][i2] = D_ColorTemptDict[l_totalDataBase[i][i2]];//颜色存到总库
+                            ColorValue[i2] = D_ColorTemptDict[l_totalDataBase[i][i2]];//颜色存到总库
                         }
                         //if the kvp color equal the marked color,temptCount +1
-                        if (ColorValue[i][i2] == col)
+                        if (ColorValue[i2] == col)
                         {
                             temptCount++;
                         }
@@ -915,15 +913,16 @@ namespace WindowsFormsApplication1
             {
                 DiffColorNum[ia] = 0;
                 zeroColor = false;
+                Color[] ColorValue = new Color[SelectNum];
                 for (int i2 = 0; i2 < SelectNum; i2++)
                 {
-                    ColorValue[ia][i2] = Color.White;   //  先设成白色？好像不需要
+                    ColorValue[i2] = Color.White;   //  先设成白色？好像不需要
                     if (D_ColorTemptDict.ContainsKey(l_totalDataBase[ia][i2]))//如果这个数字有颜色
                     {
-                        ColorValue[ia][i2] = D_ColorTemptDict[l_totalDataBase[ia][i2]];//颜色存到总库
+                        ColorValue[i2] = D_ColorTemptDict[l_totalDataBase[ia][i2]];//颜色存到总库
                         for (int j = 0; j < i2; j++)
                         {
-                            if (ColorValue[ia][i2] == ColorValue[ia][j])//如果跟前面的颜色相同，即重复了，标记为不是新颜色
+                            if (ColorValue[i2] == ColorValue[j])//如果跟前面的颜色相同，即重复了，标记为不是新颜色
                                 newColor = false;//
                         }
                         if (newColor)
@@ -1651,7 +1650,6 @@ namespace WindowsFormsApplication1
                 GenerateData gData = new GenerateData();
                 gData.s = SelectNum;                                //s为要取的个数  n
                 gData.e = TotalNum;                                 //e为要取得基数的总数   m
-                ColorValue = gData.runColor();
 
                 FinishingInterface();
                 D_ColorTemptDict.Clear();                           //清空颜色记录
