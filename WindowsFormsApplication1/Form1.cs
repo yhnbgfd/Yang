@@ -1338,6 +1338,7 @@ namespace WindowsFormsApplication1
 
         private void 保存当前进度ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            GC.Collect();
             if(!isGenerate) //如果没生成数据，直接返回，避免出bug
             {
                 MessageBox.Show("保存失败，请先生成数据。", "保存", MessageBoxButtons.OK, MessageBoxIcon.Information);
