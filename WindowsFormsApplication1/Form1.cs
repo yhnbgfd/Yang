@@ -1636,6 +1636,12 @@ namespace WindowsFormsApplication1
             {
                 // selectNum,totalNum,choiceData,m_totalDataBase
                 string pathName = path + "record." + dataGridView2.Rows[e.RowIndex].Cells[1].Value + "." + dataGridView2.Rows[e.RowIndex].Cells[2].Value + ".xml";
+                if (!File.Exists(pathName))
+                {
+                    MessageBox.Show("文件不存在！", "警告", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    GetFileList(false);
+                    return;
+                }
                 LoadData ld = new LoadData();
                 AllDataInOne adio = new AllDataInOne();
                 adio = ld.Load(pathName);
