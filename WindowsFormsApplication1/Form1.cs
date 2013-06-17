@@ -1641,6 +1641,12 @@ namespace WindowsFormsApplication1
         {
             if (e.ColumnIndex == 4) //  加载
             {
+                MessageBoxButtons messButton = MessageBoxButtons.OKCancel;
+                DialogResult dr = MessageBox.Show("加载数据前是否保存当前数据？", "警告", messButton);
+                if (dr == DialogResult.OK)//如果点击“确定”按钮
+                {
+                    保存当前进度ToolStripMenuItem_Click(sender, e);
+                }
                 // selectNum,totalNum,choiceData,m_totalDataBase
                 string pathName = path + "record." + dataGridView2.Rows[e.RowIndex].Cells[1].Value + "." + dataGridView2.Rows[e.RowIndex].Cells[2].Value + ".xml";
                 if (!File.Exists(pathName))
