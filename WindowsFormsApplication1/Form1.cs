@@ -1415,6 +1415,12 @@ namespace WindowsFormsApplication1
 
         private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            MessageBoxButtons messButton = MessageBoxButtons.OKCancel;
+            DialogResult dr = MessageBox.Show("退出前是否需要保存数据?", "警告", messButton);
+            if (dr == DialogResult.OK)//如果点击“确定”按钮
+            {
+                保存当前进度ToolStripMenuItem_Click(sender, e);
+            }
             this.Close();
         }
 
