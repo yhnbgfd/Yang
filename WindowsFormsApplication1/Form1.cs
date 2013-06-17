@@ -186,12 +186,12 @@ namespace WindowsFormsApplication1
         {
             if (e.ColumnIndex == 3)
             {
-                if (dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString() == "0")
+                if (dataGridView3.Rows[e.RowIndex].Cells[2].Value.ToString() == "0")
                 {
                     richTextBox2.Text = "";
                     return;
                 }
-                else if (dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString().Length > 4)
+                else if (dataGridView3.Rows[e.RowIndex].Cells[2].Value.ToString().Length > 4)
                 {
                     MessageBoxButtons messButton = MessageBoxButtons.OKCancel;
                     DialogResult dr = MessageBox.Show("数据量比较大，查看结果可能导致程序卡死，确定要查看吗?", "警告", messButton);
