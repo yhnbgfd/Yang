@@ -217,7 +217,6 @@ namespace WindowsFormsApplication1
                 }
                 if (Exceeded(0, tab))
                 {
-                    MessageBox.Show("标记成功。", "保存", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     richTextBox1.Text = "点击左边“查看”按钮显示结果";
                     for (int i = 0; i < 55; i++)
                         dataGridView1.Rows[i].Cells[2].Value = 0;   //  全部先设成0
@@ -230,6 +229,7 @@ namespace WindowsFormsApplication1
                             dataGridView1.Rows[FilterStatistics[ia]].Cells[2].Value = (int)dataGridView1.Rows[FilterStatistics[ia]].Cells[2].Value + 1;
                         }
                     }
+                    MessageBox.Show("标记成功。", "确认", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -294,7 +294,6 @@ namespace WindowsFormsApplication1
                 }
                 if (Exceeded(1, tab))
                 {
-                    MessageBox.Show("标记成功。", "保存", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     richTextBox2.Text = "点击左边“查看”按钮显示结果";
                     for (int i = 0; i < 7; i++)
                         dataGridView3.Rows[i].Cells[2].Value = 0;
@@ -305,6 +304,7 @@ namespace WindowsFormsApplication1
                         else
                             dataGridView3.Rows[SpecialMark[i]].Cells[2].Value = (int)dataGridView3.Rows[SpecialMark[i]].Cells[2].Value + 1;
                     }
+                    MessageBox.Show("标记成功。", "确认", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
