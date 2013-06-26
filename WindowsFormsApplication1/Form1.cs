@@ -2026,9 +2026,9 @@ namespace WindowsFormsApplication1
             {
                 string controlName = "button_c" + i.ToString();
                 Button tb = (Button)findControl(panel2, controlName);
-                digit_Button_Click(tb, (ibc[n]) ? 2 : 1);
+                digit_Button_Click(tb, (ibc[n-1]) ? 2 : 1);
             }
-            ibc[n] = !ibc[n];
+            ibc[n - 1] = !ibc[n - 1];
         }
 
         private bool[] ibch = new bool[10];//横
@@ -2040,9 +2040,9 @@ namespace WindowsFormsApplication1
             {
                 string controlName = "button_c" + (i*10+n).ToString();
                 Button tb = (Button)findControl(panel2, controlName);
-                digit_Button_Click(tb, (ibch[n]) ? 2 : 1);
+                digit_Button_Click(tb, (ibch[n-1]) ? 2 : 1);
             }
-            ibch[n] = !ibch[n];
+            ibch[n - 1] = !ibch[n - 1];
         }
 
         /* 颜色按钮统一事件 */
