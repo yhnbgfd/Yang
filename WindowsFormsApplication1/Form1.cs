@@ -2017,7 +2017,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        private bool[] ibc = new bool[7];
+        private bool[] ibc = new bool[7];//竖
         private void button_col_Click(object sender, EventArgs e)
         {
             Button bb = sender as Button;
@@ -2031,7 +2031,7 @@ namespace WindowsFormsApplication1
             ibc[n] = !ibc[n];
         }
 
-        private bool[] ibch = new bool[10];
+        private bool[] ibch = new bool[10];//横
         private void button_colh_Click(object sender, EventArgs e)
         {
             Button bb = sender as Button;
@@ -2045,6 +2045,7 @@ namespace WindowsFormsApplication1
             ibch[n] = !ibch[n];
         }
 
+        /* 颜色按钮统一事件 */
         private void radioButton_CheckedChanged(object sender, EventArgs e)
         {
             RadioButton rb = sender as RadioButton;
