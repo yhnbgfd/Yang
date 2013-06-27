@@ -32,7 +32,7 @@ namespace WindowsFormsApplication1.Method
             }
             return l_totalDataBase;
         }
-        /* 全局变量ColorValue是冗余的，删掉。
+
         public List<Color[]> runColor()
         {
             int count = CountTotalData(e,s);
@@ -47,7 +47,7 @@ namespace WindowsFormsApplication1.Method
             }
             return ColorValue;
         }
-        */
+
         /* 分支2，计算生成的总数据量 */
         public int CountTotalData(int Dividend, int Divisor)
         {
