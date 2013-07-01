@@ -71,11 +71,6 @@
             this.button10 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -249,11 +244,6 @@
             this.btnPageSetup = new System.Windows.Forms.Button();
             this.btnPrint = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.button4 = new System.Windows.Forms.Button();
@@ -261,11 +251,6 @@
             this.button9 = new System.Windows.Forms.Button();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.文件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.小工具ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.保存当前进度ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -281,6 +266,21 @@
             this.printDialog2 = new System.Windows.Forms.PrintDialog();
             this.pageSetupDialog2 = new System.Windows.Forms.PageSetupDialog();
             this.printPreviewDialog2 = new System.Windows.Forms.PrintPreviewDialog();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -310,10 +310,10 @@
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(6, 23);
+            this.tabControl1.Location = new System.Drawing.Point(7, 25);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(626, 556);
+            this.tabControl1.Size = new System.Drawing.Size(730, 602);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -324,10 +324,10 @@
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Controls.Add(this.textBox2);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 23);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(618, 530);
+            this.tabPage1.Size = new System.Drawing.Size(722, 575);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "创建筛选库";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -335,9 +335,9 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.groupBox4);
-            this.panel4.Location = new System.Drawing.Point(358, 31);
+            this.panel4.Location = new System.Drawing.Point(418, 34);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(195, 96);
+            this.panel4.Size = new System.Drawing.Size(227, 104);
             this.panel4.TabIndex = 11;
             // 
             // groupBox4
@@ -347,9 +347,9 @@
             this.groupBox4.Controls.Add(this.radioButton20);
             this.groupBox4.Controls.Add(this.radioButton19);
             this.groupBox4.Controls.Add(this.radioButton18);
-            this.groupBox4.Location = new System.Drawing.Point(15, 3);
+            this.groupBox4.Location = new System.Drawing.Point(17, 3);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(167, 90);
+            this.groupBox4.Size = new System.Drawing.Size(195, 98);
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "常用数据：";
@@ -357,9 +357,9 @@
             // radioButton21
             // 
             this.radioButton21.AutoSize = true;
-            this.radioButton21.Location = new System.Drawing.Point(18, 51);
+            this.radioButton21.Location = new System.Drawing.Point(21, 55);
             this.radioButton21.Name = "radioButton21";
-            this.radioButton21.Size = new System.Drawing.Size(53, 16);
+            this.radioButton21.Size = new System.Drawing.Size(60, 17);
             this.radioButton21.TabIndex = 4;
             this.radioButton21.TabStop = true;
             this.radioButton21.Text = "30选3";
@@ -368,9 +368,10 @@
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(86, 29);
+            this.button12.Font = new System.Drawing.Font("KaiTi", 10.5F);
+            this.button12.Location = new System.Drawing.Point(90, 31);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(75, 23);
+            this.button12.Size = new System.Drawing.Size(98, 25);
             this.button12.TabIndex = 3;
             this.button12.Text = "工具B入口";
             this.button12.UseVisualStyleBackColor = true;
@@ -379,9 +380,9 @@
             // radioButton20
             // 
             this.radioButton20.AutoSize = true;
-            this.radioButton20.Location = new System.Drawing.Point(18, 68);
+            this.radioButton20.Location = new System.Drawing.Point(21, 74);
             this.radioButton20.Name = "radioButton20";
-            this.radioButton20.Size = new System.Drawing.Size(53, 16);
+            this.radioButton20.Size = new System.Drawing.Size(60, 17);
             this.radioButton20.TabIndex = 2;
             this.radioButton20.Text = "36选7";
             this.radioButton20.UseVisualStyleBackColor = true;
@@ -391,9 +392,9 @@
             // 
             this.radioButton19.AutoSize = true;
             this.radioButton19.Checked = true;
-            this.radioButton19.Location = new System.Drawing.Point(18, 36);
+            this.radioButton19.Location = new System.Drawing.Point(21, 39);
             this.radioButton19.Name = "radioButton19";
-            this.radioButton19.Size = new System.Drawing.Size(53, 16);
+            this.radioButton19.Size = new System.Drawing.Size(60, 17);
             this.radioButton19.TabIndex = 1;
             this.radioButton19.TabStop = true;
             this.radioButton19.Text = "26选5";
@@ -403,9 +404,9 @@
             // radioButton18
             // 
             this.radioButton18.AutoSize = true;
-            this.radioButton18.Location = new System.Drawing.Point(18, 20);
+            this.radioButton18.Location = new System.Drawing.Point(21, 22);
             this.radioButton18.Name = "radioButton18";
-            this.radioButton18.Size = new System.Drawing.Size(53, 16);
+            this.radioButton18.Size = new System.Drawing.Size(60, 17);
             this.radioButton18.TabIndex = 0;
             this.radioButton18.Text = "12选2";
             this.radioButton18.UseVisualStyleBackColor = true;
@@ -414,8 +415,8 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(121, 72);
+            this.label6.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label6.Location = new System.Drawing.Point(141, 78);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(35, 14);
             this.label6.TabIndex = 10;
@@ -424,6 +425,7 @@
             // comboBox5
             // 
             this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox5.Font = new System.Drawing.Font("KaiTi", 10.5F);
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Items.AddRange(new object[] {
             "2",
@@ -433,9 +435,9 @@
             "6",
             "7",
             "8"});
-            this.comboBox5.Location = new System.Drawing.Point(121, 42);
+            this.comboBox5.Location = new System.Drawing.Point(141, 46);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(44, 20);
+            this.comboBox5.Size = new System.Drawing.Size(51, 22);
             this.comboBox5.TabIndex = 9;
             // 
             // panel1
@@ -444,9 +446,9 @@
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(6, 143);
+            this.panel1.Location = new System.Drawing.Point(7, 155);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(587, 363);
+            this.panel1.Size = new System.Drawing.Size(685, 393);
             this.panel1.TabIndex = 7;
             // 
             // groupBox2
@@ -473,9 +475,10 @@
             this.groupBox2.Controls.Add(this.checkedListBox3);
             this.groupBox2.Controls.Add(this.checkedListBox2);
             this.groupBox2.Controls.Add(this.checkedListBox1);
-            this.groupBox2.Location = new System.Drawing.Point(21, 17);
+            this.groupBox2.Font = new System.Drawing.Font("KaiTi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox2.Location = new System.Drawing.Point(22, 19);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(540, 194);
+            this.groupBox2.Size = new System.Drawing.Size(630, 210);
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "选择框";
@@ -483,9 +486,9 @@
             // checkBox_0
             // 
             this.checkBox_0.AutoSize = true;
-            this.checkBox_0.Location = new System.Drawing.Point(496, 18);
+            this.checkBox_0.Location = new System.Drawing.Point(579, 20);
             this.checkBox_0.Name = "checkBox_0";
-            this.checkBox_0.Size = new System.Drawing.Size(36, 16);
+            this.checkBox_0.Size = new System.Drawing.Size(42, 17);
             this.checkBox_0.TabIndex = 23;
             this.checkBox_0.Text = "*0";
             this.checkBox_0.UseVisualStyleBackColor = true;
@@ -494,9 +497,9 @@
             // checkBox10
             // 
             this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(448, 18);
+            this.checkBox10.Location = new System.Drawing.Point(523, 20);
             this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(36, 16);
+            this.checkBox10.Size = new System.Drawing.Size(42, 17);
             this.checkBox10.TabIndex = 22;
             this.checkBox10.Text = "*9";
             this.checkBox10.UseVisualStyleBackColor = true;
@@ -505,9 +508,9 @@
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(400, 18);
+            this.checkBox5.Location = new System.Drawing.Point(467, 20);
             this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(36, 16);
+            this.checkBox5.Size = new System.Drawing.Size(42, 17);
             this.checkBox5.TabIndex = 21;
             this.checkBox5.Text = "*8";
             this.checkBox5.UseVisualStyleBackColor = true;
@@ -516,9 +519,9 @@
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(351, 18);
+            this.checkBox6.Location = new System.Drawing.Point(409, 20);
             this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(36, 16);
+            this.checkBox6.Size = new System.Drawing.Size(42, 17);
             this.checkBox6.TabIndex = 20;
             this.checkBox6.Text = "*7";
             this.checkBox6.UseVisualStyleBackColor = true;
@@ -527,9 +530,9 @@
             // checkBox7
             // 
             this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(298, 18);
+            this.checkBox7.Location = new System.Drawing.Point(348, 20);
             this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(36, 16);
+            this.checkBox7.Size = new System.Drawing.Size(42, 17);
             this.checkBox7.TabIndex = 19;
             this.checkBox7.Text = "*6";
             this.checkBox7.UseVisualStyleBackColor = true;
@@ -538,9 +541,9 @@
             // checkBox8
             // 
             this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(249, 18);
+            this.checkBox8.Location = new System.Drawing.Point(290, 20);
             this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(36, 16);
+            this.checkBox8.Size = new System.Drawing.Size(42, 17);
             this.checkBox8.TabIndex = 18;
             this.checkBox8.Text = "*5";
             this.checkBox8.UseVisualStyleBackColor = true;
@@ -549,9 +552,9 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(202, 18);
+            this.checkBox3.Location = new System.Drawing.Point(236, 20);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(36, 16);
+            this.checkBox3.Size = new System.Drawing.Size(42, 17);
             this.checkBox3.TabIndex = 17;
             this.checkBox3.Text = "*4";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -560,9 +563,9 @@
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(155, 18);
+            this.checkBox4.Location = new System.Drawing.Point(181, 20);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(36, 16);
+            this.checkBox4.Size = new System.Drawing.Size(42, 17);
             this.checkBox4.TabIndex = 16;
             this.checkBox4.Text = "*3";
             this.checkBox4.UseVisualStyleBackColor = true;
@@ -571,9 +574,9 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(110, 18);
+            this.checkBox2.Location = new System.Drawing.Point(128, 20);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(36, 16);
+            this.checkBox2.Size = new System.Drawing.Size(42, 17);
             this.checkBox2.TabIndex = 15;
             this.checkBox2.Text = "*2";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -582,9 +585,9 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(64, 18);
+            this.checkBox1.Location = new System.Drawing.Point(75, 20);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(36, 16);
+            this.checkBox1.Size = new System.Drawing.Size(42, 17);
             this.checkBox1.TabIndex = 14;
             this.checkBox1.Text = "*1";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -604,9 +607,9 @@
             "4*",
             "5*",
             "6*"});
-            this.checkedListBox11.Location = new System.Drawing.Point(19, 40);
+            this.checkedListBox11.Location = new System.Drawing.Point(22, 43);
             this.checkedListBox11.Name = "checkedListBox11";
-            this.checkedListBox11.Size = new System.Drawing.Size(38, 112);
+            this.checkedListBox11.Size = new System.Drawing.Size(44, 112);
             this.checkedListBox11.TabIndex = 13;
             this.checkedListBox11.SelectedIndexChanged += new System.EventHandler(this.checkedListBox11_SelectedIndexChanged);
             // 
@@ -624,9 +627,9 @@
             "50",
             "60",
             "70"});
-            this.checkedListBox10.Location = new System.Drawing.Point(496, 40);
+            this.checkedListBox10.Location = new System.Drawing.Point(579, 43);
             this.checkedListBox10.Name = "checkedListBox10";
-            this.checkedListBox10.Size = new System.Drawing.Size(36, 112);
+            this.checkedListBox10.Size = new System.Drawing.Size(42, 112);
             this.checkedListBox10.TabIndex = 9;
             // 
             // checkedListBox9
@@ -643,9 +646,9 @@
             "49",
             "59",
             "69"});
-            this.checkedListBox9.Location = new System.Drawing.Point(447, 40);
+            this.checkedListBox9.Location = new System.Drawing.Point(521, 43);
             this.checkedListBox9.Name = "checkedListBox9";
-            this.checkedListBox9.Size = new System.Drawing.Size(36, 112);
+            this.checkedListBox9.Size = new System.Drawing.Size(42, 112);
             this.checkedListBox9.TabIndex = 8;
             // 
             // checkedListBox8
@@ -662,9 +665,9 @@
             "48",
             "58",
             "68"});
-            this.checkedListBox8.Location = new System.Drawing.Point(399, 40);
+            this.checkedListBox8.Location = new System.Drawing.Point(465, 43);
             this.checkedListBox8.Name = "checkedListBox8";
-            this.checkedListBox8.Size = new System.Drawing.Size(36, 112);
+            this.checkedListBox8.Size = new System.Drawing.Size(42, 112);
             this.checkedListBox8.TabIndex = 7;
             // 
             // checkedListBox7
@@ -681,9 +684,9 @@
             "47",
             "57",
             "67"});
-            this.checkedListBox7.Location = new System.Drawing.Point(350, 40);
+            this.checkedListBox7.Location = new System.Drawing.Point(408, 43);
             this.checkedListBox7.Name = "checkedListBox7";
-            this.checkedListBox7.Size = new System.Drawing.Size(36, 112);
+            this.checkedListBox7.Size = new System.Drawing.Size(42, 112);
             this.checkedListBox7.TabIndex = 6;
             // 
             // checkedListBox6
@@ -700,9 +703,9 @@
             "46",
             "56",
             "66"});
-            this.checkedListBox6.Location = new System.Drawing.Point(297, 40);
+            this.checkedListBox6.Location = new System.Drawing.Point(346, 43);
             this.checkedListBox6.Name = "checkedListBox6";
-            this.checkedListBox6.Size = new System.Drawing.Size(36, 112);
+            this.checkedListBox6.Size = new System.Drawing.Size(42, 112);
             this.checkedListBox6.TabIndex = 5;
             // 
             // checkedListBox5
@@ -719,9 +722,9 @@
             "45",
             "55",
             "65"});
-            this.checkedListBox5.Location = new System.Drawing.Point(248, 40);
+            this.checkedListBox5.Location = new System.Drawing.Point(289, 43);
             this.checkedListBox5.Name = "checkedListBox5";
-            this.checkedListBox5.Size = new System.Drawing.Size(36, 112);
+            this.checkedListBox5.Size = new System.Drawing.Size(42, 112);
             this.checkedListBox5.TabIndex = 4;
             // 
             // checkedListBox4
@@ -738,9 +741,9 @@
             "44",
             "54",
             "64"});
-            this.checkedListBox4.Location = new System.Drawing.Point(201, 40);
+            this.checkedListBox4.Location = new System.Drawing.Point(234, 43);
             this.checkedListBox4.Name = "checkedListBox4";
-            this.checkedListBox4.Size = new System.Drawing.Size(36, 112);
+            this.checkedListBox4.Size = new System.Drawing.Size(42, 112);
             this.checkedListBox4.TabIndex = 3;
             // 
             // checkedListBox3
@@ -757,9 +760,9 @@
             "43",
             "53",
             "63"});
-            this.checkedListBox3.Location = new System.Drawing.Point(154, 40);
+            this.checkedListBox3.Location = new System.Drawing.Point(180, 43);
             this.checkedListBox3.Name = "checkedListBox3";
-            this.checkedListBox3.Size = new System.Drawing.Size(36, 112);
+            this.checkedListBox3.Size = new System.Drawing.Size(42, 112);
             this.checkedListBox3.TabIndex = 2;
             // 
             // checkedListBox2
@@ -776,9 +779,9 @@
             "42",
             "52",
             "62"});
-            this.checkedListBox2.Location = new System.Drawing.Point(109, 40);
+            this.checkedListBox2.Location = new System.Drawing.Point(127, 43);
             this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(36, 112);
+            this.checkedListBox2.Size = new System.Drawing.Size(42, 112);
             this.checkedListBox2.TabIndex = 1;
             // 
             // checkedListBox1
@@ -795,16 +798,17 @@
             "41",
             "51",
             "61"});
-            this.checkedListBox1.Location = new System.Drawing.Point(63, 40);
+            this.checkedListBox1.Location = new System.Drawing.Point(73, 43);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(36, 112);
+            this.checkedListBox1.Size = new System.Drawing.Size(42, 112);
             this.checkedListBox1.TabIndex = 0;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(472, 217);
+            this.button5.Font = new System.Drawing.Font("KaiTi", 10.5F);
+            this.button5.Location = new System.Drawing.Point(551, 235);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.Size = new System.Drawing.Size(87, 25);
             this.button5.TabIndex = 24;
             this.button5.Text = "清空重选";
             this.button5.UseVisualStyleBackColor = true;
@@ -812,9 +816,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(269, 265);
+            this.button1.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button1.Location = new System.Drawing.Point(314, 287);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(87, 25);
             this.button1.TabIndex = 8;
             this.button1.Text = "确定生成";
             this.button1.UseVisualStyleBackColor = true;
@@ -822,9 +827,10 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(182, 69);
+            this.textBox2.Font = new System.Drawing.Font("KaiTi", 10.5F);
+            this.textBox2.Location = new System.Drawing.Point(212, 75);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(47, 21);
+            this.textBox2.Size = new System.Drawing.Size(54, 23);
             this.textBox2.TabIndex = 2;
             this.textBox2.Tag = "";
             this.textBox2.Text = "26";
@@ -835,7 +841,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 42F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(53, 27);
+            this.label1.Location = new System.Drawing.Point(62, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 75);
             this.label1.TabIndex = 0;
@@ -846,19 +852,19 @@
             this.tabPage2.Controls.Add(this.button10);
             this.tabPage2.Controls.Add(this.button6);
             this.tabPage2.Controls.Add(this.dataGridView2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 23);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(618, 530);
+            this.tabPage2.Size = new System.Drawing.Size(722, 575);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "选择已存记录";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(480, 441);
+            this.button10.Location = new System.Drawing.Point(560, 478);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(87, 23);
+            this.button10.Size = new System.Drawing.Size(101, 25);
             this.button10.TabIndex = 2;
             this.button10.Text = "清空所有记录";
             this.button10.UseVisualStyleBackColor = true;
@@ -866,9 +872,9 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(251, 441);
+            this.button6.Location = new System.Drawing.Point(293, 478);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.Size = new System.Drawing.Size(87, 25);
             this.button6.TabIndex = 1;
             this.button6.Text = "刷新";
             this.button6.UseVisualStyleBackColor = true;
@@ -884,51 +890,13 @@
             this.Column8,
             this.Column6,
             this.Column7});
-            this.dataGridView2.Location = new System.Drawing.Point(26, 32);
+            this.dataGridView2.Location = new System.Drawing.Point(30, 35);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowTemplate.Height = 23;
-            this.dataGridView2.Size = new System.Drawing.Size(541, 386);
+            this.dataGridView2.Size = new System.Drawing.Size(631, 418);
             this.dataGridView2.TabIndex = 0;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "ID";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 30;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "时间";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 150;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "参数";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "删除";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column6.Width = 40;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "加载";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column7.Width = 40;
             // 
             // tabPage4
             // 
@@ -938,19 +906,20 @@
             this.tabPage4.Controls.Add(this.count_generate);
             this.tabPage4.Controls.Add(this.button2);
             this.tabPage4.Controls.Add(this.panel2);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Location = new System.Drawing.Point(4, 23);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(618, 530);
+            this.tabPage4.Size = new System.Drawing.Size(722, 575);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "逻辑查询界面";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(478, 479);
+            this.button3.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button3.Location = new System.Drawing.Point(558, 519);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(87, 25);
             this.button3.TabIndex = 14;
             this.button3.Text = "查看特殊";
             this.button3.UseVisualStyleBackColor = true;
@@ -958,9 +927,10 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(305, 479);
+            this.button7.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button7.Location = new System.Drawing.Point(356, 519);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.Size = new System.Drawing.Size(87, 25);
             this.button7.TabIndex = 19;
             this.button7.Text = "清空颜色";
             this.button7.UseVisualStyleBackColor = true;
@@ -969,25 +939,26 @@
             // count_operate
             // 
             this.count_operate.AutoSize = true;
-            this.count_operate.Location = new System.Drawing.Point(18, 494);
+            this.count_operate.Location = new System.Drawing.Point(21, 535);
             this.count_operate.Name = "count_operate";
-            this.count_operate.Size = new System.Drawing.Size(11, 12);
+            this.count_operate.Size = new System.Drawing.Size(14, 13);
             this.count_operate.TabIndex = 12;
             this.count_operate.Text = " ";
             // 
             // count_generate
             // 
             this.count_generate.AutoSize = true;
-            this.count_generate.Location = new System.Drawing.Point(18, 471);
+            this.count_generate.Location = new System.Drawing.Point(21, 510);
             this.count_generate.Name = "count_generate";
-            this.count_generate.Size = new System.Drawing.Size(0, 12);
+            this.count_generate.Size = new System.Drawing.Size(0, 13);
             this.count_generate.TabIndex = 11;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(391, 479);
+            this.button2.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button2.Location = new System.Drawing.Point(456, 519);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(87, 25);
             this.button2.TabIndex = 9;
             this.button2.Text = "查看结果";
             this.button2.UseVisualStyleBackColor = true;
@@ -1028,16 +999,17 @@
             this.panel2.Controls.Add(this.radioButton_Orange);
             this.panel2.Controls.Add(this.radioButton_Red);
             this.panel2.Controls.Add(this.tableLayoutPanel1);
-            this.panel2.Location = new System.Drawing.Point(3, 6);
+            this.panel2.Location = new System.Drawing.Point(3, 7);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(590, 467);
+            this.panel2.Size = new System.Drawing.Size(688, 506);
             this.panel2.TabIndex = 8;
             // 
             // button_colh7
             // 
-            this.button_colh7.Location = new System.Drawing.Point(376, 12);
+            this.button_colh7.Font = new System.Drawing.Font("Bitstream Vera Sans Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_colh7.Location = new System.Drawing.Point(439, 13);
             this.button_colh7.Name = "button_colh7";
-            this.button_colh7.Size = new System.Drawing.Size(20, 20);
+            this.button_colh7.Size = new System.Drawing.Size(22, 22);
             this.button_colh7.TabIndex = 42;
             this.button_colh7.Text = "↓";
             this.button_colh7.UseVisualStyleBackColor = true;
@@ -1045,9 +1017,10 @@
             // 
             // button_colh8
             // 
-            this.button_colh8.Location = new System.Drawing.Point(428, 12);
+            this.button_colh8.Font = new System.Drawing.Font("Bitstream Vera Sans Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_colh8.Location = new System.Drawing.Point(499, 13);
             this.button_colh8.Name = "button_colh8";
-            this.button_colh8.Size = new System.Drawing.Size(20, 20);
+            this.button_colh8.Size = new System.Drawing.Size(22, 22);
             this.button_colh8.TabIndex = 41;
             this.button_colh8.Text = "↓";
             this.button_colh8.UseVisualStyleBackColor = true;
@@ -1055,9 +1028,10 @@
             // 
             // button_colh9
             // 
-            this.button_colh9.Location = new System.Drawing.Point(480, 12);
+            this.button_colh9.Font = new System.Drawing.Font("Bitstream Vera Sans Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_colh9.Location = new System.Drawing.Point(560, 13);
             this.button_colh9.Name = "button_colh9";
-            this.button_colh9.Size = new System.Drawing.Size(20, 20);
+            this.button_colh9.Size = new System.Drawing.Size(22, 22);
             this.button_colh9.TabIndex = 40;
             this.button_colh9.Text = "↓";
             this.button_colh9.UseVisualStyleBackColor = true;
@@ -1065,9 +1039,10 @@
             // 
             // button_colh10
             // 
-            this.button_colh10.Location = new System.Drawing.Point(532, 12);
+            this.button_colh10.Font = new System.Drawing.Font("Bitstream Vera Sans Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_colh10.Location = new System.Drawing.Point(621, 13);
             this.button_colh10.Name = "button_colh10";
-            this.button_colh10.Size = new System.Drawing.Size(20, 20);
+            this.button_colh10.Size = new System.Drawing.Size(22, 22);
             this.button_colh10.TabIndex = 39;
             this.button_colh10.Text = "↓";
             this.button_colh10.UseVisualStyleBackColor = true;
@@ -1075,9 +1050,10 @@
             // 
             // button_colh2
             // 
-            this.button_colh2.Location = new System.Drawing.Point(116, 12);
+            this.button_colh2.Font = new System.Drawing.Font("Bitstream Vera Sans Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_colh2.Location = new System.Drawing.Point(135, 13);
             this.button_colh2.Name = "button_colh2";
-            this.button_colh2.Size = new System.Drawing.Size(20, 20);
+            this.button_colh2.Size = new System.Drawing.Size(22, 22);
             this.button_colh2.TabIndex = 38;
             this.button_colh2.Text = "↓";
             this.button_colh2.UseVisualStyleBackColor = true;
@@ -1085,9 +1061,10 @@
             // 
             // button_colh3
             // 
-            this.button_colh3.Location = new System.Drawing.Point(168, 12);
+            this.button_colh3.Font = new System.Drawing.Font("Bitstream Vera Sans Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_colh3.Location = new System.Drawing.Point(196, 13);
             this.button_colh3.Name = "button_colh3";
-            this.button_colh3.Size = new System.Drawing.Size(20, 20);
+            this.button_colh3.Size = new System.Drawing.Size(22, 22);
             this.button_colh3.TabIndex = 37;
             this.button_colh3.Text = "↓";
             this.button_colh3.UseVisualStyleBackColor = true;
@@ -1095,9 +1072,10 @@
             // 
             // button_colh4
             // 
-            this.button_colh4.Location = new System.Drawing.Point(220, 12);
+            this.button_colh4.Font = new System.Drawing.Font("Bitstream Vera Sans Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_colh4.Location = new System.Drawing.Point(257, 13);
             this.button_colh4.Name = "button_colh4";
-            this.button_colh4.Size = new System.Drawing.Size(20, 20);
+            this.button_colh4.Size = new System.Drawing.Size(22, 22);
             this.button_colh4.TabIndex = 36;
             this.button_colh4.Text = "↓";
             this.button_colh4.UseVisualStyleBackColor = true;
@@ -1105,9 +1083,10 @@
             // 
             // button_colh5
             // 
-            this.button_colh5.Location = new System.Drawing.Point(272, 12);
+            this.button_colh5.Font = new System.Drawing.Font("Bitstream Vera Sans Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_colh5.Location = new System.Drawing.Point(317, 13);
             this.button_colh5.Name = "button_colh5";
-            this.button_colh5.Size = new System.Drawing.Size(20, 20);
+            this.button_colh5.Size = new System.Drawing.Size(22, 22);
             this.button_colh5.TabIndex = 35;
             this.button_colh5.Text = "↓";
             this.button_colh5.UseVisualStyleBackColor = true;
@@ -1115,9 +1094,10 @@
             // 
             // button_colh6
             // 
-            this.button_colh6.Location = new System.Drawing.Point(324, 12);
+            this.button_colh6.Font = new System.Drawing.Font("Bitstream Vera Sans Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_colh6.Location = new System.Drawing.Point(378, 13);
             this.button_colh6.Name = "button_colh6";
-            this.button_colh6.Size = new System.Drawing.Size(20, 20);
+            this.button_colh6.Size = new System.Drawing.Size(22, 22);
             this.button_colh6.TabIndex = 34;
             this.button_colh6.Text = "↓";
             this.button_colh6.UseVisualStyleBackColor = true;
@@ -1125,9 +1105,9 @@
             // 
             // button_col7
             // 
-            this.button_col7.Location = new System.Drawing.Point(21, 198);
+            this.button_col7.Location = new System.Drawing.Point(24, 215);
             this.button_col7.Name = "button_col7";
-            this.button_col7.Size = new System.Drawing.Size(20, 20);
+            this.button_col7.Size = new System.Drawing.Size(23, 22);
             this.button_col7.TabIndex = 33;
             this.button_col7.Text = ">";
             this.button_col7.UseVisualStyleBackColor = true;
@@ -1135,9 +1115,9 @@
             // 
             // button_col6
             // 
-            this.button_col6.Location = new System.Drawing.Point(21, 171);
+            this.button_col6.Location = new System.Drawing.Point(24, 185);
             this.button_col6.Name = "button_col6";
-            this.button_col6.Size = new System.Drawing.Size(20, 20);
+            this.button_col6.Size = new System.Drawing.Size(23, 22);
             this.button_col6.TabIndex = 32;
             this.button_col6.Text = ">";
             this.button_col6.UseVisualStyleBackColor = true;
@@ -1145,9 +1125,9 @@
             // 
             // button_col5
             // 
-            this.button_col5.Location = new System.Drawing.Point(21, 145);
+            this.button_col5.Location = new System.Drawing.Point(24, 157);
             this.button_col5.Name = "button_col5";
-            this.button_col5.Size = new System.Drawing.Size(20, 20);
+            this.button_col5.Size = new System.Drawing.Size(23, 22);
             this.button_col5.TabIndex = 31;
             this.button_col5.Text = ">";
             this.button_col5.UseVisualStyleBackColor = true;
@@ -1155,9 +1135,9 @@
             // 
             // button_col4
             // 
-            this.button_col4.Location = new System.Drawing.Point(21, 119);
+            this.button_col4.Location = new System.Drawing.Point(24, 129);
             this.button_col4.Name = "button_col4";
-            this.button_col4.Size = new System.Drawing.Size(20, 20);
+            this.button_col4.Size = new System.Drawing.Size(23, 22);
             this.button_col4.TabIndex = 30;
             this.button_col4.Text = ">";
             this.button_col4.UseVisualStyleBackColor = true;
@@ -1165,9 +1145,9 @@
             // 
             // button_col3
             // 
-            this.button_col3.Location = new System.Drawing.Point(21, 93);
+            this.button_col3.Location = new System.Drawing.Point(24, 101);
             this.button_col3.Name = "button_col3";
-            this.button_col3.Size = new System.Drawing.Size(20, 20);
+            this.button_col3.Size = new System.Drawing.Size(23, 22);
             this.button_col3.TabIndex = 29;
             this.button_col3.Text = ">";
             this.button_col3.UseVisualStyleBackColor = true;
@@ -1175,9 +1155,9 @@
             // 
             // button_col2
             // 
-            this.button_col2.Location = new System.Drawing.Point(21, 67);
+            this.button_col2.Location = new System.Drawing.Point(24, 73);
             this.button_col2.Name = "button_col2";
-            this.button_col2.Size = new System.Drawing.Size(20, 20);
+            this.button_col2.Size = new System.Drawing.Size(23, 22);
             this.button_col2.TabIndex = 28;
             this.button_col2.Text = ">";
             this.button_col2.UseVisualStyleBackColor = true;
@@ -1185,9 +1165,10 @@
             // 
             // button_colh1
             // 
-            this.button_colh1.Location = new System.Drawing.Point(66, 12);
+            this.button_colh1.Font = new System.Drawing.Font("Bitstream Vera Sans Mono", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_colh1.Location = new System.Drawing.Point(77, 13);
             this.button_colh1.Name = "button_colh1";
-            this.button_colh1.Size = new System.Drawing.Size(20, 20);
+            this.button_colh1.Size = new System.Drawing.Size(22, 22);
             this.button_colh1.TabIndex = 27;
             this.button_colh1.Text = "↓";
             this.button_colh1.UseVisualStyleBackColor = true;
@@ -1195,9 +1176,9 @@
             // 
             // button_col1
             // 
-            this.button_col1.Location = new System.Drawing.Point(21, 41);
+            this.button_col1.Location = new System.Drawing.Point(24, 44);
             this.button_col1.Name = "button_col1";
-            this.button_col1.Size = new System.Drawing.Size(20, 20);
+            this.button_col1.Size = new System.Drawing.Size(23, 22);
             this.button_col1.TabIndex = 26;
             this.button_col1.Text = ">";
             this.button_col1.UseVisualStyleBackColor = true;
@@ -1206,9 +1187,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 4);
+            this.label3.Location = new System.Drawing.Point(7, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 12);
+            this.label3.Size = new System.Drawing.Size(42, 13);
             this.label3.TabIndex = 25;
             this.label3.Text = "26取5";
             // 
@@ -1216,10 +1197,11 @@
             // 
             this.radioButton_Wheat.AutoSize = true;
             this.radioButton_Wheat.BackColor = System.Drawing.Color.Wheat;
+            this.radioButton_Wheat.Font = new System.Drawing.Font("KaiTi", 10F);
             this.radioButton_Wheat.ForeColor = System.Drawing.Color.Black;
-            this.radioButton_Wheat.Location = new System.Drawing.Point(488, 233);
+            this.radioButton_Wheat.Location = new System.Drawing.Point(569, 252);
             this.radioButton_Wheat.Name = "radioButton_Wheat";
-            this.radioButton_Wheat.Size = new System.Drawing.Size(35, 16);
+            this.radioButton_Wheat.Size = new System.Drawing.Size(39, 18);
             this.radioButton_Wheat.TabIndex = 24;
             this.radioButton_Wheat.TabStop = true;
             this.radioButton_Wheat.Text = "麦";
@@ -1230,10 +1212,11 @@
             // 
             this.radioButton_Chocolate.AutoSize = true;
             this.radioButton_Chocolate.BackColor = System.Drawing.Color.Chocolate;
+            this.radioButton_Chocolate.Font = new System.Drawing.Font("KaiTi", 10F);
             this.radioButton_Chocolate.ForeColor = System.Drawing.Color.Black;
-            this.radioButton_Chocolate.Location = new System.Drawing.Point(447, 233);
+            this.radioButton_Chocolate.Location = new System.Drawing.Point(521, 252);
             this.radioButton_Chocolate.Name = "radioButton_Chocolate";
-            this.radioButton_Chocolate.Size = new System.Drawing.Size(35, 16);
+            this.radioButton_Chocolate.Size = new System.Drawing.Size(39, 18);
             this.radioButton_Chocolate.TabIndex = 23;
             this.radioButton_Chocolate.TabStop = true;
             this.radioButton_Chocolate.Text = "巧";
@@ -1244,10 +1227,11 @@
             // 
             this.radioButton_Maroon.AutoSize = true;
             this.radioButton_Maroon.BackColor = System.Drawing.Color.Maroon;
+            this.radioButton_Maroon.Font = new System.Drawing.Font("KaiTi", 10F);
             this.radioButton_Maroon.ForeColor = System.Drawing.Color.White;
-            this.radioButton_Maroon.Location = new System.Drawing.Point(406, 233);
+            this.radioButton_Maroon.Location = new System.Drawing.Point(474, 252);
             this.radioButton_Maroon.Name = "radioButton_Maroon";
-            this.radioButton_Maroon.Size = new System.Drawing.Size(35, 16);
+            this.radioButton_Maroon.Size = new System.Drawing.Size(39, 18);
             this.radioButton_Maroon.TabIndex = 22;
             this.radioButton_Maroon.TabStop = true;
             this.radioButton_Maroon.Text = "栗";
@@ -1258,10 +1242,11 @@
             // 
             this.radioButton_Gray.AutoSize = true;
             this.radioButton_Gray.BackColor = System.Drawing.Color.Gray;
+            this.radioButton_Gray.Font = new System.Drawing.Font("KaiTi", 10F);
             this.radioButton_Gray.ForeColor = System.Drawing.Color.Black;
-            this.radioButton_Gray.Location = new System.Drawing.Point(365, 233);
+            this.radioButton_Gray.Location = new System.Drawing.Point(426, 252);
             this.radioButton_Gray.Name = "radioButton_Gray";
-            this.radioButton_Gray.Size = new System.Drawing.Size(35, 16);
+            this.radioButton_Gray.Size = new System.Drawing.Size(39, 18);
             this.radioButton_Gray.TabIndex = 21;
             this.radioButton_Gray.TabStop = true;
             this.radioButton_Gray.Text = "灰";
@@ -1272,10 +1257,11 @@
             // 
             this.radioButton_Black.AutoSize = true;
             this.radioButton_Black.BackColor = System.Drawing.Color.Black;
+            this.radioButton_Black.Font = new System.Drawing.Font("KaiTi", 10F);
             this.radioButton_Black.ForeColor = System.Drawing.Color.White;
-            this.radioButton_Black.Location = new System.Drawing.Point(324, 233);
+            this.radioButton_Black.Location = new System.Drawing.Point(378, 252);
             this.radioButton_Black.Name = "radioButton_Black";
-            this.radioButton_Black.Size = new System.Drawing.Size(35, 16);
+            this.radioButton_Black.Size = new System.Drawing.Size(39, 18);
             this.radioButton_Black.TabIndex = 20;
             this.radioButton_Black.TabStop = true;
             this.radioButton_Black.Text = "黑";
@@ -1326,9 +1312,9 @@
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.comboBox4);
-            this.groupBox1.Location = new System.Drawing.Point(32, 257);
+            this.groupBox1.Location = new System.Drawing.Point(37, 278);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(522, 207);
+            this.groupBox1.Size = new System.Drawing.Size(609, 224);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "筛选规则";
@@ -1341,9 +1327,9 @@
             this.operateBox4.Items.AddRange(new object[] {
             "=",
             "！="});
-            this.operateBox4.Location = new System.Drawing.Point(41, 132);
+            this.operateBox4.Location = new System.Drawing.Point(48, 143);
             this.operateBox4.Name = "operateBox4";
-            this.operateBox4.Size = new System.Drawing.Size(44, 20);
+            this.operateBox4.Size = new System.Drawing.Size(51, 21);
             this.operateBox4.TabIndex = 46;
             // 
             // colorSelect7
@@ -1361,9 +1347,9 @@
             "5",
             "6",
             "7"});
-            this.colorSelect7.Location = new System.Drawing.Point(82, 168);
+            this.colorSelect7.Location = new System.Drawing.Point(117, 182);
             this.colorSelect7.Name = "colorSelect7";
-            this.colorSelect7.Size = new System.Drawing.Size(35, 20);
+            this.colorSelect7.Size = new System.Drawing.Size(40, 21);
             this.colorSelect7.TabIndex = 45;
             // 
             // colorSelect6
@@ -1381,9 +1367,9 @@
             "5",
             "6",
             "7"});
-            this.colorSelect6.Location = new System.Drawing.Point(41, 168);
+            this.colorSelect6.Location = new System.Drawing.Point(72, 182);
             this.colorSelect6.Name = "colorSelect6";
-            this.colorSelect6.Size = new System.Drawing.Size(35, 20);
+            this.colorSelect6.Size = new System.Drawing.Size(40, 21);
             this.colorSelect6.TabIndex = 44;
             // 
             // colorSelect5
@@ -1401,9 +1387,9 @@
             "5",
             "6",
             "7"});
-            this.colorSelect5.Location = new System.Drawing.Point(0, 168);
+            this.colorSelect5.Location = new System.Drawing.Point(28, 182);
             this.colorSelect5.Name = "colorSelect5";
-            this.colorSelect5.Size = new System.Drawing.Size(35, 20);
+            this.colorSelect5.Size = new System.Drawing.Size(40, 21);
             this.colorSelect5.TabIndex = 43;
             // 
             // colorSelect4
@@ -1421,9 +1407,9 @@
             "5",
             "6",
             "7"});
-            this.colorSelect4.Location = new System.Drawing.Point(208, 132);
+            this.colorSelect4.Location = new System.Drawing.Point(238, 143);
             this.colorSelect4.Name = "colorSelect4";
-            this.colorSelect4.Size = new System.Drawing.Size(35, 20);
+            this.colorSelect4.Size = new System.Drawing.Size(40, 21);
             this.colorSelect4.TabIndex = 42;
             // 
             // colorSelect3
@@ -1441,9 +1427,9 @@
             "5",
             "6",
             "7"});
-            this.colorSelect3.Location = new System.Drawing.Point(166, 132);
+            this.colorSelect3.Location = new System.Drawing.Point(194, 143);
             this.colorSelect3.Name = "colorSelect3";
-            this.colorSelect3.Size = new System.Drawing.Size(35, 20);
+            this.colorSelect3.Size = new System.Drawing.Size(40, 21);
             this.colorSelect3.TabIndex = 41;
             // 
             // colorSelect2
@@ -1461,9 +1447,9 @@
             "5",
             "6",
             "7"});
-            this.colorSelect2.Location = new System.Drawing.Point(128, 132);
+            this.colorSelect2.Location = new System.Drawing.Point(149, 143);
             this.colorSelect2.Name = "colorSelect2";
-            this.colorSelect2.Size = new System.Drawing.Size(35, 20);
+            this.colorSelect2.Size = new System.Drawing.Size(40, 21);
             this.colorSelect2.TabIndex = 40;
             // 
             // colorSelect1
@@ -1481,25 +1467,25 @@
             "5",
             "6",
             "7"});
-            this.colorSelect1.Location = new System.Drawing.Point(87, 132);
+            this.colorSelect1.Location = new System.Drawing.Point(105, 143);
             this.colorSelect1.Name = "colorSelect1";
-            this.colorSelect1.Size = new System.Drawing.Size(35, 20);
+            this.colorSelect1.Size = new System.Drawing.Size(40, 21);
             this.colorSelect1.TabIndex = 39;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 135);
+            this.label10.Location = new System.Drawing.Point(3, 146);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 12);
+            this.label10.Size = new System.Drawing.Size(49, 13);
             this.label10.TabIndex = 38;
             this.label10.Text = "将此库";
             // 
             // tag_mehod4_minus
             // 
-            this.tag_mehod4_minus.Location = new System.Drawing.Point(490, 135);
+            this.tag_mehod4_minus.Location = new System.Drawing.Point(572, 146);
             this.tag_mehod4_minus.Name = "tag_mehod4_minus";
-            this.tag_mehod4_minus.Size = new System.Drawing.Size(23, 23);
+            this.tag_mehod4_minus.Size = new System.Drawing.Size(27, 25);
             this.tag_mehod4_minus.TabIndex = 36;
             this.tag_mehod4_minus.Text = "-";
             this.tag_mehod4_minus.UseVisualStyleBackColor = true;
@@ -1515,25 +1501,26 @@
             "五角星",
             "超出",
             "特殊五角星"});
-            this.comboBox8.Location = new System.Drawing.Point(336, 136);
+            this.comboBox8.Location = new System.Drawing.Point(392, 147);
             this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(65, 20);
+            this.comboBox8.Size = new System.Drawing.Size(75, 21);
             this.comboBox8.TabIndex = 35;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(253, 140);
+            this.label9.Location = new System.Drawing.Point(295, 152);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(77, 12);
+            this.label9.Size = new System.Drawing.Size(91, 13);
             this.label9.TabIndex = 34;
             this.label9.Text = "的注数标记为";
             // 
             // tag_method_4
             // 
-            this.tag_method_4.Location = new System.Drawing.Point(409, 135);
+            this.tag_method_4.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tag_method_4.Location = new System.Drawing.Point(477, 146);
             this.tag_method_4.Name = "tag_method_4";
-            this.tag_method_4.Size = new System.Drawing.Size(75, 23);
+            this.tag_method_4.Size = new System.Drawing.Size(87, 25);
             this.tag_method_4.TabIndex = 33;
             this.tag_method_4.Text = "开始标记";
             this.tag_method_4.UseVisualStyleBackColor = true;
@@ -1546,9 +1533,9 @@
             this.comboBox7.Items.AddRange(new object[] {
             "所选颜色",
             "所有颜色"});
-            this.comboBox7.Location = new System.Drawing.Point(75, 20);
+            this.comboBox7.Location = new System.Drawing.Point(87, 22);
             this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(86, 20);
+            this.comboBox7.Size = new System.Drawing.Size(100, 21);
             this.comboBox7.TabIndex = 26;
             // 
             // comboBox6
@@ -1560,9 +1547,9 @@
             "<=",
             "=",
             "!="});
-            this.comboBox6.Location = new System.Drawing.Point(99, 51);
+            this.comboBox6.Location = new System.Drawing.Point(115, 55);
             this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(35, 20);
+            this.comboBox6.Size = new System.Drawing.Size(40, 21);
             this.comboBox6.TabIndex = 32;
             // 
             // panel3
@@ -1572,17 +1559,17 @@
             this.panel3.Controls.Add(this.radioButton12);
             this.panel3.Controls.Add(this.radioButton11);
             this.panel3.Controls.Add(this.radioButton10);
-            this.panel3.Location = new System.Drawing.Point(163, 168);
+            this.panel3.Location = new System.Drawing.Point(190, 182);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(350, 30);
+            this.panel3.Size = new System.Drawing.Size(408, 33);
             this.panel3.TabIndex = 31;
             // 
             // radioButton14
             // 
             this.radioButton14.AutoSize = true;
-            this.radioButton14.Location = new System.Drawing.Point(255, 7);
+            this.radioButton14.Location = new System.Drawing.Point(297, 8);
             this.radioButton14.Name = "radioButton14";
-            this.radioButton14.Size = new System.Drawing.Size(83, 16);
+            this.radioButton14.Size = new System.Drawing.Size(95, 17);
             this.radioButton14.TabIndex = 4;
             this.radioButton14.TabStop = true;
             this.radioButton14.Text = "特殊五角星";
@@ -1592,9 +1579,9 @@
             // radioButton13
             // 
             this.radioButton13.AutoSize = true;
-            this.radioButton13.Location = new System.Drawing.Point(137, 7);
+            this.radioButton13.Location = new System.Drawing.Point(160, 8);
             this.radioButton13.Name = "radioButton13";
-            this.radioButton13.Size = new System.Drawing.Size(59, 16);
+            this.radioButton13.Size = new System.Drawing.Size(67, 17);
             this.radioButton13.TabIndex = 3;
             this.radioButton13.TabStop = true;
             this.radioButton13.Text = "五角星";
@@ -1604,9 +1591,9 @@
             // radioButton12
             // 
             this.radioButton12.AutoSize = true;
-            this.radioButton12.Location = new System.Drawing.Point(72, 7);
+            this.radioButton12.Location = new System.Drawing.Point(84, 8);
             this.radioButton12.Name = "radioButton12";
-            this.radioButton12.Size = new System.Drawing.Size(59, 16);
+            this.radioButton12.Size = new System.Drawing.Size(67, 17);
             this.radioButton12.TabIndex = 2;
             this.radioButton12.TabStop = true;
             this.radioButton12.Text = "四边形";
@@ -1616,9 +1603,9 @@
             // radioButton11
             // 
             this.radioButton11.AutoSize = true;
-            this.radioButton11.Location = new System.Drawing.Point(7, 7);
+            this.radioButton11.Location = new System.Drawing.Point(8, 8);
             this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(59, 16);
+            this.radioButton11.Size = new System.Drawing.Size(67, 17);
             this.radioButton11.TabIndex = 1;
             this.radioButton11.TabStop = true;
             this.radioButton11.Text = "三角形";
@@ -1628,9 +1615,9 @@
             // radioButton10
             // 
             this.radioButton10.AutoSize = true;
-            this.radioButton10.Location = new System.Drawing.Point(202, 7);
+            this.radioButton10.Location = new System.Drawing.Point(236, 8);
             this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(47, 16);
+            this.radioButton10.Size = new System.Drawing.Size(53, 17);
             this.radioButton10.TabIndex = 0;
             this.radioButton10.TabStop = true;
             this.radioButton10.Text = "超出";
@@ -1639,9 +1626,9 @@
             // 
             // button9_minus
             // 
-            this.button9_minus.Location = new System.Drawing.Point(490, 105);
+            this.button9_minus.Location = new System.Drawing.Point(572, 114);
             this.button9_minus.Name = "button9_minus";
-            this.button9_minus.Size = new System.Drawing.Size(23, 23);
+            this.button9_minus.Size = new System.Drawing.Size(27, 25);
             this.button9_minus.TabIndex = 30;
             this.button9_minus.Text = "-";
             this.button9_minus.UseVisualStyleBackColor = true;
@@ -1649,9 +1636,9 @@
             // 
             // button8_minus
             // 
-            this.button8_minus.Location = new System.Drawing.Point(490, 50);
+            this.button8_minus.Location = new System.Drawing.Point(572, 54);
             this.button8_minus.Name = "button8_minus";
-            this.button8_minus.Size = new System.Drawing.Size(23, 23);
+            this.button8_minus.Size = new System.Drawing.Size(27, 25);
             this.button8_minus.TabIndex = 29;
             this.button8_minus.Text = "-";
             this.button8_minus.UseVisualStyleBackColor = true;
@@ -1659,9 +1646,9 @@
             // 
             // button3_minus
             // 
-            this.button3_minus.Location = new System.Drawing.Point(490, 19);
+            this.button3_minus.Location = new System.Drawing.Point(572, 21);
             this.button3_minus.Name = "button3_minus";
-            this.button3_minus.Size = new System.Drawing.Size(23, 23);
+            this.button3_minus.Size = new System.Drawing.Size(27, 25);
             this.button3_minus.TabIndex = 28;
             this.button3_minus.Text = "-";
             this.button3_minus.UseVisualStyleBackColor = true;
@@ -1669,72 +1656,72 @@
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(289, 80);
+            this.textBox11.Location = new System.Drawing.Point(337, 87);
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(21, 21);
+            this.textBox11.Size = new System.Drawing.Size(24, 22);
             this.textBox11.TabIndex = 27;
             this.textBox11.Text = "x";
             this.textBox11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numTextBox_KeyPress);
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(262, 80);
+            this.textBox10.Location = new System.Drawing.Point(306, 87);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(21, 21);
+            this.textBox10.Size = new System.Drawing.Size(24, 22);
             this.textBox10.TabIndex = 26;
             this.textBox10.Text = "x";
             this.textBox10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numTextBox_KeyPress);
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(235, 80);
+            this.textBox9.Location = new System.Drawing.Point(274, 87);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(21, 21);
+            this.textBox9.Size = new System.Drawing.Size(24, 22);
             this.textBox9.TabIndex = 25;
             this.textBox9.Text = "x";
             this.textBox9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numTextBox_KeyPress);
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(208, 80);
+            this.textBox8.Location = new System.Drawing.Point(243, 87);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(21, 21);
+            this.textBox8.Size = new System.Drawing.Size(24, 22);
             this.textBox8.TabIndex = 24;
             this.textBox8.Text = "x";
             this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numTextBox_KeyPress);
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(180, 80);
+            this.textBox7.Location = new System.Drawing.Point(210, 87);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(21, 21);
+            this.textBox7.Size = new System.Drawing.Size(24, 22);
             this.textBox7.TabIndex = 23;
             this.textBox7.Text = "x";
             this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numTextBox_KeyPress);
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(153, 80);
+            this.textBox6.Location = new System.Drawing.Point(178, 87);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(21, 21);
+            this.textBox6.Size = new System.Drawing.Size(24, 22);
             this.textBox6.TabIndex = 22;
             this.textBox6.Text = "x";
             this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numTextBox_KeyPress);
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(126, 80);
+            this.textBox5.Location = new System.Drawing.Point(147, 87);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(21, 21);
+            this.textBox5.Size = new System.Drawing.Size(24, 22);
             this.textBox5.TabIndex = 21;
             this.textBox5.Text = "x";
             this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numTextBox_KeyPress);
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(99, 80);
+            this.textBox4.Location = new System.Drawing.Point(115, 87);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(21, 21);
+            this.textBox4.Size = new System.Drawing.Size(24, 22);
             this.textBox4.TabIndex = 20;
             this.textBox4.Text = "x";
             this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numTextBox_KeyPress);
@@ -1742,9 +1729,9 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(16, 84);
+            this.label33.Location = new System.Drawing.Point(19, 91);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(77, 12);
+            this.label33.Size = new System.Drawing.Size(91, 13);
             this.label33.TabIndex = 19;
             this.label33.Text = "将此库中符合";
             // 
@@ -1758,25 +1745,26 @@
             "五角星",
             "超出",
             "特殊五角星"});
-            this.comboBox1.Location = new System.Drawing.Point(336, 106);
+            this.comboBox1.Location = new System.Drawing.Point(392, 115);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(65, 20);
+            this.comboBox1.Size = new System.Drawing.Size(75, 21);
             this.comboBox1.TabIndex = 18;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(253, 110);
+            this.label11.Location = new System.Drawing.Point(295, 119);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(77, 12);
+            this.label11.Size = new System.Drawing.Size(91, 13);
             this.label11.TabIndex = 17;
             this.label11.Text = "的注数标记为";
             // 
             // button4_add
             // 
-            this.button4_add.Location = new System.Drawing.Point(409, 105);
+            this.button4_add.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button4_add.Location = new System.Drawing.Point(477, 114);
             this.button4_add.Name = "button4_add";
-            this.button4_add.Size = new System.Drawing.Size(75, 23);
+            this.button4_add.Size = new System.Drawing.Size(87, 25);
             this.button4_add.TabIndex = 16;
             this.button4_add.Text = "开始标记";
             this.button4_add.UseVisualStyleBackColor = true;
@@ -1784,9 +1772,10 @@
             // 
             // button_method2mark_add
             // 
-            this.button_method2mark_add.Location = new System.Drawing.Point(409, 50);
+            this.button_method2mark_add.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button_method2mark_add.Location = new System.Drawing.Point(477, 54);
             this.button_method2mark_add.Name = "button_method2mark_add";
-            this.button_method2mark_add.Size = new System.Drawing.Size(75, 23);
+            this.button_method2mark_add.Size = new System.Drawing.Size(87, 25);
             this.button_method2mark_add.TabIndex = 15;
             this.button_method2mark_add.Text = "开始标记";
             this.button_method2mark_add.UseVisualStyleBackColor = true;
@@ -1802,17 +1791,17 @@
             "五角星",
             "超出",
             "特殊五角星"});
-            this.comboBox_Mehod2_marked.Location = new System.Drawing.Point(336, 51);
+            this.comboBox_Mehod2_marked.Location = new System.Drawing.Point(392, 55);
             this.comboBox_Mehod2_marked.Name = "comboBox_Mehod2_marked";
-            this.comboBox_Mehod2_marked.Size = new System.Drawing.Size(65, 20);
+            this.comboBox_Mehod2_marked.Size = new System.Drawing.Size(75, 21);
             this.comboBox_Mehod2_marked.TabIndex = 14;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(253, 55);
+            this.label8.Location = new System.Drawing.Point(295, 60);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(77, 12);
+            this.label8.Size = new System.Drawing.Size(91, 13);
             this.label8.TabIndex = 13;
             this.label8.Text = "的注数标记为";
             // 
@@ -1837,26 +1826,27 @@
             "三色、七色齐",
             "一色、三色齐",
             "一色、四色齐"});
-            this.comboBox_method2_operate.Location = new System.Drawing.Point(147, 51);
+            this.comboBox_method2_operate.Location = new System.Drawing.Point(171, 55);
             this.comboBox_method2_operate.Name = "comboBox_method2_operate";
-            this.comboBox_method2_operate.Size = new System.Drawing.Size(100, 20);
+            this.comboBox_method2_operate.Size = new System.Drawing.Size(116, 21);
             this.comboBox_method2_operate.TabIndex = 12;
             this.comboBox_method2_operate.SelectedIndexChanged += new System.EventHandler(this.comboBox_method2_operate_SelectedIndexChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 55);
+            this.label7.Location = new System.Drawing.Point(19, 60);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 12);
+            this.label7.Size = new System.Drawing.Size(91, 13);
             this.label7.TabIndex = 11;
             this.label7.Text = "将此库中符合";
             // 
             // button76_add
             // 
-            this.button76_add.Location = new System.Drawing.Point(409, 19);
+            this.button76_add.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button76_add.Location = new System.Drawing.Point(477, 21);
             this.button76_add.Name = "button76_add";
-            this.button76_add.Size = new System.Drawing.Size(75, 23);
+            this.button76_add.Size = new System.Drawing.Size(87, 25);
             this.button76_add.TabIndex = 10;
             this.button76_add.Text = "开始标记";
             this.button76_add.UseVisualStyleBackColor = true;
@@ -1866,9 +1856,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(253, 24);
+            this.label5.Location = new System.Drawing.Point(295, 26);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 12);
+            this.label5.Size = new System.Drawing.Size(91, 13);
             this.label5.TabIndex = 4;
             this.label5.Text = "的注数标记为";
             // 
@@ -1893,9 +1883,9 @@
             "50",
             "60",
             "70"});
-            this.comboBox3.Location = new System.Drawing.Point(208, 20);
+            this.comboBox3.Location = new System.Drawing.Point(243, 22);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(39, 20);
+            this.comboBox3.Size = new System.Drawing.Size(45, 21);
             this.comboBox3.TabIndex = 3;
             this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
@@ -1908,18 +1898,18 @@
             "<=",
             "=",
             "!="});
-            this.comboBox2.Location = new System.Drawing.Point(167, 20);
+            this.comboBox2.Location = new System.Drawing.Point(195, 22);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(35, 20);
+            this.comboBox2.Size = new System.Drawing.Size(40, 21);
             this.comboBox2.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(16, 24);
+            this.label4.Location = new System.Drawing.Point(19, 26);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 12);
+            this.label4.Size = new System.Drawing.Size(63, 13);
             this.label4.TabIndex = 0;
             this.label4.Text = "将此库中";
             // 
@@ -1933,9 +1923,9 @@
             "五角星",
             "超出",
             "特殊五角星"});
-            this.comboBox4.Location = new System.Drawing.Point(336, 20);
+            this.comboBox4.Location = new System.Drawing.Point(392, 22);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(65, 20);
+            this.comboBox4.Size = new System.Drawing.Size(75, 21);
             this.comboBox4.TabIndex = 5;
             this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
@@ -1943,10 +1933,11 @@
             // 
             this.radioButton_Purple.AutoSize = true;
             this.radioButton_Purple.BackColor = System.Drawing.Color.Purple;
+            this.radioButton_Purple.Font = new System.Drawing.Font("KaiTi", 10F);
             this.radioButton_Purple.ForeColor = System.Drawing.Color.White;
-            this.radioButton_Purple.Location = new System.Drawing.Point(283, 233);
+            this.radioButton_Purple.Location = new System.Drawing.Point(330, 252);
             this.radioButton_Purple.Name = "radioButton_Purple";
-            this.radioButton_Purple.Size = new System.Drawing.Size(35, 16);
+            this.radioButton_Purple.Size = new System.Drawing.Size(39, 18);
             this.radioButton_Purple.TabIndex = 17;
             this.radioButton_Purple.TabStop = true;
             this.radioButton_Purple.Text = "紫";
@@ -1957,10 +1948,11 @@
             // 
             this.radioButton_Indigo.AutoSize = true;
             this.radioButton_Indigo.BackColor = System.Drawing.Color.Indigo;
+            this.radioButton_Indigo.Font = new System.Drawing.Font("KaiTi", 10F);
             this.radioButton_Indigo.ForeColor = System.Drawing.Color.White;
-            this.radioButton_Indigo.Location = new System.Drawing.Point(242, 233);
+            this.radioButton_Indigo.Location = new System.Drawing.Point(282, 252);
             this.radioButton_Indigo.Name = "radioButton_Indigo";
-            this.radioButton_Indigo.Size = new System.Drawing.Size(35, 16);
+            this.radioButton_Indigo.Size = new System.Drawing.Size(39, 18);
             this.radioButton_Indigo.TabIndex = 16;
             this.radioButton_Indigo.TabStop = true;
             this.radioButton_Indigo.Text = "靛";
@@ -1971,10 +1963,11 @@
             // 
             this.radioButton_Blue.AutoSize = true;
             this.radioButton_Blue.BackColor = System.Drawing.Color.Blue;
+            this.radioButton_Blue.Font = new System.Drawing.Font("KaiTi", 10F);
             this.radioButton_Blue.ForeColor = System.Drawing.Color.White;
-            this.radioButton_Blue.Location = new System.Drawing.Point(201, 233);
+            this.radioButton_Blue.Location = new System.Drawing.Point(234, 252);
             this.radioButton_Blue.Name = "radioButton_Blue";
-            this.radioButton_Blue.Size = new System.Drawing.Size(35, 16);
+            this.radioButton_Blue.Size = new System.Drawing.Size(39, 18);
             this.radioButton_Blue.TabIndex = 15;
             this.radioButton_Blue.TabStop = true;
             this.radioButton_Blue.Text = "蓝";
@@ -1985,10 +1978,11 @@
             // 
             this.radioButton_Green.AutoSize = true;
             this.radioButton_Green.BackColor = System.Drawing.Color.Green;
+            this.radioButton_Green.Font = new System.Drawing.Font("KaiTi", 10F);
             this.radioButton_Green.ForeColor = System.Drawing.Color.White;
-            this.radioButton_Green.Location = new System.Drawing.Point(160, 233);
+            this.radioButton_Green.Location = new System.Drawing.Point(187, 252);
             this.radioButton_Green.Name = "radioButton_Green";
-            this.radioButton_Green.Size = new System.Drawing.Size(35, 16);
+            this.radioButton_Green.Size = new System.Drawing.Size(39, 18);
             this.radioButton_Green.TabIndex = 14;
             this.radioButton_Green.TabStop = true;
             this.radioButton_Green.Text = "绿";
@@ -1999,9 +1993,10 @@
             // 
             this.radioButton_Yellow.AutoSize = true;
             this.radioButton_Yellow.BackColor = System.Drawing.Color.Yellow;
-            this.radioButton_Yellow.Location = new System.Drawing.Point(119, 233);
+            this.radioButton_Yellow.Font = new System.Drawing.Font("KaiTi", 10F);
+            this.radioButton_Yellow.Location = new System.Drawing.Point(139, 252);
             this.radioButton_Yellow.Name = "radioButton_Yellow";
-            this.radioButton_Yellow.Size = new System.Drawing.Size(35, 16);
+            this.radioButton_Yellow.Size = new System.Drawing.Size(39, 18);
             this.radioButton_Yellow.TabIndex = 13;
             this.radioButton_Yellow.TabStop = true;
             this.radioButton_Yellow.Text = "黄";
@@ -2012,9 +2007,10 @@
             // 
             this.radioButton_Orange.AutoSize = true;
             this.radioButton_Orange.BackColor = System.Drawing.Color.Orange;
-            this.radioButton_Orange.Location = new System.Drawing.Point(78, 233);
+            this.radioButton_Orange.Font = new System.Drawing.Font("KaiTi", 10F);
+            this.radioButton_Orange.Location = new System.Drawing.Point(91, 252);
             this.radioButton_Orange.Name = "radioButton_Orange";
-            this.radioButton_Orange.Size = new System.Drawing.Size(35, 16);
+            this.radioButton_Orange.Size = new System.Drawing.Size(39, 18);
             this.radioButton_Orange.TabIndex = 12;
             this.radioButton_Orange.TabStop = true;
             this.radioButton_Orange.Text = "橙";
@@ -2026,10 +2022,11 @@
             this.radioButton_Red.AutoSize = true;
             this.radioButton_Red.BackColor = System.Drawing.Color.Red;
             this.radioButton_Red.Checked = true;
+            this.radioButton_Red.Font = new System.Drawing.Font("KaiTi", 10F);
             this.radioButton_Red.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.radioButton_Red.Location = new System.Drawing.Point(37, 233);
+            this.radioButton_Red.Location = new System.Drawing.Point(43, 252);
             this.radioButton_Red.Name = "radioButton_Red";
-            this.radioButton_Red.Size = new System.Drawing.Size(35, 16);
+            this.radioButton_Red.Size = new System.Drawing.Size(39, 18);
             this.radioButton_Red.TabIndex = 11;
             this.radioButton_Red.TabStop = true;
             this.radioButton_Red.Text = "红";
@@ -2120,7 +2117,7 @@
             this.tableLayoutPanel1.Controls.Add(this.button_c3, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.button_c2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.button_c1, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(49, 38);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(57, 41);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
@@ -2130,17 +2127,17 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(522, 184);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(609, 199);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // button_c70
             // 
             this.button_c70.BackColor = System.Drawing.Color.White;
             this.button_c70.Enabled = false;
-            this.button_c70.Location = new System.Drawing.Point(471, 159);
+            this.button_c70.Location = new System.Drawing.Point(543, 171);
             this.button_c70.Name = "button_c70";
-            this.button_c70.Size = new System.Drawing.Size(47, 22);
+            this.button_c70.Size = new System.Drawing.Size(55, 24);
             this.button_c70.TabIndex = 69;
             this.button_c70.Text = "70";
             this.button_c70.UseVisualStyleBackColor = false;
@@ -2150,9 +2147,9 @@
             // 
             this.button_c69.BackColor = System.Drawing.Color.White;
             this.button_c69.Enabled = false;
-            this.button_c69.Location = new System.Drawing.Point(419, 159);
+            this.button_c69.Location = new System.Drawing.Point(483, 171);
             this.button_c69.Name = "button_c69";
-            this.button_c69.Size = new System.Drawing.Size(46, 22);
+            this.button_c69.Size = new System.Drawing.Size(54, 24);
             this.button_c69.TabIndex = 68;
             this.button_c69.Text = "69";
             this.button_c69.UseVisualStyleBackColor = false;
@@ -2162,9 +2159,9 @@
             // 
             this.button_c68.BackColor = System.Drawing.Color.White;
             this.button_c68.Enabled = false;
-            this.button_c68.Location = new System.Drawing.Point(367, 159);
+            this.button_c68.Location = new System.Drawing.Point(423, 171);
             this.button_c68.Name = "button_c68";
-            this.button_c68.Size = new System.Drawing.Size(46, 22);
+            this.button_c68.Size = new System.Drawing.Size(54, 24);
             this.button_c68.TabIndex = 67;
             this.button_c68.Text = "68";
             this.button_c68.UseVisualStyleBackColor = false;
@@ -2174,9 +2171,9 @@
             // 
             this.button_c67.BackColor = System.Drawing.Color.White;
             this.button_c67.Enabled = false;
-            this.button_c67.Location = new System.Drawing.Point(315, 159);
+            this.button_c67.Location = new System.Drawing.Point(363, 171);
             this.button_c67.Name = "button_c67";
-            this.button_c67.Size = new System.Drawing.Size(46, 22);
+            this.button_c67.Size = new System.Drawing.Size(54, 24);
             this.button_c67.TabIndex = 66;
             this.button_c67.Text = "67";
             this.button_c67.UseVisualStyleBackColor = false;
@@ -2186,9 +2183,9 @@
             // 
             this.button_c66.BackColor = System.Drawing.Color.White;
             this.button_c66.Enabled = false;
-            this.button_c66.Location = new System.Drawing.Point(263, 159);
+            this.button_c66.Location = new System.Drawing.Point(303, 171);
             this.button_c66.Name = "button_c66";
-            this.button_c66.Size = new System.Drawing.Size(46, 22);
+            this.button_c66.Size = new System.Drawing.Size(54, 24);
             this.button_c66.TabIndex = 65;
             this.button_c66.Text = "66";
             this.button_c66.UseVisualStyleBackColor = false;
@@ -2198,9 +2195,9 @@
             // 
             this.button_c65.BackColor = System.Drawing.Color.White;
             this.button_c65.Enabled = false;
-            this.button_c65.Location = new System.Drawing.Point(211, 159);
+            this.button_c65.Location = new System.Drawing.Point(243, 171);
             this.button_c65.Name = "button_c65";
-            this.button_c65.Size = new System.Drawing.Size(46, 22);
+            this.button_c65.Size = new System.Drawing.Size(54, 24);
             this.button_c65.TabIndex = 64;
             this.button_c65.Text = "65";
             this.button_c65.UseVisualStyleBackColor = false;
@@ -2210,9 +2207,9 @@
             // 
             this.button_c64.BackColor = System.Drawing.Color.White;
             this.button_c64.Enabled = false;
-            this.button_c64.Location = new System.Drawing.Point(159, 159);
+            this.button_c64.Location = new System.Drawing.Point(183, 171);
             this.button_c64.Name = "button_c64";
-            this.button_c64.Size = new System.Drawing.Size(46, 22);
+            this.button_c64.Size = new System.Drawing.Size(54, 24);
             this.button_c64.TabIndex = 63;
             this.button_c64.Text = "64";
             this.button_c64.UseVisualStyleBackColor = false;
@@ -2222,9 +2219,9 @@
             // 
             this.button_c63.BackColor = System.Drawing.Color.White;
             this.button_c63.Enabled = false;
-            this.button_c63.Location = new System.Drawing.Point(107, 159);
+            this.button_c63.Location = new System.Drawing.Point(123, 171);
             this.button_c63.Name = "button_c63";
-            this.button_c63.Size = new System.Drawing.Size(46, 22);
+            this.button_c63.Size = new System.Drawing.Size(54, 24);
             this.button_c63.TabIndex = 62;
             this.button_c63.Text = "63";
             this.button_c63.UseVisualStyleBackColor = false;
@@ -2234,9 +2231,9 @@
             // 
             this.button_c62.BackColor = System.Drawing.Color.White;
             this.button_c62.Enabled = false;
-            this.button_c62.Location = new System.Drawing.Point(55, 159);
+            this.button_c62.Location = new System.Drawing.Point(63, 171);
             this.button_c62.Name = "button_c62";
-            this.button_c62.Size = new System.Drawing.Size(46, 22);
+            this.button_c62.Size = new System.Drawing.Size(54, 24);
             this.button_c62.TabIndex = 61;
             this.button_c62.Text = "62";
             this.button_c62.UseVisualStyleBackColor = false;
@@ -2246,9 +2243,9 @@
             // 
             this.button_c61.BackColor = System.Drawing.Color.White;
             this.button_c61.Enabled = false;
-            this.button_c61.Location = new System.Drawing.Point(3, 159);
+            this.button_c61.Location = new System.Drawing.Point(3, 171);
             this.button_c61.Name = "button_c61";
-            this.button_c61.Size = new System.Drawing.Size(46, 22);
+            this.button_c61.Size = new System.Drawing.Size(54, 24);
             this.button_c61.TabIndex = 60;
             this.button_c61.Text = "61";
             this.button_c61.UseVisualStyleBackColor = false;
@@ -2258,9 +2255,9 @@
             // 
             this.button_c60.BackColor = System.Drawing.Color.White;
             this.button_c60.Enabled = false;
-            this.button_c60.Location = new System.Drawing.Point(471, 133);
+            this.button_c60.Location = new System.Drawing.Point(543, 143);
             this.button_c60.Name = "button_c60";
-            this.button_c60.Size = new System.Drawing.Size(47, 20);
+            this.button_c60.Size = new System.Drawing.Size(55, 22);
             this.button_c60.TabIndex = 59;
             this.button_c60.Text = "60";
             this.button_c60.UseVisualStyleBackColor = false;
@@ -2270,9 +2267,9 @@
             // 
             this.button_c59.BackColor = System.Drawing.Color.White;
             this.button_c59.Enabled = false;
-            this.button_c59.Location = new System.Drawing.Point(419, 133);
+            this.button_c59.Location = new System.Drawing.Point(483, 143);
             this.button_c59.Name = "button_c59";
-            this.button_c59.Size = new System.Drawing.Size(46, 20);
+            this.button_c59.Size = new System.Drawing.Size(54, 22);
             this.button_c59.TabIndex = 58;
             this.button_c59.Text = "59";
             this.button_c59.UseVisualStyleBackColor = false;
@@ -2282,9 +2279,9 @@
             // 
             this.button_c58.BackColor = System.Drawing.Color.White;
             this.button_c58.Enabled = false;
-            this.button_c58.Location = new System.Drawing.Point(367, 133);
+            this.button_c58.Location = new System.Drawing.Point(423, 143);
             this.button_c58.Name = "button_c58";
-            this.button_c58.Size = new System.Drawing.Size(46, 20);
+            this.button_c58.Size = new System.Drawing.Size(54, 22);
             this.button_c58.TabIndex = 57;
             this.button_c58.Text = "58";
             this.button_c58.UseVisualStyleBackColor = false;
@@ -2294,9 +2291,9 @@
             // 
             this.button_c57.BackColor = System.Drawing.Color.White;
             this.button_c57.Enabled = false;
-            this.button_c57.Location = new System.Drawing.Point(315, 133);
+            this.button_c57.Location = new System.Drawing.Point(363, 143);
             this.button_c57.Name = "button_c57";
-            this.button_c57.Size = new System.Drawing.Size(46, 20);
+            this.button_c57.Size = new System.Drawing.Size(54, 22);
             this.button_c57.TabIndex = 56;
             this.button_c57.Text = "57";
             this.button_c57.UseVisualStyleBackColor = false;
@@ -2306,9 +2303,9 @@
             // 
             this.button_c56.BackColor = System.Drawing.Color.White;
             this.button_c56.Enabled = false;
-            this.button_c56.Location = new System.Drawing.Point(263, 133);
+            this.button_c56.Location = new System.Drawing.Point(303, 143);
             this.button_c56.Name = "button_c56";
-            this.button_c56.Size = new System.Drawing.Size(46, 20);
+            this.button_c56.Size = new System.Drawing.Size(54, 22);
             this.button_c56.TabIndex = 55;
             this.button_c56.Text = "56";
             this.button_c56.UseVisualStyleBackColor = false;
@@ -2318,9 +2315,9 @@
             // 
             this.button_c55.BackColor = System.Drawing.Color.White;
             this.button_c55.Enabled = false;
-            this.button_c55.Location = new System.Drawing.Point(211, 133);
+            this.button_c55.Location = new System.Drawing.Point(243, 143);
             this.button_c55.Name = "button_c55";
-            this.button_c55.Size = new System.Drawing.Size(46, 20);
+            this.button_c55.Size = new System.Drawing.Size(54, 22);
             this.button_c55.TabIndex = 54;
             this.button_c55.Text = "55";
             this.button_c55.UseVisualStyleBackColor = false;
@@ -2330,9 +2327,9 @@
             // 
             this.button_c54.BackColor = System.Drawing.Color.White;
             this.button_c54.Enabled = false;
-            this.button_c54.Location = new System.Drawing.Point(159, 133);
+            this.button_c54.Location = new System.Drawing.Point(183, 143);
             this.button_c54.Name = "button_c54";
-            this.button_c54.Size = new System.Drawing.Size(46, 20);
+            this.button_c54.Size = new System.Drawing.Size(54, 22);
             this.button_c54.TabIndex = 53;
             this.button_c54.Text = "54";
             this.button_c54.UseVisualStyleBackColor = false;
@@ -2342,9 +2339,9 @@
             // 
             this.button_c53.BackColor = System.Drawing.Color.White;
             this.button_c53.Enabled = false;
-            this.button_c53.Location = new System.Drawing.Point(107, 133);
+            this.button_c53.Location = new System.Drawing.Point(123, 143);
             this.button_c53.Name = "button_c53";
-            this.button_c53.Size = new System.Drawing.Size(46, 20);
+            this.button_c53.Size = new System.Drawing.Size(54, 22);
             this.button_c53.TabIndex = 52;
             this.button_c53.Text = "53";
             this.button_c53.UseVisualStyleBackColor = false;
@@ -2354,9 +2351,9 @@
             // 
             this.button_c52.BackColor = System.Drawing.Color.White;
             this.button_c52.Enabled = false;
-            this.button_c52.Location = new System.Drawing.Point(55, 133);
+            this.button_c52.Location = new System.Drawing.Point(63, 143);
             this.button_c52.Name = "button_c52";
-            this.button_c52.Size = new System.Drawing.Size(46, 20);
+            this.button_c52.Size = new System.Drawing.Size(54, 22);
             this.button_c52.TabIndex = 51;
             this.button_c52.Text = "52";
             this.button_c52.UseVisualStyleBackColor = false;
@@ -2366,9 +2363,9 @@
             // 
             this.button_c51.BackColor = System.Drawing.Color.White;
             this.button_c51.Enabled = false;
-            this.button_c51.Location = new System.Drawing.Point(3, 133);
+            this.button_c51.Location = new System.Drawing.Point(3, 143);
             this.button_c51.Name = "button_c51";
-            this.button_c51.Size = new System.Drawing.Size(46, 20);
+            this.button_c51.Size = new System.Drawing.Size(54, 22);
             this.button_c51.TabIndex = 50;
             this.button_c51.Text = "51";
             this.button_c51.UseVisualStyleBackColor = false;
@@ -2378,9 +2375,9 @@
             // 
             this.button_c50.BackColor = System.Drawing.Color.White;
             this.button_c50.Enabled = false;
-            this.button_c50.Location = new System.Drawing.Point(471, 107);
+            this.button_c50.Location = new System.Drawing.Point(543, 115);
             this.button_c50.Name = "button_c50";
-            this.button_c50.Size = new System.Drawing.Size(47, 20);
+            this.button_c50.Size = new System.Drawing.Size(55, 22);
             this.button_c50.TabIndex = 49;
             this.button_c50.Text = "50";
             this.button_c50.UseVisualStyleBackColor = false;
@@ -2390,9 +2387,9 @@
             // 
             this.button_c49.BackColor = System.Drawing.Color.White;
             this.button_c49.Enabled = false;
-            this.button_c49.Location = new System.Drawing.Point(419, 107);
+            this.button_c49.Location = new System.Drawing.Point(483, 115);
             this.button_c49.Name = "button_c49";
-            this.button_c49.Size = new System.Drawing.Size(46, 20);
+            this.button_c49.Size = new System.Drawing.Size(54, 22);
             this.button_c49.TabIndex = 48;
             this.button_c49.Text = "49";
             this.button_c49.UseVisualStyleBackColor = false;
@@ -2402,9 +2399,9 @@
             // 
             this.button_c48.BackColor = System.Drawing.Color.White;
             this.button_c48.Enabled = false;
-            this.button_c48.Location = new System.Drawing.Point(367, 107);
+            this.button_c48.Location = new System.Drawing.Point(423, 115);
             this.button_c48.Name = "button_c48";
-            this.button_c48.Size = new System.Drawing.Size(46, 20);
+            this.button_c48.Size = new System.Drawing.Size(54, 22);
             this.button_c48.TabIndex = 47;
             this.button_c48.Text = "48";
             this.button_c48.UseVisualStyleBackColor = false;
@@ -2414,9 +2411,9 @@
             // 
             this.button_c47.BackColor = System.Drawing.Color.White;
             this.button_c47.Enabled = false;
-            this.button_c47.Location = new System.Drawing.Point(315, 107);
+            this.button_c47.Location = new System.Drawing.Point(363, 115);
             this.button_c47.Name = "button_c47";
-            this.button_c47.Size = new System.Drawing.Size(46, 20);
+            this.button_c47.Size = new System.Drawing.Size(54, 22);
             this.button_c47.TabIndex = 46;
             this.button_c47.Text = "47";
             this.button_c47.UseVisualStyleBackColor = false;
@@ -2426,9 +2423,9 @@
             // 
             this.button_c46.BackColor = System.Drawing.Color.White;
             this.button_c46.Enabled = false;
-            this.button_c46.Location = new System.Drawing.Point(263, 107);
+            this.button_c46.Location = new System.Drawing.Point(303, 115);
             this.button_c46.Name = "button_c46";
-            this.button_c46.Size = new System.Drawing.Size(46, 20);
+            this.button_c46.Size = new System.Drawing.Size(54, 22);
             this.button_c46.TabIndex = 45;
             this.button_c46.Text = "46";
             this.button_c46.UseVisualStyleBackColor = false;
@@ -2438,9 +2435,9 @@
             // 
             this.button_c45.BackColor = System.Drawing.Color.White;
             this.button_c45.Enabled = false;
-            this.button_c45.Location = new System.Drawing.Point(211, 107);
+            this.button_c45.Location = new System.Drawing.Point(243, 115);
             this.button_c45.Name = "button_c45";
-            this.button_c45.Size = new System.Drawing.Size(46, 20);
+            this.button_c45.Size = new System.Drawing.Size(54, 22);
             this.button_c45.TabIndex = 44;
             this.button_c45.Text = "45";
             this.button_c45.UseVisualStyleBackColor = false;
@@ -2450,9 +2447,9 @@
             // 
             this.button_c44.BackColor = System.Drawing.Color.White;
             this.button_c44.Enabled = false;
-            this.button_c44.Location = new System.Drawing.Point(159, 107);
+            this.button_c44.Location = new System.Drawing.Point(183, 115);
             this.button_c44.Name = "button_c44";
-            this.button_c44.Size = new System.Drawing.Size(46, 20);
+            this.button_c44.Size = new System.Drawing.Size(54, 22);
             this.button_c44.TabIndex = 43;
             this.button_c44.Text = "44";
             this.button_c44.UseVisualStyleBackColor = false;
@@ -2462,9 +2459,9 @@
             // 
             this.button_c43.BackColor = System.Drawing.Color.White;
             this.button_c43.Enabled = false;
-            this.button_c43.Location = new System.Drawing.Point(107, 107);
+            this.button_c43.Location = new System.Drawing.Point(123, 115);
             this.button_c43.Name = "button_c43";
-            this.button_c43.Size = new System.Drawing.Size(46, 20);
+            this.button_c43.Size = new System.Drawing.Size(54, 22);
             this.button_c43.TabIndex = 42;
             this.button_c43.Text = "43";
             this.button_c43.UseVisualStyleBackColor = false;
@@ -2474,9 +2471,9 @@
             // 
             this.button_c42.BackColor = System.Drawing.Color.White;
             this.button_c42.Enabled = false;
-            this.button_c42.Location = new System.Drawing.Point(55, 107);
+            this.button_c42.Location = new System.Drawing.Point(63, 115);
             this.button_c42.Name = "button_c42";
-            this.button_c42.Size = new System.Drawing.Size(46, 20);
+            this.button_c42.Size = new System.Drawing.Size(54, 22);
             this.button_c42.TabIndex = 41;
             this.button_c42.Text = "42";
             this.button_c42.UseVisualStyleBackColor = false;
@@ -2486,9 +2483,9 @@
             // 
             this.button_c41.BackColor = System.Drawing.Color.White;
             this.button_c41.Enabled = false;
-            this.button_c41.Location = new System.Drawing.Point(3, 107);
+            this.button_c41.Location = new System.Drawing.Point(3, 115);
             this.button_c41.Name = "button_c41";
-            this.button_c41.Size = new System.Drawing.Size(46, 20);
+            this.button_c41.Size = new System.Drawing.Size(54, 22);
             this.button_c41.TabIndex = 40;
             this.button_c41.Text = "41";
             this.button_c41.UseVisualStyleBackColor = false;
@@ -2498,9 +2495,9 @@
             // 
             this.button_c40.BackColor = System.Drawing.Color.White;
             this.button_c40.Enabled = false;
-            this.button_c40.Location = new System.Drawing.Point(471, 81);
+            this.button_c40.Location = new System.Drawing.Point(543, 87);
             this.button_c40.Name = "button_c40";
-            this.button_c40.Size = new System.Drawing.Size(47, 20);
+            this.button_c40.Size = new System.Drawing.Size(55, 22);
             this.button_c40.TabIndex = 39;
             this.button_c40.Text = "40";
             this.button_c40.UseVisualStyleBackColor = false;
@@ -2510,9 +2507,9 @@
             // 
             this.button_c39.BackColor = System.Drawing.Color.White;
             this.button_c39.Enabled = false;
-            this.button_c39.Location = new System.Drawing.Point(419, 81);
+            this.button_c39.Location = new System.Drawing.Point(483, 87);
             this.button_c39.Name = "button_c39";
-            this.button_c39.Size = new System.Drawing.Size(46, 20);
+            this.button_c39.Size = new System.Drawing.Size(54, 22);
             this.button_c39.TabIndex = 38;
             this.button_c39.Text = "39";
             this.button_c39.UseVisualStyleBackColor = false;
@@ -2522,9 +2519,9 @@
             // 
             this.button_c38.BackColor = System.Drawing.Color.White;
             this.button_c38.Enabled = false;
-            this.button_c38.Location = new System.Drawing.Point(367, 81);
+            this.button_c38.Location = new System.Drawing.Point(423, 87);
             this.button_c38.Name = "button_c38";
-            this.button_c38.Size = new System.Drawing.Size(46, 20);
+            this.button_c38.Size = new System.Drawing.Size(54, 22);
             this.button_c38.TabIndex = 37;
             this.button_c38.Text = "38";
             this.button_c38.UseVisualStyleBackColor = false;
@@ -2534,9 +2531,9 @@
             // 
             this.button_c37.BackColor = System.Drawing.Color.White;
             this.button_c37.Enabled = false;
-            this.button_c37.Location = new System.Drawing.Point(315, 81);
+            this.button_c37.Location = new System.Drawing.Point(363, 87);
             this.button_c37.Name = "button_c37";
-            this.button_c37.Size = new System.Drawing.Size(46, 20);
+            this.button_c37.Size = new System.Drawing.Size(54, 22);
             this.button_c37.TabIndex = 36;
             this.button_c37.Text = "37";
             this.button_c37.UseVisualStyleBackColor = false;
@@ -2546,9 +2543,9 @@
             // 
             this.button_c36.BackColor = System.Drawing.Color.White;
             this.button_c36.Enabled = false;
-            this.button_c36.Location = new System.Drawing.Point(263, 81);
+            this.button_c36.Location = new System.Drawing.Point(303, 87);
             this.button_c36.Name = "button_c36";
-            this.button_c36.Size = new System.Drawing.Size(46, 20);
+            this.button_c36.Size = new System.Drawing.Size(54, 22);
             this.button_c36.TabIndex = 35;
             this.button_c36.Text = "36";
             this.button_c36.UseVisualStyleBackColor = false;
@@ -2558,9 +2555,9 @@
             // 
             this.button_c35.BackColor = System.Drawing.Color.White;
             this.button_c35.Enabled = false;
-            this.button_c35.Location = new System.Drawing.Point(211, 81);
+            this.button_c35.Location = new System.Drawing.Point(243, 87);
             this.button_c35.Name = "button_c35";
-            this.button_c35.Size = new System.Drawing.Size(46, 20);
+            this.button_c35.Size = new System.Drawing.Size(54, 22);
             this.button_c35.TabIndex = 34;
             this.button_c35.Text = "35";
             this.button_c35.UseVisualStyleBackColor = false;
@@ -2570,9 +2567,9 @@
             // 
             this.button_c34.BackColor = System.Drawing.Color.White;
             this.button_c34.Enabled = false;
-            this.button_c34.Location = new System.Drawing.Point(159, 81);
+            this.button_c34.Location = new System.Drawing.Point(183, 87);
             this.button_c34.Name = "button_c34";
-            this.button_c34.Size = new System.Drawing.Size(46, 20);
+            this.button_c34.Size = new System.Drawing.Size(54, 22);
             this.button_c34.TabIndex = 33;
             this.button_c34.Text = "34";
             this.button_c34.UseVisualStyleBackColor = false;
@@ -2582,9 +2579,9 @@
             // 
             this.button_c33.BackColor = System.Drawing.Color.White;
             this.button_c33.Enabled = false;
-            this.button_c33.Location = new System.Drawing.Point(107, 81);
+            this.button_c33.Location = new System.Drawing.Point(123, 87);
             this.button_c33.Name = "button_c33";
-            this.button_c33.Size = new System.Drawing.Size(46, 20);
+            this.button_c33.Size = new System.Drawing.Size(54, 22);
             this.button_c33.TabIndex = 32;
             this.button_c33.Text = "33";
             this.button_c33.UseVisualStyleBackColor = false;
@@ -2594,9 +2591,9 @@
             // 
             this.button_c32.BackColor = System.Drawing.Color.White;
             this.button_c32.Enabled = false;
-            this.button_c32.Location = new System.Drawing.Point(55, 81);
+            this.button_c32.Location = new System.Drawing.Point(63, 87);
             this.button_c32.Name = "button_c32";
-            this.button_c32.Size = new System.Drawing.Size(46, 20);
+            this.button_c32.Size = new System.Drawing.Size(54, 22);
             this.button_c32.TabIndex = 31;
             this.button_c32.Text = "32";
             this.button_c32.UseVisualStyleBackColor = false;
@@ -2606,9 +2603,9 @@
             // 
             this.button_c31.BackColor = System.Drawing.Color.White;
             this.button_c31.Enabled = false;
-            this.button_c31.Location = new System.Drawing.Point(3, 81);
+            this.button_c31.Location = new System.Drawing.Point(3, 87);
             this.button_c31.Name = "button_c31";
-            this.button_c31.Size = new System.Drawing.Size(46, 20);
+            this.button_c31.Size = new System.Drawing.Size(54, 22);
             this.button_c31.TabIndex = 30;
             this.button_c31.Text = "31";
             this.button_c31.UseVisualStyleBackColor = false;
@@ -2618,9 +2615,9 @@
             // 
             this.button_c30.BackColor = System.Drawing.Color.White;
             this.button_c30.Enabled = false;
-            this.button_c30.Location = new System.Drawing.Point(471, 55);
+            this.button_c30.Location = new System.Drawing.Point(543, 59);
             this.button_c30.Name = "button_c30";
-            this.button_c30.Size = new System.Drawing.Size(47, 20);
+            this.button_c30.Size = new System.Drawing.Size(55, 22);
             this.button_c30.TabIndex = 29;
             this.button_c30.Text = "30";
             this.button_c30.UseVisualStyleBackColor = false;
@@ -2630,9 +2627,9 @@
             // 
             this.button_c29.BackColor = System.Drawing.Color.White;
             this.button_c29.Enabled = false;
-            this.button_c29.Location = new System.Drawing.Point(419, 55);
+            this.button_c29.Location = new System.Drawing.Point(483, 59);
             this.button_c29.Name = "button_c29";
-            this.button_c29.Size = new System.Drawing.Size(46, 20);
+            this.button_c29.Size = new System.Drawing.Size(54, 22);
             this.button_c29.TabIndex = 28;
             this.button_c29.Text = "29";
             this.button_c29.UseVisualStyleBackColor = false;
@@ -2642,9 +2639,9 @@
             // 
             this.button_c28.BackColor = System.Drawing.Color.White;
             this.button_c28.Enabled = false;
-            this.button_c28.Location = new System.Drawing.Point(367, 55);
+            this.button_c28.Location = new System.Drawing.Point(423, 59);
             this.button_c28.Name = "button_c28";
-            this.button_c28.Size = new System.Drawing.Size(46, 20);
+            this.button_c28.Size = new System.Drawing.Size(54, 22);
             this.button_c28.TabIndex = 27;
             this.button_c28.Text = "28";
             this.button_c28.UseVisualStyleBackColor = false;
@@ -2654,9 +2651,9 @@
             // 
             this.button_c27.BackColor = System.Drawing.Color.White;
             this.button_c27.Enabled = false;
-            this.button_c27.Location = new System.Drawing.Point(315, 55);
+            this.button_c27.Location = new System.Drawing.Point(363, 59);
             this.button_c27.Name = "button_c27";
-            this.button_c27.Size = new System.Drawing.Size(46, 20);
+            this.button_c27.Size = new System.Drawing.Size(54, 22);
             this.button_c27.TabIndex = 26;
             this.button_c27.Text = "27";
             this.button_c27.UseVisualStyleBackColor = false;
@@ -2666,9 +2663,9 @@
             // 
             this.button_c26.BackColor = System.Drawing.Color.White;
             this.button_c26.Enabled = false;
-            this.button_c26.Location = new System.Drawing.Point(263, 55);
+            this.button_c26.Location = new System.Drawing.Point(303, 59);
             this.button_c26.Name = "button_c26";
-            this.button_c26.Size = new System.Drawing.Size(46, 20);
+            this.button_c26.Size = new System.Drawing.Size(54, 22);
             this.button_c26.TabIndex = 25;
             this.button_c26.Text = "26";
             this.button_c26.UseVisualStyleBackColor = false;
@@ -2678,9 +2675,9 @@
             // 
             this.button_c25.BackColor = System.Drawing.Color.White;
             this.button_c25.Enabled = false;
-            this.button_c25.Location = new System.Drawing.Point(211, 55);
+            this.button_c25.Location = new System.Drawing.Point(243, 59);
             this.button_c25.Name = "button_c25";
-            this.button_c25.Size = new System.Drawing.Size(46, 20);
+            this.button_c25.Size = new System.Drawing.Size(54, 22);
             this.button_c25.TabIndex = 24;
             this.button_c25.Text = "25";
             this.button_c25.UseVisualStyleBackColor = false;
@@ -2690,9 +2687,9 @@
             // 
             this.button_c24.BackColor = System.Drawing.Color.White;
             this.button_c24.Enabled = false;
-            this.button_c24.Location = new System.Drawing.Point(159, 55);
+            this.button_c24.Location = new System.Drawing.Point(183, 59);
             this.button_c24.Name = "button_c24";
-            this.button_c24.Size = new System.Drawing.Size(46, 20);
+            this.button_c24.Size = new System.Drawing.Size(54, 22);
             this.button_c24.TabIndex = 23;
             this.button_c24.Text = "24";
             this.button_c24.UseVisualStyleBackColor = false;
@@ -2702,9 +2699,9 @@
             // 
             this.button_c23.BackColor = System.Drawing.Color.White;
             this.button_c23.Enabled = false;
-            this.button_c23.Location = new System.Drawing.Point(107, 55);
+            this.button_c23.Location = new System.Drawing.Point(123, 59);
             this.button_c23.Name = "button_c23";
-            this.button_c23.Size = new System.Drawing.Size(46, 20);
+            this.button_c23.Size = new System.Drawing.Size(54, 22);
             this.button_c23.TabIndex = 22;
             this.button_c23.Text = "23";
             this.button_c23.UseVisualStyleBackColor = false;
@@ -2714,9 +2711,9 @@
             // 
             this.button_c22.BackColor = System.Drawing.Color.White;
             this.button_c22.Enabled = false;
-            this.button_c22.Location = new System.Drawing.Point(55, 55);
+            this.button_c22.Location = new System.Drawing.Point(63, 59);
             this.button_c22.Name = "button_c22";
-            this.button_c22.Size = new System.Drawing.Size(46, 20);
+            this.button_c22.Size = new System.Drawing.Size(54, 22);
             this.button_c22.TabIndex = 21;
             this.button_c22.Text = "22";
             this.button_c22.UseVisualStyleBackColor = false;
@@ -2726,9 +2723,9 @@
             // 
             this.button_c21.BackColor = System.Drawing.Color.White;
             this.button_c21.Enabled = false;
-            this.button_c21.Location = new System.Drawing.Point(3, 55);
+            this.button_c21.Location = new System.Drawing.Point(3, 59);
             this.button_c21.Name = "button_c21";
-            this.button_c21.Size = new System.Drawing.Size(46, 20);
+            this.button_c21.Size = new System.Drawing.Size(54, 22);
             this.button_c21.TabIndex = 20;
             this.button_c21.Text = "21";
             this.button_c21.UseVisualStyleBackColor = false;
@@ -2738,9 +2735,9 @@
             // 
             this.button_c20.BackColor = System.Drawing.Color.White;
             this.button_c20.Enabled = false;
-            this.button_c20.Location = new System.Drawing.Point(471, 29);
+            this.button_c20.Location = new System.Drawing.Point(543, 31);
             this.button_c20.Name = "button_c20";
-            this.button_c20.Size = new System.Drawing.Size(47, 20);
+            this.button_c20.Size = new System.Drawing.Size(55, 22);
             this.button_c20.TabIndex = 19;
             this.button_c20.Text = "20";
             this.button_c20.UseVisualStyleBackColor = false;
@@ -2750,9 +2747,9 @@
             // 
             this.button_c19.BackColor = System.Drawing.Color.White;
             this.button_c19.Enabled = false;
-            this.button_c19.Location = new System.Drawing.Point(419, 29);
+            this.button_c19.Location = new System.Drawing.Point(483, 31);
             this.button_c19.Name = "button_c19";
-            this.button_c19.Size = new System.Drawing.Size(46, 20);
+            this.button_c19.Size = new System.Drawing.Size(54, 22);
             this.button_c19.TabIndex = 18;
             this.button_c19.Text = "19";
             this.button_c19.UseVisualStyleBackColor = false;
@@ -2762,9 +2759,9 @@
             // 
             this.button_c18.BackColor = System.Drawing.Color.White;
             this.button_c18.Enabled = false;
-            this.button_c18.Location = new System.Drawing.Point(367, 29);
+            this.button_c18.Location = new System.Drawing.Point(423, 31);
             this.button_c18.Name = "button_c18";
-            this.button_c18.Size = new System.Drawing.Size(46, 20);
+            this.button_c18.Size = new System.Drawing.Size(54, 22);
             this.button_c18.TabIndex = 17;
             this.button_c18.Text = "18";
             this.button_c18.UseVisualStyleBackColor = false;
@@ -2774,9 +2771,9 @@
             // 
             this.button_c17.BackColor = System.Drawing.Color.White;
             this.button_c17.Enabled = false;
-            this.button_c17.Location = new System.Drawing.Point(315, 29);
+            this.button_c17.Location = new System.Drawing.Point(363, 31);
             this.button_c17.Name = "button_c17";
-            this.button_c17.Size = new System.Drawing.Size(46, 20);
+            this.button_c17.Size = new System.Drawing.Size(54, 22);
             this.button_c17.TabIndex = 16;
             this.button_c17.Text = "17";
             this.button_c17.UseVisualStyleBackColor = false;
@@ -2786,9 +2783,9 @@
             // 
             this.button_c16.BackColor = System.Drawing.Color.White;
             this.button_c16.Enabled = false;
-            this.button_c16.Location = new System.Drawing.Point(263, 29);
+            this.button_c16.Location = new System.Drawing.Point(303, 31);
             this.button_c16.Name = "button_c16";
-            this.button_c16.Size = new System.Drawing.Size(46, 20);
+            this.button_c16.Size = new System.Drawing.Size(54, 22);
             this.button_c16.TabIndex = 15;
             this.button_c16.Text = "16";
             this.button_c16.UseVisualStyleBackColor = false;
@@ -2798,9 +2795,9 @@
             // 
             this.button_c15.BackColor = System.Drawing.Color.White;
             this.button_c15.Enabled = false;
-            this.button_c15.Location = new System.Drawing.Point(211, 29);
+            this.button_c15.Location = new System.Drawing.Point(243, 31);
             this.button_c15.Name = "button_c15";
-            this.button_c15.Size = new System.Drawing.Size(46, 20);
+            this.button_c15.Size = new System.Drawing.Size(54, 22);
             this.button_c15.TabIndex = 14;
             this.button_c15.Text = "15";
             this.button_c15.UseVisualStyleBackColor = false;
@@ -2810,9 +2807,9 @@
             // 
             this.button_c14.BackColor = System.Drawing.Color.White;
             this.button_c14.Enabled = false;
-            this.button_c14.Location = new System.Drawing.Point(159, 29);
+            this.button_c14.Location = new System.Drawing.Point(183, 31);
             this.button_c14.Name = "button_c14";
-            this.button_c14.Size = new System.Drawing.Size(46, 20);
+            this.button_c14.Size = new System.Drawing.Size(54, 22);
             this.button_c14.TabIndex = 13;
             this.button_c14.Text = "14";
             this.button_c14.UseVisualStyleBackColor = false;
@@ -2822,9 +2819,9 @@
             // 
             this.button_c13.BackColor = System.Drawing.Color.White;
             this.button_c13.Enabled = false;
-            this.button_c13.Location = new System.Drawing.Point(107, 29);
+            this.button_c13.Location = new System.Drawing.Point(123, 31);
             this.button_c13.Name = "button_c13";
-            this.button_c13.Size = new System.Drawing.Size(46, 20);
+            this.button_c13.Size = new System.Drawing.Size(54, 22);
             this.button_c13.TabIndex = 12;
             this.button_c13.Text = "13";
             this.button_c13.UseVisualStyleBackColor = false;
@@ -2834,9 +2831,9 @@
             // 
             this.button_c12.BackColor = System.Drawing.Color.White;
             this.button_c12.Enabled = false;
-            this.button_c12.Location = new System.Drawing.Point(55, 29);
+            this.button_c12.Location = new System.Drawing.Point(63, 31);
             this.button_c12.Name = "button_c12";
-            this.button_c12.Size = new System.Drawing.Size(46, 20);
+            this.button_c12.Size = new System.Drawing.Size(54, 22);
             this.button_c12.TabIndex = 11;
             this.button_c12.Text = "12";
             this.button_c12.UseVisualStyleBackColor = false;
@@ -2846,9 +2843,9 @@
             // 
             this.button_c11.BackColor = System.Drawing.Color.White;
             this.button_c11.Enabled = false;
-            this.button_c11.Location = new System.Drawing.Point(3, 29);
+            this.button_c11.Location = new System.Drawing.Point(3, 31);
             this.button_c11.Name = "button_c11";
-            this.button_c11.Size = new System.Drawing.Size(46, 20);
+            this.button_c11.Size = new System.Drawing.Size(54, 22);
             this.button_c11.TabIndex = 10;
             this.button_c11.Text = "11";
             this.button_c11.UseVisualStyleBackColor = false;
@@ -2858,9 +2855,9 @@
             // 
             this.button_c10.BackColor = System.Drawing.Color.White;
             this.button_c10.Enabled = false;
-            this.button_c10.Location = new System.Drawing.Point(471, 3);
+            this.button_c10.Location = new System.Drawing.Point(543, 3);
             this.button_c10.Name = "button_c10";
-            this.button_c10.Size = new System.Drawing.Size(47, 20);
+            this.button_c10.Size = new System.Drawing.Size(55, 22);
             this.button_c10.TabIndex = 9;
             this.button_c10.Text = "10";
             this.button_c10.UseVisualStyleBackColor = false;
@@ -2870,9 +2867,9 @@
             // 
             this.button_c9.BackColor = System.Drawing.Color.White;
             this.button_c9.Enabled = false;
-            this.button_c9.Location = new System.Drawing.Point(419, 3);
+            this.button_c9.Location = new System.Drawing.Point(483, 3);
             this.button_c9.Name = "button_c9";
-            this.button_c9.Size = new System.Drawing.Size(46, 20);
+            this.button_c9.Size = new System.Drawing.Size(54, 22);
             this.button_c9.TabIndex = 8;
             this.button_c9.Text = "9";
             this.button_c9.UseVisualStyleBackColor = false;
@@ -2882,9 +2879,9 @@
             // 
             this.button_c8.BackColor = System.Drawing.Color.White;
             this.button_c8.Enabled = false;
-            this.button_c8.Location = new System.Drawing.Point(367, 3);
+            this.button_c8.Location = new System.Drawing.Point(423, 3);
             this.button_c8.Name = "button_c8";
-            this.button_c8.Size = new System.Drawing.Size(46, 20);
+            this.button_c8.Size = new System.Drawing.Size(54, 22);
             this.button_c8.TabIndex = 7;
             this.button_c8.Text = "8";
             this.button_c8.UseVisualStyleBackColor = false;
@@ -2894,9 +2891,9 @@
             // 
             this.button_c7.BackColor = System.Drawing.Color.White;
             this.button_c7.Enabled = false;
-            this.button_c7.Location = new System.Drawing.Point(315, 3);
+            this.button_c7.Location = new System.Drawing.Point(363, 3);
             this.button_c7.Name = "button_c7";
-            this.button_c7.Size = new System.Drawing.Size(46, 20);
+            this.button_c7.Size = new System.Drawing.Size(54, 22);
             this.button_c7.TabIndex = 6;
             this.button_c7.Text = "7";
             this.button_c7.UseVisualStyleBackColor = false;
@@ -2906,9 +2903,9 @@
             // 
             this.button_c6.BackColor = System.Drawing.Color.White;
             this.button_c6.Enabled = false;
-            this.button_c6.Location = new System.Drawing.Point(263, 3);
+            this.button_c6.Location = new System.Drawing.Point(303, 3);
             this.button_c6.Name = "button_c6";
-            this.button_c6.Size = new System.Drawing.Size(46, 20);
+            this.button_c6.Size = new System.Drawing.Size(54, 22);
             this.button_c6.TabIndex = 5;
             this.button_c6.Text = "6";
             this.button_c6.UseVisualStyleBackColor = false;
@@ -2918,9 +2915,9 @@
             // 
             this.button_c5.BackColor = System.Drawing.Color.White;
             this.button_c5.Enabled = false;
-            this.button_c5.Location = new System.Drawing.Point(211, 3);
+            this.button_c5.Location = new System.Drawing.Point(243, 3);
             this.button_c5.Name = "button_c5";
-            this.button_c5.Size = new System.Drawing.Size(46, 20);
+            this.button_c5.Size = new System.Drawing.Size(54, 22);
             this.button_c5.TabIndex = 4;
             this.button_c5.Text = "5";
             this.button_c5.UseVisualStyleBackColor = false;
@@ -2930,9 +2927,9 @@
             // 
             this.button_c4.BackColor = System.Drawing.Color.White;
             this.button_c4.Enabled = false;
-            this.button_c4.Location = new System.Drawing.Point(159, 3);
+            this.button_c4.Location = new System.Drawing.Point(183, 3);
             this.button_c4.Name = "button_c4";
-            this.button_c4.Size = new System.Drawing.Size(46, 20);
+            this.button_c4.Size = new System.Drawing.Size(54, 22);
             this.button_c4.TabIndex = 3;
             this.button_c4.Text = "4";
             this.button_c4.UseVisualStyleBackColor = false;
@@ -2942,9 +2939,9 @@
             // 
             this.button_c3.BackColor = System.Drawing.Color.White;
             this.button_c3.Enabled = false;
-            this.button_c3.Location = new System.Drawing.Point(107, 3);
+            this.button_c3.Location = new System.Drawing.Point(123, 3);
             this.button_c3.Name = "button_c3";
-            this.button_c3.Size = new System.Drawing.Size(46, 20);
+            this.button_c3.Size = new System.Drawing.Size(54, 22);
             this.button_c3.TabIndex = 2;
             this.button_c3.Text = "3";
             this.button_c3.UseVisualStyleBackColor = false;
@@ -2954,9 +2951,9 @@
             // 
             this.button_c2.BackColor = System.Drawing.Color.White;
             this.button_c2.Enabled = false;
-            this.button_c2.Location = new System.Drawing.Point(55, 3);
+            this.button_c2.Location = new System.Drawing.Point(63, 3);
             this.button_c2.Name = "button_c2";
-            this.button_c2.Size = new System.Drawing.Size(46, 20);
+            this.button_c2.Size = new System.Drawing.Size(54, 22);
             this.button_c2.TabIndex = 1;
             this.button_c2.Text = "2";
             this.button_c2.UseVisualStyleBackColor = false;
@@ -2968,7 +2965,7 @@
             this.button_c1.Enabled = false;
             this.button_c1.Location = new System.Drawing.Point(3, 3);
             this.button_c1.Name = "button_c1";
-            this.button_c1.Size = new System.Drawing.Size(46, 20);
+            this.button_c1.Size = new System.Drawing.Size(54, 22);
             this.button_c1.TabIndex = 0;
             this.button_c1.Text = "1";
             this.button_c1.UseVisualStyleBackColor = false;
@@ -2984,10 +2981,10 @@
             this.tabPage5.Controls.Add(this.btnPrint);
             this.tabPage5.Controls.Add(this.dataGridView1);
             this.tabPage5.Controls.Add(this.richTextBox1);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Location = new System.Drawing.Point(4, 23);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(618, 530);
+            this.tabPage5.Size = new System.Drawing.Size(722, 575);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "查看结果";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -2995,17 +2992,17 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(392, 484);
+            this.label2.Location = new System.Drawing.Point(457, 524);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 12);
+            this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 34;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.groupBox3);
-            this.panel5.Location = new System.Drawing.Point(6, 427);
+            this.panel5.Location = new System.Drawing.Point(7, 463);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(380, 79);
+            this.panel5.Size = new System.Drawing.Size(443, 86);
             this.panel5.TabIndex = 33;
             // 
             // groupBox3
@@ -3018,82 +3015,83 @@
             this.groupBox3.Controls.Add(this.textBox_win3);
             this.groupBox3.Controls.Add(this.textBox_win2);
             this.groupBox3.Controls.Add(this.textBox_win1);
-            this.groupBox3.Location = new System.Drawing.Point(3, 9);
+            this.groupBox3.Location = new System.Drawing.Point(3, 10);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(371, 60);
+            this.groupBox3.Size = new System.Drawing.Size(433, 65);
             this.groupBox3.TabIndex = 31;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "请输入目标号码：";
             // 
             // textBox_win8
             // 
-            this.textBox_win8.Location = new System.Drawing.Point(325, 23);
+            this.textBox_win8.Location = new System.Drawing.Point(379, 25);
             this.textBox_win8.Name = "textBox_win8";
-            this.textBox_win8.Size = new System.Drawing.Size(36, 21);
+            this.textBox_win8.Size = new System.Drawing.Size(41, 22);
             this.textBox_win8.TabIndex = 36;
             this.textBox_win8.Text = "0";
             // 
             // textBox_win7
             // 
-            this.textBox_win7.Location = new System.Drawing.Point(283, 23);
+            this.textBox_win7.Location = new System.Drawing.Point(330, 25);
             this.textBox_win7.Name = "textBox_win7";
-            this.textBox_win7.Size = new System.Drawing.Size(36, 21);
+            this.textBox_win7.Size = new System.Drawing.Size(41, 22);
             this.textBox_win7.TabIndex = 35;
             this.textBox_win7.Text = "0";
             // 
             // textBox_win6
             // 
-            this.textBox_win6.Location = new System.Drawing.Point(241, 23);
+            this.textBox_win6.Location = new System.Drawing.Point(281, 25);
             this.textBox_win6.Name = "textBox_win6";
-            this.textBox_win6.Size = new System.Drawing.Size(36, 21);
+            this.textBox_win6.Size = new System.Drawing.Size(41, 22);
             this.textBox_win6.TabIndex = 34;
             this.textBox_win6.Text = "0";
             // 
             // textBox_win5
             // 
-            this.textBox_win5.Location = new System.Drawing.Point(199, 23);
+            this.textBox_win5.Location = new System.Drawing.Point(232, 25);
             this.textBox_win5.Name = "textBox_win5";
-            this.textBox_win5.Size = new System.Drawing.Size(36, 21);
+            this.textBox_win5.Size = new System.Drawing.Size(41, 22);
             this.textBox_win5.TabIndex = 33;
             this.textBox_win5.Text = "0";
             // 
             // textBox_win4
             // 
-            this.textBox_win4.Location = new System.Drawing.Point(157, 23);
+            this.textBox_win4.Location = new System.Drawing.Point(183, 25);
             this.textBox_win4.Name = "textBox_win4";
-            this.textBox_win4.Size = new System.Drawing.Size(36, 21);
+            this.textBox_win4.Size = new System.Drawing.Size(41, 22);
             this.textBox_win4.TabIndex = 32;
             this.textBox_win4.Text = "0";
             // 
             // textBox_win3
             // 
-            this.textBox_win3.Location = new System.Drawing.Point(115, 23);
+            this.textBox_win3.Location = new System.Drawing.Point(134, 25);
             this.textBox_win3.Name = "textBox_win3";
-            this.textBox_win3.Size = new System.Drawing.Size(36, 21);
+            this.textBox_win3.Size = new System.Drawing.Size(41, 22);
             this.textBox_win3.TabIndex = 31;
             this.textBox_win3.Text = "0";
             // 
             // textBox_win2
             // 
-            this.textBox_win2.Location = new System.Drawing.Point(73, 23);
+            this.textBox_win2.Location = new System.Drawing.Point(85, 25);
             this.textBox_win2.Name = "textBox_win2";
-            this.textBox_win2.Size = new System.Drawing.Size(36, 21);
+            this.textBox_win2.Size = new System.Drawing.Size(41, 22);
             this.textBox_win2.TabIndex = 30;
             this.textBox_win2.Text = "0";
             // 
             // textBox_win1
             // 
-            this.textBox_win1.Location = new System.Drawing.Point(31, 23);
+            this.textBox_win1.Location = new System.Drawing.Point(36, 25);
             this.textBox_win1.Name = "textBox_win1";
-            this.textBox_win1.Size = new System.Drawing.Size(36, 21);
+            this.textBox_win1.Size = new System.Drawing.Size(41, 22);
             this.textBox_win1.TabIndex = 26;
             this.textBox_win1.Text = "0";
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(394, 457);
+            this.button11.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button11.Location = new System.Drawing.Point(460, 495);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
+            this.button11.Size = new System.Drawing.Size(87, 25);
             this.button11.TabIndex = 32;
             this.button11.Text = "目标定位";
             this.button11.UseVisualStyleBackColor = true;
@@ -3101,9 +3099,10 @@
             // 
             // btnPrintPreview
             // 
-            this.btnPrintPreview.Location = new System.Drawing.Point(519, 427);
+            this.btnPrintPreview.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnPrintPreview.Location = new System.Drawing.Point(604, 493);
             this.btnPrintPreview.Name = "btnPrintPreview";
-            this.btnPrintPreview.Size = new System.Drawing.Size(75, 23);
+            this.btnPrintPreview.Size = new System.Drawing.Size(87, 25);
             this.btnPrintPreview.TabIndex = 8;
             this.btnPrintPreview.Text = "打印预览";
             this.btnPrintPreview.UseVisualStyleBackColor = true;
@@ -3111,9 +3110,10 @@
             // 
             // btnPageSetup
             // 
-            this.btnPageSetup.Location = new System.Drawing.Point(394, 428);
+            this.btnPageSetup.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnPageSetup.Location = new System.Drawing.Point(604, 463);
             this.btnPageSetup.Name = "btnPageSetup";
-            this.btnPageSetup.Size = new System.Drawing.Size(75, 23);
+            this.btnPageSetup.Size = new System.Drawing.Size(87, 25);
             this.btnPageSetup.TabIndex = 7;
             this.btnPageSetup.Text = "页面设置";
             this.btnPageSetup.UseVisualStyleBackColor = true;
@@ -3121,9 +3121,10 @@
             // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(519, 484);
+            this.btnPrint.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnPrint.Location = new System.Drawing.Point(604, 524);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(75, 23);
+            this.btnPrint.Size = new System.Drawing.Size(87, 25);
             this.btnPrint.TabIndex = 6;
             this.btnPrint.Text = "打印";
             this.btnPrint.UseVisualStyleBackColor = true;
@@ -3140,63 +3141,20 @@
             this.Column2,
             this.Column3,
             this.Column9});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 29);
+            this.dataGridView1.Location = new System.Drawing.Point(7, 31);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(360, 392);
+            this.dataGridView1.Size = new System.Drawing.Size(420, 425);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ID.Width = 30;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "情况";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column1.Width = 120;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "注数";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column2.Width = 70;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "查看";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column3.Width = 40;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "超出";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column9.Width = 40;
-            // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(372, 29);
+            this.richTextBox1.Location = new System.Drawing.Point(434, 31);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(221, 392);
+            this.richTextBox1.Size = new System.Drawing.Size(257, 424);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "点击左边“查看”按钮显示结果";
             // 
@@ -3207,19 +3165,20 @@
             this.tabPage3.Controls.Add(this.button9);
             this.tabPage3.Controls.Add(this.richTextBox2);
             this.tabPage3.Controls.Add(this.dataGridView3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 23);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(618, 530);
+            this.tabPage3.Size = new System.Drawing.Size(722, 575);
             this.tabPage3.TabIndex = 5;
             this.tabPage3.Text = "特殊五星";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(429, 466);
+            this.button4.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button4.Location = new System.Drawing.Point(500, 505);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(87, 25);
             this.button4.TabIndex = 11;
             this.button4.Text = "打印预览";
             this.button4.UseVisualStyleBackColor = true;
@@ -3227,9 +3186,10 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(348, 466);
+            this.button8.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button8.Location = new System.Drawing.Point(406, 505);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.Size = new System.Drawing.Size(87, 25);
             this.button8.TabIndex = 10;
             this.button8.Text = "页面设置";
             this.button8.UseVisualStyleBackColor = true;
@@ -3237,9 +3197,10 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(510, 466);
+            this.button9.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button9.Location = new System.Drawing.Point(595, 505);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.Size = new System.Drawing.Size(87, 25);
             this.button9.TabIndex = 9;
             this.button9.Text = "打印";
             this.button9.UseVisualStyleBackColor = true;
@@ -3247,10 +3208,10 @@
             // 
             // richTextBox2
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(335, 29);
+            this.richTextBox2.Location = new System.Drawing.Point(391, 31);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.ReadOnly = true;
-            this.richTextBox2.Size = new System.Drawing.Size(259, 423);
+            this.richTextBox2.Size = new System.Drawing.Size(301, 458);
             this.richTextBox2.TabIndex = 7;
             this.richTextBox2.Text = "点击左边“查看”按钮显示结果";
             // 
@@ -3265,56 +3226,13 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.Column10});
-            this.dataGridView3.Location = new System.Drawing.Point(6, 29);
+            this.dataGridView3.Location = new System.Drawing.Point(7, 31);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.RowTemplate.Height = 23;
-            this.dataGridView3.Size = new System.Drawing.Size(323, 423);
+            this.dataGridView3.Size = new System.Drawing.Size(377, 458);
             this.dataGridView3.TabIndex = 6;
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn1.Width = 30;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "情况";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn2.Width = 70;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "注数";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn3.Width = 70;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "查看";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn4.Width = 40;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "超出";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column10.Width = 40;
             // 
             // 文件ToolStripMenuItem
             // 
@@ -3322,28 +3240,29 @@
             this.小工具ToolStripMenuItem,
             this.保存当前进度ToolStripMenuItem,
             this.退出ToolStripMenuItem});
+            this.文件ToolStripMenuItem.Font = new System.Drawing.Font("KaiTi", 10F);
             this.文件ToolStripMenuItem.Name = "文件ToolStripMenuItem";
-            this.文件ToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.文件ToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.文件ToolStripMenuItem.Text = "文件";
             // 
             // 小工具ToolStripMenuItem
             // 
             this.小工具ToolStripMenuItem.Name = "小工具ToolStripMenuItem";
-            this.小工具ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.小工具ToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.小工具ToolStripMenuItem.Text = "小工具";
             this.小工具ToolStripMenuItem.Click += new System.EventHandler(this.小工具ToolStripMenuItem_Click);
             // 
             // 保存当前进度ToolStripMenuItem
             // 
             this.保存当前进度ToolStripMenuItem.Name = "保存当前进度ToolStripMenuItem";
-            this.保存当前进度ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.保存当前进度ToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.保存当前进度ToolStripMenuItem.Text = "保存当前进度";
             this.保存当前进度ToolStripMenuItem.Click += new System.EventHandler(this.保存当前进度ToolStripMenuItem_Click);
             // 
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
@@ -3351,14 +3270,15 @@
             // 
             this.帮助ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.关于ToolStripMenuItem});
+            this.帮助ToolStripMenuItem.Font = new System.Drawing.Font("KaiTi", 10F);
             this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
-            this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.帮助ToolStripMenuItem.Text = "帮助";
             // 
             // 关于ToolStripMenuItem
             // 
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.关于ToolStripMenuItem.Text = "关于";
             this.关于ToolStripMenuItem.Click += new System.EventHandler(this.关于ToolStripMenuItem_Click);
             // 
@@ -3369,7 +3289,8 @@
             this.帮助ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(616, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(719, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -3409,14 +3330,139 @@
             this.printPreviewDialog2.Name = "printPreviewDialog2";
             this.printPreviewDialog2.Visible = false;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn1.Width = 30;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "情况";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn2.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "注数";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn3.Width = 70;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "查看";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn4.Width = 45;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "超出";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column10.Width = 45;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ID.Width = 30;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "情况";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column1.Width = 135;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "注数";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column2.Width = 70;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "查看";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column3.Width = 45;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "超出";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column9.Width = 45;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "ID";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 30;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "时间";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 150;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "参数";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "删除";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column6.Width = 45;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "加载";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column7.Width = 45;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(616, 560);
+            this.ClientSize = new System.Drawing.Size(719, 607);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("KaiTi", 9.5F);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -3648,11 +3694,6 @@
         private System.Windows.Forms.ToolStripMenuItem 小工具ToolStripMenuItem;
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox textBox_win8;
@@ -3684,16 +3725,6 @@
         private System.Windows.Forms.ComboBox operateBox4;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.RadioButton radioButton21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.Button button_col1;
         private System.Windows.Forms.Button button_colh7;
         private System.Windows.Forms.Button button_colh8;
@@ -3711,6 +3742,21 @@
         private System.Windows.Forms.Button button_col3;
         private System.Windows.Forms.Button button_col2;
         private System.Windows.Forms.Button button_colh1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
 
     }
 }
