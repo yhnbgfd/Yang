@@ -53,7 +53,7 @@ namespace WindowsFormsApplication1
 
         //新分支，改用array保存总库
         private int totalData = 0;
-        private int[] FilterStatistics;
+        private int[] FilterStatistics;  //普通标记
         private int[] SpecialMark;      //特殊五角星标记
         private int[] DiffColorNum;
         private List<Color[]> ColorValue = new List<Color[]>();
@@ -95,6 +95,21 @@ namespace WindowsFormsApplication1
                 choiceDate.Add(i+1);
             }
         }
+        /* 整理标记超过"超出"的 */ 
+        private void MarkSort()
+        {
+            for (int i = 0; i < totalData; i++)
+            {
+                if (FilterStatistics[i] > 54)
+                {
+                    FilterStatistics[i] = 54;
+                }
+                if (SpecialMark[i] > 6)
+                {
+                    SpecialMark[i] = 6;
+                }
+            }
+        }
 
         /* 点击超出 */
         private bool Exceeded(int type, int tab)
@@ -121,6 +136,31 @@ namespace WindowsFormsApplication1
             }
             return true;
         }
+        /* 点击0 */
+        private bool Zero(int type, int tab)
+        {
+            if (type == 0)
+            {
+                for (int i = 0; i < totalData; i++)
+                {
+                    if (FilterStatistics[i] == tab)
+                    {
+                        FilterStatistics[i] = 0;
+                    }
+                }
+            }
+            else if (type == 1)
+            {
+                for (int i = 0; i < totalData; i++)
+                {
+                    if (SpecialMark[i] == tab)
+                    {
+                        SpecialMark[i] = 0;
+                    }
+                }
+            }
+            return true;
+        }
 
         /* 特殊五角星 @param arr tvalue  @param ctab ctab */
         private void SpecialStar(int local, int ctab)
@@ -134,7 +174,7 @@ namespace WindowsFormsApplication1
             DataGridViewRowCollection rows = this.dataGridView1.Rows;
             for (int i = 0; i < 55; i++ )
             {
-                rows.Add( i + 1, sort[i], 0, " 查看"," 超出" );
+                rows.Add( i + 1, sort[i], 0, " 查看"," 超出"," 归0" );
             }
         }
         private void InitDataGridView2()
@@ -150,7 +190,7 @@ namespace WindowsFormsApplication1
             DataGridViewRowCollection rows = this.dataGridView3.Rows;
             for (int i = 0; i < 7; i++)
             {
-                rows.Add(i + 1, sort[i], 0, " 查看", " 超出");
+                rows.Add(i + 1, sort[i], 0, " 查看", " 超出"," 归0");
             }
         }
 
@@ -162,6 +202,7 @@ namespace WindowsFormsApplication1
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            MarkSort();
             MessageBoxButtons messButton = MessageBoxButtons.OKCancel;
             int tab = e.RowIndex;
             if (e.ColumnIndex == 3)
@@ -176,7 +217,7 @@ namespace WindowsFormsApplication1
                     DialogResult dr = MessageBox.Show("数据量比较大，查看结果可能导致程序卡死，确定要查看吗?", "警告", messButton);
                     if (dr == DialogResult.Cancel)//如果点击“确定”按钮
                     {
-                        return; 
+                        return;
                     }
                 }
 
@@ -193,7 +234,7 @@ namespace WindowsFormsApplication1
                                 text += " ";
                             text += l_totalDataBase[ia][i] + " ";
                         }
-                            text += "\n";
+                        text += "\n";
                     }
                     else if (FilterStatistics[ia] == tab)
                     {
@@ -203,19 +244,32 @@ namespace WindowsFormsApplication1
                                 text += " ";
                             text += l_totalDataBase[ia][i] + " ";
                         }
-                            text += "\n";
+                        text += "\n";
                     }
                 }
                 richTextBox1.Text = text;
             }
-            if (e.ColumnIndex == 4)
+            else
             {
-                DialogResult dr = MessageBox.Show("确定标记 “" + sort[tab] + "” 所有数据超出吗？", "警告", messButton);
-                if (dr == DialogResult.Cancel)//如果点击“确定”按钮
+                bool result = false;
+                string word = "";
+                if (e.ColumnIndex == 4) //超出
+                {
+                    result = Exceeded(0, tab);
+                    word = "超出";
+                }
+                if (e.ColumnIndex == 5) //归0
+                {
+                    result = Zero(0, tab);
+                    word = "归0";
+                }
+
+                DialogResult dr = MessageBox.Show("确定标记 “" + sort[tab] + "” "+ word +"吗？", "警告", messButton);
+                if (dr == DialogResult.Cancel)//如果点击“Cancel”按钮
                 {
                     return;
                 }
-                if (Exceeded(0, tab))
+                if (result)
                 {
                     richTextBox1.Text = "点击左边“查看”按钮显示结果";
                     for (int i = 0; i < 55; i++)
@@ -240,6 +294,7 @@ namespace WindowsFormsApplication1
 
         private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            MarkSort();
             MessageBoxButtons messButton = MessageBoxButtons.OKCancel;
             int tab = e.RowIndex;
             if (e.ColumnIndex == 3)
@@ -285,14 +340,28 @@ namespace WindowsFormsApplication1
                 }
                 richTextBox2.Text = text;
             }
-            else if (e.ColumnIndex == 4)    //超出
-            {
-                DialogResult dr = MessageBox.Show("确定标记 “" + sort[tab] + "” 所有数据超出吗？", "警告", messButton);
+            else{
+                bool result = false;
+                string boxword = "";
+
+                if (e.ColumnIndex == 4)    //超出
+                {
+                    boxword = "超出";
+                    result = Exceeded(1, tab);
+                }
+                else if (e.ColumnIndex == 5)
+                {
+                    boxword = "归0";
+                    result = Zero(0, tab);
+                }
+
+                DialogResult dr = MessageBox.Show("确定标记 “" + sort[tab] + "” "+ boxword +"吗？", "警告", messButton);
                 if (dr == DialogResult.Cancel)//如果点击“确定”按钮
                 {
                     return;
                 }
-                if (Exceeded(1, tab))
+
+                if (result)
                 {
                     richTextBox2.Text = "点击左边“查看”按钮显示结果";
                     for (int i = 0; i < 7; i++)
@@ -433,6 +502,7 @@ namespace WindowsFormsApplication1
 
         private void button2_Click(object sender, EventArgs e)
         {
+            MarkSort();
             richTextBox1.Text = "点击左边“查看”按钮显示结果";
             for (int i = 0; i < 55;i++ )
                 dataGridView1.Rows[i].Cells[2].Value = 0;   //  全部先设成0
@@ -2010,11 +2080,6 @@ namespace WindowsFormsApplication1
         {
             Form3 fm3 = new Form3(m,n);//将m取n放入工具B
             fm3.Show();
-        }
-
-        private void button13_Click(object sender, EventArgs e)//超出按钮
-        {
-
         }
 
         private bool[] ibc = new bool[7];//竖
