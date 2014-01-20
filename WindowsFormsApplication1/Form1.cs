@@ -498,7 +498,10 @@ namespace WindowsFormsApplication1
             
         }
 
-        /* 检查checkedListBox勾选 */
+        /// <summary>
+        /// 检查checkedListBox勾选
+        /// </summary>
+        /// <returns></returns>
         private List<int> checkchoice_checkedListBox()
         {
             TotalNum = 0;//清空统计
@@ -521,7 +524,12 @@ namespace WindowsFormsApplication1
             return choiceDate;
         }
 
-        /* 查找控件方法 */
+        /// <summary>
+        /// 查找控件方法
+        /// </summary>
+        /// <param name="control"></param>
+        /// <param name="controlName"></param>
+        /// <returns></returns>
         private Control findControl(Control control, string controlName)
         {
             Control c1;
@@ -543,9 +551,12 @@ namespace WindowsFormsApplication1
             return null;
         } 
 
-        /* 为点击的按钮着色
-         * type:0默认，1着色，2去色
-         */
+        /// <summary>
+        /// 为点击的按钮着色
+        /// type:0默认，1着色，2去色
+        /// </summary>
+        /// <param name="button"></param>
+        /// <param name="type">0默认，1着色，2去色</param>
         private void digit_Button_Click(Button button,int type)
         {
             int n = int.Parse(button.Name.Substring(button.Name.LastIndexOf("c") + 1));
@@ -704,7 +715,10 @@ namespace WindowsFormsApplication1
             isGenerate = true;                                  //是否已生成数据=true，避免保存出错
         }
 
-        /* 分支2，初始化筛选统计数组、不同颜色统计数组 */
+        /// <summary>
+        /// 分支2，初始化筛选统计数组、不同颜色统计数组
+        /// </summary>
+        /// <param name="totalData"></param>
         private void InitFilterStatisticsAndDiffColorNum(int totalData)
         {
             FilterStatistics = new int[totalData];
@@ -718,7 +732,9 @@ namespace WindowsFormsApplication1
             }
         }
 
-        /* 整理还原tab3的界面 */
+        /// <summary>
+        /// 整理还原tab3的界面
+        /// </summary>
         private void FinishingInterface()
         {
             /* 清空各种数据 */
@@ -1015,12 +1031,22 @@ namespace WindowsFormsApplication1
         {
             button_c1.BackColor = ChoiceColor;
         }
-        /* 1-70个按钮的通用事件 */
+
+        /// <summary>
+        /// 1-70个按钮的通用事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button_cx_Click(object sender, EventArgs e)
         {
             digit_Button_Click((Button)sender, 0);
         }
-        /* 标记按钮1 */
+
+        /// <summary>
+        /// 标记按钮1
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button76_Click(object sender, EventArgs e)
         {
             //获得点击按钮的名字,根据名字判断执行对应的方法
@@ -1053,9 +1079,14 @@ namespace WindowsFormsApplication1
                 count_generate.Text = "本次操作共标记" + m_Count_Generate + "注";
                 m_Count_Generate = 0;
             }
-            
         }
-        /* 筛选方法1 */
+
+        /// <summary>
+        /// 筛选方法1
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="col"></param>
+        /// <returns></returns>
         private int Filter1(object sender, Color col)
         {
             string buttonName = ((Button)sender).Name;
@@ -1175,7 +1206,11 @@ namespace WindowsFormsApplication1
             return m_Count_Generate;
         }
 
-        /* 标记按钮2 ------ 五色齐 */
+        /// <summary>
+        /// 标记按钮2 ------ 五色齐
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button_method2mark_Click(object sender, EventArgs e)
         {
             string buttonName = ((Button)sender).Name;
@@ -1443,7 +1478,11 @@ namespace WindowsFormsApplication1
             richTextBox1.Text = text;
         }
 
-        /* 标记按钮3 ------ 五星定位 */
+        /// <summary>
+        /// 标记按钮3 ------ 五星定位
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button4_Click_1(object sender, EventArgs e)
         {
             string buttonName = ((Button)sender).Name;
@@ -1547,7 +1586,11 @@ namespace WindowsFormsApplication1
             m_Count_Generate = 0;
         }
 
-        /* 清空颜色 */
+        /// <summary>
+        /// 清空颜色
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button7_Click(object sender, EventArgs e)
         {
             choiceDate = checkchoice_checkedListBox();          //获取勾选的数字
@@ -1600,7 +1643,10 @@ namespace WindowsFormsApplication1
             markRadioChecked(4);
         }
 
-        //直接选择要目标注数要标记的等级
+        /// <summary>
+        /// 直接选择要目标注数要标记的等级
+        /// </summary>
+        /// <param name="i"></param>
         private void markRadioChecked(int i)
         {
             comboBox4.SelectedIndex = i;
@@ -1609,7 +1655,11 @@ namespace WindowsFormsApplication1
             comboBox8.SelectedIndex = i;
         }
 
-        //只能输入数字跟删除
+        /// <summary>
+        /// 只能输入数字跟删除
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void numTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((Keys)(e.KeyChar) == Keys.Back || (Keys)(e.KeyChar) == Keys.Delete)
@@ -1744,7 +1794,14 @@ namespace WindowsFormsApplication1
             printDoc1(e, msg, font, bru);
             e.HasMorePages = !isEnd; //是否有下一页
         }
-        //just print
+        
+        /// <summary>
+        /// just print
+        /// </summary>
+        /// <param name="e"></param>
+        /// <param name="msg"></param>
+        /// <param name="font"></param>
+        /// <param name="bru"></param>
         private void printDoc1(System.Drawing.Printing.PrintPageEventArgs e, string msg, Font font, Brush bru)
         {
             e.Graphics.DrawString(msg, font, bru, 50, 50);
@@ -2002,7 +2059,12 @@ namespace WindowsFormsApplication1
                 GetFileList(false);
             }
         }
-        /* 目标号码定位 */
+
+        /// <summary>
+        /// 目标号码定位
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button11_Click(object sender, EventArgs e)
         {
             GetWinningNumbers();        //获取中奖号码
@@ -2030,7 +2092,11 @@ namespace WindowsFormsApplication1
         }
 
 
-        //第四种筛选方法,根据颜色类型筛选
+        /// <summary>
+        /// 第四种筛选方法,根据颜色类型筛选
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button13_add_Click(object sender, EventArgs e)
         {
             //获得点击按钮的名字,根据名字判断执行对应的方法
@@ -2071,7 +2137,13 @@ namespace WindowsFormsApplication1
             count_generate.Text = "本次操作共标记" + m_Count_Generate + "注";
             m_Count_Generate = 0;
         }
-        /* 筛选方法4 */
+
+        /// <summary>
+        /// 筛选方法4
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="col"></param>
+        /// <returns></returns>
         private int Method4(object sender, int[] col)
         {
             string buttonName = ((Button)sender).Name;                          //按钮名字
@@ -2224,7 +2296,11 @@ namespace WindowsFormsApplication1
             ibch[n - 1] = !ibch[n - 1];
         }
 
-        /* 颜色按钮统一事件 */
+        /// <summary>
+        /// 颜色按钮统一事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void radioButton_CheckedChanged(object sender, EventArgs e)
         {
             RadioButton rb = sender as RadioButton;
