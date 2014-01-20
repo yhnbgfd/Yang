@@ -15,12 +15,18 @@ using WindowsFormsApplication1.DataDef;
 
 namespace WindowsFormsApplication1
 {
+    /// <summary>
+    /// 主窗口
+    /// </summary>
     public partial class Form1 : Form
     {
         #region valueDef
 
         private Dictionary<int, Color> D_ColorTemptDict = new Dictionary<int, Color>();
-        private List<int> choiceDate = new List<int>();             //定义获取勾选的数字
+        /// <summary>
+        /// 定义获取勾选的数字
+        /// </summary>
+        private List<int> choiceDate = new List<int>();
         
         private int SelectNum = 5;
         private int TotalNum = 26;
@@ -30,9 +36,18 @@ namespace WindowsFormsApplication1
         private int m_Count_Operate;
         private int m_Count_Generate;
 
-        private int[] Winning_Numbers;                                  //中奖号码
-        private string path = Application.StartupPath + @"\";           //软件目录
-        private int CurrentPage = 0;                                    //当前打印的页面
+        /// <summary>
+        /// 中奖号码
+        /// </summary>
+        private int[] Winning_Numbers;
+        /// <summary>
+        /// 软件目录
+        /// </summary>
+        private string path = Application.StartupPath + @"\";
+        /// <summary>
+        /// 当前打印的页面
+        /// </summary>
+        private int CurrentPage = 0;
         private string CurrentMarkforPrint = "";
 
         private string[] sort = {   "0", 
@@ -53,8 +68,14 @@ namespace WindowsFormsApplication1
 
         //新分支，改用array保存总库
         private int totalData = 0;
-        private int[] FilterStatistics;  //普通标记
-        private int[] SpecialMark;      //特殊五角星标记
+        /// <summary>
+        /// 生成长度=总数据量的数组，用以一一对应存储每组数据的普通标记数
+        /// </summary>
+        private int[] FilterStatistics;
+        /// <summary>
+        /// 生成长度=总数据量的数组，用以一一对应存储每组数据的特殊五角星标记数
+        /// </summary>
+        private int[] SpecialMark;
         private int[] DiffColorNum;
         private List<Color[]> ColorValue = new List<Color[]>();
         List<int[]> l_totalDataBase = new List<int[]>();
@@ -64,6 +85,10 @@ namespace WindowsFormsApplication1
         #endregion
         private int m = 26;
         private int n = 5;
+        
+        /// <summary>
+        /// 构造函数
+        /// </summary>
         public Form1()
         {
             InitializeComponent();
@@ -284,6 +309,9 @@ namespace WindowsFormsApplication1
             }
         }
 
+        /// <summary>
+        /// 定义错误提示窗口
+        /// </summary>
         public void ErrorBox()
         {
             MessageBoxButtons errButton = MessageBoxButtons.OK;
