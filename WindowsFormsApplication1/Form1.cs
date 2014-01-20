@@ -96,7 +96,9 @@ namespace WindowsFormsApplication1
             }
         }
 
-        /* 整理标记超过"超出"的 */ 
+        /// <summary>
+        /// 整理标记超过"超出"的
+        /// </summary>
         private void MarkSort()
         {
             for (int i = 0; i < totalData; i++)
@@ -112,7 +114,11 @@ namespace WindowsFormsApplication1
             }
         }
 
-        /* 点击加星 */
+        /// <summary>
+        /// 点击加星
+        /// </summary>
+        /// <param name="tab"></param>
+        /// <returns></returns>
         private bool AddStar(int tab)
         {
        
@@ -127,7 +133,11 @@ namespace WindowsFormsApplication1
             return true;
         }
 
-        /* 点击减星 */
+        /// <summary>
+        /// 点击减星
+        /// </summary>
+        /// <param name="tab"></param>
+        /// <returns></returns>
         private bool ReduceStar(int tab)
         {
             for (int i = 0; i < totalData; i++)
@@ -141,7 +151,11 @@ namespace WindowsFormsApplication1
             return true;
         }
 
-        /* 点击加特殊五角 */
+        /// <summary>
+        /// 点击加特殊五角
+        /// </summary>
+        /// <param name="tab"></param>
+        /// <returns></returns>
         private bool AddSpStar(int tab)
         {
             for (int i = 0; i < totalData; i++)
@@ -154,7 +168,11 @@ namespace WindowsFormsApplication1
             return true;
         }
 
-        /* 点击减特殊五角 */
+        /// <summary>
+        /// 点击减特殊五角
+        /// </summary>
+        /// <param name="tab"></param>
+        /// <returns></returns>
         private bool ReduceSpStar(int tab)
         {
             
@@ -169,7 +187,12 @@ namespace WindowsFormsApplication1
             return true;
         }
 
-        /* 点击超出 */
+        /// <summary>
+        /// 点击超出
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="tab"></param>
+        /// <returns></returns>
         private bool Exceeded(int type, int tab)
         {
             if (type == 0)
@@ -195,7 +218,12 @@ namespace WindowsFormsApplication1
             return true;
         }
 
-        /* 点击0 */
+        /// <summary>
+        /// 点击0
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="tab"></param>
+        /// <returns></returns>
         private bool Zero(int type, int tab)
         {
             if (type == 0)
@@ -221,7 +249,11 @@ namespace WindowsFormsApplication1
             return true;
         }
 
-        /* 特殊五角星 @param arr tvalue  @param ctab ctab */
+        /// <summary>
+        /// 特殊五角星 @param arr tvalue  @param ctab ctab
+        /// </summary>
+        /// <param name="local"></param>
+        /// <param name="ctab"></param>
         private void SpecialStar(int local, int ctab)
         {
             SpecialMark[local] += ctab;
