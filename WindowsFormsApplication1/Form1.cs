@@ -2346,5 +2346,50 @@ namespace WindowsFormsApplication1
             ibc = new bool[7];
             ibch = new bool[10];
         }
+
+        private void tabControl1_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            switch (this.tabControl1.SelectedIndex)
+            {
+                case 0:
+                    //MessageBox.Show("tabPage1 is Selected");
+                    break;
+                case 1:
+                    //MessageBox.Show("tabPage2 is Selected");
+                    break;
+                case 2:
+                    //MessageBox.Show("tabPage3 is Selected");
+                    break;
+                case 3:
+                    //MessageBox.Show("tabPage4 is Selected");
+                    MarkSort();
+                    richTextBox1.Text = "点击左边“查看”按钮显示结果";
+                    for (int i = 0; i < 55;i++ )
+                        dataGridView1.Rows[i].Cells[2].Value = 0;   //  全部先设成0
+                    for (int ia = 0; ia < totalData; ia++)
+                    {
+                        if (FilterStatistics[ia] >= 54)
+                            dataGridView1.Rows[54].Cells[2].Value = (int)dataGridView1.Rows[54].Cells[2].Value + 1;
+                        else
+                        {
+                            dataGridView1.Rows[FilterStatistics[ia]].Cells[2].Value = (int)dataGridView1.Rows[FilterStatistics[ia]].Cells[2].Value + 1;
+                        }
+                    }
+                    break;
+                case 4:
+                    //MessageBox.Show("tabPage5 is Selected");
+                    richTextBox2.Text = "点击左边“查看”按钮显示结果";
+                    for (int i = 0; i < 7; i++)
+                        dataGridView3.Rows[i].Cells[2].Value = 0;
+                    for(int i=0; i<totalData; i++)
+                    {
+                        if (SpecialMark[i] >= 6)
+                            dataGridView3.Rows[6].Cells[2].Value = (int)dataGridView3.Rows[6].Cells[2].Value + 1;
+                        else
+                            dataGridView3.Rows[SpecialMark[i]].Cells[2].Value = (int)dataGridView3.Rows[SpecialMark[i]].Cells[2].Value + 1;
+                    }
+                    break;
+            } 
+        }
     }
 }
