@@ -160,7 +160,7 @@ namespace WindowsFormsApplication1
         {
             for (int i = 0; i < totalData; i++)
             {
-                if (SpecialMark[i] == tab)
+                if (FilterStatistics[i] == tab)
                 {
                     SpecialMark[i] += 1;
                 }
@@ -178,7 +178,7 @@ namespace WindowsFormsApplication1
             
             for (int i = 0; i < totalData; i++)
             {
-                if (SpecialMark[i] == tab)
+                if (FilterStatistics[i] == tab)
                 {
                     SpecialMark[i] -= 1;
                 }
@@ -295,7 +295,7 @@ namespace WindowsFormsApplication1
             MarkSort();
             MessageBoxButtons messButton = MessageBoxButtons.OKCancel;
             int tab = e.RowIndex;
-            if (e.ColumnIndex == 3)
+            if (e.ColumnIndex == 3)//查看
             {
                 if (dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString() == "0")
                 {
@@ -622,6 +622,11 @@ namespace WindowsFormsApplication1
             }
         }
 
+        /// <summary>
+        /// 查看结果
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             MarkSort();
@@ -651,10 +656,14 @@ namespace WindowsFormsApplication1
             }
 
             string buttonName = ((Button)sender).Name;
-            if(buttonName.IndexOf("3")>0)       // 查看特殊按钮的名字是：button3
+            if (buttonName.IndexOf("3") > 0)       // 查看特殊按钮的名字是：button3
+            {
                 tabControl1.SelectedIndex = 4;  // 跳到特殊五星tab
+            }
             else
+            {
                 tabControl1.SelectedIndex = 3;  // 调到普通结果tab
+            }
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -1051,7 +1060,7 @@ namespace WindowsFormsApplication1
         {
             //获得点击按钮的名字,根据名字判断执行对应的方法
             string buttonName = ((Button)sender).Name;
-            if (buttonName.IndexOf("minus") > 0)
+            if (buttonName.IndexOf("minus") > 0)    // 点击的是减按钮
             {
                 MessageBoxButtons messButton = MessageBoxButtons.OKCancel;
                 DialogResult dr = MessageBox.Show("您当前要进行的是减操作，确定进行吗?", "减操作", messButton);
@@ -1061,13 +1070,13 @@ namespace WindowsFormsApplication1
                 }
             }
             
-            if (comboBox7.SelectedIndex == 0)
+            if (comboBox7.SelectedIndex == 0)//所选颜色
             {
                 m_Count_Generate = Filter1(sender, ChoiceColor);
                 count_generate.Text = "本次操作共标记" + m_Count_Generate + "注";
                 m_Count_Generate = 0;
             }
-            else 
+            else //所有颜色
             { 
                 foreach(Color col in allColor)
                 {
