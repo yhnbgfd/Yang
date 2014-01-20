@@ -2304,8 +2304,10 @@ namespace WindowsFormsApplication1
             Form3 fm3 = new Form3(m,n);//将m取n放入工具B
             fm3.Show();
         }
-
-        private bool[] ibc = new bool[7];//竖
+        /// <summary>
+        /// 竖
+        /// </summary>
+        private bool[] ibc = new bool[7];
         private void button_col_Click(object sender, EventArgs e)
         {
             Button bb = sender as Button;
@@ -2318,8 +2320,10 @@ namespace WindowsFormsApplication1
             }
             ibc[n - 1] = !ibc[n - 1];
         }
-
-        private bool[] ibch = new bool[10];//横
+        /// <summary>
+        /// 横
+        /// </summary>
+        private bool[] ibch = new bool[10];
         private void button_colh_Click(object sender, EventArgs e)
         {
             Button bb = sender as Button;
@@ -2347,6 +2351,12 @@ namespace WindowsFormsApplication1
             ibch = new bool[10];
         }
 
+        /// <summary>
+        /// 标签页切换事件
+        /// 用于处理切换标签页时刷新数据
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tabControl1_SelectedIndexChanged(object sender, System.EventArgs e)
         {
             switch (this.tabControl1.SelectedIndex)
