@@ -95,6 +95,7 @@ namespace WindowsFormsApplication1
                 choiceDate.Add(i+1);
             }
         }
+
         /* 整理标记超过"超出"的 */ 
         private void MarkSort()
         {
@@ -109,6 +110,63 @@ namespace WindowsFormsApplication1
                     SpecialMark[i] = 6;
                 }
             }
+        }
+
+        /* 点击加星 */
+        private bool AddStar(int tab)
+        {
+       
+            for (int i = 0; i < totalData; i++)
+            {
+                if (FilterStatistics[i] == tab)
+                {
+                    FilterStatistics[i] += 1;
+                }
+            }
+            
+            return true;
+        }
+
+        /* 点击减星 */
+        private bool ReduceStar(int tab)
+        {
+            for (int i = 0; i < totalData; i++)
+            {
+                if (FilterStatistics[i] == tab)
+                {
+                    FilterStatistics[i] -= 1;
+                }
+            }
+   
+            return true;
+        }
+
+        /* 点击加特殊五角 */
+        private bool AddSpStar(int tab)
+        {
+            for (int i = 0; i < totalData; i++)
+            {
+                if (SpecialMark[i] == tab)
+                {
+                    SpecialMark[i] += 1;
+                }
+            }
+            return true;
+        }
+
+        /* 点击减特殊五角 */
+        private bool ReduceSpStar(int tab)
+        {
+            
+            for (int i = 0; i < totalData; i++)
+            {
+                if (SpecialMark[i] == tab)
+                {
+                    SpecialMark[i] -= 1;
+                }
+            }
+            
+            return true;
         }
 
         /* 点击超出 */
@@ -136,6 +194,7 @@ namespace WindowsFormsApplication1
             }
             return true;
         }
+
         /* 点击0 */
         private bool Zero(int type, int tab)
         {
@@ -170,11 +229,10 @@ namespace WindowsFormsApplication1
         
         private void InitDataGridView1()
         {
-            //    ☆ □ △ ■
             DataGridViewRowCollection rows = this.dataGridView1.Rows;
             for (int i = 0; i < 55; i++ )
             {
-                rows.Add( i + 1, sort[i], 0, " 查看"," 超出"," 归0" );
+                rows.Add(i + 1, sort[i], 0, " 查看", " +△", " -△", " +☆", " -☆", " 超出", " 归0");
             }
         }
         private void InitDataGridView2()
@@ -249,16 +307,37 @@ namespace WindowsFormsApplication1
                 }
                 richTextBox1.Text = text;
             }
+
             else
             {
                 bool result = false;
                 string word = "";
-                if (e.ColumnIndex == 4) //超出
+                if (e.ColumnIndex == 4) //加星
+                {
+                    result = AddStar(tab);
+                    word = "加星";
+                }
+                if (e.ColumnIndex == 5) //减星
+                {
+                    result = ReduceStar(tab);
+                    word = "减星";
+                }
+                if (e.ColumnIndex == 6) //加特殊五角
+                {
+                    result = AddSpStar(tab);
+                    word = "加特殊五角";
+                }
+                if (e.ColumnIndex == 7) //减特殊五角
+                {
+                    result = ReduceSpStar(tab);
+                    word = "减特殊五角";
+                }
+                if (e.ColumnIndex == 8) //超出
                 {
                     result = Exceeded(0, tab);
                     word = "超出";
                 }
-                if (e.ColumnIndex == 5) //归0
+                if (e.ColumnIndex == 9) //归0
                 {
                     result = Zero(0, tab);
                     word = "归0";
@@ -287,7 +366,7 @@ namespace WindowsFormsApplication1
                 }
                 else
                 {
-                    MessageBox.Show("标记失败！！！！！！！！！！！！！", "失败", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("标记失败！", "失败", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
@@ -1816,11 +1895,14 @@ namespace WindowsFormsApplication1
             if (e.ColumnIndex == 4) //  加载
             {
                 MessageBoxButtons messButton = MessageBoxButtons.OKCancel;
-                DialogResult dr = MessageBox.Show("加载数据前是否保存当前数据？\n点击取消不保存继续加载。", "警告", messButton);
-                if (dr == DialogResult.OK)//如果点击“确定”按钮
+
+                DialogResult dr = MessageBox.Show("确定加载。", "警告", messButton);
+                if (dr == DialogResult.Cancel)//如果点击“确定”按钮
                 {
-                    保存当前进度ToolStripMenuItem_Click(sender, e);
+                    return;
                 }
+
+                保存当前进度ToolStripMenuItem_Click(sender, e);
                 // selectNum,totalNum,choiceData,m_totalDataBase
                 string pathName = path + "record." + dataGridView2.Rows[e.RowIndex].Cells[1].Value + "." + dataGridView2.Rows[e.RowIndex].Cells[2].Value + ".xml";
                 LoadData ld = new LoadData();
