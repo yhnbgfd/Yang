@@ -30,6 +30,7 @@ namespace WindowsFormsApplication1
         
         private int SelectNum = 5;
         private int TotalNum = 26;
+        private int ShowSpecialStar = 10;
 
         private Color ChoiceColor = Color.Red;
 
@@ -58,8 +59,8 @@ namespace WindowsFormsApplication1
                                 "☆☆", "△☆☆", "△△☆☆", "■☆☆", "△■☆☆", "△△■☆☆", "■■☆☆", "△■■☆☆", "△△■■☆☆", 
                                 "☆☆☆", "△☆☆☆", "△△☆☆☆", "■☆☆☆", "△■☆☆☆", "△△■☆☆☆", "■■☆☆☆", "△■■☆☆☆", "△△■■☆☆☆", 
                                 "☆☆☆☆", "△☆☆☆☆", "△△☆☆☆☆", "■☆☆☆☆", "△■☆☆☆☆", "△△■☆☆☆☆", "■■☆☆☆☆", "△■■☆☆☆☆", "△△■■☆☆☆☆", 
-                                "☆☆☆☆☆", "△☆☆☆☆☆", "△△☆☆☆☆☆", "■☆☆☆☆☆", "△■☆☆☆☆☆", "△△■☆☆☆☆☆", "■■☆☆☆☆☆", "△■■☆☆☆☆☆", "△△■■☆☆☆☆☆", 
-                                "超出" 
+                                "☆☆☆☆☆", "△☆☆☆☆☆", "△△☆☆☆☆☆", "■☆☆☆☆☆", "△■☆☆☆☆☆", "△△■☆☆☆☆☆", "■■☆☆☆☆☆", "△■■☆☆☆☆☆",
+                                "△△■■☆☆☆☆☆", "超出" 
                             };
         private Color[] allColor = { Color.Red, Color.Orange, Color.Yellow, Color.Green, Color.Blue, Color.Indigo, Color.Purple, 
                                      Color.Black, Color.Gray, Color.Maroon, Color.Chocolate, Color.Wheat };
@@ -132,9 +133,9 @@ namespace WindowsFormsApplication1
                 {
                     FilterStatistics[i] = 54;
                 }
-                if (SpecialMark[i] > 6)
+                if (SpecialMark[i] > ShowSpecialStar)
                 {
-                    SpecialMark[i] = 6;
+                    SpecialMark[i] = ShowSpecialStar + 1;
                 }
             }
         }
@@ -154,7 +155,6 @@ namespace WindowsFormsApplication1
                     FilterStatistics[i] += 1;
                 }
             }
-            
             return true;
         }
 
@@ -172,7 +172,6 @@ namespace WindowsFormsApplication1
                     FilterStatistics[i] -= 1;
                 }
             }
-   
             return true;
         }
 
@@ -208,7 +207,6 @@ namespace WindowsFormsApplication1
                     SpecialMark[i] -= 1;
                 }
             }
-            
             return true;
         }
 
@@ -236,7 +234,7 @@ namespace WindowsFormsApplication1
                 {
                     if (SpecialMark[i] == tab)
                     {
-                        SpecialMark[i] += 6;
+                        SpecialMark[i] = ShowSpecialStar + 1;
                     }
                 }
             }
@@ -294,18 +292,26 @@ namespace WindowsFormsApplication1
         }
         private void InitDataGridView2()
         {
-            string[] sort = {   "0",
-                                "☆", 
-                                "☆☆", 
-                                "☆☆☆", 
-                                "☆☆☆☆", 
-                                "☆☆☆☆☆", 
-                                "超出" 
-                            };
+            string State = "";
             DataGridViewRowCollection rows = this.dataGridView3.Rows;
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < ShowSpecialStar + 2; i++)
             {
-                rows.Add(i + 1, sort[i], 0, " 查看", " 超出"," 归0");
+                if (i == 0)
+                {
+                    State = "0";
+                    rows.Add(i + 1, State, 0, " 查看", " 超出", " 归0");
+                    State = "";
+                }
+                else if (i == ShowSpecialStar + 1)
+                {
+                    State = "超出";
+                    rows.Add(i + 1, State, 0, " 查看", " 超出", " 归0");
+                }
+                else
+                {
+                    State += "☆";
+                    rows.Add(i + 1, State, 0, " 查看", " 超出", " 归0");
+                }
             }
         }
 
@@ -318,6 +324,9 @@ namespace WindowsFormsApplication1
             MessageBox.Show("程序出现了一个未知的错误，错误已记录到日志，请联系管理员。", "错误", errButton);
         }
 
+        /// <summary>
+        /// 逻辑结果查看页面操作
+        /// </summary>
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             MarkSort();
@@ -431,6 +440,9 @@ namespace WindowsFormsApplication1
             }
         }
 
+        /// <summary>
+        /// 特殊五角星查看页面操作
+        /// </summary>
         private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             MarkSort();
@@ -491,7 +503,7 @@ namespace WindowsFormsApplication1
                 else if (e.ColumnIndex == 5)
                 {
                     boxword = "归0";
-                    result = Zero(0, tab);
+                    result = Zero(1, tab);
                 }
 
                 DialogResult dr = MessageBox.Show("确定标记 “" + sort[tab] + "” "+ boxword +"吗？", "警告", messButton);
@@ -502,13 +514,16 @@ namespace WindowsFormsApplication1
 
                 if (result)
                 {
+                    int rowsLength = dataGridView3.Rows.Count;
                     richTextBox2.Text = "点击左边“查看”按钮显示结果";
-                    for (int i = 0; i < 7; i++)
+                    for (int i = 0; i < rowsLength; i++)
                         dataGridView3.Rows[i].Cells[2].Value = 0;
                     for (int i = 0; i < totalData; i++)
                     {
-                        if (SpecialMark[i] >= 6)
-                            dataGridView3.Rows[6].Cells[2].Value = (int)dataGridView3.Rows[6].Cells[2].Value + 1;
+                        if (SpecialMark[i] >= rowsLength)
+                        {
+                            dataGridView3.Rows[rowsLength - 1].Cells[2].Value = (int)dataGridView3.Rows[rowsLength - 1].Cells[2].Value + 1;
+                        }   
                         else
                             dataGridView3.Rows[SpecialMark[i]].Cells[2].Value = (int)dataGridView3.Rows[SpecialMark[i]].Cells[2].Value + 1;
                     }
@@ -516,14 +531,9 @@ namespace WindowsFormsApplication1
                 }
                 else
                 {
-                    MessageBox.Show("标记失败！！！！！！！！！！！！！", "失败", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("标记失败！", "失败", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
         }
 
         /// <summary>
@@ -673,12 +683,12 @@ namespace WindowsFormsApplication1
 
             /* 特殊五角星tab */
             richTextBox2.Text = "点击左边“查看”按钮显示结果";
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < dataGridView3.Rows.Count; i++)
                 dataGridView3.Rows[i].Cells[2].Value = 0;
             for(int i=0; i<totalData; i++)
             {
-                if (SpecialMark[i] >= 6)
-                    dataGridView3.Rows[6].Cells[2].Value = (int)dataGridView3.Rows[6].Cells[2].Value + 1;
+                if (SpecialMark[i] > ShowSpecialStar)
+                    dataGridView3.Rows[ShowSpecialStar].Cells[2].Value = (int)dataGridView3.Rows[ShowSpecialStar].Cells[2].Value + 1;
                 else
                     dataGridView3.Rows[SpecialMark[i]].Cells[2].Value = (int)dataGridView3.Rows[SpecialMark[i]].Cells[2].Value + 1;
             }
@@ -708,15 +718,41 @@ namespace WindowsFormsApplication1
             }
         }
 
+        /// <summary>
+        /// 逻辑查询页面获取手动输入中奖号码的方法
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GetWinningNumbers()
         {
-            /* 获取输入的中奖号码 */
             Winning_Numbers = new int[SelectNum];
             for (int i = 0; i < SelectNum; i++)
             {
                 string controlName = "textBox_win" + (i + 1).ToString();
                 TextBox tb = (TextBox)findControl(panel5, controlName);
                 if (tb.Text == "" || tb.Text == "0" || (i > 0 && int.Parse(tb.Text) < Winning_Numbers[i-1]))
+                {
+                    MessageBox.Show("请输入正常的目标号码", "警告", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Winning_Numbers = null;
+                    return;
+                }
+                Winning_Numbers[i] = int.Parse(tb.Text);
+            }
+        }
+
+        /// <summary>
+        /// 特殊五角星查询页面获取手动输入中奖号码的方法
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void GetWinningNumbersInSpecial()
+        {
+            Winning_Numbers = new int[SelectNum];
+            for (int i = 0; i < SelectNum; i++)
+            {
+                string controlName = "textBox_sw" + (i + 1).ToString();
+                TextBox tb = (TextBox)findControl(panel6, controlName);
+                if (tb.Text == "" || tb.Text == "0" || (i > 0 && int.Parse(tb.Text) < Winning_Numbers[i - 1]))
                 {
                     MessageBox.Show("请输入正常的目标号码", "警告", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Winning_Numbers = null;
@@ -750,6 +786,7 @@ namespace WindowsFormsApplication1
             FinishingInterface();                               // 整理还原tab3的界面
             tabControl1.SelectedIndex = 2;                      //跳到编号为3的tab
             isGenerate = true;                                  //是否已生成数据=true，避免保存出错
+
         }
 
         /// <summary>
@@ -775,10 +812,10 @@ namespace WindowsFormsApplication1
         private void FinishingInterface()
         {
             /* 清空各种数据 */
-            m_Count_Operate = 0;                        //操作次数清零
-            //m_SpecialStar.Clear();                      //特殊五星库清空
-            count_generate.Text = "";                   //左下角提示清空
-            count_operate.Text = "";                    //左下角提示清空
+            m_Count_Operate = 0;                        
+            //m_SpecialStar.Clear();                    
+            count_generate.Text = "";                   
+            count_operate.Text = "";                    
             comboBox_method2_operate.SelectedIndex = SelectNum - 1;
             //激活被选中数字的按钮
             for (int i = 1; i <= 70; i++)
@@ -846,7 +883,7 @@ namespace WindowsFormsApplication1
             for (int i = 0; i < 55; i++)
                 dataGridView1.Rows[i].Cells[2].Value = 0;   //  全部先设成0
             richTextBox2.Text = "点击左边“查看”按钮显示结果";
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < dataGridView3.Rows.Count; i++)
                 dataGridView3.Rows[i].Cells[2].Value = 0;
 
             /* 屏蔽过量的中奖号码输入框 */
@@ -864,9 +901,25 @@ namespace WindowsFormsApplication1
                 }
             }
 
+            /* 屏蔽过量的中奖号码输入框（特殊五角查询页面） */
+            for (int i = 1; i < 9; i++)
+            {
+                string WinControlName = "textBox_sw" + i.ToString();
+                TextBox bw = (TextBox)findControl(panel6, WinControlName);
+                if (SelectNum < i)
+                {
+                    bw.Enabled = false;
+                }
+                else
+                {
+                    bw.Enabled = true;
+                }
+            }
+
             //上方提示几选几
             label3.Text = TotalNum + "取" + SelectNum;
             label2.Text = "0";
+            label12.Text = "";
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
@@ -1070,7 +1123,7 @@ namespace WindowsFormsApplication1
         }
 
         /// <summary>
-        /// 1-70个按钮的通用事件
+        /// 逻辑操作页面数字1-70的按钮的通用事件
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -1641,10 +1694,6 @@ namespace WindowsFormsApplication1
             D_ColorTemptDict.Clear();
         }
 
-        private void button10_Click(object sender, EventArgs e)
-        {
-
-        }
 
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
@@ -2098,13 +2147,13 @@ namespace WindowsFormsApplication1
         }
 
         /// <summary>
-        /// 目标号码定位
+        /// 目标号码定位--普通结果查看页面
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void button11_Click(object sender, EventArgs e)
         {
-            GetWinningNumbers();        //获取中奖号码
+            GetWinningNumbers();        
             if (Winning_Numbers == null)
             {
                 return;
@@ -2389,17 +2438,50 @@ namespace WindowsFormsApplication1
                 case 4:
                     //MessageBox.Show("tabPage5 is Selected");
                     richTextBox2.Text = "点击左边“查看”按钮显示结果";
-                    for (int i = 0; i < 7; i++)
+                    for (int i = 0; i < dataGridView3.Rows.Count; i++)
                         dataGridView3.Rows[i].Cells[2].Value = 0;
                     for(int i=0; i<totalData; i++)
                     {
-                        if (SpecialMark[i] >= 6)
-                            dataGridView3.Rows[6].Cells[2].Value = (int)dataGridView3.Rows[6].Cells[2].Value + 1;
+                        if (SpecialMark[i] > ShowSpecialStar)
+                            dataGridView3.Rows[ShowSpecialStar].Cells[2].Value = (int)dataGridView3.Rows[ShowSpecialStar].Cells[2].Value + 1;
                         else
                             dataGridView3.Rows[SpecialMark[i]].Cells[2].Value = (int)dataGridView3.Rows[SpecialMark[i]].Cells[2].Value + 1;
                     }
                     break;
             } 
+        }
+
+        /// <summary>
+        /// 目标号码定位--特殊五角结果查看页面
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button13_Click(object sender, EventArgs e)
+        {
+            GetWinningNumbersInSpecial();
+            if (Winning_Numbers == null)
+            {
+                return;
+            }
+            Dichotomy dd = new Dichotomy();
+            int local = dd.Find(Winning_Numbers, l_totalDataBase, totalData);
+            int targetNumber = SpecialMark[local];
+            if (targetNumber > ShowSpecialStar)
+                targetNumber = ShowSpecialStar + 1;
+
+            string State = "";
+            if (targetNumber == 0)
+                State = "0";
+            else if (targetNumber == ShowSpecialStar + 1)
+                State = "超出";
+            else
+            {
+                State = "";
+                for(int i =0; i < targetNumber; i++)
+                    State += "☆";
+            }
+                
+            label12.Text = State;
         }
     }
 }

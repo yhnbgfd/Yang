@@ -287,6 +287,18 @@
             this.printDialog2 = new System.Windows.Forms.PrintDialog();
             this.pageSetupDialog2 = new System.Windows.Forms.PageSetupDialog();
             this.printPreviewDialog2 = new System.Windows.Forms.PrintPreviewDialog();
+            this.button13 = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.textBox_sw8 = new System.Windows.Forms.TextBox();
+            this.textBox_sw7 = new System.Windows.Forms.TextBox();
+            this.textBox_sw6 = new System.Windows.Forms.TextBox();
+            this.textBox_sw5 = new System.Windows.Forms.TextBox();
+            this.textBox_sw4 = new System.Windows.Forms.TextBox();
+            this.textBox_sw3 = new System.Windows.Forms.TextBox();
+            this.textBox_sw2 = new System.Windows.Forms.TextBox();
+            this.textBox_sw1 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -307,6 +319,8 @@
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -3290,6 +3304,9 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label12);
+            this.tabPage3.Controls.Add(this.panel6);
+            this.tabPage3.Controls.Add(this.button13);
             this.tabPage3.Controls.Add(this.button4);
             this.tabPage3.Controls.Add(this.button8);
             this.tabPage3.Controls.Add(this.button9);
@@ -3306,7 +3323,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button4.Location = new System.Drawing.Point(500, 505);
+            this.button4.Location = new System.Drawing.Point(568, 504);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(87, 25);
             this.button4.TabIndex = 11;
@@ -3317,7 +3334,7 @@
             // button8
             // 
             this.button8.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button8.Location = new System.Drawing.Point(406, 505);
+            this.button8.Location = new System.Drawing.Point(652, 535);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(87, 25);
             this.button8.TabIndex = 10;
@@ -3328,7 +3345,7 @@
             // button9
             // 
             this.button9.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button9.Location = new System.Drawing.Point(595, 505);
+            this.button9.Location = new System.Drawing.Point(661, 504);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(87, 25);
             this.button9.TabIndex = 9;
@@ -3338,7 +3355,7 @@
             // 
             // richTextBox2
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(391, 31);
+            this.richTextBox2.Location = new System.Drawing.Point(447, 31);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.ReadOnly = true;
             this.richTextBox2.Size = new System.Drawing.Size(301, 458);
@@ -3361,7 +3378,7 @@
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.RowTemplate.Height = 23;
-            this.dataGridView3.Size = new System.Drawing.Size(377, 458);
+            this.dataGridView3.Size = new System.Drawing.Size(434, 458);
             this.dataGridView3.TabIndex = 6;
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
@@ -3380,7 +3397,7 @@
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn2.Width = 80;
+            this.dataGridViewTextBoxColumn2.Width = 160;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -3513,6 +3530,114 @@
             this.printPreviewDialog2.Name = "printPreviewDialog2";
             this.printPreviewDialog2.Visible = false;
             // 
+            // button13
+            // 
+            this.button13.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button13.Location = new System.Drawing.Point(458, 504);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(87, 25);
+            this.button13.TabIndex = 33;
+            this.button13.Text = "目标定位";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.groupBox6);
+            this.panel6.Location = new System.Drawing.Point(3, 489);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(443, 86);
+            this.panel6.TabIndex = 34;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.textBox_sw8);
+            this.groupBox6.Controls.Add(this.textBox_sw7);
+            this.groupBox6.Controls.Add(this.textBox_sw6);
+            this.groupBox6.Controls.Add(this.textBox_sw5);
+            this.groupBox6.Controls.Add(this.textBox_sw4);
+            this.groupBox6.Controls.Add(this.textBox_sw3);
+            this.groupBox6.Controls.Add(this.textBox_sw2);
+            this.groupBox6.Controls.Add(this.textBox_sw1);
+            this.groupBox6.Location = new System.Drawing.Point(3, 10);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(433, 65);
+            this.groupBox6.TabIndex = 31;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "请输入目标号码：";
+            // 
+            // textBox_sw8
+            // 
+            this.textBox_sw8.Location = new System.Drawing.Point(379, 25);
+            this.textBox_sw8.Name = "textBox_sw8";
+            this.textBox_sw8.Size = new System.Drawing.Size(41, 22);
+            this.textBox_sw8.TabIndex = 36;
+            this.textBox_sw8.Text = "0";
+            // 
+            // textBox_sw7
+            // 
+            this.textBox_sw7.Location = new System.Drawing.Point(330, 25);
+            this.textBox_sw7.Name = "textBox_sw7";
+            this.textBox_sw7.Size = new System.Drawing.Size(41, 22);
+            this.textBox_sw7.TabIndex = 35;
+            this.textBox_sw7.Text = "0";
+            // 
+            // textBox_sw6
+            // 
+            this.textBox_sw6.Location = new System.Drawing.Point(281, 25);
+            this.textBox_sw6.Name = "textBox_sw6";
+            this.textBox_sw6.Size = new System.Drawing.Size(41, 22);
+            this.textBox_sw6.TabIndex = 34;
+            this.textBox_sw6.Text = "0";
+            // 
+            // textBox_sw5
+            // 
+            this.textBox_sw5.Location = new System.Drawing.Point(232, 25);
+            this.textBox_sw5.Name = "textBox_sw5";
+            this.textBox_sw5.Size = new System.Drawing.Size(41, 22);
+            this.textBox_sw5.TabIndex = 33;
+            this.textBox_sw5.Text = "0";
+            // 
+            // textBox_sw4
+            // 
+            this.textBox_sw4.Location = new System.Drawing.Point(183, 25);
+            this.textBox_sw4.Name = "textBox_sw4";
+            this.textBox_sw4.Size = new System.Drawing.Size(41, 22);
+            this.textBox_sw4.TabIndex = 32;
+            this.textBox_sw4.Text = "0";
+            // 
+            // textBox_sw3
+            // 
+            this.textBox_sw3.Location = new System.Drawing.Point(134, 25);
+            this.textBox_sw3.Name = "textBox_sw3";
+            this.textBox_sw3.Size = new System.Drawing.Size(41, 22);
+            this.textBox_sw3.TabIndex = 31;
+            this.textBox_sw3.Text = "0";
+            // 
+            // textBox_sw2
+            // 
+            this.textBox_sw2.Location = new System.Drawing.Point(85, 25);
+            this.textBox_sw2.Name = "textBox_sw2";
+            this.textBox_sw2.Size = new System.Drawing.Size(41, 22);
+            this.textBox_sw2.TabIndex = 30;
+            this.textBox_sw2.Text = "0";
+            // 
+            // textBox_sw1
+            // 
+            this.textBox_sw1.Location = new System.Drawing.Point(36, 25);
+            this.textBox_sw1.Name = "textBox_sw1";
+            this.textBox_sw1.Size = new System.Drawing.Size(41, 22);
+            this.textBox_sw1.TabIndex = 26;
+            this.textBox_sw1.Text = "0";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(455, 541);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(0, 13);
+            this.label12.TabIndex = 35;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -3526,7 +3651,6 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "缩水过滤分式一体化";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -3554,9 +3678,13 @@
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3806,12 +3934,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -3822,6 +3944,24 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.TextBox textBox_sw8;
+        private System.Windows.Forms.TextBox textBox_sw7;
+        private System.Windows.Forms.TextBox textBox_sw6;
+        private System.Windows.Forms.TextBox textBox_sw5;
+        private System.Windows.Forms.TextBox textBox_sw4;
+        private System.Windows.Forms.TextBox textBox_sw3;
+        private System.Windows.Forms.TextBox textBox_sw2;
+        private System.Windows.Forms.TextBox textBox_sw1;
+        private System.Windows.Forms.Label label12;
 
     }
 }
