@@ -332,7 +332,7 @@ namespace WindowsFormsApplication1
             MarkSort();
             MessageBoxButtons messButton = MessageBoxButtons.OKCancel;
             int tab = e.RowIndex;
-            if (e.ColumnIndex == 3)//查看
+            if (e.ColumnIndex == 3)
             {
                 if (dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString() == "0")
                 {
@@ -342,7 +342,7 @@ namespace WindowsFormsApplication1
                 else if (dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString().Length > 4)
                 {
                     DialogResult dr = MessageBox.Show("数据量比较大，查看结果可能导致程序卡死，确定要查看吗?", "警告", messButton);
-                    if (dr == DialogResult.Cancel)//如果点击“确定”按钮
+                    if (dr == DialogResult.Cancel)
                     {
                         return;
                     }
@@ -379,44 +379,39 @@ namespace WindowsFormsApplication1
 
             else
             {
-                bool result = false;
-                string word = "";
-                if (e.ColumnIndex == 4) //加星
-                {
-                    result = AddStar(tab);
-                    word = "加星";
-                }
-                if (e.ColumnIndex == 5) //减星
-                {
-                    result = ReduceStar(tab);
-                    word = "减星";
-                }
-                if (e.ColumnIndex == 6) //加特殊五角
-                {
-                    result = AddSpStar(tab);
-                    word = "加特殊五角";
-                }
-                if (e.ColumnIndex == 7) //减特殊五角
-                {
-                    result = ReduceSpStar(tab);
-                    word = "减特殊五角";
-                }
-                if (e.ColumnIndex == 8) //超出
-                {
-                    result = Exceeded(0, tab);
-                    word = "超出";
-                }
-                if (e.ColumnIndex == 9) //归0
-                {
-                    result = Zero(0, tab);
-                    word = "归0";
-                }
-
-                DialogResult dr = MessageBox.Show("确定标记 “" + sort[tab] + "” "+ word +"吗？", "警告", messButton);
-                if (dr == DialogResult.Cancel)//如果点击“Cancel”按钮
+                DialogResult dr = MessageBox.Show("确定执行该操作吗？", "警告", messButton);
+                if (dr == DialogResult.Cancel)
                 {
                     return;
                 }
+
+                bool result = false;
+
+                if (e.ColumnIndex == 4)
+                {
+                    result = AddStar(tab);
+                }
+                if (e.ColumnIndex == 5)
+                {
+                    result = ReduceStar(tab);
+                }
+                if (e.ColumnIndex == 6)
+                {
+                    result = AddSpStar(tab);
+                }
+                if (e.ColumnIndex == 7)
+                {
+                    result = ReduceSpStar(tab);
+                }
+                if (e.ColumnIndex == 8)
+                {
+                    result = Exceeded(0, tab);
+                }
+                if (e.ColumnIndex == 9)
+                {
+                    result = Zero(0, tab);
+                }
+
                 if (result)
                 {
                     richTextBox1.Text = "点击左边“查看”按钮显示结果";
@@ -432,10 +427,6 @@ namespace WindowsFormsApplication1
                         }
                     }
                     MessageBox.Show("标记成功。", "确认", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("标记失败！", "失败", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
@@ -492,24 +483,20 @@ namespace WindowsFormsApplication1
                 richTextBox2.Text = text;
             }
             else{
-                bool result = false;
-                string boxword = "";
+                DialogResult dr = MessageBox.Show("确定执行该操作吗？", "警告", messButton);
+                if (dr == DialogResult.Cancel)
+                {
+                    return;
+                }
 
+                bool result = false;
                 if (e.ColumnIndex == 4)    //超出
                 {
-                    boxword = "超出";
                     result = Exceeded(1, tab);
                 }
                 else if (e.ColumnIndex == 5)
                 {
-                    boxword = "归0";
                     result = Zero(1, tab);
-                }
-
-                DialogResult dr = MessageBox.Show("确定标记 “" + sort[tab] + "” "+ boxword +"吗？", "警告", messButton);
-                if (dr == DialogResult.Cancel)//如果点击“确定”按钮
-                {
-                    return;
                 }
 
                 if (result)
@@ -528,10 +515,6 @@ namespace WindowsFormsApplication1
                             dataGridView3.Rows[SpecialMark[i]].Cells[2].Value = (int)dataGridView3.Rows[SpecialMark[i]].Cells[2].Value + 1;
                     }
                     MessageBox.Show("标记成功。", "确认", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("标记失败！", "失败", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
