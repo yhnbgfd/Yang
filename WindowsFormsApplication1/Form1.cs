@@ -2466,5 +2466,13 @@ namespace WindowsFormsApplication1
                 
             label12.Text = State;
         }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if ((comboBox2.SelectedIndex == 0 || comboBox2.SelectedIndex == 1) && comboBox4.SelectedIndex == 4)
+            {
+                comboBox4.SelectedIndex = 2;
+            }
+        }
     }
 }
