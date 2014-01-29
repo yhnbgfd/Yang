@@ -12,7 +12,7 @@ namespace WindowsFormsApplication1.Method
         {
             FileStream fs = new FileStream(path + "error.log", FileMode.Append);
             StreamWriter sw = new StreamWriter(fs);
-            sw.Write(log+"\n");
+            sw.Write("\n"+log+"\n");
             //清空缓冲区  
             sw.Flush();
             //关闭流  
