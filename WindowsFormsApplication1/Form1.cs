@@ -273,10 +273,12 @@ namespace WindowsFormsApplication1
         }
 
         /// <summary>
-        /// 特殊五角星 @param arr tvalue  @param ctab ctab
+        /// 特殊五角星
+        /// local：要增加标记的数据（顺序位置）
+        /// ctab：添加的标记数量
         /// </summary>
-        /// <param name="local"></param>
-        /// <param name="ctab"></param>
+        /// <param name="local">要增加标记的数据（顺序位置）</param>
+        /// <param name="ctab">添加的标记数量</param>
         private void SpecialStar(int local, int ctab)
         {
             SpecialMark[local] += ctab;
@@ -1218,9 +1220,16 @@ namespace WindowsFormsApplication1
                         case "<=":
                             if (temptCount <= count && count < 10/*|| (count > 10 && (temptCount == count / 10 || temptCount == count % 10))*/)
                             {
-                                if (FilterStatistics[i] + cTab < 0)//0,不让减了
-                                    continue;
-                                FilterStatistics[i] += cTab;
+                                if (comboBox4.SelectedIndex != 4)   //不是特殊五角星
+                                {
+                                    if (FilterStatistics[i] + cTab < 0)//0,不让减了
+                                        continue;
+                                    FilterStatistics[i] += cTab;
+                                }
+                                else            //特殊五角星
+                                {
+                                    SpecialStar(i, cTab);
+                                }
                                 m_Count_Generate++;
                             }
                             break;
@@ -1243,22 +1252,29 @@ namespace WindowsFormsApplication1
                         case ">=":
                             if (temptCount >= count/* || (count > 10 && (temptCount == count / 10 || temptCount == count % 10))*/)
                             {
-                                if (FilterStatistics[i] + cTab < 0)//0,不让减了
-                                    continue;
-                                FilterStatistics[i] += cTab;
+                                if (comboBox4.SelectedIndex != 4)   //不是特殊五角星
+                                {
+                                    if (FilterStatistics[i] + cTab < 0)//0,不让减了
+                                        continue;
+                                    FilterStatistics[i] += cTab;
+                                }
+                                else    //特殊五角星
+                                {
+                                    SpecialStar(i, cTab);
+                                }
                                 m_Count_Generate++;
                             }
                             break;
                         case "!=":
                             if (temptCount != count || (count > 10 && (temptCount == count / 10 || temptCount == count % 10)))
                             {
-                                if (comboBox4.SelectedIndex != 4)
+                                if (comboBox4.SelectedIndex != 4)//不是特殊五角星
                                 {
                                     if (FilterStatistics[i] + cTab < 0)//0,不让减了
                                         continue;
                                     FilterStatistics[i] += cTab;
                                 }
-                                else
+                                else    //特殊五角星
                                 {
                                     SpecialStar(i, cTab);
                                 }
@@ -1901,14 +1917,6 @@ namespace WindowsFormsApplication1
             this.printPreviewDialog1.ShowDialog();
         }
 
-        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comboBox4.SelectedIndex == 4 && comboBox2.SelectedIndex != 2 && comboBox2.SelectedIndex != 3)
-            {
-                comboBox2.SelectedIndex = 2;
-            }
-        }
-
         private void radioButton18_CheckedChanged(object sender, EventArgs e)
         {
             this.m = 12;
@@ -2384,57 +2392,6 @@ namespace WindowsFormsApplication1
         }
 
         /// <summary>
-        /// 标签页切换事件
-        /// 用于处理切换标签页时刷新数据
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void tabControl1_SelectedIndexChanged(object sender, System.EventArgs e)
-        {
-            switch (this.tabControl1.SelectedIndex)
-            {
-                case 0:
-                    //MessageBox.Show("tabPage1 is Selected");
-                    break;
-                case 1:
-                    //MessageBox.Show("tabPage2 is Selected");
-                    break;
-                case 2:
-                    //MessageBox.Show("tabPage3 is Selected");
-                    break;
-                case 3:
-                    //MessageBox.Show("tabPage4 is Selected");
-                    MarkSort();
-                    richTextBox1.Text = "点击左边“查看”按钮显示结果";
-                    for (int i = 0; i < 55;i++ )
-                        dataGridView1.Rows[i].Cells[2].Value = 0;   //  全部先设成0
-                    for (int ia = 0; ia < totalData; ia++)
-                    {
-                        if (FilterStatistics[ia] >= 54)
-                            dataGridView1.Rows[54].Cells[2].Value = (int)dataGridView1.Rows[54].Cells[2].Value + 1;
-                        else
-                        {
-                            dataGridView1.Rows[FilterStatistics[ia]].Cells[2].Value = (int)dataGridView1.Rows[FilterStatistics[ia]].Cells[2].Value + 1;
-                        }
-                    }
-                    break;
-                case 4:
-                    //MessageBox.Show("tabPage5 is Selected");
-                    richTextBox2.Text = "点击左边“查看”按钮显示结果";
-                    for (int i = 0; i < dataGridView3.Rows.Count; i++)
-                        dataGridView3.Rows[i].Cells[2].Value = 0;
-                    for(int i=0; i<totalData; i++)
-                    {
-                        if (SpecialMark[i] > ShowSpecialStar)
-                            dataGridView3.Rows[ShowSpecialStar].Cells[2].Value = (int)dataGridView3.Rows[ShowSpecialStar].Cells[2].Value + 1;
-                        else
-                            dataGridView3.Rows[SpecialMark[i]].Cells[2].Value = (int)dataGridView3.Rows[SpecialMark[i]].Cells[2].Value + 1;
-                    }
-                    break;
-            } 
-        }
-
-        /// <summary>
         /// 目标号码定位--特殊五角结果查看页面
         /// </summary>
         /// <param name="sender"></param>
@@ -2467,12 +2424,5 @@ namespace WindowsFormsApplication1
             label12.Text = State;
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if ((comboBox2.SelectedIndex == 0 || comboBox2.SelectedIndex == 1) && comboBox4.SelectedIndex == 4)
-            {
-                comboBox4.SelectedIndex = 2;
-            }
-        }
     }
 }
