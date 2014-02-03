@@ -975,7 +975,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button3.Location = new System.Drawing.Point(558, 519);
+            this.button3.Location = new System.Drawing.Point(363, 529);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(87, 25);
             this.button3.TabIndex = 14;
@@ -986,7 +986,7 @@
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button7.Location = new System.Drawing.Point(356, 519);
+            this.button7.Location = new System.Drawing.Point(645, 303);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(87, 25);
             this.button7.TabIndex = 19;
@@ -1014,7 +1014,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button2.Location = new System.Drawing.Point(456, 519);
+            this.button2.Location = new System.Drawing.Point(476, 529);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(87, 25);
             this.button2.TabIndex = 9;
