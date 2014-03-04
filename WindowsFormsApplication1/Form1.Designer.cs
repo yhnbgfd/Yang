@@ -333,7 +333,7 @@
             this.tabControl1.Location = new System.Drawing.Point(7, 25);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(762, 602);
+            this.tabControl1.Size = new System.Drawing.Size(859, 646);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -347,7 +347,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 23);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(754, 575);
+            this.tabPage1.Size = new System.Drawing.Size(851, 619);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "创建筛选库";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -875,7 +875,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 23);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(754, 575);
+            this.tabPage2.Size = new System.Drawing.Size(851, 619);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "选择已存记录";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -967,7 +967,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 23);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(754, 575);
+            this.tabPage4.Size = new System.Drawing.Size(851, 619);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "逻辑查询界面";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -975,7 +975,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button3.Location = new System.Drawing.Point(363, 529);
+            this.button3.Location = new System.Drawing.Point(697, 376);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(87, 25);
             this.button3.TabIndex = 14;
@@ -986,7 +986,7 @@
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button7.Location = new System.Drawing.Point(645, 303);
+            this.button7.Location = new System.Drawing.Point(697, 307);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(87, 25);
             this.button7.TabIndex = 19;
@@ -1014,7 +1014,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button2.Location = new System.Drawing.Point(476, 529);
+            this.button2.Location = new System.Drawing.Point(697, 340);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(87, 25);
             this.button2.TabIndex = 9;
@@ -3041,7 +3041,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 23);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(754, 575);
+            this.tabPage5.Size = new System.Drawing.Size(851, 619);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "查看结果";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -3207,7 +3207,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(514, 425);
+            this.dataGridView1.Size = new System.Drawing.Size(606, 425);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -3293,7 +3293,7 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(523, 32);
+            this.richTextBox1.Location = new System.Drawing.Point(615, 32);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(228, 424);
@@ -3313,7 +3313,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 23);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(754, 575);
+            this.tabPage3.Size = new System.Drawing.Size(851, 619);
             this.tabPage3.TabIndex = 5;
             this.tabPage3.Text = "特殊五星";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -3596,7 +3596,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(823, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(866, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -3641,7 +3641,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(823, 681);
+            this.ClientSize = new System.Drawing.Size(866, 683);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("KaiTi", 9.5F);
