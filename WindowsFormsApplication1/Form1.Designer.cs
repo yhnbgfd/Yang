@@ -975,9 +975,9 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button3.Location = new System.Drawing.Point(697, 376);
+            this.button3.Location = new System.Drawing.Point(673, 393);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(87, 25);
+            this.button3.Size = new System.Drawing.Size(87, 34);
             this.button3.TabIndex = 14;
             this.button3.Text = "查看特殊";
             this.button3.UseVisualStyleBackColor = true;
@@ -986,9 +986,9 @@
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button7.Location = new System.Drawing.Point(697, 307);
+            this.button7.Location = new System.Drawing.Point(673, 259);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(87, 25);
+            this.button7.Size = new System.Drawing.Size(87, 31);
             this.button7.TabIndex = 19;
             this.button7.Text = "清空颜色";
             this.button7.UseVisualStyleBackColor = true;
@@ -1014,9 +1014,9 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button2.Location = new System.Drawing.Point(697, 340);
+            this.button2.Location = new System.Drawing.Point(673, 324);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(87, 25);
+            this.button2.Size = new System.Drawing.Size(87, 34);
             this.button2.TabIndex = 9;
             this.button2.Text = "查看结果";
             this.button2.UseVisualStyleBackColor = true;
@@ -1059,7 +1059,7 @@
             this.panel2.Controls.Add(this.tableLayoutPanel1);
             this.panel2.Location = new System.Drawing.Point(3, 7);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(688, 506);
+            this.panel2.Size = new System.Drawing.Size(673, 506);
             this.panel2.TabIndex = 8;
             // 
             // button_colh7
@@ -2174,7 +2174,7 @@
             this.tableLayoutPanel1.Controls.Add(this.button_c3, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.button_c2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.button_c1, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(57, 41);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(49, 41);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
