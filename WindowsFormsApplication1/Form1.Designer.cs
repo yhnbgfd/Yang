@@ -288,6 +288,9 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.文件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.小工具ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.保存当前进度ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -303,9 +306,6 @@
             this.printDialog2 = new System.Windows.Forms.PrintDialog();
             this.pageSetupDialog2 = new System.Windows.Forms.PageSetupDialog();
             this.printPreviewDialog2 = new System.Windows.Forms.PrintPreviewDialog();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -327,9 +327,9 @@
             this.panel6.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -1568,7 +1568,8 @@
             "四边形",
             "五角星",
             "超出",
-            "特殊五角星"});
+            "特殊五角星",
+            "删除"});
             this.comboBox8.Location = new System.Drawing.Point(392, 147);
             this.comboBox8.Name = "comboBox8";
             this.comboBox8.Size = new System.Drawing.Size(75, 21);
@@ -1812,7 +1813,8 @@
             "四边形",
             "五角星",
             "超出",
-            "特殊五角星"});
+            "特殊五角星",
+            "删除"});
             this.comboBox1.Location = new System.Drawing.Point(392, 115);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(75, 21);
@@ -1858,7 +1860,8 @@
             "四边形",
             "五角星",
             "超出",
-            "特殊五角星"});
+            "特殊五角星",
+            "删除"});
             this.comboBox_Mehod2_marked.Location = new System.Drawing.Point(392, 55);
             this.comboBox_Mehod2_marked.Name = "comboBox_Mehod2_marked";
             this.comboBox_Mehod2_marked.Size = new System.Drawing.Size(75, 21);
@@ -1990,7 +1993,8 @@
             "四边形",
             "五角星",
             "超出",
-            "特殊五角星"});
+            "特殊五角星",
+            "删除"});
             this.comboBox4.Location = new System.Drawing.Point(392, 22);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(75, 21);
@@ -3594,6 +3598,39 @@
             this.Column12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Column12.Width = 45;
             // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.richTextBox3);
+            this.tabPage6.Controls.Add(this.dataGridView4);
+            this.tabPage6.Location = new System.Drawing.Point(4, 23);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(851, 619);
+            this.tabPage6.TabIndex = 6;
+            this.tabPage6.Text = "删除标记";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox3
+            // 
+            this.richTextBox3.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox3.Location = new System.Drawing.Point(532, 62);
+            this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.Size = new System.Drawing.Size(250, 271);
+            this.richTextBox3.TabIndex = 1;
+            this.richTextBox3.Text = "点击左边“查看”按钮显示结果";
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.AllowUserToAddRows = false;
+            this.dataGridView4.AllowUserToDeleteRows = false;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Location = new System.Drawing.Point(17, 34);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.ReadOnly = true;
+            this.dataGridView4.RowTemplate.Height = 23;
+            this.dataGridView4.Size = new System.Drawing.Size(416, 355);
+            this.dataGridView4.TabIndex = 0;
+            // 
             // 文件ToolStripMenuItem
             // 
             this.文件ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -3690,39 +3727,6 @@
             this.printPreviewDialog2.Name = "printPreviewDialog2";
             this.printPreviewDialog2.Visible = false;
             // 
-            // tabPage6
-            // 
-            this.tabPage6.Controls.Add(this.richTextBox3);
-            this.tabPage6.Controls.Add(this.dataGridView4);
-            this.tabPage6.Location = new System.Drawing.Point(4, 23);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(851, 619);
-            this.tabPage6.TabIndex = 6;
-            this.tabPage6.Text = "删除标记";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView4
-            // 
-            this.dataGridView4.AllowUserToAddRows = false;
-            this.dataGridView4.AllowUserToDeleteRows = false;
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(17, 34);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.ReadOnly = true;
-            this.dataGridView4.RowTemplate.Height = 23;
-            this.dataGridView4.Size = new System.Drawing.Size(416, 355);
-            this.dataGridView4.TabIndex = 0;
-            // 
-            // richTextBox3
-            // 
-            this.richTextBox3.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox3.Location = new System.Drawing.Point(532, 62);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(250, 271);
-            this.richTextBox3.TabIndex = 1;
-            this.richTextBox3.Text = "点击左边“查看”按钮显示结果";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -3768,10 +3772,10 @@
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -77,6 +77,10 @@ namespace WindowsFormsApplication1
         /// 生成长度=总数据量的数组，用以一一对应存储每组数据的特殊五角星标记数
         /// </summary>
         private int[] SpecialMark;
+        /// <summary>
+        /// 生成长度=总数据量的数组，用以一一对应存储每组数据的删除标记数
+        /// </summary>
+        private int[] DeleteMark;
         private int[] DiffColorNum;
         private List<Color[]> ColorValue = new List<Color[]>();
         List<int[]> l_totalDataBase = new List<int[]>();
@@ -775,20 +779,22 @@ namespace WindowsFormsApplication1
         }
 
         /// <summary>
-        /// 分支2，初始化筛选统计数组、不同颜色统计数组
+        /// 分支2，初始化筛选统计数组、不同颜色统计数组、删除数统计数组（20140421）
         /// </summary>
         /// <param name="totalData"></param>
         private void InitFilterStatisticsAndDiffColorNum(int totalData)
         {
             FilterStatistics = new int[totalData];
             DiffColorNum = new int[totalData];
-            SpecialMark = new int[totalData]; 
-            foreach(int i in FilterStatistics)
-            {
-                FilterStatistics[i] = 0;
-                SpecialMark[i] = 0;
-                DiffColorNum[i] = 0;
-            }
+            SpecialMark = new int[totalData];
+            DeleteMark = new int[totalData]; 
+            //foreach(int i in FilterStatistics)//默认就全部是0，好无聊的代码，还达不到目的
+            //{
+            //    FilterStatistics[i] = 0;
+            //    SpecialMark[i] = 0;
+            //    DiffColorNum[i] = 0;
+            //    DeleteMark[i] = 0;
+            //}
         }
 
         /// <summary>
