@@ -233,6 +233,10 @@
             this.button_c2 = new System.Windows.Forms.Button();
             this.button_c1 = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label13 = new System.Windows.Forms.Label();
+            this.numSetOut = new System.Windows.Forms.TextBox();
+            this.button14 = new System.Windows.Forms.Button();
+            this.AllClear = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -299,10 +303,9 @@
             this.printDialog2 = new System.Windows.Forms.PrintDialog();
             this.pageSetupDialog2 = new System.Windows.Forms.PageSetupDialog();
             this.printPreviewDialog2 = new System.Windows.Forms.PrintPreviewDialog();
-            this.AllClear = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.numSetOut = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -325,6 +328,8 @@
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -334,6 +339,7 @@
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Location = new System.Drawing.Point(7, 25);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -3054,6 +3060,46 @@
             this.tabPage5.Text = "查看结果";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("KaiTi", 13F);
+            this.label13.Location = new System.Drawing.Point(176, 571);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(80, 18);
+            this.label13.TabIndex = 39;
+            this.label13.Text = "设置ID为";
+            // 
+            // numSetOut
+            // 
+            this.numSetOut.Location = new System.Drawing.Point(271, 568);
+            this.numSetOut.Name = "numSetOut";
+            this.numSetOut.Size = new System.Drawing.Size(61, 22);
+            this.numSetOut.TabIndex = 37;
+            this.numSetOut.Text = "0";
+            // 
+            // button14
+            // 
+            this.button14.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button14.Location = new System.Drawing.Point(343, 568);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(87, 25);
+            this.button14.TabIndex = 36;
+            this.button14.Text = "以下超出";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
+            // AllClear
+            // 
+            this.AllClear.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.AllClear.Location = new System.Drawing.Point(456, 568);
+            this.AllClear.Name = "AllClear";
+            this.AllClear.Size = new System.Drawing.Size(87, 25);
+            this.AllClear.TabIndex = 35;
+            this.AllClear.Text = "全部归0";
+            this.AllClear.UseVisualStyleBackColor = true;
+            this.AllClear.Click += new System.EventHandler(this.AllClear_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -3644,45 +3690,38 @@
             this.printPreviewDialog2.Name = "printPreviewDialog2";
             this.printPreviewDialog2.Visible = false;
             // 
-            // AllClear
+            // tabPage6
             // 
-            this.AllClear.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.AllClear.Location = new System.Drawing.Point(456, 568);
-            this.AllClear.Name = "AllClear";
-            this.AllClear.Size = new System.Drawing.Size(87, 25);
-            this.AllClear.TabIndex = 35;
-            this.AllClear.Text = "全部归0";
-            this.AllClear.UseVisualStyleBackColor = true;
-            this.AllClear.Click += new System.EventHandler(this.AllClear_Click);
+            this.tabPage6.Controls.Add(this.richTextBox3);
+            this.tabPage6.Controls.Add(this.dataGridView4);
+            this.tabPage6.Location = new System.Drawing.Point(4, 23);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(851, 619);
+            this.tabPage6.TabIndex = 6;
+            this.tabPage6.Text = "删除标记";
+            this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // button14
+            // dataGridView4
             // 
-            this.button14.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button14.Location = new System.Drawing.Point(343, 568);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(87, 25);
-            this.button14.TabIndex = 36;
-            this.button14.Text = "以下超出";
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
+            this.dataGridView4.AllowUserToAddRows = false;
+            this.dataGridView4.AllowUserToDeleteRows = false;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Location = new System.Drawing.Point(17, 34);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.ReadOnly = true;
+            this.dataGridView4.RowTemplate.Height = 23;
+            this.dataGridView4.Size = new System.Drawing.Size(416, 355);
+            this.dataGridView4.TabIndex = 0;
             // 
-            // numSetOut
+            // richTextBox3
             // 
-            this.numSetOut.Location = new System.Drawing.Point(271, 568);
-            this.numSetOut.Name = "numSetOut";
-            this.numSetOut.Size = new System.Drawing.Size(61, 22);
-            this.numSetOut.TabIndex = 37;
-            this.numSetOut.Text = "0";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("KaiTi", 13F);
-            this.label13.Location = new System.Drawing.Point(176, 571);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(80, 18);
-            this.label13.TabIndex = 39;
-            this.label13.Text = "设置ID为";
+            this.richTextBox3.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox3.Location = new System.Drawing.Point(532, 62);
+            this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.Size = new System.Drawing.Size(250, 271);
+            this.richTextBox3.TabIndex = 1;
+            this.richTextBox3.Text = "点击左边“查看”按钮显示结果";
             // 
             // Form1
             // 
@@ -3731,6 +3770,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.tabPage6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4012,6 +4053,9 @@
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button AllClear;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.RichTextBox richTextBox3;
 
     }
 }
