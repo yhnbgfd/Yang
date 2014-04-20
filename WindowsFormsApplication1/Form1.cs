@@ -2345,7 +2345,7 @@ namespace WindowsFormsApplication1
             fm3.Show();
         }
         /// <summary>
-        /// 竖
+        /// 横
         /// </summary>
         private bool[] ibc = new bool[7];
         private void button_col_Click(object sender, EventArgs e)
@@ -2361,7 +2361,7 @@ namespace WindowsFormsApplication1
             ibc[n - 1] = !ibc[n - 1];
         }
         /// <summary>
-        /// 横
+        /// 竖
         /// </summary>
         private bool[] ibch = new bool[10];
         private void button_colh_Click(object sender, EventArgs e)
