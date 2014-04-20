@@ -299,6 +299,10 @@
             this.printDialog2 = new System.Windows.Forms.PrintDialog();
             this.pageSetupDialog2 = new System.Windows.Forms.PageSetupDialog();
             this.printPreviewDialog2 = new System.Windows.Forms.PrintPreviewDialog();
+            this.AllClear = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.numSetOut = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -3030,6 +3034,10 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.label13);
+            this.tabPage5.Controls.Add(this.numSetOut);
+            this.tabPage5.Controls.Add(this.button14);
+            this.tabPage5.Controls.Add(this.AllClear);
             this.tabPage5.Controls.Add(this.label2);
             this.tabPage5.Controls.Add(this.panel5);
             this.tabPage5.Controls.Add(this.button11);
@@ -3146,7 +3154,7 @@
             // button11
             // 
             this.button11.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button11.Location = new System.Drawing.Point(460, 495);
+            this.button11.Location = new System.Drawing.Point(456, 495);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(87, 25);
             this.button11.TabIndex = 32;
@@ -3636,6 +3644,46 @@
             this.printPreviewDialog2.Name = "printPreviewDialog2";
             this.printPreviewDialog2.Visible = false;
             // 
+            // AllClear
+            // 
+            this.AllClear.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.AllClear.Location = new System.Drawing.Point(456, 568);
+            this.AllClear.Name = "AllClear";
+            this.AllClear.Size = new System.Drawing.Size(87, 25);
+            this.AllClear.TabIndex = 35;
+            this.AllClear.Text = "全部归0";
+            this.AllClear.UseVisualStyleBackColor = true;
+            this.AllClear.Click += new System.EventHandler(this.AllClear_Click);
+            // 
+            // button14
+            // 
+            this.button14.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button14.Location = new System.Drawing.Point(343, 568);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(87, 25);
+            this.button14.TabIndex = 36;
+            this.button14.Text = "以下超出";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
+            // numSetOut
+            // 
+            this.numSetOut.Location = new System.Drawing.Point(271, 568);
+            this.numSetOut.Name = "numSetOut";
+            this.numSetOut.Size = new System.Drawing.Size(61, 22);
+            this.numSetOut.TabIndex = 37;
+            this.numSetOut.Text = "0";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("KaiTi", 13F);
+            this.label13.Location = new System.Drawing.Point(176, 571);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(80, 18);
+            this.label13.TabIndex = 39;
+            this.label13.Text = "设置ID为";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -3960,6 +4008,10 @@
         private System.Windows.Forms.TextBox textBox_sw2;
         private System.Windows.Forms.TextBox textBox_sw1;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox numSetOut;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button AllClear;
+        private System.Windows.Forms.Label label13;
 
     }
 }

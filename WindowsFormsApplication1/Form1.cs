@@ -2424,5 +2424,81 @@ namespace WindowsFormsApplication1
             label12.Text = State;
         }
 
+        /// <summary>
+        /// 查看结果界面，除被标记为超出外的数组全部清零
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void AllClear_Click(object sender, EventArgs e)
+        {
+            MessageBoxButtons messButton = MessageBoxButtons.OKCancel;
+            DialogResult dr = MessageBox.Show("确定执行该操作吗？", "警告", messButton);
+            if (dr == DialogResult.Cancel)
+            {
+                return;
+            }
+            for (int i = 0; i < totalData; i++)
+            {
+                if (FilterStatistics[i] < 54 && FilterStatistics[i] != 1)
+                {
+                    FilterStatistics[i] = 0;
+                }
+            }
+            richTextBox1.Text = "点击左边“查看”按钮显示结果";
+            for (int i = 0; i < 55; i++)
+                dataGridView1.Rows[i].Cells[2].Value = 0;   //  全部先设成0
+            for (int ia = 0; ia < totalData; ia++)
+            {
+                if (FilterStatistics[ia] >= 54)
+                    dataGridView1.Rows[54].Cells[2].Value = (int)dataGridView1.Rows[54].Cells[2].Value + 1;
+                else
+                {
+                    dataGridView1.Rows[FilterStatistics[ia]].Cells[2].Value = (int)dataGridView1.Rows[FilterStatistics[ia]].Cells[2].Value + 1;
+                }
+            }
+            MessageBox.Show("标记成功。", "确认", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        /// <summary>
+        /// 查看结果界面，ID为X以下的数组全部标记为超出
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button14_Click(object sender, EventArgs e)
+        {
+            MessageBoxButtons messButton = MessageBoxButtons.OKCancel;
+            DialogResult dr = MessageBox.Show("确定执行该操作吗？", "警告", messButton);
+            if (dr == DialogResult.Cancel)
+            {
+                return;
+            }
+            string setNumberOut = numSetOut.Text.ToString();
+            int num = 15;
+            if (setNumberOut != "" && 1 == 1)
+            {
+                num = Convert.ToInt32(setNumberOut);
+            }
+            for (int i = 0; i < totalData; i++)
+            {
+                if (FilterStatistics[i] >= num)
+                {
+                    FilterStatistics[i] = 55;
+                }
+            }
+            richTextBox1.Text = "点击左边“查看”按钮显示结果";
+            for (int i = 0; i < 55; i++)
+                dataGridView1.Rows[i].Cells[2].Value = 0;   //  全部先设成0
+            for (int ia = 0; ia < totalData; ia++)
+            {
+                if (FilterStatistics[ia] >= 54)
+                    dataGridView1.Rows[54].Cells[2].Value = (int)dataGridView1.Rows[54].Cells[2].Value + 1;
+                else
+                {
+                    dataGridView1.Rows[FilterStatistics[ia]].Cells[2].Value = (int)dataGridView1.Rows[FilterStatistics[ia]].Cells[2].Value + 1;
+                }
+            }
+            MessageBox.Show("标记成功。", "确认", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
     }
 }
