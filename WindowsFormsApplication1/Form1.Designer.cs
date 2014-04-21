@@ -329,6 +329,11 @@
             this.textBox_del6 = new System.Windows.Forms.TextBox();
             this.textBox_del7 = new System.Windows.Forms.TextBox();
             this.textBox_del8 = new System.Windows.Forms.TextBox();
+            this.printDialog3 = new System.Windows.Forms.PrintDialog();
+            this.printDocument3 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog3 = new System.Windows.Forms.PrintPreviewDialog();
+            this.pageSetupDialog3 = new System.Windows.Forms.PageSetupDialog();
+            this.label14 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -3658,6 +3663,7 @@
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.label14);
             this.tabPage6.Controls.Add(this.button_Del_Locate);
             this.tabPage6.Controls.Add(this.groupBox5);
             this.tabPage6.Controls.Add(this.button_Del_Print);
@@ -3980,6 +3986,32 @@
             this.textBox_del8.Size = new System.Drawing.Size(41, 22);
             this.textBox_del8.TabIndex = 7;
             // 
+            // printDialog3
+            // 
+            this.printDialog3.UseEXDialog = true;
+            // 
+            // printDocument3
+            // 
+            this.printDocument3.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument3_PrintPage);
+            // 
+            // printPreviewDialog3
+            // 
+            this.printPreviewDialog3.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog3.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog3.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog3.Enabled = true;
+            this.printPreviewDialog3.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog3.Icon")));
+            this.printPreviewDialog3.Name = "printPreviewDialog3";
+            this.printPreviewDialog3.Visible = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(551, 532);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(0, 13);
+            this.label14.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -4026,6 +4058,7 @@
             this.groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -4338,6 +4371,11 @@
         private System.Windows.Forms.TextBox textBox_del3;
         private System.Windows.Forms.TextBox textBox_del2;
         private System.Windows.Forms.TextBox textBox_del1;
+        private System.Windows.Forms.PrintDialog printDialog3;
+        private System.Drawing.Printing.PrintDocument printDocument3;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog3;
+        private System.Windows.Forms.PageSetupDialog pageSetupDialog3;
+        private System.Windows.Forms.Label label14;
 
     }
 }

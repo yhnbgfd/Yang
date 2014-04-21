@@ -893,6 +893,26 @@ namespace WindowsFormsApplication1
                 Winning_Numbers[i] = int.Parse(tb.Text);
             }
         }
+        /// <summary>
+        /// 获取删除结果页面的目标号码
+        /// </summary>
+        private void GetDeleteMarkNumbers()
+        {
+            Winning_Numbers = new int[SelectNum];
+            for (int i = 0; i < SelectNum; i++)
+            {
+                string controlName = "textBox_del" + (i + 1).ToString();
+                TextBox tb = (TextBox)findControl(groupBox5, controlName);
+                if (tb.Text == "" || tb.Text == "0" || (i > 0 && int.Parse(tb.Text) < Winning_Numbers[i - 1]))
+                {
+                    MessageBox.Show("请输入正常的目标号码", "警告", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Winning_Numbers = null;
+                    return;
+                }
+                Winning_Numbers[i] = int.Parse(tb.Text);
+            }
+        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -1049,7 +1069,20 @@ namespace WindowsFormsApplication1
                     bw.Enabled = true;
                 }
             }
-
+            /* 屏蔽过量的中奖号码输入框（删除查询页面） */
+            for (int i = 1; i < 9; i++)
+            {
+                string WinControlName = "textBox_del" + i.ToString();
+                TextBox bw = (TextBox)findControl(groupBox5, WinControlName);
+                if (SelectNum < i)
+                {
+                    bw.Enabled = false;
+                }
+                else
+                {
+                    bw.Enabled = true;
+                }
+            }
             //上方提示几选几
             label3.Text = TotalNum + "取" + SelectNum;
             label2.Text = "0";
@@ -2839,22 +2872,89 @@ namespace WindowsFormsApplication1
 
         private void button_Del_PrintSetting_Click(object sender, EventArgs e)
         {
-
+            CurrentPage = 0;
+            this.pageSetupDialog3.Document = printDocument3;
+            this.pageSetupDialog3.ShowDialog(); 
         }
 
         private void button_Del_PrintPreview_Click(object sender, EventArgs e)
         {
-
+            CurrentPage = 0;
+            this.printPreviewDialog3.Document = printDocument3;
+            this.printPreviewDialog3.ShowDialog();
         }
 
         private void button_Del_Print_Click(object sender, EventArgs e)
         {
-
+            CurrentPage = 0;
+            this.printDialog3.Document = printDocument3;
+            if (this.printDialog3.ShowDialog() == DialogResult.OK)
+            {
+                this.printDocument3.Print();
+            }
         }
 
         private void button_Del_Locate_Click(object sender, EventArgs e)
         {
+            GetDeleteMarkNumbers();
+            if (Winning_Numbers == null)
+            {
+                return;
+            }
+            Dichotomy dd = new Dichotomy();
+            int local = dd.Find(Winning_Numbers, l_totalDataBase, totalData);
+            int targetNumber = DeleteMark[local];
+            if (targetNumber > ShowSpecialStar)
+                targetNumber = ShowSpecialStar + 1;
 
+            string State = "";
+            if (targetNumber == 0)
+                State = "0";
+            else if (targetNumber == ShowSpecialStar + 1)
+                State = "超出";
+            else
+            {
+                State = "";
+                for (int i = 0; i < targetNumber; i++)
+                    State += "☆";
+            }
+
+            label14.Text = State;
+        }
+
+        private void printDocument3_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            int PrintColumn = 1;
+            bool isEnd = false;
+            Font font_title = new Font(new FontFamily("黑体"), 18);
+            Font font = new Font("宋体", 14);
+            Brush bru = Brushes.Blue;
+            string[] line = richTextBox3.Text.Split(new string[] { "\n" }, StringSplitOptions.None);
+            string msg = CurrentMarkforPrint + " = " + (line.Length - 1) + "\n\n";
+            for (int i = CurrentPage * 135; i < (CurrentPage + 1) * 135; i++)             //135 = 45*3
+            {
+                if (i >= line.Length)
+                {
+                    isEnd = true;
+                    break;
+                }
+                if (PrintColumn < 3)        //  3列打印
+                {
+                    msg += line[i] + "   ";
+                    PrintColumn++;
+                }
+                else
+                {
+                    msg += line[i] + "\n";
+                    PrintColumn = 1;
+                }
+                if (i == line.Length - 1)
+                {
+                    isEnd = true;
+                }
+            }
+            printDoc1(e, msg, font, bru);
+            e.HasMorePages = !isEnd; //是否有下一页
         }
 
     }
