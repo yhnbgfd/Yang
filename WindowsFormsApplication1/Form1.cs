@@ -283,22 +283,48 @@ namespace WindowsFormsApplication1
         /// <param name="tab"></param>
         private bool AddDelete(int type, int tab)
         {
-            for (int i = 0; i < totalData; i++)
+            if(type == 0)
             {
-                if (DeleteMark[i] == tab)
+                for (int i = 0; i < totalData; i++)
                 {
-                    DeleteMark[i] += 1;
+                    if (FilterStatistics[i] == tab)
+                    {
+                        DeleteMark[i] += 1;
+                    }
+                }
+            }
+            else if(type == 1)
+            {
+                for (int i = 0; i < totalData; i++)
+                {
+                    if (SpecialMark[i] == tab)
+                    {
+                        DeleteMark[i] += 1;
+                    }
                 }
             }
             return true;
         }
         private bool ReduceDelete(int type, int tab)
         {
-            for (int i = 0; i < totalData; i++)
+            if (type == 0)
             {
-                if (DeleteMark[i] == tab)
+                for (int i = 0; i < totalData; i++)
                 {
-                    DeleteMark[i] -= 1;
+                    if (FilterStatistics[i] == tab)
+                    {
+                        DeleteMark[i] -= 1;
+                    }
+                }
+            }
+            else if (type == 1)
+            {
+                for (int i = 0; i < totalData; i++)
+                {
+                    if (SpecialMark[i] == tab)
+                    {
+                        DeleteMark[i] -= 1;
+                    }
                 }
             }
             return true;
