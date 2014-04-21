@@ -51,7 +51,14 @@ namespace WindowsFormsApplication1.Method
                         adio.l_totalDataBase.Add(idata);
                         adio.FilterStatistics[ic] = int.Parse(kk[adio.n]);
                         adio.SpecialMark[ic] = int.Parse(kk[adio.n+1]);
-                        adio.DeleteMark[ic] = int.Parse(kk[adio.n + 2]);
+                        if (kk.Length < adio.n + 3)//兼容已保存数据
+                        {
+                            adio.DeleteMark[ic] = 0;
+                        }
+                        else
+                        {
+                            adio.DeleteMark[ic] = int.Parse(kk[adio.n + 2]);
+                        }
                         ic++;
                     }
                 }
