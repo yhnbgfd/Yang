@@ -2837,5 +2837,25 @@ namespace WindowsFormsApplication1
             }
         }
 
+        private void button_Del_PrintSetting_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_Del_PrintPreview_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_Del_Print_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_Del_Locate_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
