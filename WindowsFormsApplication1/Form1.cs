@@ -2544,34 +2544,84 @@ namespace WindowsFormsApplication1
         /// <summary>
         /// 横
         /// </summary>
-        private bool[] ibc = new bool[7];
         private void button_col_Click(object sender, EventArgs e)
         {
             Button bb = sender as Button;
+            int NotTransparentNum = 0;
+            int Count = 0;
             int n = int.Parse(bb.Name.Substring(bb.Name.LastIndexOf("l") + 1));
             for (int i = n * 10 - 9; i <= n * 10;i++ )
             {
                 string controlName = "button_c" + i.ToString();
                 Button tb = (Button)findControl(panel2, controlName);
-                digit_Button_Click(tb, (ibc[n-1]) ? 2 : 1);
+                if (tb.BackColor != Color.White)
+                {
+                    Count++;
+                }
+                if (tb.BackColor != Color.Transparent && tb.BackColor != Color.White)
+                {
+                    NotTransparentNum++;
+                }
             }
-            ibc[n - 1] = !ibc[n - 1];
+            if ((NotTransparentNum != Count && NotTransparentNum>0) || NotTransparentNum == 0)//(不全是当前颜色&&有颜色)||没颜色
+            {
+                for (int i = n * 10 - 9; i <= n * 10; i++)
+                {
+                    string controlName = "button_c" + i.ToString();
+                    Button tb = (Button)findControl(panel2, controlName);
+                    digit_Button_Click(tb, 1);
+                }
+            }
+            else //if (TransparentNum == 0)
+            {
+                for (int i = n * 10 - 9; i <= n * 10; i++)
+                {
+                    string controlName = "button_c" + i.ToString();
+                    Button tb = (Button)findControl(panel2, controlName);
+                    digit_Button_Click(tb, 2);
+                }
+            }
         }
         /// <summary>
         /// 竖
         /// </summary>
-        private bool[] ibch = new bool[10];
         private void button_colh_Click(object sender, EventArgs e)
         {
             Button bb = sender as Button;
+            int NotTransparentNum = 0;
+            int Count = 0;
             int n = int.Parse(bb.Name.Substring(bb.Name.LastIndexOf("h") + 1));
             for (int i = 0; i < 7; i++)
             {
-                string controlName = "button_c" + (i*10+n).ToString();
+                string controlName = "button_c" + (i * 10 + n).ToString();
                 Button tb = (Button)findControl(panel2, controlName);
-                digit_Button_Click(tb, (ibch[n-1]) ? 2 : 1);
+                if(tb.BackColor != Color.White)
+                {
+                    Count++;
+                }
+                if (tb.BackColor != Color.Transparent && tb.BackColor != Color.White)
+                {
+                    NotTransparentNum++;//有颜色则+
+                }
             }
-            ibch[n - 1] = !ibch[n - 1];
+            if ((NotTransparentNum != Count && NotTransparentNum > 0) || NotTransparentNum == 0)//(不全是当前颜色&&有颜色)||没颜色
+            {
+                for (int i = 0; i < 7; i++)
+                {
+                    string controlName = "button_c" + (i * 10 + n).ToString();
+                    Button tb = (Button)findControl(panel2, controlName);
+                    digit_Button_Click(tb, 1);
+                }
+            }
+            else //if (TransparentNum == 0)
+            {
+                for (int i = 0; i < 7; i++)
+                {
+                    string controlName = "button_c" + (i * 10 + n).ToString();
+                    Button tb = (Button)findControl(panel2, controlName);
+                    digit_Button_Click(tb, 2);
+                }
+            }
         }
 
         /// <summary>
@@ -2584,8 +2634,8 @@ namespace WindowsFormsApplication1
             RadioButton rb = sender as RadioButton;
             Color col = Color.FromName(rb.Name.Substring(rb.Name.LastIndexOf("_") + 1));
             ChoiceColor = col;
-            ibc = new bool[7];
-            ibch = new bool[10];
+            //ibc = new bool[7];
+            //ibch = new bool[10];
         }
 
         /// <summary>
