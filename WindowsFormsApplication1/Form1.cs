@@ -142,6 +142,10 @@ namespace WindowsFormsApplication1
                 {
                     SpecialMark[i] = ShowSpecialStar + 1;
                 }
+                if (DeleteMark[i] > ShowSpecialStar)
+                {
+                    DeleteMark[i] = ShowSpecialStar + 1;
+                }
             }
         }
 
@@ -249,7 +253,7 @@ namespace WindowsFormsApplication1
         /// <summary>
         /// 点击0
         /// </summary>
-        /// <param name="type">0普通结果页面，1特殊结果页面</param>
+        /// <param name="type">0普通结果页面，1特殊结果页面,2删除页面</param>
         /// <param name="tab"></param>
         /// <returns></returns>
         private bool Zero(int type, int tab)
@@ -274,10 +278,21 @@ namespace WindowsFormsApplication1
                     }
                 }
             }
+            else if (type == 2)
+            {
+                for (int i = 0; i < totalData; i++)
+                {
+                    if (DeleteMark[i] == tab)
+                    {
+                        DeleteMark[i] = 0;
+                    }
+                }
+            }
             return true;
         }
         /// <summary>
         /// 查看结果页面点击删除标记
+        /// type 0普通1特殊2删除
         /// </summary>
         /// <param name="type"></param>
         /// <param name="tab"></param>
@@ -303,6 +318,16 @@ namespace WindowsFormsApplication1
                     }
                 }
             }
+            else if (type == 2)
+            {
+                for (int i = 0; i < totalData; i++)
+                {
+                    if (DeleteMark[i] == tab)
+                    {
+                        DeleteMark[i] += 1;
+                    }
+                }
+            }
             return true;
         }
         private bool ReduceDelete(int type, int tab)
@@ -322,6 +347,16 @@ namespace WindowsFormsApplication1
                 for (int i = 0; i < totalData; i++)
                 {
                     if (SpecialMark[i] == tab)
+                    {
+                        DeleteMark[i] -= 1;
+                    }
+                }
+            }
+            else if (type == 2)
+            {
+                for (int i = 0; i < totalData; i++)
+                {
+                    if (DeleteMark[i] == tab)
                     {
                         DeleteMark[i] -= 1;
                     }
@@ -2660,6 +2695,96 @@ namespace WindowsFormsApplication1
                 }
             }
             MessageBox.Show("标记成功。", "确认", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            MarkSort();
+            MessageBoxButtons messButton = MessageBoxButtons.OKCancel;
+            int tab = e.RowIndex;
+            if (e.ColumnIndex == 3)//datagrid---查看
+            {
+                if (dataGridView4.Rows[e.RowIndex].Cells[2].Value.ToString() == "0")
+                {
+                    richTextBox3.Text = "";
+                    return;
+                }
+                else if (dataGridView4.Rows[e.RowIndex].Cells[2].Value.ToString().Length > 4)
+                {
+                    DialogResult dr = MessageBox.Show("数据量比较大，查看结果可能导致程序卡死，确定要查看吗?", "警告", messButton);
+                    if (dr == DialogResult.Cancel)//如果点击“确定”按钮
+                    {
+                        return;
+                    }
+                }
+                richTextBox3.Text = "";
+                CurrentMarkforPrint = sort[tab];
+                string text = "";
+                for (int ia = 0; ia < totalData; ia++)
+                {
+                    if (tab == 6 && DeleteMark[ia] >= tab)
+                    {
+                        for (int i = 0; i < SelectNum; i++)
+                        {
+                            if (l_totalDataBase[ia][i] < 10)
+                                text += " ";
+                            text += l_totalDataBase[ia][i] + " ";
+                        }
+                        text += "\n";
+                    }
+                    else if (DeleteMark[ia] == tab)
+                    {
+                        for (int i = 0; i < SelectNum; i++)
+                        {
+                            if (l_totalDataBase[ia][i] < 10)
+                                text += " ";
+                            text += l_totalDataBase[ia][i] + " ";
+                        }
+                        text += "\n";
+                    }
+                }
+                richTextBox3.Text = text;
+            }
+            else
+            {
+                DialogResult dr = MessageBox.Show("确定执行该操作吗？", "警告", messButton);
+                if (dr == DialogResult.Cancel)
+                {
+                    return;
+                }
+
+                bool result = false;
+                if (e.ColumnIndex == 4)    //datagrid---加删
+                {
+                    result = AddDelete(2, tab);
+                }
+                else if (e.ColumnIndex == 5)//datagrid---减删
+                {
+                    result = ReduceDelete(2, tab);
+                }
+                else if (e.ColumnIndex == 6)//datagrid---归0
+                {
+                    result = Zero(2, tab);
+                }
+
+                if (result)
+                {
+                    int rowsLength = dataGridView4.Rows.Count;
+                    richTextBox3.Text = "点击左边“查看”按钮显示结果";
+                    for (int i = 0; i < rowsLength; i++)
+                        dataGridView4.Rows[i].Cells[2].Value = 0;
+                    for (int i = 0; i < totalData; i++)
+                    {
+                        if (DeleteMark[i] >= rowsLength)
+                        {
+                            dataGridView4.Rows[rowsLength - 1].Cells[2].Value = (int)dataGridView4.Rows[rowsLength - 1].Cells[2].Value + 1;
+                        }
+                        else
+                            dataGridView4.Rows[DeleteMark[i]].Cells[2].Value = (int)dataGridView4.Rows[DeleteMark[i]].Cells[2].Value + 1;
+                    }
+                    MessageBox.Show("标记成功。", "确认", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
 
     }
