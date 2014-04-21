@@ -118,6 +118,7 @@ namespace WindowsFormsApplication1
             }
             InitDataGridView1();
             InitDataGridView2();
+            InitDataGridViewDeleteResult();
 
             GetFileList(false); //读取已存记录
             for (int i = 0; i < TotalNum;i++ )
@@ -248,7 +249,7 @@ namespace WindowsFormsApplication1
         /// <summary>
         /// 点击0
         /// </summary>
-        /// <param name="type"></param>
+        /// <param name="type">0普通结果页面，1特殊结果页面</param>
         /// <param name="tab"></param>
         /// <returns></returns>
         private bool Zero(int type, int tab)
@@ -275,6 +276,33 @@ namespace WindowsFormsApplication1
             }
             return true;
         }
+        /// <summary>
+        /// 查看结果页面点击删除标记
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="tab"></param>
+        private bool AddDelete(int type, int tab)
+        {
+            for (int i = 0; i < totalData; i++)
+            {
+                if (DeleteMark[i] == tab)
+                {
+                    DeleteMark[i] += 1;
+                }
+            }
+            return true;
+        }
+        private bool ReduceDelete(int type, int tab)
+        {
+            for (int i = 0; i < totalData; i++)
+            {
+                if (DeleteMark[i] == tab)
+                {
+                    DeleteMark[i] -= 1;
+                }
+            }
+            return true;
+        }
 
         /// <summary>
         /// 特殊五角星
@@ -287,13 +315,18 @@ namespace WindowsFormsApplication1
         {
             SpecialMark[local] += ctab;
         }
-        
+
+        private void AddDeleteMark(int local, int ctab)
+        {
+            DeleteMark[local] += ctab;
+        }
+        #region 初始化三个DataGridView
         private void InitDataGridView1()
         {
             DataGridViewRowCollection rows = this.dataGridView1.Rows;
             for (int i = 0; i < 55; i++ )
             {
-                rows.Add(i + 1, sort[i], 0, " 查看", " +△", " -△", " +☆", " -☆", " 超出", " 归0");
+                rows.Add(i + 1, sort[i], 0, " 查看", " +△", " -△", " +☆", " -☆", " 超出", " 归0", " 删除");
             }
         }
         private void InitDataGridView2()
@@ -305,22 +338,46 @@ namespace WindowsFormsApplication1
                 if (i == 0)
                 {
                     State = "0";
-                    rows.Add(i + 1, State, 0, " 查看", " 超出", " 归0");
+                    rows.Add(i + 1, State, 0, " 查看", " 超出", " 归0", " 删除");
                     State = "";
                 }
                 else if (i == ShowSpecialStar + 1)
                 {
                     State = "超出";
-                    rows.Add(i + 1, State, 0, " 查看", " 超出", " 归0");
+                    rows.Add(i + 1, State, 0, " 查看", " 超出", " 归0", " 删除");
                 }
                 else
                 {
                     State += "☆";
-                    rows.Add(i + 1, State, 0, " 查看", " 超出", " 归0");
+                    rows.Add(i + 1, State, 0, " 查看", " 超出", " 归0", " 删除");
                 }
             }
         }
-
+        private void InitDataGridViewDeleteResult()
+        {
+            string State = "";
+            DataGridViewRowCollection rows = this.dataGridView4.Rows;
+            for (int i = 0; i < ShowSpecialStar + 2; i++)
+            {
+                if (i == 0)
+                {
+                    State = "0";
+                    rows.Add(i + 1, State, 0, " 查看", " 加删", " 减删", " 归0");
+                    State = "";
+                }
+                else if (i == ShowSpecialStar + 1)
+                {
+                    State = "超出";
+                    rows.Add(i + 1, State, 0, " 查看", " 加删", " 减删", " 归0");
+                }
+                else
+                {
+                    State += "☆";
+                    rows.Add(i + 1, State, 0, " 查看", " 加删", " 减删", " 归0");
+                }
+            }
+        }
+        #endregion
         /// <summary>
         /// 定义错误提示窗口
         /// </summary>
@@ -338,7 +395,7 @@ namespace WindowsFormsApplication1
             MarkSort();
             MessageBoxButtons messButton = MessageBoxButtons.OKCancel;
             int tab = e.RowIndex;
-            if (e.ColumnIndex == 3)
+            if (e.ColumnIndex == 3)//datagrid---查看
             {
                 if (dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString() == "0")
                 {
@@ -393,29 +450,33 @@ namespace WindowsFormsApplication1
 
                 bool result = false;
 
-                if (e.ColumnIndex == 4)
+                if (e.ColumnIndex == 4)//datagrid---加星
                 {
                     result = AddStar(tab);
                 }
-                if (e.ColumnIndex == 5)
+                if (e.ColumnIndex == 5)//datagrid---减星
                 {
                     result = ReduceStar(tab);
                 }
-                if (e.ColumnIndex == 6)
+                if (e.ColumnIndex == 6)//datagrid---特加
                 {
                     result = AddSpStar(tab);
                 }
-                if (e.ColumnIndex == 7)
+                if (e.ColumnIndex == 7)//datagrid---特减
                 {
                     result = ReduceSpStar(tab);
                 }
-                if (e.ColumnIndex == 8)
+                if (e.ColumnIndex == 8)//datagrid---超出
                 {
                     result = Exceeded(0, tab);
                 }
-                if (e.ColumnIndex == 9)
+                if (e.ColumnIndex == 9)//datagrid---归0
                 {
                     result = Zero(0, tab);
+                }
+                if(e.ColumnIndex == 10)//datagrid---删除
+                {
+                    result = AddDelete(0, tab);
                 }
 
                 if (result)
@@ -445,7 +506,7 @@ namespace WindowsFormsApplication1
             MarkSort();
             MessageBoxButtons messButton = MessageBoxButtons.OKCancel;
             int tab = e.RowIndex;
-            if (e.ColumnIndex == 3)
+            if (e.ColumnIndex == 3)//datagrid---查看
             {
                 if (dataGridView3.Rows[e.RowIndex].Cells[2].Value.ToString() == "0")
                 {
@@ -496,13 +557,17 @@ namespace WindowsFormsApplication1
                 }
 
                 bool result = false;
-                if (e.ColumnIndex == 4)    //超出
+                if (e.ColumnIndex == 4)    //datagrid---超出
                 {
                     result = Exceeded(1, tab);
                 }
-                else if (e.ColumnIndex == 5)
+                else if (e.ColumnIndex == 5)//datagrid---归0
                 {
                     result = Zero(1, tab);
+                }
+                else if(e.ColumnIndex == 6)//datagrid---删除
+                {
+                    result = AddDelete(1, tab);
                 }
 
                 if (result)
@@ -682,14 +747,31 @@ namespace WindowsFormsApplication1
                     dataGridView3.Rows[SpecialMark[i]].Cells[2].Value = (int)dataGridView3.Rows[SpecialMark[i]].Cells[2].Value + 1;
             }
 
+            //删除标记
+            richTextBox3.Text = "点击左边“查看”按钮显示结果";
+            for (int i = 0; i < dataGridView4.Rows.Count; i++)
+                dataGridView4.Rows[i].Cells[2].Value = 0;
+            for (int i = 0; i < totalData; i++)
+            {
+                if (DeleteMark[i] > ShowSpecialStar)
+                    dataGridView4.Rows[ShowSpecialStar].Cells[2].Value = (int)dataGridView4.Rows[ShowSpecialStar].Cells[2].Value + 1;
+                else
+                    dataGridView4.Rows[DeleteMark[i]].Cells[2].Value = (int)dataGridView4.Rows[DeleteMark[i]].Cells[2].Value + 1;
+            }
+
+            //跳转tab
             string buttonName = ((Button)sender).Name;
-            if (buttonName.IndexOf("3") > 0)       // 查看特殊按钮的名字是：button3
+            if (buttonName == "button3")       // 查看特殊按钮的名字是：button3
             {
                 tabControl1.SelectedIndex = 4;  // 跳到特殊五星tab
             }
-            else
+            else if (buttonName == "button2")
             {
                 tabControl1.SelectedIndex = 3;  // 调到普通结果tab
+            }
+            else if (buttonName == "button15")
+            {
+                tabControl1.SelectedIndex = 5;
             }
         }
 
@@ -1194,6 +1276,9 @@ namespace WindowsFormsApplication1
                 case 4: //特殊五星
                     cTab = 1;
                     break;
+                case 5: //删除标记
+                    cTab = 1;
+                    break;
                 default:
                     cTab = 0;
                     break;
@@ -1226,15 +1311,19 @@ namespace WindowsFormsApplication1
                         case "<=":
                             if (temptCount <= count && count < 10/*|| (count > 10 && (temptCount == count / 10 || temptCount == count % 10))*/)
                             {
-                                if (comboBox4.SelectedIndex != 4)   //不是特殊五角星
+                                if (comboBox4.SelectedIndex < 4)   //不是特殊五角星
                                 {
                                     if (FilterStatistics[i] + cTab < 0)//0,不让减了
                                         continue;
                                     FilterStatistics[i] += cTab;
                                 }
-                                else            //特殊五角星
+                                else if (comboBox4.SelectedIndex == 4)           //特殊五角星
                                 {
                                     SpecialStar(i, cTab);
+                                }
+                                else if (comboBox4.SelectedIndex == 5)//删除标记
+                                {
+                                    AddDeleteMark(i,cTab);
                                 }
                                 m_Count_Generate++;
                             }
@@ -1242,15 +1331,19 @@ namespace WindowsFormsApplication1
                         case "=":
                             if (temptCount == count || (count > 10 && (temptCount == count / 10 || temptCount == count % 10)))
                             {
-                                if (comboBox4.SelectedIndex != 4)   //不是特殊五角星
+                                if (comboBox4.SelectedIndex < 4)   //不是特殊五角星
                                 {
                                     if (FilterStatistics[i] + cTab < 0)//0,不让减了
                                         continue;
                                     FilterStatistics[i] += cTab;
                                 }
-                                else            //特殊五角星
+                                else if (comboBox4.SelectedIndex == 4)          //特殊五角星
                                 {
                                     SpecialStar(i, cTab);
+                                }
+                                else if (comboBox4.SelectedIndex == 5)//删除标记
+                                {
+                                    AddDeleteMark(i, cTab);
                                 }
                                 m_Count_Generate++;
                             }
@@ -1258,15 +1351,19 @@ namespace WindowsFormsApplication1
                         case ">=":
                             if (temptCount >= count/* || (count > 10 && (temptCount == count / 10 || temptCount == count % 10))*/)
                             {
-                                if (comboBox4.SelectedIndex != 4)   //不是特殊五角星
+                                if (comboBox4.SelectedIndex < 4)   //不是特殊五角星
                                 {
                                     if (FilterStatistics[i] + cTab < 0)//0,不让减了
                                         continue;
                                     FilterStatistics[i] += cTab;
                                 }
-                                else    //特殊五角星
+                                else if (comboBox4.SelectedIndex == 4)    //特殊五角星
                                 {
                                     SpecialStar(i, cTab);
+                                }
+                                else if (comboBox4.SelectedIndex == 5)//删除标记
+                                {
+                                    AddDeleteMark(i, cTab);
                                 }
                                 m_Count_Generate++;
                             }
@@ -1274,15 +1371,19 @@ namespace WindowsFormsApplication1
                         case "!=":
                             if (temptCount != count || (count > 10 && (temptCount == count / 10 || temptCount == count % 10)))
                             {
-                                if (comboBox4.SelectedIndex != 4)//不是特殊五角星
+                                if (comboBox4.SelectedIndex < 4)//不是特殊五角星
                                 {
                                     if (FilterStatistics[i] + cTab < 0)//0,不让减了
                                         continue;
                                     FilterStatistics[i] += cTab;
                                 }
-                                else    //特殊五角星
+                                else if (comboBox4.SelectedIndex == 4)   //特殊五角星
                                 {
                                     SpecialStar(i, cTab);
+                                }
+                                else if (comboBox4.SelectedIndex == 5)//删除标记
+                                {
+                                    AddDeleteMark(i, cTab);
                                 }
                                 m_Count_Generate++;
                             }
@@ -1437,6 +1538,9 @@ namespace WindowsFormsApplication1
                 case 4://特殊五角星
                     cTab = 1;
                     break;
+                case 5:
+                    cTab = 1;//删除标记
+                    break;
                 default:
                     cTab = 0;
                     break;
@@ -1452,15 +1556,19 @@ namespace WindowsFormsApplication1
                         case "=":
                             if (DiffColorNum[ia] == diffColorNum || (diffColorNum > 10 && (DiffColorNum[ia] == diffColorNum / 10 || DiffColorNum[ia] == diffColorNum % 10)))
                             {
-                                if (marked != 4)
+                                if (marked < 4)
                                 {
                                     if (cTab < 0 && DiffColorNum[ia] == 0)
                                         continue;
                                     FilterStatistics[ia] += cTab;
                                 }
-                                else //特殊五角星
+                                else if(marked == 4)//特殊五角星
                                 {
                                     SpecialStar(ia, cTab);
+                                }
+                                else if(marked == 5)
+                                {
+                                    AddDeleteMark(ia, cTab);
                                 }
                                 m_Count_Generate++;
                             }
@@ -1468,15 +1576,19 @@ namespace WindowsFormsApplication1
                         case "!=":
                             if (DiffColorNum[ia] != diffColorNum || (diffColorNum > 10 && (DiffColorNum[ia] == diffColorNum / 10 || DiffColorNum[ia] == diffColorNum % 10)))
                             {
-                                if (marked != 4)
+                                if (marked < 4)
                                 {
                                     if (cTab < 0 && DiffColorNum[ia] == 0)
                                         continue;
                                     FilterStatistics[ia] += cTab;
                                 }
-                                else //特殊五角星
+                                else if (marked == 4)//特殊五角星
                                 {
                                     SpecialStar(ia, cTab);
+                                }
+                                else if (marked == 5)//delete mark
+                                {
+                                    AddDeleteMark(ia, cTab);
                                 }
                                 m_Count_Generate++;
                             }
@@ -1484,15 +1596,19 @@ namespace WindowsFormsApplication1
                         case ">=":
                             if (DiffColorNum[ia] >= diffColorNum /*|| (diffColorNum > 10 && (DiffColorNum[ia] == diffColorNum / 10 || DiffColorNum[ia] == diffColorNum % 10))*/)
                             {
-                                if (marked != 4)
+                                if (marked < 4)
                                 {
                                     if (cTab < 0 && FilterStatistics[ia] == 0)
                                         continue;
                                     FilterStatistics[ia] += cTab;
                                 }
-                                else //特殊五角星
+                                else if (marked == 4)//特殊五角星
                                 {
                                     SpecialStar(ia, cTab);
+                                }
+                                else if (marked == 5)// delete mark
+                                {
+                                    AddDeleteMark(ia, cTab);
                                 }
                                 m_Count_Generate++;
                             }
@@ -1500,15 +1616,19 @@ namespace WindowsFormsApplication1
                         case "<=":
                             if (DiffColorNum[ia] <= diffColorNum /*|| (diffColorNum > 10 && (DiffColorNum[ia] == diffColorNum / 10 || DiffColorNum[ia] == diffColorNum % 10))*/)
                             {
-                                if (marked != 4)
+                                if (marked < 4)
                                 {
                                     if (cTab < 0 && FilterStatistics[ia] == 0)
                                         continue;
                                     FilterStatistics[ia] += cTab;
                                 }
-                                else //特殊五角星
+                                else if (marked == 4)//特殊五角星
                                 {
                                     SpecialStar(ia, cTab);
+                                }
+                                else if (marked == 5)// delete mark
+                                {
+                                    AddDeleteMark(ia, cTab);
                                 }
                                 m_Count_Generate++;
                             }
@@ -1624,7 +1744,10 @@ namespace WindowsFormsApplication1
                 case 3:
                     cTab = 54;
                     break;
-                case 4:
+                case 4://special mark
+                    cTab = 1;
+                    break;
+                case 5://delete mark
                     cTab = 1;
                     break;
                 default:
@@ -1656,15 +1779,19 @@ namespace WindowsFormsApplication1
                     }
                     if (isTrue)
                     {
-                        if (comboBox1.SelectedIndex != 4)
+                        if (comboBox1.SelectedIndex < 4)
                         {
                             if (cTab < 0 && FilterStatistics[ia] == 0)
                                 continue;
                             FilterStatistics[ia] += cTab;
                         }
-                        else    //特殊五角星
+                        else if (comboBox1.SelectedIndex == 4)   //特殊五角星
                         {
                             SpecialStar(ia, cTab);
+                        }
+                        else if (comboBox1.SelectedIndex == 5)//delete mark
+                        {
+                            AddDeleteMark(ia, cTab);
                         }
                         m_Count_Generate++;
                     }
@@ -2248,6 +2375,9 @@ namespace WindowsFormsApplication1
                     cTab = 54;
                     break;
                 case 4: //特殊五星
+                    cTab = 1;
+                    break;
+                case 5://delete mark
                     cTab = 1;
                     break;
                 default:

@@ -253,16 +253,6 @@
             this.btnPageSetup = new System.Windows.Forms.Button();
             this.btnPrint = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label12 = new System.Windows.Forms.Label();
@@ -282,12 +272,6 @@
             this.button9 = new System.Windows.Forms.Button();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
@@ -306,6 +290,32 @@
             this.printDialog2 = new System.Windows.Forms.PrintDialog();
             this.pageSetupDialog2 = new System.Windows.Forms.PageSetupDialog();
             this.printPreviewDialog2 = new System.Windows.Forms.PrintPreviewDialog();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button15 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -343,7 +353,7 @@
             this.tabControl1.Location = new System.Drawing.Point(7, 25);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(859, 646);
+            this.tabControl1.Size = new System.Drawing.Size(1001, 646);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -357,7 +367,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 23);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(851, 619);
+            this.tabPage1.Size = new System.Drawing.Size(993, 619);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "创建筛选库";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -365,7 +375,7 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.groupBox4);
-            this.panel4.Location = new System.Drawing.Point(418, 34);
+            this.panel4.Location = new System.Drawing.Point(583, 29);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(227, 104);
             this.panel4.TabIndex = 11;
@@ -445,10 +455,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(141, 78);
+            this.label6.Font = new System.Drawing.Font("KaiTi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label6.Location = new System.Drawing.Point(239, 78);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 14);
+            this.label6.Size = new System.Drawing.Size(40, 16);
             this.label6.TabIndex = 10;
             this.label6.Text = "总数";
             // 
@@ -465,7 +475,7 @@
             "6",
             "7",
             "8"});
-            this.comboBox5.Location = new System.Drawing.Point(141, 46);
+            this.comboBox5.Location = new System.Drawing.Point(238, 44);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(51, 22);
             this.comboBox5.TabIndex = 9;
@@ -476,7 +486,7 @@
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(7, 155);
+            this.panel1.Location = new System.Drawing.Point(141, 156);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(685, 393);
             this.panel1.TabIndex = 7;
@@ -858,7 +868,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("KaiTi", 10.5F);
-            this.textBox2.Location = new System.Drawing.Point(212, 75);
+            this.textBox2.Location = new System.Drawing.Point(291, 76);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(54, 23);
             this.textBox2.TabIndex = 2;
@@ -871,7 +881,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 42F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(62, 29);
+            this.label1.Location = new System.Drawing.Point(155, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 75);
             this.label1.TabIndex = 0;
@@ -885,7 +895,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 23);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(851, 619);
+            this.tabPage2.Size = new System.Drawing.Size(993, 619);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "选择已存记录";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -920,7 +930,7 @@
             this.Column8,
             this.Column6,
             this.Column7});
-            this.dataGridView2.Location = new System.Drawing.Point(30, 35);
+            this.dataGridView2.Location = new System.Drawing.Point(171, 31);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowTemplate.Height = 23;
@@ -968,16 +978,13 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.button3);
-            this.tabPage4.Controls.Add(this.button7);
             this.tabPage4.Controls.Add(this.count_operate);
             this.tabPage4.Controls.Add(this.count_generate);
-            this.tabPage4.Controls.Add(this.button2);
             this.tabPage4.Controls.Add(this.panel2);
             this.tabPage4.Location = new System.Drawing.Point(4, 23);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(851, 619);
+            this.tabPage4.Size = new System.Drawing.Size(993, 619);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "逻辑查询界面";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -985,7 +992,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button3.Location = new System.Drawing.Point(673, 393);
+            this.button3.Location = new System.Drawing.Point(784, 358);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(87, 34);
             this.button3.TabIndex = 14;
@@ -996,7 +1003,7 @@
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button7.Location = new System.Drawing.Point(673, 259);
+            this.button7.Location = new System.Drawing.Point(784, 252);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(87, 31);
             this.button7.TabIndex = 19;
@@ -1024,7 +1031,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button2.Location = new System.Drawing.Point(673, 324);
+            this.button2.Location = new System.Drawing.Point(784, 305);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(87, 34);
             this.button2.TabIndex = 9;
@@ -1035,8 +1042,12 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.button15);
+            this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button_colh7);
+            this.panel2.Controls.Add(this.button7);
             this.panel2.Controls.Add(this.button_colh8);
+            this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button_colh9);
             this.panel2.Controls.Add(this.button_colh10);
             this.panel2.Controls.Add(this.button_colh2);
@@ -1069,13 +1080,13 @@
             this.panel2.Controls.Add(this.tableLayoutPanel1);
             this.panel2.Location = new System.Drawing.Point(3, 7);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(673, 506);
+            this.panel2.Size = new System.Drawing.Size(889, 506);
             this.panel2.TabIndex = 8;
             // 
             // button_colh7
             // 
             this.button_colh7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_colh7.Location = new System.Drawing.Point(439, 13);
+            this.button_colh7.Location = new System.Drawing.Point(535, 13);
             this.button_colh7.Name = "button_colh7";
             this.button_colh7.Size = new System.Drawing.Size(22, 22);
             this.button_colh7.TabIndex = 42;
@@ -1086,7 +1097,7 @@
             // button_colh8
             // 
             this.button_colh8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_colh8.Location = new System.Drawing.Point(499, 13);
+            this.button_colh8.Location = new System.Drawing.Point(595, 13);
             this.button_colh8.Name = "button_colh8";
             this.button_colh8.Size = new System.Drawing.Size(22, 22);
             this.button_colh8.TabIndex = 41;
@@ -1097,7 +1108,7 @@
             // button_colh9
             // 
             this.button_colh9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_colh9.Location = new System.Drawing.Point(560, 13);
+            this.button_colh9.Location = new System.Drawing.Point(655, 13);
             this.button_colh9.Name = "button_colh9";
             this.button_colh9.Size = new System.Drawing.Size(22, 22);
             this.button_colh9.TabIndex = 40;
@@ -1108,7 +1119,7 @@
             // button_colh10
             // 
             this.button_colh10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_colh10.Location = new System.Drawing.Point(621, 13);
+            this.button_colh10.Location = new System.Drawing.Point(717, 13);
             this.button_colh10.Name = "button_colh10";
             this.button_colh10.Size = new System.Drawing.Size(22, 22);
             this.button_colh10.TabIndex = 39;
@@ -1119,7 +1130,7 @@
             // button_colh2
             // 
             this.button_colh2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_colh2.Location = new System.Drawing.Point(135, 13);
+            this.button_colh2.Location = new System.Drawing.Point(236, 13);
             this.button_colh2.Name = "button_colh2";
             this.button_colh2.Size = new System.Drawing.Size(22, 22);
             this.button_colh2.TabIndex = 38;
@@ -1130,7 +1141,7 @@
             // button_colh3
             // 
             this.button_colh3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_colh3.Location = new System.Drawing.Point(196, 13);
+            this.button_colh3.Location = new System.Drawing.Point(296, 13);
             this.button_colh3.Name = "button_colh3";
             this.button_colh3.Size = new System.Drawing.Size(22, 22);
             this.button_colh3.TabIndex = 37;
@@ -1141,7 +1152,7 @@
             // button_colh4
             // 
             this.button_colh4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_colh4.Location = new System.Drawing.Point(257, 13);
+            this.button_colh4.Location = new System.Drawing.Point(356, 13);
             this.button_colh4.Name = "button_colh4";
             this.button_colh4.Size = new System.Drawing.Size(22, 22);
             this.button_colh4.TabIndex = 36;
@@ -1152,7 +1163,7 @@
             // button_colh5
             // 
             this.button_colh5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_colh5.Location = new System.Drawing.Point(317, 13);
+            this.button_colh5.Location = new System.Drawing.Point(415, 13);
             this.button_colh5.Name = "button_colh5";
             this.button_colh5.Size = new System.Drawing.Size(22, 22);
             this.button_colh5.TabIndex = 35;
@@ -1163,7 +1174,7 @@
             // button_colh6
             // 
             this.button_colh6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_colh6.Location = new System.Drawing.Point(378, 13);
+            this.button_colh6.Location = new System.Drawing.Point(475, 13);
             this.button_colh6.Name = "button_colh6";
             this.button_colh6.Size = new System.Drawing.Size(22, 22);
             this.button_colh6.TabIndex = 34;
@@ -1173,7 +1184,7 @@
             // 
             // button_col7
             // 
-            this.button_col7.Location = new System.Drawing.Point(24, 215);
+            this.button_col7.Location = new System.Drawing.Point(118, 213);
             this.button_col7.Name = "button_col7";
             this.button_col7.Size = new System.Drawing.Size(23, 22);
             this.button_col7.TabIndex = 33;
@@ -1183,7 +1194,7 @@
             // 
             // button_col6
             // 
-            this.button_col6.Location = new System.Drawing.Point(24, 185);
+            this.button_col6.Location = new System.Drawing.Point(118, 184);
             this.button_col6.Name = "button_col6";
             this.button_col6.Size = new System.Drawing.Size(23, 22);
             this.button_col6.TabIndex = 32;
@@ -1193,7 +1204,7 @@
             // 
             // button_col5
             // 
-            this.button_col5.Location = new System.Drawing.Point(24, 157);
+            this.button_col5.Location = new System.Drawing.Point(118, 156);
             this.button_col5.Name = "button_col5";
             this.button_col5.Size = new System.Drawing.Size(23, 22);
             this.button_col5.TabIndex = 31;
@@ -1203,7 +1214,7 @@
             // 
             // button_col4
             // 
-            this.button_col4.Location = new System.Drawing.Point(24, 129);
+            this.button_col4.Location = new System.Drawing.Point(118, 128);
             this.button_col4.Name = "button_col4";
             this.button_col4.Size = new System.Drawing.Size(23, 22);
             this.button_col4.TabIndex = 30;
@@ -1213,7 +1224,7 @@
             // 
             // button_col3
             // 
-            this.button_col3.Location = new System.Drawing.Point(24, 101);
+            this.button_col3.Location = new System.Drawing.Point(118, 100);
             this.button_col3.Name = "button_col3";
             this.button_col3.Size = new System.Drawing.Size(23, 22);
             this.button_col3.TabIndex = 29;
@@ -1223,7 +1234,7 @@
             // 
             // button_col2
             // 
-            this.button_col2.Location = new System.Drawing.Point(24, 73);
+            this.button_col2.Location = new System.Drawing.Point(118, 72);
             this.button_col2.Name = "button_col2";
             this.button_col2.Size = new System.Drawing.Size(23, 22);
             this.button_col2.TabIndex = 28;
@@ -1234,7 +1245,7 @@
             // button_colh1
             // 
             this.button_colh1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_colh1.Location = new System.Drawing.Point(77, 13);
+            this.button_colh1.Location = new System.Drawing.Point(176, 13);
             this.button_colh1.Name = "button_colh1";
             this.button_colh1.Size = new System.Drawing.Size(22, 22);
             this.button_colh1.TabIndex = 27;
@@ -1244,7 +1255,7 @@
             // 
             // button_col1
             // 
-            this.button_col1.Location = new System.Drawing.Point(24, 44);
+            this.button_col1.Location = new System.Drawing.Point(118, 44);
             this.button_col1.Name = "button_col1";
             this.button_col1.Size = new System.Drawing.Size(23, 22);
             this.button_col1.TabIndex = 26;
@@ -1255,9 +1266,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 4);
+            this.label3.Font = new System.Drawing.Font("KaiTi", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.Location = new System.Drawing.Point(18, 13);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.Size = new System.Drawing.Size(59, 20);
             this.label3.TabIndex = 25;
             this.label3.Text = "26取5";
             // 
@@ -1267,7 +1279,7 @@
             this.radioButton_Wheat.BackColor = System.Drawing.Color.Wheat;
             this.radioButton_Wheat.Font = new System.Drawing.Font("KaiTi", 10F);
             this.radioButton_Wheat.ForeColor = System.Drawing.Color.Black;
-            this.radioButton_Wheat.Location = new System.Drawing.Point(569, 252);
+            this.radioButton_Wheat.Location = new System.Drawing.Point(682, 252);
             this.radioButton_Wheat.Name = "radioButton_Wheat";
             this.radioButton_Wheat.Size = new System.Drawing.Size(39, 18);
             this.radioButton_Wheat.TabIndex = 24;
@@ -1282,7 +1294,7 @@
             this.radioButton_Chocolate.BackColor = System.Drawing.Color.Chocolate;
             this.radioButton_Chocolate.Font = new System.Drawing.Font("KaiTi", 10F);
             this.radioButton_Chocolate.ForeColor = System.Drawing.Color.Black;
-            this.radioButton_Chocolate.Location = new System.Drawing.Point(521, 252);
+            this.radioButton_Chocolate.Location = new System.Drawing.Point(634, 252);
             this.radioButton_Chocolate.Name = "radioButton_Chocolate";
             this.radioButton_Chocolate.Size = new System.Drawing.Size(39, 18);
             this.radioButton_Chocolate.TabIndex = 23;
@@ -1297,7 +1309,7 @@
             this.radioButton_Maroon.BackColor = System.Drawing.Color.Maroon;
             this.radioButton_Maroon.Font = new System.Drawing.Font("KaiTi", 10F);
             this.radioButton_Maroon.ForeColor = System.Drawing.Color.White;
-            this.radioButton_Maroon.Location = new System.Drawing.Point(474, 252);
+            this.radioButton_Maroon.Location = new System.Drawing.Point(587, 252);
             this.radioButton_Maroon.Name = "radioButton_Maroon";
             this.radioButton_Maroon.Size = new System.Drawing.Size(39, 18);
             this.radioButton_Maroon.TabIndex = 22;
@@ -1312,7 +1324,7 @@
             this.radioButton_Gray.BackColor = System.Drawing.Color.Gray;
             this.radioButton_Gray.Font = new System.Drawing.Font("KaiTi", 10F);
             this.radioButton_Gray.ForeColor = System.Drawing.Color.Black;
-            this.radioButton_Gray.Location = new System.Drawing.Point(426, 252);
+            this.radioButton_Gray.Location = new System.Drawing.Point(539, 252);
             this.radioButton_Gray.Name = "radioButton_Gray";
             this.radioButton_Gray.Size = new System.Drawing.Size(39, 18);
             this.radioButton_Gray.TabIndex = 21;
@@ -1327,7 +1339,7 @@
             this.radioButton_Black.BackColor = System.Drawing.Color.Black;
             this.radioButton_Black.Font = new System.Drawing.Font("KaiTi", 10F);
             this.radioButton_Black.ForeColor = System.Drawing.Color.White;
-            this.radioButton_Black.Location = new System.Drawing.Point(378, 252);
+            this.radioButton_Black.Location = new System.Drawing.Point(491, 252);
             this.radioButton_Black.Name = "radioButton_Black";
             this.radioButton_Black.Size = new System.Drawing.Size(39, 18);
             this.radioButton_Black.TabIndex = 20;
@@ -1380,7 +1392,7 @@
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.comboBox4);
-            this.groupBox1.Location = new System.Drawing.Point(37, 278);
+            this.groupBox1.Location = new System.Drawing.Point(151, 279);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(609, 224);
             this.groupBox1.TabIndex = 18;
@@ -2006,7 +2018,7 @@
             this.radioButton_Purple.BackColor = System.Drawing.Color.Purple;
             this.radioButton_Purple.Font = new System.Drawing.Font("KaiTi", 10F);
             this.radioButton_Purple.ForeColor = System.Drawing.Color.White;
-            this.radioButton_Purple.Location = new System.Drawing.Point(330, 252);
+            this.radioButton_Purple.Location = new System.Drawing.Point(443, 252);
             this.radioButton_Purple.Name = "radioButton_Purple";
             this.radioButton_Purple.Size = new System.Drawing.Size(39, 18);
             this.radioButton_Purple.TabIndex = 17;
@@ -2021,7 +2033,7 @@
             this.radioButton_Indigo.BackColor = System.Drawing.Color.Indigo;
             this.radioButton_Indigo.Font = new System.Drawing.Font("KaiTi", 10F);
             this.radioButton_Indigo.ForeColor = System.Drawing.Color.White;
-            this.radioButton_Indigo.Location = new System.Drawing.Point(282, 252);
+            this.radioButton_Indigo.Location = new System.Drawing.Point(395, 252);
             this.radioButton_Indigo.Name = "radioButton_Indigo";
             this.radioButton_Indigo.Size = new System.Drawing.Size(39, 18);
             this.radioButton_Indigo.TabIndex = 16;
@@ -2036,7 +2048,7 @@
             this.radioButton_Blue.BackColor = System.Drawing.Color.Blue;
             this.radioButton_Blue.Font = new System.Drawing.Font("KaiTi", 10F);
             this.radioButton_Blue.ForeColor = System.Drawing.Color.White;
-            this.radioButton_Blue.Location = new System.Drawing.Point(234, 252);
+            this.radioButton_Blue.Location = new System.Drawing.Point(347, 252);
             this.radioButton_Blue.Name = "radioButton_Blue";
             this.radioButton_Blue.Size = new System.Drawing.Size(39, 18);
             this.radioButton_Blue.TabIndex = 15;
@@ -2051,7 +2063,7 @@
             this.radioButton_Green.BackColor = System.Drawing.Color.Green;
             this.radioButton_Green.Font = new System.Drawing.Font("KaiTi", 10F);
             this.radioButton_Green.ForeColor = System.Drawing.Color.White;
-            this.radioButton_Green.Location = new System.Drawing.Point(187, 252);
+            this.radioButton_Green.Location = new System.Drawing.Point(300, 252);
             this.radioButton_Green.Name = "radioButton_Green";
             this.radioButton_Green.Size = new System.Drawing.Size(39, 18);
             this.radioButton_Green.TabIndex = 14;
@@ -2065,7 +2077,7 @@
             this.radioButton_Yellow.AutoSize = true;
             this.radioButton_Yellow.BackColor = System.Drawing.Color.Yellow;
             this.radioButton_Yellow.Font = new System.Drawing.Font("KaiTi", 10F);
-            this.radioButton_Yellow.Location = new System.Drawing.Point(139, 252);
+            this.radioButton_Yellow.Location = new System.Drawing.Point(252, 252);
             this.radioButton_Yellow.Name = "radioButton_Yellow";
             this.radioButton_Yellow.Size = new System.Drawing.Size(39, 18);
             this.radioButton_Yellow.TabIndex = 13;
@@ -2079,7 +2091,7 @@
             this.radioButton_Orange.AutoSize = true;
             this.radioButton_Orange.BackColor = System.Drawing.Color.Orange;
             this.radioButton_Orange.Font = new System.Drawing.Font("KaiTi", 10F);
-            this.radioButton_Orange.Location = new System.Drawing.Point(91, 252);
+            this.radioButton_Orange.Location = new System.Drawing.Point(204, 252);
             this.radioButton_Orange.Name = "radioButton_Orange";
             this.radioButton_Orange.Size = new System.Drawing.Size(39, 18);
             this.radioButton_Orange.TabIndex = 12;
@@ -2095,7 +2107,7 @@
             this.radioButton_Red.Checked = true;
             this.radioButton_Red.Font = new System.Drawing.Font("KaiTi", 10F);
             this.radioButton_Red.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.radioButton_Red.Location = new System.Drawing.Point(43, 252);
+            this.radioButton_Red.Location = new System.Drawing.Point(156, 252);
             this.radioButton_Red.Name = "radioButton_Red";
             this.radioButton_Red.Size = new System.Drawing.Size(39, 18);
             this.radioButton_Red.TabIndex = 11;
@@ -2188,7 +2200,7 @@
             this.tableLayoutPanel1.Controls.Add(this.button_c3, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.button_c2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.button_c1, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(49, 41);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(157, 41);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
@@ -3059,7 +3071,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 23);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(851, 619);
+            this.tabPage5.Size = new System.Drawing.Size(993, 619);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "查看结果";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -3215,7 +3227,7 @@
             // btnPrintPreview
             // 
             this.btnPrintPreview.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnPrintPreview.Location = new System.Drawing.Point(604, 493);
+            this.btnPrintPreview.Location = new System.Drawing.Point(898, 493);
             this.btnPrintPreview.Name = "btnPrintPreview";
             this.btnPrintPreview.Size = new System.Drawing.Size(87, 25);
             this.btnPrintPreview.TabIndex = 8;
@@ -3226,7 +3238,7 @@
             // btnPageSetup
             // 
             this.btnPageSetup.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnPageSetup.Location = new System.Drawing.Point(604, 463);
+            this.btnPageSetup.Location = new System.Drawing.Point(898, 462);
             this.btnPageSetup.Name = "btnPageSetup";
             this.btnPageSetup.Size = new System.Drawing.Size(87, 25);
             this.btnPageSetup.TabIndex = 7;
@@ -3237,7 +3249,7 @@
             // btnPrint
             // 
             this.btnPrint.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnPrint.Location = new System.Drawing.Point(604, 524);
+            this.btnPrint.Location = new System.Drawing.Point(898, 524);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(87, 25);
             this.btnPrint.TabIndex = 6;
@@ -3249,6 +3261,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -3260,101 +3273,22 @@
             this.Column16,
             this.Column15,
             this.Column9,
-            this.Column11});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 32);
+            this.Column11,
+            this.Column17});
+            this.dataGridView1.Location = new System.Drawing.Point(10, 30);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(606, 425);
+            this.dataGridView1.Size = new System.Drawing.Size(667, 425);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ID.Width = 30;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "情况";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column1.Width = 135;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "注数";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column2.Width = 70;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "查看";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column3.Width = 45;
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "加星";
-            this.Column13.Name = "Column13";
-            this.Column13.ReadOnly = true;
-            this.Column13.Width = 45;
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "减星";
-            this.Column14.Name = "Column14";
-            this.Column14.ReadOnly = true;
-            this.Column14.Width = 45;
-            // 
-            // Column16
-            // 
-            this.Column16.HeaderText = "特加";
-            this.Column16.Name = "Column16";
-            this.Column16.ReadOnly = true;
-            this.Column16.Width = 45;
-            // 
-            // Column15
-            // 
-            this.Column15.HeaderText = "特减";
-            this.Column15.Name = "Column15";
-            this.Column15.ReadOnly = true;
-            this.Column15.Width = 45;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "超出";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column9.Width = 45;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "归0";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            this.Column11.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column11.Width = 45;
-            // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(615, 32);
+            this.richTextBox1.Location = new System.Drawing.Point(683, 30);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(228, 424);
+            this.richTextBox1.Size = new System.Drawing.Size(302, 424);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "点击左边“查看”按钮显示结果";
             // 
@@ -3371,7 +3305,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 23);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(851, 619);
+            this.tabPage3.Size = new System.Drawing.Size(993, 619);
             this.tabPage3.TabIndex = 5;
             this.tabPage3.Text = "特殊五星";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -3476,7 +3410,7 @@
             // button13
             // 
             this.button13.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button13.Location = new System.Drawing.Point(458, 504);
+            this.button13.Location = new System.Drawing.Point(458, 521);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(87, 25);
             this.button13.TabIndex = 33;
@@ -3487,7 +3421,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button4.Location = new System.Drawing.Point(568, 504);
+            this.button4.Location = new System.Drawing.Point(898, 526);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(87, 25);
             this.button4.TabIndex = 11;
@@ -3498,7 +3432,7 @@
             // button8
             // 
             this.button8.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button8.Location = new System.Drawing.Point(652, 535);
+            this.button8.Location = new System.Drawing.Point(898, 495);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(87, 25);
             this.button8.TabIndex = 10;
@@ -3509,7 +3443,7 @@
             // button9
             // 
             this.button9.Font = new System.Drawing.Font("KaiTi", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button9.Location = new System.Drawing.Point(661, 504);
+            this.button9.Location = new System.Drawing.Point(898, 557);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(87, 25);
             this.button9.TabIndex = 9;
@@ -3519,10 +3453,10 @@
             // 
             // richTextBox2
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(447, 31);
+            this.richTextBox2.Location = new System.Drawing.Point(683, 30);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.ReadOnly = true;
-            this.richTextBox2.Size = new System.Drawing.Size(301, 458);
+            this.richTextBox2.Size = new System.Drawing.Size(302, 458);
             this.richTextBox2.TabIndex = 7;
             this.richTextBox2.Text = "点击左边“查看”按钮显示结果";
             // 
@@ -3530,6 +3464,7 @@
             // 
             this.dataGridView3.AllowUserToAddRows = false;
             this.dataGridView3.AllowUserToDeleteRows = false;
+            this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -3537,66 +3472,15 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.Column10,
-            this.Column12});
-            this.dataGridView3.Location = new System.Drawing.Point(7, 31);
+            this.Column12,
+            this.Column18});
+            this.dataGridView3.Location = new System.Drawing.Point(10, 30);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.RowTemplate.Height = 23;
-            this.dataGridView3.Size = new System.Drawing.Size(434, 458);
+            this.dataGridView3.Size = new System.Drawing.Size(667, 458);
             this.dataGridView3.TabIndex = 6;
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn1.Width = 30;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "情况";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn2.Width = 160;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "注数";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn3.Width = 70;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "查看";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn4.Width = 45;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "超出";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column10.Width = 45;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "归0";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            this.Column12.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column12.Width = 45;
             // 
             // tabPage6
             // 
@@ -3605,7 +3489,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 23);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(851, 619);
+            this.tabPage6.Size = new System.Drawing.Size(993, 619);
             this.tabPage6.TabIndex = 6;
             this.tabPage6.Text = "删除标记";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -3613,9 +3497,9 @@
             // richTextBox3
             // 
             this.richTextBox3.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox3.Location = new System.Drawing.Point(532, 62);
+            this.richTextBox3.Location = new System.Drawing.Point(683, 30);
             this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(250, 271);
+            this.richTextBox3.Size = new System.Drawing.Size(302, 458);
             this.richTextBox3.TabIndex = 1;
             this.richTextBox3.Text = "点击左边“查看”按钮显示结果";
             // 
@@ -3623,12 +3507,21 @@
             // 
             this.dataGridView4.AllowUserToAddRows = false;
             this.dataGridView4.AllowUserToDeleteRows = false;
+            this.dataGridView4.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(17, 34);
+            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column19,
+            this.Column20,
+            this.Column21,
+            this.Column22,
+            this.Column23,
+            this.Column24,
+            this.Column25});
+            this.dataGridView4.Location = new System.Drawing.Point(10, 30);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.ReadOnly = true;
             this.dataGridView4.RowTemplate.Height = 23;
-            this.dataGridView4.Size = new System.Drawing.Size(416, 355);
+            this.dataGridView4.Size = new System.Drawing.Size(667, 458);
             this.dataGridView4.TabIndex = 0;
             // 
             // 文件ToolStripMenuItem
@@ -3687,7 +3580,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(866, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1008, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -3727,12 +3620,235 @@
             this.printPreviewDialog2.Name = "printPreviewDialog2";
             this.printPreviewDialog2.Visible = false;
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ID.Width = 30;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "情况";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column1.Width = 135;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "注数";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column2.Width = 70;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "查看";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column3.Width = 45;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "加星";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            this.Column13.Width = 45;
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "减星";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            this.Column14.Width = 45;
+            // 
+            // Column16
+            // 
+            this.Column16.HeaderText = "特加";
+            this.Column16.Name = "Column16";
+            this.Column16.ReadOnly = true;
+            this.Column16.Width = 45;
+            // 
+            // Column15
+            // 
+            this.Column15.HeaderText = "特减";
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            this.Column15.Width = 45;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "超出";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column9.Width = 45;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "归0";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column11.Width = 45;
+            // 
+            // Column17
+            // 
+            this.Column17.HeaderText = "删除";
+            this.Column17.Name = "Column17";
+            this.Column17.ReadOnly = true;
+            this.Column17.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column17.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column17.Width = 45;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn1.Width = 30;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "情况";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn2.Width = 160;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "注数";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn3.Width = 70;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "查看";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn4.Width = 45;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "超出";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column10.Width = 45;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "归0";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column12.Width = 45;
+            // 
+            // Column18
+            // 
+            this.Column18.HeaderText = "删除";
+            this.Column18.Name = "Column18";
+            this.Column18.ReadOnly = true;
+            this.Column18.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column18.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column18.Width = 45;
+            // 
+            // Column19
+            // 
+            this.Column19.HeaderText = "ID";
+            this.Column19.Name = "Column19";
+            this.Column19.ReadOnly = true;
+            this.Column19.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column19.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column19.Width = 30;
+            // 
+            // Column20
+            // 
+            this.Column20.HeaderText = "情况";
+            this.Column20.Name = "Column20";
+            this.Column20.ReadOnly = true;
+            this.Column20.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column20.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column20.Width = 160;
+            // 
+            // Column21
+            // 
+            this.Column21.HeaderText = "注数";
+            this.Column21.Name = "Column21";
+            this.Column21.ReadOnly = true;
+            this.Column21.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column21.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column21.Width = 70;
+            // 
+            // Column22
+            // 
+            this.Column22.HeaderText = "查看";
+            this.Column22.Name = "Column22";
+            this.Column22.ReadOnly = true;
+            this.Column22.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column22.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column22.Width = 45;
+            // 
+            // Column23
+            // 
+            this.Column23.HeaderText = "加删";
+            this.Column23.Name = "Column23";
+            this.Column23.ReadOnly = true;
+            this.Column23.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column23.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column23.Width = 45;
+            // 
+            // Column24
+            // 
+            this.Column24.HeaderText = "减删";
+            this.Column24.Name = "Column24";
+            this.Column24.ReadOnly = true;
+            this.Column24.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column24.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column24.Width = 45;
+            // 
+            // Column25
+            // 
+            this.Column25.HeaderText = "归0";
+            this.Column25.Name = "Column25";
+            this.Column25.ReadOnly = true;
+            this.Column25.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column25.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column25.Width = 45;
+            // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(784, 415);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(87, 32);
+            this.button15.TabIndex = 43;
+            this.button15.Text = "查看删除";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(866, 683);
+            this.ClientSize = new System.Drawing.Size(1008, 683);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("KaiTi", 9.5F);
@@ -4025,22 +4141,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.GroupBox groupBox6;
@@ -4060,6 +4160,32 @@
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.RichTextBox richTextBox3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column25;
+        private System.Windows.Forms.Button button15;
 
     }
 }
