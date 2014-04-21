@@ -2037,7 +2037,8 @@ namespace WindowsFormsApplication1
                         tvalue_xml += l_totalDataBase[ia][i].ToString() + ",";
                     }
                     tvalue_xml += FilterStatistics[ia].ToString() + ",";    //  普通标记
-                    tvalue_xml += SpecialMark[ia].ToString() + "";          //  特殊标记
+                    tvalue_xml += SpecialMark[ia].ToString() + ",";          //  特殊标记
+                    tvalue_xml += DeleteMark[ia].ToString() + "";          //  删除标记
                     array.InnerText = (tvalue_xml);
                     //array.SetAttribute("ctab", FilterStatistics[ia].ToString());
                     //array.SetAttribute("stab", SpecialMark[ia].ToString());    //特殊五角星标记
@@ -2307,6 +2308,7 @@ namespace WindowsFormsApplication1
                 l_totalDataBase = adio.l_totalDataBase;
                 FilterStatistics = adio.FilterStatistics;
                 SpecialMark = adio.SpecialMark;
+                DeleteMark = adio.DeleteMark;
                 totalData = adio.totalData;
                 //生成颜色空数据
                 GenerateData gData = new GenerateData();

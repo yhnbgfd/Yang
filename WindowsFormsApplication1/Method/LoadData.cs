@@ -29,6 +29,7 @@ namespace WindowsFormsApplication1.Method
                 adio.totalData = gd.CountTotalData(adio.m, adio.n);
                 adio.FilterStatistics = new int[adio.totalData];
                 adio.SpecialMark = new int[adio.totalData];
+                adio.DeleteMark = new int[adio.totalData];
                 while (reader.Read())
                 {
                     if (reader.Name == "list")
@@ -50,6 +51,7 @@ namespace WindowsFormsApplication1.Method
                         adio.l_totalDataBase.Add(idata);
                         adio.FilterStatistics[ic] = int.Parse(kk[adio.n]);
                         adio.SpecialMark[ic] = int.Parse(kk[adio.n+1]);
+                        adio.DeleteMark[ic] = int.Parse(kk[adio.n + 2]);
                         ic++;
                     }
                 }
