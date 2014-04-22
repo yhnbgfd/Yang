@@ -2548,16 +2548,38 @@ namespace WindowsFormsApplication1
                     }
                     if (IsSuit == true && operate == 0)
                     {
-                        if (FilterStatistics[i] + cTab < 0)//0,不让减了
-                            continue;
-                        FilterStatistics[i] += cTab;
+                        if (comboBox8.SelectedIndex < 4)
+                        {
+                            if (FilterStatistics[i] + cTab < 0)//0,不让减了
+                                continue;
+                            FilterStatistics[i] += cTab;
+                        }
+                        else if (comboBox8.SelectedIndex == 4)
+                        {
+                            SpecialStar(i, cTab);
+                        }
+                        else if (comboBox8.SelectedIndex == 5)
+                        {
+                            AddDeleteMark(i, cTab);
+                        }
                         m_Count_Generate++;
                     }
                     else if (IsSuit == false && operate == 1)
                     {
-                        if (FilterStatistics[i] + cTab < 0)//0,不让减了
-                            continue;
-                        FilterStatistics[i] += cTab;
+                        if (comboBox8.SelectedIndex < 4)
+                        {
+                            if (FilterStatistics[i] + cTab < 0)//0,不让减了
+                                continue;
+                            FilterStatistics[i] += cTab;
+                        }
+                        else if (comboBox8.SelectedIndex == 4)
+                        {
+                            SpecialStar(i, cTab);
+                        }
+                        else if (comboBox8.SelectedIndex == 5)
+                        {
+                            AddDeleteMark(i, cTab);
+                        }
                         m_Count_Generate++;
                     }
                 }
