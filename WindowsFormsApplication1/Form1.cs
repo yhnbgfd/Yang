@@ -125,6 +125,7 @@ namespace WindowsFormsApplication1
             {
                 choiceDate.Add(i+1);
             }
+            radioButton21.Checked = true;//默认30选3
         }
 
         /// <summary>

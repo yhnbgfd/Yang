@@ -292,6 +292,20 @@
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.label14 = new System.Windows.Forms.Label();
+            this.button_Del_Locate = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.textBox_del8 = new System.Windows.Forms.TextBox();
+            this.textBox_del7 = new System.Windows.Forms.TextBox();
+            this.textBox_del6 = new System.Windows.Forms.TextBox();
+            this.textBox_del5 = new System.Windows.Forms.TextBox();
+            this.textBox_del4 = new System.Windows.Forms.TextBox();
+            this.textBox_del3 = new System.Windows.Forms.TextBox();
+            this.textBox_del2 = new System.Windows.Forms.TextBox();
+            this.textBox_del1 = new System.Windows.Forms.TextBox();
+            this.button_Del_Print = new System.Windows.Forms.Button();
+            this.button_Del_PrintPreview = new System.Windows.Forms.Button();
+            this.button_Del_PrintSetting = new System.Windows.Forms.Button();
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -316,24 +330,10 @@
             this.printDialog2 = new System.Windows.Forms.PrintDialog();
             this.pageSetupDialog2 = new System.Windows.Forms.PageSetupDialog();
             this.printPreviewDialog2 = new System.Windows.Forms.PrintPreviewDialog();
-            this.button_Del_PrintSetting = new System.Windows.Forms.Button();
-            this.button_Del_PrintPreview = new System.Windows.Forms.Button();
-            this.button_Del_Print = new System.Windows.Forms.Button();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.button_Del_Locate = new System.Windows.Forms.Button();
-            this.textBox_del1 = new System.Windows.Forms.TextBox();
-            this.textBox_del2 = new System.Windows.Forms.TextBox();
-            this.textBox_del3 = new System.Windows.Forms.TextBox();
-            this.textBox_del4 = new System.Windows.Forms.TextBox();
-            this.textBox_del5 = new System.Windows.Forms.TextBox();
-            this.textBox_del6 = new System.Windows.Forms.TextBox();
-            this.textBox_del7 = new System.Windows.Forms.TextBox();
-            this.textBox_del8 = new System.Windows.Forms.TextBox();
             this.printDialog3 = new System.Windows.Forms.PrintDialog();
             this.printDocument3 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog3 = new System.Windows.Forms.PrintPreviewDialog();
             this.pageSetupDialog3 = new System.Windows.Forms.PageSetupDialog();
-            this.label14 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -356,9 +356,9 @@
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.tabPage6.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -420,7 +420,6 @@
             this.radioButton21.Name = "radioButton21";
             this.radioButton21.Size = new System.Drawing.Size(60, 17);
             this.radioButton21.TabIndex = 4;
-            this.radioButton21.TabStop = true;
             this.radioButton21.Text = "30选3";
             this.radioButton21.UseVisualStyleBackColor = true;
             this.radioButton21.CheckedChanged += new System.EventHandler(this.radioButton21_CheckedChanged);
@@ -450,12 +449,10 @@
             // radioButton19
             // 
             this.radioButton19.AutoSize = true;
-            this.radioButton19.Checked = true;
             this.radioButton19.Location = new System.Drawing.Point(21, 39);
             this.radioButton19.Name = "radioButton19";
             this.radioButton19.Size = new System.Drawing.Size(60, 17);
             this.radioButton19.TabIndex = 1;
-            this.radioButton19.TabStop = true;
             this.radioButton19.Text = "26选5";
             this.radioButton19.UseVisualStyleBackColor = true;
             this.radioButton19.CheckedChanged += new System.EventHandler(this.radioButton19_CheckedChanged);
@@ -3679,6 +3676,131 @@
             this.tabPage6.Text = "删除标记";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(551, 532);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(0, 13);
+            this.label14.TabIndex = 7;
+            // 
+            // button_Del_Locate
+            // 
+            this.button_Del_Locate.Font = new System.Drawing.Font("KaiTi", 10.5F);
+            this.button_Del_Locate.Location = new System.Drawing.Point(458, 525);
+            this.button_Del_Locate.Name = "button_Del_Locate";
+            this.button_Del_Locate.Size = new System.Drawing.Size(87, 25);
+            this.button_Del_Locate.TabIndex = 6;
+            this.button_Del_Locate.Text = "目标定位";
+            this.button_Del_Locate.UseVisualStyleBackColor = true;
+            this.button_Del_Locate.Click += new System.EventHandler(this.button_Del_Locate_Click);
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.textBox_del8);
+            this.groupBox5.Controls.Add(this.textBox_del7);
+            this.groupBox5.Controls.Add(this.textBox_del6);
+            this.groupBox5.Controls.Add(this.textBox_del5);
+            this.groupBox5.Controls.Add(this.textBox_del4);
+            this.groupBox5.Controls.Add(this.textBox_del3);
+            this.groupBox5.Controls.Add(this.textBox_del2);
+            this.groupBox5.Controls.Add(this.textBox_del1);
+            this.groupBox5.Location = new System.Drawing.Point(10, 494);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(432, 77);
+            this.groupBox5.TabIndex = 5;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "请输入目标号码：";
+            // 
+            // textBox_del8
+            // 
+            this.textBox_del8.Location = new System.Drawing.Point(360, 31);
+            this.textBox_del8.Name = "textBox_del8";
+            this.textBox_del8.Size = new System.Drawing.Size(41, 22);
+            this.textBox_del8.TabIndex = 7;
+            // 
+            // textBox_del7
+            // 
+            this.textBox_del7.Location = new System.Drawing.Point(313, 31);
+            this.textBox_del7.Name = "textBox_del7";
+            this.textBox_del7.Size = new System.Drawing.Size(41, 22);
+            this.textBox_del7.TabIndex = 6;
+            // 
+            // textBox_del6
+            // 
+            this.textBox_del6.Location = new System.Drawing.Point(266, 31);
+            this.textBox_del6.Name = "textBox_del6";
+            this.textBox_del6.Size = new System.Drawing.Size(41, 22);
+            this.textBox_del6.TabIndex = 5;
+            // 
+            // textBox_del5
+            // 
+            this.textBox_del5.Location = new System.Drawing.Point(219, 31);
+            this.textBox_del5.Name = "textBox_del5";
+            this.textBox_del5.Size = new System.Drawing.Size(41, 22);
+            this.textBox_del5.TabIndex = 4;
+            // 
+            // textBox_del4
+            // 
+            this.textBox_del4.Location = new System.Drawing.Point(172, 31);
+            this.textBox_del4.Name = "textBox_del4";
+            this.textBox_del4.Size = new System.Drawing.Size(41, 22);
+            this.textBox_del4.TabIndex = 3;
+            // 
+            // textBox_del3
+            // 
+            this.textBox_del3.Location = new System.Drawing.Point(125, 31);
+            this.textBox_del3.Name = "textBox_del3";
+            this.textBox_del3.Size = new System.Drawing.Size(41, 22);
+            this.textBox_del3.TabIndex = 2;
+            // 
+            // textBox_del2
+            // 
+            this.textBox_del2.Location = new System.Drawing.Point(78, 31);
+            this.textBox_del2.Name = "textBox_del2";
+            this.textBox_del2.Size = new System.Drawing.Size(41, 22);
+            this.textBox_del2.TabIndex = 1;
+            // 
+            // textBox_del1
+            // 
+            this.textBox_del1.Location = new System.Drawing.Point(31, 31);
+            this.textBox_del1.Name = "textBox_del1";
+            this.textBox_del1.Size = new System.Drawing.Size(41, 22);
+            this.textBox_del1.TabIndex = 0;
+            // 
+            // button_Del_Print
+            // 
+            this.button_Del_Print.Font = new System.Drawing.Font("KaiTi", 10.5F);
+            this.button_Del_Print.Location = new System.Drawing.Point(900, 588);
+            this.button_Del_Print.Name = "button_Del_Print";
+            this.button_Del_Print.Size = new System.Drawing.Size(87, 25);
+            this.button_Del_Print.TabIndex = 4;
+            this.button_Del_Print.Text = "打印";
+            this.button_Del_Print.UseVisualStyleBackColor = true;
+            this.button_Del_Print.Click += new System.EventHandler(this.button_Del_Print_Click);
+            // 
+            // button_Del_PrintPreview
+            // 
+            this.button_Del_PrintPreview.Font = new System.Drawing.Font("KaiTi", 10.5F);
+            this.button_Del_PrintPreview.Location = new System.Drawing.Point(900, 557);
+            this.button_Del_PrintPreview.Name = "button_Del_PrintPreview";
+            this.button_Del_PrintPreview.Size = new System.Drawing.Size(87, 25);
+            this.button_Del_PrintPreview.TabIndex = 3;
+            this.button_Del_PrintPreview.Text = "打印预览";
+            this.button_Del_PrintPreview.UseVisualStyleBackColor = true;
+            this.button_Del_PrintPreview.Click += new System.EventHandler(this.button_Del_PrintPreview_Click);
+            // 
+            // button_Del_PrintSetting
+            // 
+            this.button_Del_PrintSetting.Font = new System.Drawing.Font("KaiTi", 10.5F);
+            this.button_Del_PrintSetting.Location = new System.Drawing.Point(900, 526);
+            this.button_Del_PrintSetting.Name = "button_Del_PrintSetting";
+            this.button_Del_PrintSetting.Size = new System.Drawing.Size(87, 25);
+            this.button_Del_PrintSetting.TabIndex = 2;
+            this.button_Del_PrintSetting.Text = "页面设置";
+            this.button_Del_PrintSetting.UseVisualStyleBackColor = true;
+            this.button_Del_PrintSetting.Click += new System.EventHandler(this.button_Del_PrintSetting_Click);
+            // 
             // richTextBox3
             // 
             this.richTextBox3.BackColor = System.Drawing.SystemColors.Control;
@@ -3869,123 +3991,6 @@
             this.printPreviewDialog2.Name = "printPreviewDialog2";
             this.printPreviewDialog2.Visible = false;
             // 
-            // button_Del_PrintSetting
-            // 
-            this.button_Del_PrintSetting.Font = new System.Drawing.Font("KaiTi", 10.5F);
-            this.button_Del_PrintSetting.Location = new System.Drawing.Point(900, 526);
-            this.button_Del_PrintSetting.Name = "button_Del_PrintSetting";
-            this.button_Del_PrintSetting.Size = new System.Drawing.Size(87, 25);
-            this.button_Del_PrintSetting.TabIndex = 2;
-            this.button_Del_PrintSetting.Text = "页面设置";
-            this.button_Del_PrintSetting.UseVisualStyleBackColor = true;
-            this.button_Del_PrintSetting.Click += new System.EventHandler(this.button_Del_PrintSetting_Click);
-            // 
-            // button_Del_PrintPreview
-            // 
-            this.button_Del_PrintPreview.Font = new System.Drawing.Font("KaiTi", 10.5F);
-            this.button_Del_PrintPreview.Location = new System.Drawing.Point(900, 557);
-            this.button_Del_PrintPreview.Name = "button_Del_PrintPreview";
-            this.button_Del_PrintPreview.Size = new System.Drawing.Size(87, 25);
-            this.button_Del_PrintPreview.TabIndex = 3;
-            this.button_Del_PrintPreview.Text = "打印预览";
-            this.button_Del_PrintPreview.UseVisualStyleBackColor = true;
-            this.button_Del_PrintPreview.Click += new System.EventHandler(this.button_Del_PrintPreview_Click);
-            // 
-            // button_Del_Print
-            // 
-            this.button_Del_Print.Font = new System.Drawing.Font("KaiTi", 10.5F);
-            this.button_Del_Print.Location = new System.Drawing.Point(900, 588);
-            this.button_Del_Print.Name = "button_Del_Print";
-            this.button_Del_Print.Size = new System.Drawing.Size(87, 25);
-            this.button_Del_Print.TabIndex = 4;
-            this.button_Del_Print.Text = "打印";
-            this.button_Del_Print.UseVisualStyleBackColor = true;
-            this.button_Del_Print.Click += new System.EventHandler(this.button_Del_Print_Click);
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.textBox_del8);
-            this.groupBox5.Controls.Add(this.textBox_del7);
-            this.groupBox5.Controls.Add(this.textBox_del6);
-            this.groupBox5.Controls.Add(this.textBox_del5);
-            this.groupBox5.Controls.Add(this.textBox_del4);
-            this.groupBox5.Controls.Add(this.textBox_del3);
-            this.groupBox5.Controls.Add(this.textBox_del2);
-            this.groupBox5.Controls.Add(this.textBox_del1);
-            this.groupBox5.Location = new System.Drawing.Point(10, 494);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(432, 77);
-            this.groupBox5.TabIndex = 5;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "请输入目标号码：";
-            // 
-            // button_Del_Locate
-            // 
-            this.button_Del_Locate.Font = new System.Drawing.Font("KaiTi", 10.5F);
-            this.button_Del_Locate.Location = new System.Drawing.Point(458, 525);
-            this.button_Del_Locate.Name = "button_Del_Locate";
-            this.button_Del_Locate.Size = new System.Drawing.Size(87, 25);
-            this.button_Del_Locate.TabIndex = 6;
-            this.button_Del_Locate.Text = "目标定位";
-            this.button_Del_Locate.UseVisualStyleBackColor = true;
-            this.button_Del_Locate.Click += new System.EventHandler(this.button_Del_Locate_Click);
-            // 
-            // textBox_del1
-            // 
-            this.textBox_del1.Location = new System.Drawing.Point(31, 31);
-            this.textBox_del1.Name = "textBox_del1";
-            this.textBox_del1.Size = new System.Drawing.Size(41, 22);
-            this.textBox_del1.TabIndex = 0;
-            // 
-            // textBox_del2
-            // 
-            this.textBox_del2.Location = new System.Drawing.Point(78, 31);
-            this.textBox_del2.Name = "textBox_del2";
-            this.textBox_del2.Size = new System.Drawing.Size(41, 22);
-            this.textBox_del2.TabIndex = 1;
-            // 
-            // textBox_del3
-            // 
-            this.textBox_del3.Location = new System.Drawing.Point(125, 31);
-            this.textBox_del3.Name = "textBox_del3";
-            this.textBox_del3.Size = new System.Drawing.Size(41, 22);
-            this.textBox_del3.TabIndex = 2;
-            // 
-            // textBox_del4
-            // 
-            this.textBox_del4.Location = new System.Drawing.Point(172, 31);
-            this.textBox_del4.Name = "textBox_del4";
-            this.textBox_del4.Size = new System.Drawing.Size(41, 22);
-            this.textBox_del4.TabIndex = 3;
-            // 
-            // textBox_del5
-            // 
-            this.textBox_del5.Location = new System.Drawing.Point(219, 31);
-            this.textBox_del5.Name = "textBox_del5";
-            this.textBox_del5.Size = new System.Drawing.Size(41, 22);
-            this.textBox_del5.TabIndex = 4;
-            // 
-            // textBox_del6
-            // 
-            this.textBox_del6.Location = new System.Drawing.Point(266, 31);
-            this.textBox_del6.Name = "textBox_del6";
-            this.textBox_del6.Size = new System.Drawing.Size(41, 22);
-            this.textBox_del6.TabIndex = 5;
-            // 
-            // textBox_del7
-            // 
-            this.textBox_del7.Location = new System.Drawing.Point(313, 31);
-            this.textBox_del7.Name = "textBox_del7";
-            this.textBox_del7.Size = new System.Drawing.Size(41, 22);
-            this.textBox_del7.TabIndex = 6;
-            // 
-            // textBox_del8
-            // 
-            this.textBox_del8.Location = new System.Drawing.Point(360, 31);
-            this.textBox_del8.Name = "textBox_del8";
-            this.textBox_del8.Size = new System.Drawing.Size(41, 22);
-            this.textBox_del8.TabIndex = 7;
-            // 
             // printDialog3
             // 
             this.printDialog3.UseEXDialog = true;
@@ -4003,14 +4008,6 @@
             this.printPreviewDialog3.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog3.Icon")));
             this.printPreviewDialog3.Name = "printPreviewDialog3";
             this.printPreviewDialog3.Visible = false;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(551, 532);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(0, 13);
-            this.label14.TabIndex = 7;
             // 
             // Form1
             // 
@@ -4059,11 +4056,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
