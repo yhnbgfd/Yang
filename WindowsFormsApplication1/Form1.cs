@@ -1955,7 +1955,10 @@ namespace WindowsFormsApplication1
         {
             markRadioChecked(4);
         }
-
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            markRadioChecked(5);
+        }
         /// <summary>
         /// 直接选择要目标注数要标记的等级
         /// </summary>
@@ -2981,6 +2984,8 @@ namespace WindowsFormsApplication1
             printDoc1(e, msg, font, bru);
             e.HasMorePages = !isEnd; //是否有下一页
         }
+
+        
 
     }
 }

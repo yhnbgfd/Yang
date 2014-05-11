@@ -334,6 +334,7 @@
             this.printDocument3 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog3 = new System.Windows.Forms.PrintPreviewDialog();
             this.pageSetupDialog3 = new System.Windows.Forms.PageSetupDialog();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -1063,7 +1064,7 @@
             this.panel2.Controls.Add(this.tableLayoutPanel1);
             this.panel2.Location = new System.Drawing.Point(3, 7);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(889, 506);
+            this.panel2.Size = new System.Drawing.Size(889, 606);
             this.panel2.TabIndex = 8;
             // 
             // button15
@@ -1420,7 +1421,7 @@
             this.groupBox1.Controls.Add(this.comboBox4);
             this.groupBox1.Location = new System.Drawing.Point(151, 279);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(609, 224);
+            this.groupBox1.Size = new System.Drawing.Size(609, 262);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "筛选规则";
@@ -1661,14 +1662,15 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.radioButton1);
             this.panel3.Controls.Add(this.radioButton14);
             this.panel3.Controls.Add(this.radioButton13);
             this.panel3.Controls.Add(this.radioButton12);
             this.panel3.Controls.Add(this.radioButton11);
             this.panel3.Controls.Add(this.radioButton10);
-            this.panel3.Location = new System.Drawing.Point(190, 182);
+            this.panel3.Location = new System.Drawing.Point(101, 223);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(408, 33);
+            this.panel3.Size = new System.Drawing.Size(498, 33);
             this.panel3.TabIndex = 31;
             // 
             // radioButton14
@@ -4009,6 +4011,18 @@
             this.printPreviewDialog3.Name = "printPreviewDialog3";
             this.printPreviewDialog3.Visible = false;
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(403, 8);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(53, 17);
+            this.radioButton1.TabIndex = 5;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "删除";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -4373,6 +4387,7 @@
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog3;
         private System.Windows.Forms.PageSetupDialog pageSetupDialog3;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.RadioButton radioButton1;
 
     }
 }
