@@ -30,7 +30,7 @@ namespace WindowsFormsApplication1
         
         private int SelectNum = 5;
         private int TotalNum = 26;
-        private int ShowSpecialStar = 10;
+        private int ShowSpecialStar = 20;
 
         private Color ChoiceColor = Color.Red;
 
@@ -408,6 +408,16 @@ namespace WindowsFormsApplication1
                     State = "超出";
                     rows.Add(i + 1, State, 0, " 查看", " 超出", " 归0", " 删除");
                 }
+                else if( i == 10)
+                {
+                    State = "★";
+                    rows.Add(i + 1, State, 0, " 查看", " 超出", " 归0", " 删除");
+                }
+                else if (i == 20)
+                {
+                    State = "★★";
+                    rows.Add(i + 1, State, 0, " 查看", " 超出", " 归0", " 删除");
+                }
                 else
                 {
                     State += "☆";
@@ -430,6 +440,16 @@ namespace WindowsFormsApplication1
                 else if (i == ShowSpecialStar + 1)
                 {
                     State = "超出";
+                    rows.Add(i + 1, State, 0, " 查看", " 加删", " 减删", " 归0");
+                }
+                else if (i == 10)
+                {
+                    State = "★";
+                    rows.Add(i + 1, State, 0, " 查看", " 加删", " 减删", " 归0");
+                }
+                else if (i == 20)
+                {
+                    State = "★★";
                     rows.Add(i + 1, State, 0, " 查看", " 加删", " 减删", " 归0");
                 }
                 else
