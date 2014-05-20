@@ -812,9 +812,7 @@ namespace WindowsFormsApplication1
                 if (FilterStatistics[ia] >= 54)
                     dataGridView1.Rows[54].Cells[2].Value = (int)dataGridView1.Rows[54].Cells[2].Value + 1;
                 else
-                {
                     dataGridView1.Rows[FilterStatistics[ia]].Cells[2].Value = (int)dataGridView1.Rows[FilterStatistics[ia]].Cells[2].Value + 1;
-                }
             }
 
             /* 特殊五角星tab */
@@ -823,8 +821,8 @@ namespace WindowsFormsApplication1
                 dataGridView3.Rows[i].Cells[2].Value = 0;
             for(int i=0; i<totalData; i++)
             {
-                if (SpecialMark[i] > ShowSpecialStar)
-                    dataGridView3.Rows[ShowSpecialStar].Cells[2].Value = (int)dataGridView3.Rows[ShowSpecialStar].Cells[2].Value + 1;
+                if (SpecialMark[i] > ShowSpecialStar + 1)
+                    dataGridView3.Rows[ShowSpecialStar+1].Cells[2].Value = (int)dataGridView3.Rows[ShowSpecialStar].Cells[2].Value + 1;
                 else
                     dataGridView3.Rows[SpecialMark[i]].Cells[2].Value = (int)dataGridView3.Rows[SpecialMark[i]].Cells[2].Value + 1;
             }
@@ -835,8 +833,8 @@ namespace WindowsFormsApplication1
                 dataGridView4.Rows[i].Cells[2].Value = 0;
             for (int i = 0; i < totalData; i++)
             {
-                if (DeleteMark[i] > ShowSpecialStar)
-                    dataGridView4.Rows[ShowSpecialStar].Cells[2].Value = (int)dataGridView4.Rows[ShowSpecialStar].Cells[2].Value + 1;
+                if (DeleteMark[i] > ShowSpecialStar + 1)
+                    dataGridView4.Rows[ShowSpecialStar+1].Cells[2].Value = (int)dataGridView4.Rows[ShowSpecialStar].Cells[2].Value + 1;
                 else
                     dataGridView4.Rows[DeleteMark[i]].Cells[2].Value = (int)dataGridView4.Rows[DeleteMark[i]].Cells[2].Value + 1;
             }
