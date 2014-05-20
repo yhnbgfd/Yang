@@ -522,42 +522,56 @@ namespace WindowsFormsApplication1
                 richTextBox1.Text = text;
             }
 
-            else
+            else if (e.ColumnIndex > 3)
             {
-                DialogResult dr = MessageBox.Show("确定执行该操作吗？", "警告", messButton);
-                if (dr == DialogResult.Cancel)
-                {
-                    return;
-                }
-
                 bool result = false;
-
                 if (e.ColumnIndex == 4)//datagrid---加星
                 {
+                    DialogResult dr = MessageBox.Show("确定执行\"加星\"操作吗？", "警告", messButton);
+                    if (dr == DialogResult.Cancel)
+                        return;
                     result = AddStar(tab);
                 }
                 if (e.ColumnIndex == 5)//datagrid---减星
                 {
+                    DialogResult dr = MessageBox.Show("确定执行\"减星\"操作吗？", "警告", messButton);
+                    if (dr == DialogResult.Cancel)
+                        return;
                     result = ReduceStar(tab);
                 }
                 if (e.ColumnIndex == 6)//datagrid---特加
                 {
+                    DialogResult dr = MessageBox.Show("确定执行\"特加\"操作吗？", "警告", messButton);
+                    if (dr == DialogResult.Cancel)
+                        return;
                     result = AddSpStar(tab);
                 }
                 if (e.ColumnIndex == 7)//datagrid---特减
                 {
+                    DialogResult dr = MessageBox.Show("确定执行\"特减\"操作吗？", "警告", messButton);
+                    if (dr == DialogResult.Cancel)
+                        return;
                     result = ReduceSpStar(tab);
                 }
                 if (e.ColumnIndex == 8)//datagrid---超出
                 {
+                    DialogResult dr = MessageBox.Show("确定执行\"超出\"操作吗？", "警告", messButton);
+                    if (dr == DialogResult.Cancel)
+                        return;
                     result = Exceeded(0, tab);
                 }
                 if (e.ColumnIndex == 9)//datagrid---归0
                 {
+                    DialogResult dr = MessageBox.Show("确定执行\"归0\"操作吗？", "警告", messButton);
+                    if (dr == DialogResult.Cancel)
+                        return;
                     result = Zero(0, tab);
                 }
                 if(e.ColumnIndex == 10)//datagrid---删除
                 {
+                    DialogResult dr = MessageBox.Show("确定执行\"删除\"操作吗？", "警告", messButton);
+                    if (dr == DialogResult.Cancel)
+                        return;
                     result = AddDelete(0, tab);
                 }
 
@@ -631,24 +645,28 @@ namespace WindowsFormsApplication1
                 }
                 richTextBox2.Text = text;
             }
-            else{
-                DialogResult dr = MessageBox.Show("确定执行该操作吗？", "警告", messButton);
-                if (dr == DialogResult.Cancel)
-                {
-                    return;
-                }
-
+            else if (e.ColumnIndex > 3)
+            {
                 bool result = false;
                 if (e.ColumnIndex == 4)    //datagrid---超出
                 {
+                    DialogResult dr = MessageBox.Show("确定执行\"超出\"操作吗？", "警告", messButton);
+                    if (dr == DialogResult.Cancel)
+                        return;
                     result = Exceeded(1, tab);
                 }
                 else if (e.ColumnIndex == 5)//datagrid---归0
                 {
+                    DialogResult dr = MessageBox.Show("确定执行\"归0\"操作吗？", "警告", messButton);
+                    if (dr == DialogResult.Cancel)
+                        return;
                     result = Zero(1, tab);
                 }
                 else if(e.ColumnIndex == 6)//datagrid---删除
                 {
+                    DialogResult dr = MessageBox.Show("确定执行\"删除\"操作吗？", "警告", messButton);
+                    if (dr == DialogResult.Cancel)
+                        return;
                     result = AddDelete(1, tab);
                 }
 
@@ -2874,25 +2892,28 @@ namespace WindowsFormsApplication1
                 }
                 richTextBox3.Text = text;
             }
-            else
+            else if (e.ColumnIndex > 3)
             {
-                DialogResult dr = MessageBox.Show("确定执行该操作吗？", "警告", messButton);
-                if (dr == DialogResult.Cancel)
-                {
-                    return;
-                }
-
                 bool result = false;
                 if (e.ColumnIndex == 4)    //datagrid---加删
                 {
+                    DialogResult dr = MessageBox.Show("确定执行\"加删\"操作吗？", "警告", messButton);
+                    if (dr == DialogResult.Cancel) 
+                        return;
                     result = AddDelete(2, tab);
                 }
                 else if (e.ColumnIndex == 5)//datagrid---减删
                 {
+                    DialogResult dr = MessageBox.Show("确定执行\"减删\"操作吗？", "警告", messButton);
+                    if (dr == DialogResult.Cancel)
+                        return;
                     result = ReduceDelete(2, tab);
                 }
                 else if (e.ColumnIndex == 6)//datagrid---归0
                 {
+                    DialogResult dr = MessageBox.Show("确定执行\"归0\"操作吗？", "警告", messButton);
+                    if (dr == DialogResult.Cancel)
+                        return;
                     result = Zero(2, tab);
                 }
 
