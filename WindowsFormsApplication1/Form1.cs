@@ -248,6 +248,16 @@ namespace WindowsFormsApplication1
                     }
                 }
             }
+            else if (type == 2)
+            {
+                for (int i = 0; i < totalData; i++)
+                {
+                    if (DeleteMark[i] == tab)
+                    {
+                        DeleteMark[i] = ShowSpecialStar + 1;
+                    }
+                }
+            }
             return true;
         }
 
@@ -434,28 +444,28 @@ namespace WindowsFormsApplication1
                 if (i == 0)
                 {
                     State = "0";
-                    rows.Add(i + 1, State, 0, " 查看", " 加删", " 减删", " 归0");
+                    rows.Add(i + 1, State, 0, " 查看", " 加删", " 减删", " 归0", " 超出");
                     State = "";
                 }
                 else if (i == ShowSpecialStar + 1)
                 {
                     State = "超出";
-                    rows.Add(i + 1, State, 0, " 查看", " 加删", " 减删", " 归0");
+                    rows.Add(i + 1, State, 0, " 查看", " 加删", " 减删", " 归0", " 超出");
                 }
                 else if (i == 10)
                 {
                     State = "★";
-                    rows.Add(i + 1, State, 0, " 查看", " 加删", " 减删", " 归0");
+                    rows.Add(i + 1, State, 0, " 查看", " 加删", " 减删", " 归0", " 超出");
                 }
                 else if (i == 20)
                 {
                     State = "★★";
-                    rows.Add(i + 1, State, 0, " 查看", " 加删", " 减删", " 归0");
+                    rows.Add(i + 1, State, 0, " 查看", " 加删", " 减删", " 归0", " 超出");
                 }
                 else
                 {
                     State += "☆";
-                    rows.Add(i + 1, State, 0, " 查看", " 加删", " 减删", " 归0");
+                    rows.Add(i + 1, State, 0, " 查看", " 加删", " 减删", " 归0", " 超出");
                 }
             }
         }
@@ -2915,6 +2925,13 @@ namespace WindowsFormsApplication1
                     if (dr == DialogResult.Cancel)
                         return;
                     result = Zero(2, tab);
+                }
+                else if (e.ColumnIndex == 7)//超出
+                {
+                    DialogResult dr = MessageBox.Show("确定执行\"超出\"操作吗？", "警告", messButton);
+                    if (dr == DialogResult.Cancel)
+                        return;
+                    result = Exceeded(2, tab);
                 }
 
                 if (result)

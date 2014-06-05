@@ -285,6 +285,13 @@
             this.button9 = new System.Windows.Forms.Button();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.label14 = new System.Windows.Forms.Label();
             this.button_Del_Locate = new System.Windows.Forms.Button();
@@ -302,13 +309,6 @@
             this.button_Del_PrintSetting = new System.Windows.Forms.Button();
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.文件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.小工具ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.保存当前进度ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -328,13 +328,14 @@
             this.printDocument3 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog3 = new System.Windows.Forms.PrintPreviewDialog();
             this.pageSetupDialog3 = new System.Windows.Forms.PageSetupDialog();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -3611,6 +3612,67 @@
             this.dataGridView3.TabIndex = 6;
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn1.Width = 30;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "情况";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn2.Width = 180;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "注数";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn3.Width = 70;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "查看";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn4.Width = 45;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "超出";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column10.Width = 45;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "归0";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column12.Width = 45;
+            // 
+            // Column18
+            // 
+            this.Column18.HeaderText = "删除";
+            this.Column18.Name = "Column18";
+            this.Column18.ReadOnly = true;
+            this.Column18.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column18.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column18.Width = 45;
+            // 
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.label14);
@@ -3776,7 +3838,8 @@
             this.Column22,
             this.Column23,
             this.Column24,
-            this.Column25});
+            this.Column25,
+            this.Column26});
             this.dataGridView4.Location = new System.Drawing.Point(10, 30);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.ReadOnly = true;
@@ -3784,69 +3847,6 @@
             this.dataGridView4.Size = new System.Drawing.Size(667, 458);
             this.dataGridView4.TabIndex = 0;
             this.dataGridView4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
-            // 
-            // Column19
-            // 
-            this.Column19.HeaderText = "ID";
-            this.Column19.Name = "Column19";
-            this.Column19.ReadOnly = true;
-            this.Column19.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column19.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column19.Width = 30;
-            // 
-            // Column20
-            // 
-            this.Column20.HeaderText = "情况";
-            this.Column20.Name = "Column20";
-            this.Column20.ReadOnly = true;
-            this.Column20.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column20.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column20.Width = 160;
-            // 
-            // Column21
-            // 
-            this.Column21.HeaderText = "注数";
-            this.Column21.Name = "Column21";
-            this.Column21.ReadOnly = true;
-            this.Column21.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column21.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column21.Width = 70;
-            // 
-            // Column22
-            // 
-            this.Column22.HeaderText = "查看";
-            this.Column22.Name = "Column22";
-            this.Column22.ReadOnly = true;
-            this.Column22.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column22.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column22.Width = 45;
-            // 
-            // Column23
-            // 
-            this.Column23.HeaderText = "加删";
-            this.Column23.Name = "Column23";
-            this.Column23.ReadOnly = true;
-            this.Column23.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column23.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column23.Width = 45;
-            // 
-            // Column24
-            // 
-            this.Column24.HeaderText = "减删";
-            this.Column24.Name = "Column24";
-            this.Column24.ReadOnly = true;
-            this.Column24.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column24.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column24.Width = 45;
-            // 
-            // Column25
-            // 
-            this.Column25.HeaderText = "归0";
-            this.Column25.Name = "Column25";
-            this.Column25.ReadOnly = true;
-            this.Column25.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column25.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column25.Width = 45;
             // 
             // 文件ToolStripMenuItem
             // 
@@ -3962,66 +3962,75 @@
             this.printPreviewDialog3.Name = "printPreviewDialog3";
             this.printPreviewDialog3.Visible = false;
             // 
-            // dataGridViewTextBoxColumn1
+            // Column19
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn1.Width = 30;
+            this.Column19.HeaderText = "ID";
+            this.Column19.Name = "Column19";
+            this.Column19.ReadOnly = true;
+            this.Column19.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column19.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column19.Width = 30;
             // 
-            // dataGridViewTextBoxColumn2
+            // Column20
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "情况";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn2.Width = 180;
+            this.Column20.HeaderText = "情况";
+            this.Column20.Name = "Column20";
+            this.Column20.ReadOnly = true;
+            this.Column20.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column20.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column20.Width = 160;
             // 
-            // dataGridViewTextBoxColumn3
+            // Column21
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "注数";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn3.Width = 70;
+            this.Column21.HeaderText = "注数";
+            this.Column21.Name = "Column21";
+            this.Column21.ReadOnly = true;
+            this.Column21.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column21.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column21.Width = 70;
             // 
-            // dataGridViewTextBoxColumn4
+            // Column22
             // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "查看";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn4.Width = 45;
+            this.Column22.HeaderText = "查看";
+            this.Column22.Name = "Column22";
+            this.Column22.ReadOnly = true;
+            this.Column22.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column22.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column22.Width = 45;
             // 
-            // Column10
+            // Column23
             // 
-            this.Column10.HeaderText = "超出";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column10.Width = 45;
+            this.Column23.HeaderText = "加删";
+            this.Column23.Name = "Column23";
+            this.Column23.ReadOnly = true;
+            this.Column23.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column23.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column23.Width = 45;
             // 
-            // Column12
+            // Column24
             // 
-            this.Column12.HeaderText = "归0";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            this.Column12.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column12.Width = 45;
+            this.Column24.HeaderText = "减删";
+            this.Column24.Name = "Column24";
+            this.Column24.ReadOnly = true;
+            this.Column24.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column24.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column24.Width = 45;
             // 
-            // Column18
+            // Column25
             // 
-            this.Column18.HeaderText = "删除";
-            this.Column18.Name = "Column18";
-            this.Column18.ReadOnly = true;
-            this.Column18.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column18.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column18.Width = 45;
+            this.Column25.HeaderText = "归0";
+            this.Column25.Name = "Column25";
+            this.Column25.ReadOnly = true;
+            this.Column25.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column25.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column25.Width = 45;
+            // 
+            // Column26
+            // 
+            this.Column26.HeaderText = "超出";
+            this.Column26.Name = "Column26";
+            this.Column26.ReadOnly = true;
+            this.Column26.Width = 45;
             // 
             // Form1
             // 
@@ -4354,13 +4363,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column24;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column25;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button_Del_Print;
         private System.Windows.Forms.Button button_Del_PrintPreview;
@@ -4388,6 +4390,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column26;
 
     }
 }
