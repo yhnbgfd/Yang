@@ -26,13 +26,13 @@ namespace WindowsFormsApplication1
         /// <summary>
         /// 定义获取勾选的数字
         /// </summary>
-        private List<int> choiceDate = new List<int>();
-        
-        private int SelectNum = 5;
-        private int TotalNum = 26;
-        private int ShowSpecialStar = 20;
+        private List<int> _choiceDate = new List<int>();
 
-        private Color ChoiceColor = Color.Red;
+        private int _selectNum = 5;
+        private int _totalNum = 26;
+        private int _showSpecialStar = 20;
+
+        private Color _choiceColor = Color.Red;
 
         private int m_Count_Operate;
         private int m_Count_Generate;
@@ -40,18 +40,18 @@ namespace WindowsFormsApplication1
         /// <summary>
         /// 中奖号码
         /// </summary>
-        private int[] Winning_Numbers;
+        private int[] _winningNumbers;
         /// <summary>
         /// 软件目录
         /// </summary>
-        private string path = Application.StartupPath + @"\";
+        private string _path = Application.StartupPath + @"\";
         /// <summary>
         /// 当前打印的页面
         /// </summary>
-        private int CurrentPage = 0;
-        private string CurrentMarkforPrint = "";
+        private int _currentPage = 0;
+        private string _currentMarkforPrint = "";
 
-        private string[] sort = {   "0", 
+        private string[] _sort = {   "0", 
                                 "△", "△△", 
                                 "■", "△■", "△△■", 
                                 "■■", "△■■", "△△■■", 
@@ -62,35 +62,35 @@ namespace WindowsFormsApplication1
                                 "☆☆☆☆☆", "△☆☆☆☆☆", "△△☆☆☆☆☆", "■☆☆☆☆☆", "△■☆☆☆☆☆", "△△■☆☆☆☆☆", "■■☆☆☆☆☆", "△■■☆☆☆☆☆",
                                 "△△■■☆☆☆☆☆", "超出" 
                             };
-        private Color[] allColor = { Color.Red, Color.Orange, Color.Yellow, Color.Green, Color.Blue, Color.Indigo, Color.Purple, 
+        private Color[] _allColor = { Color.Red, Color.Orange, Color.Yellow, Color.Green, Color.Blue, Color.Indigo, Color.Purple, 
                                      Color.Black, Color.Gray, Color.Maroon, Color.Chocolate, Color.Wheat };
 
-        private bool isGenerate = false;
+        private bool _isGenerate = false;
 
         //新分支，改用array保存总库
-        private int totalData = 0;
+        private int _totalData = 0;
         /// <summary>
         /// 生成长度=总数据量的数组，用以一一对应存储每组数据的普通标记数
         /// </summary>
-        private int[] FilterStatistics;
+        private int[] _filterStatistics;
         /// <summary>
         /// 生成长度=总数据量的数组，用以一一对应存储每组数据的特殊五角星标记数
         /// </summary>
-        private int[] SpecialMark;
+        private int[] _specialMark;
         /// <summary>
         /// 生成长度=总数据量的数组，用以一一对应存储每组数据的删除标记数
         /// </summary>
-        private int[] DeleteMark;
-        private int[] DiffColorNum;
-        private List<Color[]> ColorValue = new List<Color[]>();
+        private int[] _deleteMark;
+        private int[] _diffColorNum;
+        private List<Color[]> _colorValue = new List<Color[]>();
         List<int[]> l_totalDataBase = new List<int[]>();
 
-        Logging savelog = new Logging();
+        Logging _savelog = new Logging();
 
         #endregion
-        private int m = 26;
-        private int n = 5;
-        
+        private int _m = 26;
+        private int _n = 5;
+
         /// <summary>
         /// 构造函数
         /// </summary>
@@ -113,7 +113,7 @@ namespace WindowsFormsApplication1
                 CheckedListBox clb = (CheckedListBox)findControl(panel1, controlName);
                 clb.SetItemChecked(0, true);
                 clb.SetItemChecked(1, true);
-                if(i<7)
+                if (i < 7)
                     clb.SetItemChecked(2, true);
             }
             InitDataGridView1();
@@ -121,9 +121,9 @@ namespace WindowsFormsApplication1
             InitDataGridViewDeleteResult();
 
             GetFileList(false); //读取已存记录
-            for (int i = 0; i < TotalNum;i++ )
+            for (int i = 0; i < _totalNum; i++)
             {
-                choiceDate.Add(i+1);
+                _choiceDate.Add(i + 1);
             }
             radioButton21.Checked = true;//默认30选3
         }
@@ -133,19 +133,19 @@ namespace WindowsFormsApplication1
         /// </summary>
         private void MarkSort()
         {
-            for (int i = 0; i < totalData; i++)
+            for (int i = 0; i < _totalData; i++)
             {
-                if (FilterStatistics[i] > 54)
+                if (_filterStatistics[i] > 54)
                 {
-                    FilterStatistics[i] = 54;
+                    _filterStatistics[i] = 54;
                 }
-                if (SpecialMark[i] > ShowSpecialStar)
+                if (_specialMark[i] > _showSpecialStar)
                 {
-                    SpecialMark[i] = ShowSpecialStar + 1;
+                    _specialMark[i] = _showSpecialStar + 1;
                 }
-                if (DeleteMark[i] > ShowSpecialStar)
+                if (_deleteMark[i] > _showSpecialStar)
                 {
-                    DeleteMark[i] = ShowSpecialStar + 1;
+                    _deleteMark[i] = _showSpecialStar + 1;
                 }
             }
         }
@@ -157,12 +157,12 @@ namespace WindowsFormsApplication1
         /// <returns></returns>
         private bool AddStar(int tab)
         {
-       
-            for (int i = 0; i < totalData; i++)
+
+            for (int i = 0; i < _totalData; i++)
             {
-                if (FilterStatistics[i] == tab)
+                if (_filterStatistics[i] == tab)
                 {
-                    FilterStatistics[i] += 1;
+                    _filterStatistics[i] += 1;
                 }
             }
             return true;
@@ -175,11 +175,11 @@ namespace WindowsFormsApplication1
         /// <returns></returns>
         private bool ReduceStar(int tab)
         {
-            for (int i = 0; i < totalData; i++)
+            for (int i = 0; i < _totalData; i++)
             {
-                if (FilterStatistics[i] == tab)
+                if (_filterStatistics[i] == tab)
                 {
-                    FilterStatistics[i] -= 1;
+                    _filterStatistics[i] -= 1;
                 }
             }
             return true;
@@ -190,13 +190,26 @@ namespace WindowsFormsApplication1
         /// </summary>
         /// <param name="tab"></param>
         /// <returns></returns>
-        private bool AddSpStar(int tab)
+        private bool AddSpStar(int tab, int type = 0)
         {
-            for (int i = 0; i < totalData; i++)
+            if (type == 0)
             {
-                if (FilterStatistics[i] == tab)
+                for (int i = 0; i < _totalData; i++)
                 {
-                    SpecialMark[i] += 1;
+                    if (_filterStatistics[i] == tab)
+                    {
+                        _specialMark[i] += 1;
+                    }
+                }
+            }
+            else if (type == 1)
+            {
+                for (int i = 0; i < _totalData; i++)
+                {
+                    if (_specialMark[i] == tab)
+                    {
+                        _specialMark[i] += 1;
+                    }
                 }
             }
             return true;
@@ -207,14 +220,26 @@ namespace WindowsFormsApplication1
         /// </summary>
         /// <param name="tab"></param>
         /// <returns></returns>
-        private bool ReduceSpStar(int tab)
+        private bool ReduceSpStar(int tab, int type = 0)
         {
-            
-            for (int i = 0; i < totalData; i++)
+            if (type == 0)
             {
-                if (FilterStatistics[i] == tab)
+                for (int i = 0; i < _totalData; i++)
                 {
-                    SpecialMark[i] -= 1;
+                    if (_filterStatistics[i] == tab)
+                    {
+                        _specialMark[i] -= 1;
+                    }
+                }
+            }
+            else if (type == 1)
+            {
+                for (int i = 0; i < _totalData; i++)
+                {
+                    if (_specialMark[i] == tab)
+                    {
+                        _specialMark[i] -= 1;
+                    }
                 }
             }
             return true;
@@ -230,31 +255,31 @@ namespace WindowsFormsApplication1
         {
             if (type == 0)
             {
-                for (int i = 0; i < totalData; i++)
+                for (int i = 0; i < _totalData; i++)
                 {
-                    if (FilterStatistics[i] == tab)
+                    if (_filterStatistics[i] == tab)
                     {
-                        FilterStatistics[i] += 54;
+                        _filterStatistics[i] += 54;
                     }
                 }
             }
             else if (type == 1)
             {
-                for (int i = 0; i < totalData; i++)
+                for (int i = 0; i < _totalData; i++)
                 {
-                    if (SpecialMark[i] == tab)
+                    if (_specialMark[i] == tab)
                     {
-                        SpecialMark[i] = ShowSpecialStar + 1;
+                        _specialMark[i] = _showSpecialStar + 1;
                     }
                 }
             }
             else if (type == 2)
             {
-                for (int i = 0; i < totalData; i++)
+                for (int i = 0; i < _totalData; i++)
                 {
-                    if (DeleteMark[i] == tab)
+                    if (_deleteMark[i] == tab)
                     {
-                        DeleteMark[i] = ShowSpecialStar + 1;
+                        _deleteMark[i] = _showSpecialStar + 1;
                     }
                 }
             }
@@ -271,31 +296,31 @@ namespace WindowsFormsApplication1
         {
             if (type == 0)
             {
-                for (int i = 0; i < totalData; i++)
+                for (int i = 0; i < _totalData; i++)
                 {
-                    if (FilterStatistics[i] == tab)
+                    if (_filterStatistics[i] == tab)
                     {
-                        FilterStatistics[i] = 0;
+                        _filterStatistics[i] = 0;
                     }
                 }
             }
             else if (type == 1)
             {
-                for (int i = 0; i < totalData; i++)
+                for (int i = 0; i < _totalData; i++)
                 {
-                    if (SpecialMark[i] == tab)
+                    if (_specialMark[i] == tab)
                     {
-                        SpecialMark[i] = 0;
+                        _specialMark[i] = 0;
                     }
                 }
             }
             else if (type == 2)
             {
-                for (int i = 0; i < totalData; i++)
+                for (int i = 0; i < _totalData; i++)
                 {
-                    if (DeleteMark[i] == tab)
+                    if (_deleteMark[i] == tab)
                     {
-                        DeleteMark[i] = 0;
+                        _deleteMark[i] = 0;
                     }
                 }
             }
@@ -309,33 +334,33 @@ namespace WindowsFormsApplication1
         /// <param name="tab"></param>
         private bool AddDelete(int type, int tab)
         {
-            if(type == 0)
+            if (type == 0)
             {
-                for (int i = 0; i < totalData; i++)
+                for (int i = 0; i < _totalData; i++)
                 {
-                    if (FilterStatistics[i] == tab)
+                    if (_filterStatistics[i] == tab)
                     {
-                        DeleteMark[i] += 1;
+                        _deleteMark[i] += 1;
                     }
                 }
             }
-            else if(type == 1)
+            else if (type == 1)
             {
-                for (int i = 0; i < totalData; i++)
+                for (int i = 0; i < _totalData; i++)
                 {
-                    if (SpecialMark[i] == tab)
+                    if (_specialMark[i] == tab)
                     {
-                        DeleteMark[i] += 1;
+                        _deleteMark[i] += 1;
                     }
                 }
             }
             else if (type == 2)
             {
-                for (int i = 0; i < totalData; i++)
+                for (int i = 0; i < _totalData; i++)
                 {
-                    if (DeleteMark[i] == tab)
+                    if (_deleteMark[i] == tab)
                     {
-                        DeleteMark[i] += 1;
+                        _deleteMark[i] += 1;
                     }
                 }
             }
@@ -345,31 +370,31 @@ namespace WindowsFormsApplication1
         {
             if (type == 0)
             {
-                for (int i = 0; i < totalData; i++)
+                for (int i = 0; i < _totalData; i++)
                 {
-                    if (FilterStatistics[i] == tab)
+                    if (_filterStatistics[i] == tab)
                     {
-                        DeleteMark[i] -= 1;
+                        _deleteMark[i] -= 1;
                     }
                 }
             }
             else if (type == 1)
             {
-                for (int i = 0; i < totalData; i++)
+                for (int i = 0; i < _totalData; i++)
                 {
-                    if (SpecialMark[i] == tab)
+                    if (_specialMark[i] == tab)
                     {
-                        DeleteMark[i] -= 1;
+                        _deleteMark[i] -= 1;
                     }
                 }
             }
             else if (type == 2)
             {
-                for (int i = 0; i < totalData; i++)
+                for (int i = 0; i < _totalData; i++)
                 {
-                    if (DeleteMark[i] == tab)
+                    if (_deleteMark[i] == tab)
                     {
-                        DeleteMark[i] -= 1;
+                        _deleteMark[i] -= 1;
                     }
                 }
             }
@@ -385,53 +410,57 @@ namespace WindowsFormsApplication1
         /// <param name="ctab">添加的标记数量</param>
         private void SpecialStar(int local, int ctab)
         {
-            SpecialMark[local] += ctab;
+            _specialMark[local] += ctab;
         }
 
         private void AddDeleteMark(int local, int ctab)
         {
-            DeleteMark[local] += ctab;
+            _deleteMark[local] += ctab;
         }
         #region 初始化三个DataGridView
         private void InitDataGridView1()
         {
             DataGridViewRowCollection rows = this.dataGridView1.Rows;
-            for (int i = 0; i < 55; i++ )
+            for (int i = 0; i < 55; i++)
             {
-                rows.Add(i + 1, sort[i], 0, " 查看", " +△", " -△", " +☆", " -☆", " 超出", " 归0", " 删除");
+                rows.Add(i + 1, _sort[i], 0, " 查看", " +△", " -△", " +☆", " -☆", " 超出", " 归0", " 删除");
             }
         }
+
+        /// <summary>
+        /// dataGridView3
+        /// </summary>
         private void InitDataGridView2()
         {
             string State = "";
             DataGridViewRowCollection rows = this.dataGridView3.Rows;
-            for (int i = 0; i < ShowSpecialStar + 2; i++)
+            for (int i = 0; i < _showSpecialStar + 2; i++)
             {
                 if (i == 0)
                 {
                     State = "0";
-                    rows.Add(i + 1, State, 0, " 查看", " 超出", " 归0", " 删除");
+                    rows.Add(i + 1, State, 0, " 查看", " 加特", " 减特", " 加删", " 减删", " 超出", " 归0");
                     State = "";
                 }
-                else if (i == ShowSpecialStar + 1)
+                else if (i == _showSpecialStar + 1)
                 {
                     State = "超出";
-                    rows.Add(i + 1, State, 0, " 查看", " 超出", " 归0", " 删除");
+                    rows.Add(i + 1, State, 0, " 查看", " 加特", " 减特", " 加删", " 减删", " 超出", " 归0");
                 }
-                else if( i == 10)
+                else if (i == 10)
                 {
                     State = "★";
-                    rows.Add(i + 1, State, 0, " 查看", " 超出", " 归0", " 删除");
+                    rows.Add(i + 1, State, 0, " 查看", " 加特", " 减特", " 加删", " 减删", " 超出", " 归0");
                 }
                 else if (i == 20)
                 {
                     State = "★★";
-                    rows.Add(i + 1, State, 0, " 查看", " 超出", " 归0", " 删除");
+                    rows.Add(i + 1, State, 0, " 查看", " 加特", " 减特", " 加删", " 减删", " 超出", " 归0");
                 }
                 else
                 {
                     State += "☆";
-                    rows.Add(i + 1, State, 0, " 查看", " 超出", " 归0", " 删除");
+                    rows.Add(i + 1, State, 0, " 查看", " 加特", " 减特", " 加删", " 减删", " 超出", " 归0");
                 }
             }
         }
@@ -439,7 +468,7 @@ namespace WindowsFormsApplication1
         {
             string State = "";
             DataGridViewRowCollection rows = this.dataGridView4.Rows;
-            for (int i = 0; i < ShowSpecialStar + 2; i++)
+            for (int i = 0; i < _showSpecialStar + 2; i++)
             {
                 if (i == 0)
                 {
@@ -447,7 +476,7 @@ namespace WindowsFormsApplication1
                     rows.Add(i + 1, State, 0, " 查看", " 加删", " 减删", " 归0", " 超出");
                     State = "";
                 }
-                else if (i == ShowSpecialStar + 1)
+                else if (i == _showSpecialStar + 1)
                 {
                     State = "超出";
                     rows.Add(i + 1, State, 0, " 查看", " 加删", " 减删", " 归0", " 超出");
@@ -504,13 +533,13 @@ namespace WindowsFormsApplication1
                 }
 
                 richTextBox1.Text = "";
-                CurrentMarkforPrint = sort[tab];
+                _currentMarkforPrint = _sort[tab];
                 string text = "";
-                for (int ia = 0; ia < totalData; ia++)
+                for (int ia = 0; ia < _totalData; ia++)
                 {
-                    if (tab == 54 && FilterStatistics[ia] >= tab)
+                    if (tab == 54 && _filterStatistics[ia] >= tab)
                     {
-                        for (int i = 0; i < SelectNum; i++)
+                        for (int i = 0; i < _selectNum; i++)
                         {
                             if (l_totalDataBase[ia][i] < 10)
                                 text += " ";
@@ -518,9 +547,9 @@ namespace WindowsFormsApplication1
                         }
                         text += "\n";
                     }
-                    else if (FilterStatistics[ia] == tab)
+                    else if (_filterStatistics[ia] == tab)
                     {
-                        for (int i = 0; i < SelectNum; i++)
+                        for (int i = 0; i < _selectNum; i++)
                         {
                             if (l_totalDataBase[ia][i] < 10)
                                 text += " ";
@@ -577,7 +606,7 @@ namespace WindowsFormsApplication1
                         return;
                     result = Zero(0, tab);
                 }
-                if(e.ColumnIndex == 10)//datagrid---删除
+                if (e.ColumnIndex == 10)//datagrid---删除
                 {
                     DialogResult dr = MessageBox.Show("确定执行\"删除\"操作吗？", "警告", messButton);
                     if (dr == DialogResult.Cancel)
@@ -590,13 +619,13 @@ namespace WindowsFormsApplication1
                     richTextBox1.Text = "点击左边“查看”按钮显示结果";
                     for (int i = 0; i < 55; i++)
                         dataGridView1.Rows[i].Cells[2].Value = 0;   //  全部先设成0
-                    for (int ia = 0; ia < totalData; ia++)
+                    for (int ia = 0; ia < _totalData; ia++)
                     {
-                        if (FilterStatistics[ia] >= 54)
+                        if (_filterStatistics[ia] >= 54)
                             dataGridView1.Rows[54].Cells[2].Value = (int)dataGridView1.Rows[54].Cells[2].Value + 1;
                         else
                         {
-                            dataGridView1.Rows[FilterStatistics[ia]].Cells[2].Value = (int)dataGridView1.Rows[FilterStatistics[ia]].Cells[2].Value + 1;
+                            dataGridView1.Rows[_filterStatistics[ia]].Cells[2].Value = (int)dataGridView1.Rows[_filterStatistics[ia]].Cells[2].Value + 1;
                         }
                     }
                     MessageBox.Show("标记成功。", "确认", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -628,13 +657,13 @@ namespace WindowsFormsApplication1
                     }
                 }
                 richTextBox2.Text = "";
-                CurrentMarkforPrint = sort[tab];
+                _currentMarkforPrint = _sort[tab];
                 string text = "";
-                for (int ia = 0; ia < totalData; ia++ )
+                for (int ia = 0; ia < _totalData; ia++)
                 {
-                    if (tab == 6 && SpecialMark[ia] >= tab)
+                    if (tab == 6 && _specialMark[ia] >= tab)
                     {
-                        for (int i = 0; i < SelectNum; i++)
+                        for (int i = 0; i < _selectNum; i++)
                         {
                             if (l_totalDataBase[ia][i] < 10)
                                 text += " ";
@@ -642,9 +671,9 @@ namespace WindowsFormsApplication1
                         }
                         text += "\n";
                     }
-                    else if (SpecialMark[ia] == tab)
+                    else if (_specialMark[ia] == tab)
                     {
-                        for (int i = 0; i < SelectNum; i++)
+                        for (int i = 0; i < _selectNum; i++)
                         {
                             if (l_totalDataBase[ia][i] < 10)
                                 text += " ";
@@ -658,26 +687,47 @@ namespace WindowsFormsApplication1
             else if (e.ColumnIndex > 3)
             {
                 bool result = false;
-                if (e.ColumnIndex == 4)    //datagrid---超出
+                if (e.ColumnIndex == 4)//加特
+                {
+                    DialogResult dr = MessageBox.Show("确定执行\"加特\"操作吗？", "警告", messButton);
+                    if (dr == DialogResult.Cancel)
+                        return;
+                    result = AddSpStar(tab, 1);
+                }
+                else if (e.ColumnIndex == 5)//减特
+                {
+                    DialogResult dr = MessageBox.Show("确定执行\"减特\"操作吗？", "警告", messButton);
+                    if (dr == DialogResult.Cancel)
+                        return;
+                    result = ReduceSpStar(tab, 1);
+                }
+                else if (e.ColumnIndex == 6)//加删
+                {
+                    DialogResult dr = MessageBox.Show("确定执行\"加删\"操作吗？", "警告", messButton);
+                    if (dr == DialogResult.Cancel)
+                        return;
+                    result = AddDelete(1, tab);
+                }
+                else if (e.ColumnIndex == 7)//减删
+                {
+                    DialogResult dr = MessageBox.Show("确定执行\"减删\"操作吗？", "警告", messButton);
+                    if (dr == DialogResult.Cancel)
+                        return;
+                    result = ReduceDelete(1, tab);
+                }
+                else if (e.ColumnIndex == 8)    //datagrid---超出
                 {
                     DialogResult dr = MessageBox.Show("确定执行\"超出\"操作吗？", "警告", messButton);
                     if (dr == DialogResult.Cancel)
                         return;
                     result = Exceeded(1, tab);
                 }
-                else if (e.ColumnIndex == 5)//datagrid---归0
+                else if (e.ColumnIndex == 9)//datagrid---归0
                 {
                     DialogResult dr = MessageBox.Show("确定执行\"归0\"操作吗？", "警告", messButton);
                     if (dr == DialogResult.Cancel)
                         return;
                     result = Zero(1, tab);
-                }
-                else if(e.ColumnIndex == 6)//datagrid---删除
-                {
-                    DialogResult dr = MessageBox.Show("确定执行\"删除\"操作吗？", "警告", messButton);
-                    if (dr == DialogResult.Cancel)
-                        return;
-                    result = AddDelete(1, tab);
                 }
 
                 if (result)
@@ -686,14 +736,14 @@ namespace WindowsFormsApplication1
                     richTextBox2.Text = "点击左边“查看”按钮显示结果";
                     for (int i = 0; i < rowsLength; i++)
                         dataGridView3.Rows[i].Cells[2].Value = 0;
-                    for (int i = 0; i < totalData; i++)
+                    for (int i = 0; i < _totalData; i++)
                     {
-                        if (SpecialMark[i] >= rowsLength)
+                        if (_specialMark[i] >= rowsLength)
                         {
                             dataGridView3.Rows[rowsLength - 1].Cells[2].Value = (int)dataGridView3.Rows[rowsLength - 1].Cells[2].Value + 1;
-                        }   
+                        }
                         else
-                            dataGridView3.Rows[SpecialMark[i]].Cells[2].Value = (int)dataGridView3.Rows[SpecialMark[i]].Cells[2].Value + 1;
+                            dataGridView3.Rows[_specialMark[i]].Cells[2].Value = (int)dataGridView3.Rows[_specialMark[i]].Cells[2].Value + 1;
                     }
                     MessageBox.Show("标记成功。", "确认", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -706,7 +756,7 @@ namespace WindowsFormsApplication1
         /// <returns></returns>
         private List<int> checkchoice_checkedListBox()
         {
-            TotalNum = 0;//清空统计
+            _totalNum = 0;//清空统计
             List<int> choiceDate = new List<int>();
             for (int i = 0; i < checkedListBox1.Items.Count; i++)
             {
@@ -721,8 +771,8 @@ namespace WindowsFormsApplication1
                 if (checkedListBox9.GetItemChecked(i)) { choiceDate.Add(int.Parse(checkedListBox9.GetItemText(checkedListBox9.Items[i]))); };
                 if (checkedListBox10.GetItemChecked(i)) { choiceDate.Add(int.Parse(checkedListBox10.GetItemText(checkedListBox10.Items[i]))); };
             }
-            TotalNum = choiceDate.Count;
-            label6.Text = TotalNum.ToString();
+            _totalNum = choiceDate.Count;
+            label6.Text = _totalNum.ToString();
             return choiceDate;
         }
 
@@ -751,7 +801,7 @@ namespace WindowsFormsApplication1
                 }
             }
             return null;
-        } 
+        }
 
         /// <summary>
         /// 为点击的按钮着色
@@ -759,10 +809,10 @@ namespace WindowsFormsApplication1
         /// </summary>
         /// <param name="button"></param>
         /// <param name="type">0默认，1着色，2去色</param>
-        private void digit_Button_Click(Button button,int type)
+        private void digit_Button_Click(Button button, int type)
         {
             int n = int.Parse(button.Name.Substring(button.Name.LastIndexOf("c") + 1));
-            if (!choiceDate.Contains(n))    //如果该数字未被选中，直接跳过
+            if (!_choiceDate.Contains(n))    //如果该数字未被选中，直接跳过
             {
                 return;
             }
@@ -771,17 +821,17 @@ namespace WindowsFormsApplication1
             {
                 button.BackColor = Color.Transparent;
             }
-            else if(type == 1)
+            else if (type == 1)
             {
-                button.BackColor = ChoiceColor;
+                button.BackColor = _choiceColor;
             }
-            else if (button.BackColor == ChoiceColor)
+            else if (button.BackColor == _choiceColor)
             {
                 button.BackColor = Color.Transparent;
             }
             else
             {
-                button.BackColor = ChoiceColor;
+                button.BackColor = _choiceColor;
             }
 
             //白色字体
@@ -833,38 +883,38 @@ namespace WindowsFormsApplication1
         {
             MarkSort();
             richTextBox1.Text = "点击左边“查看”按钮显示结果";
-            for (int i = 0; i < 55;i++ )
+            for (int i = 0; i < 55; i++)
                 dataGridView1.Rows[i].Cells[2].Value = 0;   //  全部先设成0
-            for (int ia = 0; ia < totalData; ia++)
+            for (int ia = 0; ia < _totalData; ia++)
             {
-                if (FilterStatistics[ia] >= 54)
+                if (_filterStatistics[ia] >= 54)
                     dataGridView1.Rows[54].Cells[2].Value = (int)dataGridView1.Rows[54].Cells[2].Value + 1;
                 else
-                    dataGridView1.Rows[FilterStatistics[ia]].Cells[2].Value = (int)dataGridView1.Rows[FilterStatistics[ia]].Cells[2].Value + 1;
+                    dataGridView1.Rows[_filterStatistics[ia]].Cells[2].Value = (int)dataGridView1.Rows[_filterStatistics[ia]].Cells[2].Value + 1;
             }
 
             /* 特殊五角星tab */
             richTextBox2.Text = "点击左边“查看”按钮显示结果";
             for (int i = 0; i < dataGridView3.Rows.Count; i++)
                 dataGridView3.Rows[i].Cells[2].Value = 0;
-            for(int i=0; i<totalData; i++)
+            for (int i = 0; i < _totalData; i++)
             {
-                if (SpecialMark[i] > ShowSpecialStar + 1)
-                    dataGridView3.Rows[ShowSpecialStar+1].Cells[2].Value = (int)dataGridView3.Rows[ShowSpecialStar].Cells[2].Value + 1;
+                if (_specialMark[i] > _showSpecialStar + 1)
+                    dataGridView3.Rows[_showSpecialStar + 1].Cells[2].Value = (int)dataGridView3.Rows[_showSpecialStar].Cells[2].Value + 1;
                 else
-                    dataGridView3.Rows[SpecialMark[i]].Cells[2].Value = (int)dataGridView3.Rows[SpecialMark[i]].Cells[2].Value + 1;
+                    dataGridView3.Rows[_specialMark[i]].Cells[2].Value = (int)dataGridView3.Rows[_specialMark[i]].Cells[2].Value + 1;
             }
 
             //删除标记
             richTextBox3.Text = "点击左边“查看”按钮显示结果";
             for (int i = 0; i < dataGridView4.Rows.Count; i++)
                 dataGridView4.Rows[i].Cells[2].Value = 0;
-            for (int i = 0; i < totalData; i++)
+            for (int i = 0; i < _totalData; i++)
             {
-                if (DeleteMark[i] > ShowSpecialStar + 1)
-                    dataGridView4.Rows[ShowSpecialStar+1].Cells[2].Value = (int)dataGridView4.Rows[ShowSpecialStar].Cells[2].Value + 1;
+                if (_deleteMark[i] > _showSpecialStar + 1)
+                    dataGridView4.Rows[_showSpecialStar + 1].Cells[2].Value = (int)dataGridView4.Rows[_showSpecialStar].Cells[2].Value + 1;
                 else
-                    dataGridView4.Rows[DeleteMark[i]].Cells[2].Value = (int)dataGridView4.Rows[DeleteMark[i]].Cells[2].Value + 1;
+                    dataGridView4.Rows[_deleteMark[i]].Cells[2].Value = (int)dataGridView4.Rows[_deleteMark[i]].Cells[2].Value + 1;
             }
 
             //跳转tab
@@ -892,7 +942,7 @@ namespace WindowsFormsApplication1
             }
             else
             {
-                for (int j =0; j < checkedListBox1.Items.Count; j++)
+                for (int j = 0; j < checkedListBox1.Items.Count; j++)
                     checkedListBox1.SetItemChecked(j, false);
             }
         }
@@ -904,18 +954,18 @@ namespace WindowsFormsApplication1
         /// <param name="e"></param>
         private void GetWinningNumbers()
         {
-            Winning_Numbers = new int[SelectNum];
-            for (int i = 0; i < SelectNum; i++)
+            _winningNumbers = new int[_selectNum];
+            for (int i = 0; i < _selectNum; i++)
             {
                 string controlName = "textBox_win" + (i + 1).ToString();
                 TextBox tb = (TextBox)findControl(panel5, controlName);
-                if (tb.Text == "" || tb.Text == "0" || (i > 0 && int.Parse(tb.Text) < Winning_Numbers[i-1]))
+                if (tb.Text == "" || tb.Text == "0" || (i > 0 && int.Parse(tb.Text) < _winningNumbers[i - 1]))
                 {
                     MessageBox.Show("请输入正常的目标号码", "警告", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Winning_Numbers = null;
+                    _winningNumbers = null;
                     return;
                 }
-                Winning_Numbers[i] = int.Parse(tb.Text);
+                _winningNumbers[i] = int.Parse(tb.Text);
             }
         }
 
@@ -926,18 +976,18 @@ namespace WindowsFormsApplication1
         /// <param name="e"></param>
         private void GetWinningNumbersInSpecial()
         {
-            Winning_Numbers = new int[SelectNum];
-            for (int i = 0; i < SelectNum; i++)
+            _winningNumbers = new int[_selectNum];
+            for (int i = 0; i < _selectNum; i++)
             {
                 string controlName = "textBox_sw" + (i + 1).ToString();
                 TextBox tb = (TextBox)findControl(panel6, controlName);
-                if (tb.Text == "" || tb.Text == "0" || (i > 0 && int.Parse(tb.Text) < Winning_Numbers[i - 1]))
+                if (tb.Text == "" || tb.Text == "0" || (i > 0 && int.Parse(tb.Text) < _winningNumbers[i - 1]))
                 {
                     MessageBox.Show("请输入正常的目标号码", "警告", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Winning_Numbers = null;
+                    _winningNumbers = null;
                     return;
                 }
-                Winning_Numbers[i] = int.Parse(tb.Text);
+                _winningNumbers[i] = int.Parse(tb.Text);
             }
         }
         /// <summary>
@@ -945,18 +995,18 @@ namespace WindowsFormsApplication1
         /// </summary>
         private void GetDeleteMarkNumbers()
         {
-            Winning_Numbers = new int[SelectNum];
-            for (int i = 0; i < SelectNum; i++)
+            _winningNumbers = new int[_selectNum];
+            for (int i = 0; i < _selectNum; i++)
             {
                 string controlName = "textBox_del" + (i + 1).ToString();
                 TextBox tb = (TextBox)findControl(groupBox5, controlName);
-                if (tb.Text == "" || tb.Text == "0" || (i > 0 && int.Parse(tb.Text) < Winning_Numbers[i - 1]))
+                if (tb.Text == "" || tb.Text == "0" || (i > 0 && int.Parse(tb.Text) < _winningNumbers[i - 1]))
                 {
                     MessageBox.Show("请输入正常的目标号码", "警告", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Winning_Numbers = null;
+                    _winningNumbers = null;
                     return;
                 }
-                Winning_Numbers[i] = int.Parse(tb.Text);
+                _winningNumbers[i] = int.Parse(tb.Text);
             }
         }
 
@@ -966,25 +1016,25 @@ namespace WindowsFormsApplication1
             /* 清空各种数据 */
             D_ColorTemptDict.Clear();                           //清空颜色记录
             l_totalDataBase.Clear();                            //总库清空
-            ColorValue.Clear();
+            _colorValue.Clear();
             /* 获取选择数据 */
-            SelectNum = int.Parse(comboBox5.Text);              //M取N，获取N
-            choiceDate = checkchoice_checkedListBox();          //获取勾选的数字，赋值TotalNum
+            _selectNum = int.Parse(comboBox5.Text);              //M取N，获取N
+            _choiceDate = checkchoice_checkedListBox();          //获取勾选的数字，赋值TotalNum
             /* 生成数据 */
             GenerateData gData = new GenerateData();
-            gData.s = SelectNum;                                //s为要取的个数  n
-            gData.e = TotalNum;                                 //e为要取得基数的总数   m
-            gData.dataSets = choiceDate;                        //选择的数据集
+            gData.s = _selectNum;                                //s为要取的个数  n
+            gData.e = _totalNum;                                 //e为要取得基数的总数   m
+            gData.dataSets = _choiceDate;                        //选择的数据集
             //生成数据
             l_totalDataBase = gData.run2();                     // 生成数据总库
-            ColorValue = gData.runColor();                      // 生成颜色数据总库
-            totalData = gData.CountTotalData(TotalNum, SelectNum);  //总库的数据总量
-            InitFilterStatisticsAndDiffColorNum(totalData);     //初始化总库 筛选统计数组、不同颜色统计数组
+            _colorValue = gData.runColor();                      // 生成颜色数据总库
+            _totalData = gData.CountTotalData(_totalNum, _selectNum);  //总库的数据总量
+            InitFilterStatisticsAndDiffColorNum(_totalData);     //初始化总库 筛选统计数组、不同颜色统计数组
 
             /* 跳到下一个tab:逻辑查询操作tab */
             FinishingInterface();                               // 整理还原tab3的界面
             tabControl1.SelectedIndex = 2;                      //跳到编号为3的tab
-            isGenerate = true;                                  //是否已生成数据=true，避免保存出错
+            _isGenerate = true;                                  //是否已生成数据=true，避免保存出错
 
         }
 
@@ -994,10 +1044,10 @@ namespace WindowsFormsApplication1
         /// <param name="totalData"></param>
         private void InitFilterStatisticsAndDiffColorNum(int totalData)
         {
-            FilterStatistics = new int[totalData];
-            DiffColorNum = new int[totalData];
-            SpecialMark = new int[totalData];
-            DeleteMark = new int[totalData]; 
+            _filterStatistics = new int[totalData];
+            _diffColorNum = new int[totalData];
+            _specialMark = new int[totalData];
+            _deleteMark = new int[totalData];
             //foreach(int i in FilterStatistics)//默认就全部是0，好无聊的代码，还达不到目的
             //{
             //    FilterStatistics[i] = 0;
@@ -1013,11 +1063,11 @@ namespace WindowsFormsApplication1
         private void FinishingInterface()
         {
             /* 清空各种数据 */
-            m_Count_Operate = 0;                        
+            m_Count_Operate = 0;
             //m_SpecialStar.Clear();                    
-            count_generate.Text = "";                   
-            count_operate.Text = "";                    
-            comboBox_method2_operate.SelectedIndex = SelectNum - 1;
+            count_generate.Text = "";
+            count_operate.Text = "";
+            comboBox_method2_operate.SelectedIndex = _selectNum - 1;
             //激活被选中数字的按钮
             for (int i = 1; i <= 70; i++)
             {
@@ -1027,9 +1077,9 @@ namespace WindowsFormsApplication1
                 bb.BackColor = Color.White;
                 bb.ForeColor = Color.Black;
             }
-            for (int i = 0; i < TotalNum; i++)
+            for (int i = 0; i < _totalNum; i++)
             {
-                string controlName = "button_c" + choiceDate[i].ToString();
+                string controlName = "button_c" + _choiceDate[i].ToString();
                 Button bb = (Button)findControl(panel2, controlName);
                 bb.Enabled = true;
                 bb.BackColor = Color.Transparent;
@@ -1039,7 +1089,7 @@ namespace WindowsFormsApplication1
             {
                 string textBoxName = "textBox" + (i + 4).ToString();
                 TextBox tb = (TextBox)findControl(panel2, textBoxName);
-                if (i >= SelectNum)
+                if (i >= _selectNum)
                     tb.Enabled = false;
                 else
                     tb.Enabled = true;
@@ -1092,7 +1142,7 @@ namespace WindowsFormsApplication1
             {
                 string WinControlName = "textBox_win" + i.ToString();
                 TextBox bw = (TextBox)findControl(panel5, WinControlName);
-                if (SelectNum < i)
+                if (_selectNum < i)
                 {
                     bw.Enabled = false;
                 }
@@ -1107,7 +1157,7 @@ namespace WindowsFormsApplication1
             {
                 string WinControlName = "textBox_sw" + i.ToString();
                 TextBox bw = (TextBox)findControl(panel6, WinControlName);
-                if (SelectNum < i)
+                if (_selectNum < i)
                 {
                     bw.Enabled = false;
                 }
@@ -1121,7 +1171,7 @@ namespace WindowsFormsApplication1
             {
                 string WinControlName = "textBox_del" + i.ToString();
                 TextBox bw = (TextBox)findControl(groupBox5, WinControlName);
-                if (SelectNum < i)
+                if (_selectNum < i)
                 {
                     bw.Enabled = false;
                 }
@@ -1131,7 +1181,7 @@ namespace WindowsFormsApplication1
                 }
             }
             //上方提示几选几
-            label3.Text = TotalNum + "取" + SelectNum;
+            label3.Text = _totalNum + "取" + _selectNum;
             label2.Text = "0";
             label12.Text = "";
         }
@@ -1333,7 +1383,7 @@ namespace WindowsFormsApplication1
 
         private void button6_Click(object sender, EventArgs e)
         {
-            button_c1.BackColor = ChoiceColor;
+            button_c1.BackColor = _choiceColor;
         }
 
         /// <summary>
@@ -1364,16 +1414,16 @@ namespace WindowsFormsApplication1
                     return;
                 }
             }
-            
+
             if (comboBox7.SelectedIndex == 0)//所选颜色
             {
-                m_Count_Generate = Filter1(sender, ChoiceColor);
+                m_Count_Generate = Filter1(sender, _choiceColor);
                 count_generate.Text = "本次操作共标记" + m_Count_Generate + "注";
                 m_Count_Generate = 0;
             }
             else //所有颜色
-            { 
-                foreach(Color col in allColor)
+            {
+                foreach (Color col in _allColor)
                 {
                     if (D_ColorTemptDict.ContainsValue(col))
                     {
@@ -1424,24 +1474,24 @@ namespace WindowsFormsApplication1
                     cTab = 0;
                     break;
             }
-            
+
             //接下来要把标记后totalDataBase.tab的增量算出来并存起来。
             if (cTab != 0)
             {
                 if (buttonName.IndexOf("minus") > 0)    //  减操作，ctab取反
                     cTab = -cTab;
-                for (int i = 0; i < totalData; i++)
+                for (int i = 0; i < _totalData; i++)
                 {
                     int temptCount = 0;                 //  该注的号码颜色统计
-                    for (int i2 = 0; i2 < SelectNum; i2++)
+                    for (int i2 = 0; i2 < _selectNum; i2++)
                     {
-                        ColorValue[i][i2] = Color.White;   //  先设成白色？好像不需要
+                        _colorValue[i][i2] = Color.White;   //  先设成白色？好像不需要
                         if (D_ColorTemptDict.ContainsKey(l_totalDataBase[i][i2]) && D_ColorTemptDict[l_totalDataBase[i][i2]] != Color.White)//如果这个数字有颜色
                         {
-                            ColorValue[i][i2] = D_ColorTemptDict[l_totalDataBase[i][i2]];//颜色存到总库
+                            _colorValue[i][i2] = D_ColorTemptDict[l_totalDataBase[i][i2]];//颜色存到总库
                         }
                         //if the kvp color equal the marked color,temptCount +1
-                        if (ColorValue[i][i2] == col)
+                        if (_colorValue[i][i2] == col)
                         {
                             temptCount++;
                         }
@@ -1454,9 +1504,9 @@ namespace WindowsFormsApplication1
                             {
                                 if (comboBox4.SelectedIndex < 4)   //不是特殊五角星
                                 {
-                                    if (FilterStatistics[i] + cTab < 0)//0,不让减了
+                                    if (_filterStatistics[i] + cTab < 0)//0,不让减了
                                         continue;
-                                    FilterStatistics[i] += cTab;
+                                    _filterStatistics[i] += cTab;
                                 }
                                 else if (comboBox4.SelectedIndex == 4)           //特殊五角星
                                 {
@@ -1464,7 +1514,7 @@ namespace WindowsFormsApplication1
                                 }
                                 else if (comboBox4.SelectedIndex == 5)//删除标记
                                 {
-                                    AddDeleteMark(i,cTab);
+                                    AddDeleteMark(i, cTab);
                                 }
                                 m_Count_Generate++;
                             }
@@ -1474,9 +1524,9 @@ namespace WindowsFormsApplication1
                             {
                                 if (comboBox4.SelectedIndex < 4)   //不是特殊五角星
                                 {
-                                    if (FilterStatistics[i] + cTab < 0)//0,不让减了
+                                    if (_filterStatistics[i] + cTab < 0)//0,不让减了
                                         continue;
-                                    FilterStatistics[i] += cTab;
+                                    _filterStatistics[i] += cTab;
                                 }
                                 else if (comboBox4.SelectedIndex == 4)          //特殊五角星
                                 {
@@ -1494,9 +1544,9 @@ namespace WindowsFormsApplication1
                             {
                                 if (comboBox4.SelectedIndex < 4)   //不是特殊五角星
                                 {
-                                    if (FilterStatistics[i] + cTab < 0)//0,不让减了
+                                    if (_filterStatistics[i] + cTab < 0)//0,不让减了
                                         continue;
-                                    FilterStatistics[i] += cTab;
+                                    _filterStatistics[i] += cTab;
                                 }
                                 else if (comboBox4.SelectedIndex == 4)    //特殊五角星
                                 {
@@ -1514,9 +1564,9 @@ namespace WindowsFormsApplication1
                             {
                                 if (comboBox4.SelectedIndex < 4)//不是特殊五角星
                                 {
-                                    if (FilterStatistics[i] + cTab < 0)//0,不让减了
+                                    if (_filterStatistics[i] + cTab < 0)//0,不让减了
                                         continue;
-                                    FilterStatistics[i] += cTab;
+                                    _filterStatistics[i] += cTab;
                                 }
                                 else if (comboBox4.SelectedIndex == 4)   //特殊五角星
                                 {
@@ -1571,24 +1621,24 @@ namespace WindowsFormsApplication1
             //database color mark
             bool newColor = true;
             bool zeroColor = false; // 标记是否有空颜色，有即不属于任何n色齐
-            for (int ia = 0; ia < totalData; ia++)
+            for (int ia = 0; ia < _totalData; ia++)
             {
-                DiffColorNum[ia] = 0;
+                _diffColorNum[ia] = 0;
                 zeroColor = false;
-                for (int i2 = 0; i2 < SelectNum; i2++)
+                for (int i2 = 0; i2 < _selectNum; i2++)
                 {
-                    ColorValue[ia][i2] = Color.White;                                       //先设成白色？好像不需要
+                    _colorValue[ia][i2] = Color.White;                                       //先设成白色？好像不需要
                     if (D_ColorTemptDict.ContainsKey(l_totalDataBase[ia][i2]))              //如果这个数字有颜色
                     {
-                        ColorValue[ia][i2] = D_ColorTemptDict[l_totalDataBase[ia][i2]];     //颜色存到总库
+                        _colorValue[ia][i2] = D_ColorTemptDict[l_totalDataBase[ia][i2]];     //颜色存到总库
                         for (int j = 0; j < i2; j++)
                         {
-                            if (ColorValue[ia][i2] == ColorValue[ia][j])                    //如果跟前面的颜色相同，即重复了，标记为不是新颜色
+                            if (_colorValue[ia][i2] == _colorValue[ia][j])                    //如果跟前面的颜色相同，即重复了，标记为不是新颜色
                                 newColor = false;//
                         }
                         if (newColor)
                         {
-                            DiffColorNum[ia]++;
+                            _diffColorNum[ia]++;
                         }
                         newColor = true;
                     }
@@ -1599,10 +1649,10 @@ namespace WindowsFormsApplication1
                 }
                 if (zeroColor)
                 {
-                    DiffColorNum[ia] = 0;
+                    _diffColorNum[ia] = 0;
                 }
             }
-            
+
             //get the pomenomt param
             int operation = comboBox_method2_operate.SelectedIndex;
             int marked = comboBox_Mehod2_marked.SelectedIndex;
@@ -1690,24 +1740,24 @@ namespace WindowsFormsApplication1
             {
                 if (buttonName.IndexOf("minus") > 0)
                     cTab = -cTab;
-                for (int ia = 0; ia < totalData; ia++)
+                for (int ia = 0; ia < _totalData; ia++)
                 {
-                    switch(comboBox6.Text)
+                    switch (comboBox6.Text)
                     {
                         case "=":
-                            if (DiffColorNum[ia] == diffColorNum || (diffColorNum > 10 && (DiffColorNum[ia] == diffColorNum / 10 || DiffColorNum[ia] == diffColorNum % 10)))
+                            if (_diffColorNum[ia] == diffColorNum || (diffColorNum > 10 && (_diffColorNum[ia] == diffColorNum / 10 || _diffColorNum[ia] == diffColorNum % 10)))
                             {
                                 if (marked < 4)
                                 {
-                                    if (cTab < 0 && DiffColorNum[ia] == 0)
+                                    if (cTab < 0 && _diffColorNum[ia] == 0)
                                         continue;
-                                    FilterStatistics[ia] += cTab;
+                                    _filterStatistics[ia] += cTab;
                                 }
-                                else if(marked == 4)//特殊五角星
+                                else if (marked == 4)//特殊五角星
                                 {
                                     SpecialStar(ia, cTab);
                                 }
-                                else if(marked == 5)
+                                else if (marked == 5)
                                 {
                                     AddDeleteMark(ia, cTab);
                                 }
@@ -1715,13 +1765,13 @@ namespace WindowsFormsApplication1
                             }
                             break;
                         case "!=":
-                            if (DiffColorNum[ia] != diffColorNum || (diffColorNum > 10 && (DiffColorNum[ia] == diffColorNum / 10 || DiffColorNum[ia] == diffColorNum % 10)))
+                            if (_diffColorNum[ia] != diffColorNum || (diffColorNum > 10 && (_diffColorNum[ia] == diffColorNum / 10 || _diffColorNum[ia] == diffColorNum % 10)))
                             {
                                 if (marked < 4)
                                 {
-                                    if (cTab < 0 && DiffColorNum[ia] == 0)
+                                    if (cTab < 0 && _diffColorNum[ia] == 0)
                                         continue;
-                                    FilterStatistics[ia] += cTab;
+                                    _filterStatistics[ia] += cTab;
                                 }
                                 else if (marked == 4)//特殊五角星
                                 {
@@ -1735,13 +1785,13 @@ namespace WindowsFormsApplication1
                             }
                             break;
                         case ">=":
-                            if (DiffColorNum[ia] >= diffColorNum /*|| (diffColorNum > 10 && (DiffColorNum[ia] == diffColorNum / 10 || DiffColorNum[ia] == diffColorNum % 10))*/)
+                            if (_diffColorNum[ia] >= diffColorNum /*|| (diffColorNum > 10 && (DiffColorNum[ia] == diffColorNum / 10 || DiffColorNum[ia] == diffColorNum % 10))*/)
                             {
                                 if (marked < 4)
                                 {
-                                    if (cTab < 0 && FilterStatistics[ia] == 0)
+                                    if (cTab < 0 && _filterStatistics[ia] == 0)
                                         continue;
-                                    FilterStatistics[ia] += cTab;
+                                    _filterStatistics[ia] += cTab;
                                 }
                                 else if (marked == 4)//特殊五角星
                                 {
@@ -1755,13 +1805,13 @@ namespace WindowsFormsApplication1
                             }
                             break;
                         case "<=":
-                            if (DiffColorNum[ia] <= diffColorNum /*|| (diffColorNum > 10 && (DiffColorNum[ia] == diffColorNum / 10 || DiffColorNum[ia] == diffColorNum % 10))*/)
+                            if (_diffColorNum[ia] <= diffColorNum /*|| (diffColorNum > 10 && (DiffColorNum[ia] == diffColorNum / 10 || DiffColorNum[ia] == diffColorNum % 10))*/)
                             {
                                 if (marked < 4)
                                 {
-                                    if (cTab < 0 && FilterStatistics[ia] == 0)
+                                    if (cTab < 0 && _filterStatistics[ia] == 0)
                                         continue;
-                                    FilterStatistics[ia] += cTab;
+                                    _filterStatistics[ia] += cTab;
                                 }
                                 else if (marked == 4)//特殊五角星
                                 {
@@ -1818,17 +1868,17 @@ namespace WindowsFormsApplication1
                     break;
             }
             string text = "";
-            for (int ia = 0; ia < totalData; ia++)
+            for (int ia = 0; ia < _totalData; ia++)
             {
-                if (FilterStatistics[ia] == tab)
+                if (_filterStatistics[ia] == tab)
                 {
-                    for (int i = 0; i < SelectNum; i++)
+                    for (int i = 0; i < _selectNum; i++)
                     {
                         if (l_totalDataBase[ia][i] < 10)
                             text += " ";
                         text += l_totalDataBase[ia][i] + " ";
                     }
-                   text += "\n";
+                    text += "\n";
                 }
             }
             richTextBox1.Text = text;
@@ -1843,7 +1893,7 @@ namespace WindowsFormsApplication1
         {
             string buttonName = ((Button)sender).Name;
             if (buttonName.IndexOf("minus") > 0)
-            { 
+            {
                 MessageBoxButtons messButton = MessageBoxButtons.OKCancel;
                 DialogResult dr = MessageBox.Show("您当前要进行的是减操作，确定进行吗?", "减操作", messButton);
                 if (dr == DialogResult.Cancel)//如果点击“确定”按钮
@@ -1861,7 +1911,7 @@ namespace WindowsFormsApplication1
             text[6] = textBox10.Text;
             text[7] = textBox11.Text;
             bool isAllX = true;
-            for(int i=0;i<8;i++)
+            for (int i = 0; i < 8; i++)
             {
                 if (text[i] != "x" && text[i] != "")
                 {
@@ -1900,10 +1950,10 @@ namespace WindowsFormsApplication1
             {
                 if (buttonName.IndexOf("minus") > 0)
                     cTab = -cTab;
-                for (int ia = 0; ia < totalData; ia++ )
+                for (int ia = 0; ia < _totalData; ia++)
                 {
 
-                    for (int i = 0; i < SelectNum; i++)
+                    for (int i = 0; i < _selectNum; i++)
                     {
                         if (text[i] == "x" || text[i] == "")
                         {
@@ -1922,9 +1972,9 @@ namespace WindowsFormsApplication1
                     {
                         if (comboBox1.SelectedIndex < 4)
                         {
-                            if (cTab < 0 && FilterStatistics[ia] == 0)
+                            if (cTab < 0 && _filterStatistics[ia] == 0)
                                 continue;
-                            FilterStatistics[ia] += cTab;
+                            _filterStatistics[ia] += cTab;
                         }
                         else if (comboBox1.SelectedIndex == 4)   //特殊五角星
                         {
@@ -1956,10 +2006,10 @@ namespace WindowsFormsApplication1
         /// <param name="e"></param>
         private void button7_Click(object sender, EventArgs e)
         {
-            choiceDate = checkchoice_checkedListBox();          //获取勾选的数字
-            for (int i = 0; i < TotalNum; i++ )
+            _choiceDate = checkchoice_checkedListBox();          //获取勾选的数字
+            for (int i = 0; i < _totalNum; i++)
             {
-                string controlName = "button_c" + choiceDate[i].ToString();
+                string controlName = "button_c" + _choiceDate[i].ToString();
                 Button bb = (Button)findControl(panel2, controlName);
                 bb.BackColor = Color.Transparent;
                 bb.ForeColor = Color.Black;
@@ -1971,9 +2021,9 @@ namespace WindowsFormsApplication1
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox3.Text == "20" || comboBox3.Text == "30" || comboBox3.Text == "40" || 
+            if (comboBox3.Text == "20" || comboBox3.Text == "30" || comboBox3.Text == "40" ||
                 comboBox3.Text == "50" || comboBox3.Text == "60" || comboBox3.Text == "70")
-                if (comboBox2.SelectedIndex != 2 && comboBox2.SelectedIndex !=3)    //未勾选等于or不等于
+                if (comboBox2.SelectedIndex != 2 && comboBox2.SelectedIndex != 3)    //未勾选等于or不等于
                     comboBox2.SelectedIndex = 2;
         }
 
@@ -2037,7 +2087,7 @@ namespace WindowsFormsApplication1
 
         private void 保存当前进度ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(!isGenerate) //如果没生成数据，直接返回，避免出bug
+            if (!_isGenerate) //如果没生成数据，直接返回，避免出bug
             {
                 MessageBox.Show("保存失败，请先生成数据。", "保存", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -2045,14 +2095,14 @@ namespace WindowsFormsApplication1
             System.DateTime currentTime = new System.DateTime();
             currentTime = System.DateTime.Now; ;
             string date = currentTime.ToString();
-            if(date.Length == 17)   // 小时只有一位的时候，补个0给他
+            if (date.Length == 17)   // 小时只有一位的时候，补个0给他
             {
                 date = date.Replace(" ", " 0");
             }
-            string RecordFile = path + ("record." + date + "." + TotalNum.ToString() + "q" + SelectNum.ToString() + ".xml").Replace(":", "-").Replace("/", "-");
+            string RecordFile = _path + ("record." + date + "." + _totalNum.ToString() + "q" + _selectNum.ToString() + ".xml").Replace(":", "-").Replace("/", "-");
 
             string choiceDate_xml = "";
-            foreach(int i in choiceDate)
+            foreach (int i in _choiceDate)
             {
                 choiceDate_xml += i.ToString() + ",";
             }
@@ -2068,8 +2118,8 @@ namespace WindowsFormsApplication1
 
                 list = xmldoc.CreateElement("list");
                 list.InnerText = (choiceDate_xml);                  //设置内容
-                list.SetAttribute("m", TotalNum.ToString());        //设置属性
-                list.SetAttribute("n", SelectNum.ToString());
+                list.SetAttribute("m", _totalNum.ToString());        //设置属性
+                list.SetAttribute("n", _selectNum.ToString());
                 xmldoc.DocumentElement.AppendChild(list);           //添加到节点
 
                 xmldoc.Save(RecordFile);
@@ -2078,17 +2128,17 @@ namespace WindowsFormsApplication1
                 xmldoc.DocumentElement.AppendChild(arrays);
 
                 //保存l_totalDataBase
-                for (int ia = 0; ia < totalData; ia++)
+                for (int ia = 0; ia < _totalData; ia++)
                 {
                     string tvalue_xml = "";
                     array = xmldoc.CreateElement("array");
-                    for (int i = 0; i < SelectNum; i++)
+                    for (int i = 0; i < _selectNum; i++)
                     {
                         tvalue_xml += l_totalDataBase[ia][i].ToString() + ",";
                     }
-                    tvalue_xml += FilterStatistics[ia].ToString() + ",";    //  普通标记
-                    tvalue_xml += SpecialMark[ia].ToString() + ",";          //  特殊标记
-                    tvalue_xml += DeleteMark[ia].ToString() + "";          //  删除标记
+                    tvalue_xml += _filterStatistics[ia].ToString() + ",";    //  普通标记
+                    tvalue_xml += _specialMark[ia].ToString() + ",";          //  特殊标记
+                    tvalue_xml += _deleteMark[ia].ToString() + "";          //  删除标记
                     array.InnerText = (tvalue_xml);
                     //array.SetAttribute("ctab", FilterStatistics[ia].ToString());
                     //array.SetAttribute("stab", SpecialMark[ia].ToString());    //特殊五角星标记
@@ -2099,7 +2149,7 @@ namespace WindowsFormsApplication1
             }
             catch (Exception ex)
             {
-                savelog.errorlog(path, ex.ToString());
+                _savelog.errorlog(_path, ex.ToString());
                 ErrorBox();
             }
             MessageBox.Show("保存成功。", "保存", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -2131,8 +2181,8 @@ namespace WindowsFormsApplication1
             Font font = new Font("宋体", 14);
             Brush bru = Brushes.Blue;
             string[] line = richTextBox1.Text.Split(new string[] { "\n" }, StringSplitOptions.None);
-            string msg = CurrentMarkforPrint + " = " + (line.Length-1) + "\n\n";
-            for (int i = CurrentPage * 135; i < (CurrentPage+1) * 135; i++)             //135 = 45*3
+            string msg = _currentMarkforPrint + " = " + (line.Length - 1) + "\n\n";
+            for (int i = _currentPage * 135; i < (_currentPage + 1) * 135; i++)             //135 = 45*3
             {
                 if (i >= line.Length)
                 {
@@ -2157,7 +2207,7 @@ namespace WindowsFormsApplication1
             printDoc1(e, msg, font, bru);
             e.HasMorePages = !isEnd; //是否有下一页
         }
-        
+
         /// <summary>
         /// just print
         /// </summary>
@@ -2168,12 +2218,12 @@ namespace WindowsFormsApplication1
         private void printDoc1(System.Drawing.Printing.PrintPageEventArgs e, string msg, Font font, Brush bru)
         {
             e.Graphics.DrawString(msg, font, bru, 50, 50);
-            CurrentPage ++;
+            _currentPage++;
         }
 
         private void button_print_Click(object sender, EventArgs e)
         {
-            CurrentPage = 0;
+            _currentPage = 0;
             this.printDialog1.Document = printDocument1;
             if (this.printDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -2183,22 +2233,22 @@ namespace WindowsFormsApplication1
 
         private void button_btnPageSetup_Click(object sender, EventArgs e)
         {
-            CurrentPage = 0;
+            _currentPage = 0;
             this.pageSetupDialog1.Document = printDocument1;
-            this.pageSetupDialog1.ShowDialog(); 
+            this.pageSetupDialog1.ShowDialog();
         }
 
         private void btnPrintPreview_Click(object sender, EventArgs e)
         {
-            CurrentPage = 0;
+            _currentPage = 0;
             this.printPreviewDialog1.Document = printDocument1;
             this.printPreviewDialog1.ShowDialog();
         }
 
         private void radioButton18_CheckedChanged(object sender, EventArgs e)
         {
-            this.m = 12;
-            this.n = 2;
+            this._m = 12;
+            this._n = 2;
             comboBox5.Text = "2";
             label6.Text = "12";
             textBox2.Text = "12";
@@ -2206,8 +2256,8 @@ namespace WindowsFormsApplication1
 
         private void radioButton19_CheckedChanged(object sender, EventArgs e)
         {
-            this.m = 26;
-            this.n = 5;
+            this._m = 26;
+            this._n = 5;
             comboBox5.Text = "5";
             label6.Text = "26";
             textBox2.Text = "26";
@@ -2215,16 +2265,16 @@ namespace WindowsFormsApplication1
 
         private void radioButton20_CheckedChanged(object sender, EventArgs e)
         {
-            this.m = 36;
-            this.n = 7;
+            this._m = 36;
+            this._n = 7;
             comboBox5.Text = "7";
             label6.Text = "36";
             textBox2.Text = "36";
         }
         private void radioButton21_CheckedChanged(object sender, EventArgs e)
         {
-            this.m = 30;
-            this.n = 3;
+            this._m = 30;
+            this._n = 3;
             comboBox5.Text = "3";
             label6.Text = "30";
             textBox2.Text = "30";
@@ -2232,21 +2282,21 @@ namespace WindowsFormsApplication1
 
         private void button8_Click(object sender, EventArgs e)
         {
-            CurrentPage = 0;
+            _currentPage = 0;
             this.pageSetupDialog2.Document = printDocument2;
             this.pageSetupDialog2.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            CurrentPage = 0;
+            _currentPage = 0;
             this.printPreviewDialog2.Document = printDocument2;
             this.printPreviewDialog2.ShowDialog();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            CurrentPage = 0;
+            _currentPage = 0;
             this.printDialog2.Document = printDocument2;
             if (this.printDialog2.ShowDialog() == DialogResult.OK)
             {
@@ -2263,8 +2313,8 @@ namespace WindowsFormsApplication1
                 Font font = new Font("宋体", 14);
                 Brush bru = Brushes.Blue;
                 string[] line = richTextBox2.Text.Split(new string[] { "\n" }, StringSplitOptions.None);
-                string msg = CurrentMarkforPrint + " = " + (line.Length - 1) + "\n\n";
-                for (int i = CurrentPage * 135; i < (CurrentPage + 1) * 135; i++)             //135 = 45*3
+                string msg = _currentMarkforPrint + " = " + (line.Length - 1) + "\n\n";
+                for (int i = _currentPage * 135; i < (_currentPage + 1) * 135; i++)             //135 = 45*3
                 {
                     if (i >= line.Length)
                     {
@@ -2281,7 +2331,7 @@ namespace WindowsFormsApplication1
                         msg += line[i] + "\n";
                         PrintColumn = 1;
                     }
-                    if(i == line.Length - 1)       //到了最后一个，没有下一页
+                    if (i == line.Length - 1)       //到了最后一个，没有下一页
                     {
                         isEnd = true;
                     }
@@ -2310,10 +2360,10 @@ namespace WindowsFormsApplication1
             try
             {
                 int row = 0;
-                DirectoryInfo dir = new DirectoryInfo(path);
+                DirectoryInfo dir = new DirectoryInfo(_path);
                 foreach (FileInfo d in dir.GetFiles())
                 {
-                    if(d.Name.IndexOf("xml") < 0)
+                    if (d.Name.IndexOf("xml") < 0)
                         continue;
                     string[] aa = d.Name.Split(new string[] { "." }, StringSplitOptions.None);
                     if (row >= dataGridView2.RowCount)
@@ -2329,7 +2379,7 @@ namespace WindowsFormsApplication1
             }
             catch (Exception ex)
             {
-                savelog.errorlog(path, ex.ToString());
+                _savelog.errorlog(_path, ex.ToString());
                 ErrorBox();
             }
         }
@@ -2348,37 +2398,37 @@ namespace WindowsFormsApplication1
 
                 保存当前进度ToolStripMenuItem_Click(sender, e);
                 // selectNum,totalNum,choiceData,m_totalDataBase
-                string pathName = path + "record." + dataGridView2.Rows[e.RowIndex].Cells[1].Value + "." + dataGridView2.Rows[e.RowIndex].Cells[2].Value + ".xml";
+                string pathName = _path + "record." + dataGridView2.Rows[e.RowIndex].Cells[1].Value + "." + dataGridView2.Rows[e.RowIndex].Cells[2].Value + ".xml";
                 LoadData ld = new LoadData();
                 AllDataInOne adio = new AllDataInOne();
                 adio = ld.Load(pathName);
-                SelectNum = adio.n;
-                TotalNum = adio.m;
-                choiceDate = adio.choiceDate;
+                _selectNum = adio.n;
+                _totalNum = adio.m;
+                _choiceDate = adio.choiceDate;
                 l_totalDataBase = adio.l_totalDataBase;
-                FilterStatistics = adio.FilterStatistics;
-                SpecialMark = adio.SpecialMark;
-                DeleteMark = adio.DeleteMark;
-                totalData = adio.totalData;
+                _filterStatistics = adio.FilterStatistics;
+                _specialMark = adio.SpecialMark;
+                _deleteMark = adio.DeleteMark;
+                _totalData = adio.totalData;
                 //生成颜色空数据
                 GenerateData gData = new GenerateData();
-                gData.s = SelectNum;                                //s为要取的个数  n
-                gData.e = TotalNum;                                 //e为要取得基数的总数   m
-                ColorValue = gData.runColor();
+                gData.s = _selectNum;                                //s为要取的个数  n
+                gData.e = _totalNum;                                 //e为要取得基数的总数   m
+                _colorValue = gData.runColor();
 
                 FinishingInterface();
                 D_ColorTemptDict.Clear();                           //清空颜色记录
                 tabControl1.SelectedIndex = 2;                      //跳到编号为3的tab
-                isGenerate = true;
+                _isGenerate = true;
                 MessageBox.Show("加载完成", "加载完成", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            if(e.ColumnIndex ==3)   //删除
+            if (e.ColumnIndex == 3)   //删除
             {
                 MessageBoxButtons messButton = MessageBoxButtons.OKCancel;
                 DialogResult dr = MessageBox.Show("确定要删除记录吗?", "删除记录", messButton);
                 if (dr == DialogResult.OK)//如果点击“确定”按钮
                 {
-                    string pathName = path + "record." + dataGridView2.Rows[e.RowIndex].Cells[1].Value + "." + dataGridView2.Rows[e.RowIndex].Cells[2].Value + ".xml";
+                    string pathName = _path + "record." + dataGridView2.Rows[e.RowIndex].Cells[1].Value + "." + dataGridView2.Rows[e.RowIndex].Cells[2].Value + ".xml";
                     try
                     {
                         DeleteFile df = new DeleteFile();
@@ -2386,7 +2436,7 @@ namespace WindowsFormsApplication1
                     }
                     catch (Exception ex)
                     {
-                        savelog.errorlog(path, ex.ToString());
+                        _savelog.errorlog(_path, ex.ToString());
                         ErrorBox();
                     }
                     GetFileList(false);
@@ -2404,13 +2454,13 @@ namespace WindowsFormsApplication1
             DialogResult dr = MessageBox.Show("确定要删除全部记录吗?", "删除记录", messButton);
             if (dr == DialogResult.OK)//如果点击“确定”按钮
             {
-                DirectoryInfo dir = new DirectoryInfo(path);
+                DirectoryInfo dir = new DirectoryInfo(_path);
                 DeleteFile df = new DeleteFile();
                 foreach (FileInfo d in dir.GetFiles())
                 {
                     if (d.Name.IndexOf("xml") < 0)
                         continue;
-                    df.del(path + d.Name);
+                    df.del(_path + d.Name);
                 }
                 GetFileList(false);
             }
@@ -2423,24 +2473,24 @@ namespace WindowsFormsApplication1
         /// <param name="e"></param>
         private void button11_Click(object sender, EventArgs e)
         {
-            GetWinningNumbers();        
-            if (Winning_Numbers == null)
+            GetWinningNumbers();
+            if (_winningNumbers == null)
             {
                 return;
             }
             Dichotomy dd = new Dichotomy();
-            int local = dd.Find(Winning_Numbers, l_totalDataBase, totalData);
-            int da54 = FilterStatistics[local];
+            int local = dd.Find(_winningNumbers, l_totalDataBase, _totalData);
+            int da54 = _filterStatistics[local];
             if (da54 > 54)
                 da54 = 54;
-            label2.Text = sort[da54];
+            label2.Text = _sort[da54];
         }
 
         private void comboBox_method2_operate_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox_method2_operate.SelectedIndex > 7)
             {
-                if(comboBox6.SelectedIndex < 2 )
+                if (comboBox6.SelectedIndex < 2)
                 {
                     comboBox6.SelectedIndex = 2;
                 }
@@ -2484,7 +2534,7 @@ namespace WindowsFormsApplication1
                 }
             }
 
-            if(selectTotalNum > SelectNum)
+            if (selectTotalNum > _selectNum)
             {
                 DialogResult dr = MessageBox.Show("选择的颜色类型不正常，请重新输入");
                 return;
@@ -2536,41 +2586,41 @@ namespace WindowsFormsApplication1
             {
                 if (buttonName.IndexOf("minus") > 0)                                        //减操作，ctab取反
                     cTab = -cTab;
-                for (int i = 0; i < totalData; i++)                     
+                for (int i = 0; i < _totalData; i++)
                 {
                     int[] colorCalculate = new int[7];
-                    for (int i2 = 0; i2 < SelectNum; i2++)
+                    for (int i2 = 0; i2 < _selectNum; i2++)
                     {
-                        ColorValue[i][i2] = Color.White;   //  先设成白色？好像不需要
+                        _colorValue[i][i2] = Color.White;   //  先设成白色？好像不需要
                         if (D_ColorTemptDict.ContainsKey(l_totalDataBase[i][i2]) && D_ColorTemptDict[l_totalDataBase[i][i2]] != Color.White)//如果这个数字有颜色
                         {
-                            ColorValue[i][i2] = D_ColorTemptDict[l_totalDataBase[i][i2]];//颜色存到总库
+                            _colorValue[i][i2] = D_ColorTemptDict[l_totalDataBase[i][i2]];//颜色存到总库
                         }
-                        if (ColorValue[i][i2] == Color.Red)
+                        if (_colorValue[i][i2] == Color.Red)
                         {
                             colorCalculate[0] += 1;
                         }
-                        else if(ColorValue[i][i2] == Color.Orange)
+                        else if (_colorValue[i][i2] == Color.Orange)
                         {
                             colorCalculate[1] += 1;
                         }
-                        else if (ColorValue[i][i2] == Color.Yellow)
+                        else if (_colorValue[i][i2] == Color.Yellow)
                         {
                             colorCalculate[2] += 1;
                         }
-                        else if (ColorValue[i][i2] == Color.Green)
+                        else if (_colorValue[i][i2] == Color.Green)
                         {
                             colorCalculate[3] += 1;
                         }
-                        else if (ColorValue[i][i2] == Color.Blue)
+                        else if (_colorValue[i][i2] == Color.Blue)
                         {
                             colorCalculate[4] += 1;
                         }
-                        else if (ColorValue[i][i2] == Color.Purple)
+                        else if (_colorValue[i][i2] == Color.Purple)
                         {
                             colorCalculate[5] += 1;
                         }
-                        else if (ColorValue[i][i2] == Color.Indigo)
+                        else if (_colorValue[i][i2] == Color.Indigo)
                         {
                             colorCalculate[6] += 1;
                         }
@@ -2600,9 +2650,9 @@ namespace WindowsFormsApplication1
                     {
                         if (comboBox8.SelectedIndex < 4)
                         {
-                            if (FilterStatistics[i] + cTab < 0)//0,不让减了
+                            if (_filterStatistics[i] + cTab < 0)//0,不让减了
                                 continue;
-                            FilterStatistics[i] += cTab;
+                            _filterStatistics[i] += cTab;
                         }
                         else if (comboBox8.SelectedIndex == 4)
                         {
@@ -2618,9 +2668,9 @@ namespace WindowsFormsApplication1
                     {
                         if (comboBox8.SelectedIndex < 4)
                         {
-                            if (FilterStatistics[i] + cTab < 0)//0,不让减了
+                            if (_filterStatistics[i] + cTab < 0)//0,不让减了
                                 continue;
-                            FilterStatistics[i] += cTab;
+                            _filterStatistics[i] += cTab;
                         }
                         else if (comboBox8.SelectedIndex == 4)
                         {
@@ -2645,7 +2695,7 @@ namespace WindowsFormsApplication1
 
         private void button12_Click(object sender, EventArgs e)
         {
-            Form3 fm3 = new Form3(m,n);//将m取n放入工具B
+            Form3 fm3 = new Form3(_m, _n);//将m取n放入工具B
             fm3.Show();
         }
         /// <summary>
@@ -2657,7 +2707,7 @@ namespace WindowsFormsApplication1
             int NotTransparentNum = 0;
             int Count = 0;
             int n = int.Parse(bb.Name.Substring(bb.Name.LastIndexOf("l") + 1));
-            for (int i = n * 10 - 9; i <= n * 10;i++ )
+            for (int i = n * 10 - 9; i <= n * 10; i++)
             {
                 string controlName = "button_c" + i.ToString();
                 Button tb = (Button)findControl(panel2, controlName);
@@ -2670,7 +2720,7 @@ namespace WindowsFormsApplication1
                     NotTransparentNum++;
                 }
             }
-            if ((NotTransparentNum != Count && NotTransparentNum>0) || NotTransparentNum == 0)//(不全是当前颜色&&有颜色)||没颜色
+            if ((NotTransparentNum != Count && NotTransparentNum > 0) || NotTransparentNum == 0)//(不全是当前颜色&&有颜色)||没颜色
             {
                 for (int i = n * 10 - 9; i <= n * 10; i++)
                 {
@@ -2702,7 +2752,7 @@ namespace WindowsFormsApplication1
             {
                 string controlName = "button_c" + (i * 10 + n).ToString();
                 Button tb = (Button)findControl(panel2, controlName);
-                if(tb.BackColor != Color.White)
+                if (tb.BackColor != Color.White)
                 {
                     Count++;
                 }
@@ -2740,7 +2790,7 @@ namespace WindowsFormsApplication1
         {
             RadioButton rb = sender as RadioButton;
             Color col = Color.FromName(rb.Name.Substring(rb.Name.LastIndexOf("_") + 1));
-            ChoiceColor = col;
+            _choiceColor = col;
             //ibc = new bool[7];
             //ibch = new bool[10];
         }
@@ -2753,28 +2803,28 @@ namespace WindowsFormsApplication1
         private void button13_Click(object sender, EventArgs e)
         {
             GetWinningNumbersInSpecial();
-            if (Winning_Numbers == null)
+            if (_winningNumbers == null)
             {
                 return;
             }
             Dichotomy dd = new Dichotomy();
-            int local = dd.Find(Winning_Numbers, l_totalDataBase, totalData);
-            int targetNumber = SpecialMark[local];
-            if (targetNumber > ShowSpecialStar)
-                targetNumber = ShowSpecialStar + 1;
+            int local = dd.Find(_winningNumbers, l_totalDataBase, _totalData);
+            int targetNumber = _specialMark[local];
+            if (targetNumber > _showSpecialStar)
+                targetNumber = _showSpecialStar + 1;
 
             string State = "";
             if (targetNumber == 0)
                 State = "0";
-            else if (targetNumber == ShowSpecialStar + 1)
+            else if (targetNumber == _showSpecialStar + 1)
                 State = "超出";
             else
             {
                 State = "";
-                for(int i =0; i < targetNumber; i++)
+                for (int i = 0; i < targetNumber; i++)
                     State += "☆";
             }
-                
+
             label12.Text = State;
         }
 
@@ -2791,23 +2841,23 @@ namespace WindowsFormsApplication1
             {
                 return;
             }
-            for (int i = 0; i < totalData; i++)
+            for (int i = 0; i < _totalData; i++)
             {
-                if (FilterStatistics[i] < 54 && FilterStatistics[i] != 1)
+                if (_filterStatistics[i] < 54 && _filterStatistics[i] != 1)
                 {
-                    FilterStatistics[i] = 0;
+                    _filterStatistics[i] = 0;
                 }
             }
             richTextBox1.Text = "点击左边“查看”按钮显示结果";
             for (int i = 0; i < 55; i++)
                 dataGridView1.Rows[i].Cells[2].Value = 0;   //  全部先设成0
-            for (int ia = 0; ia < totalData; ia++)
+            for (int ia = 0; ia < _totalData; ia++)
             {
-                if (FilterStatistics[ia] >= 54)
+                if (_filterStatistics[ia] >= 54)
                     dataGridView1.Rows[54].Cells[2].Value = (int)dataGridView1.Rows[54].Cells[2].Value + 1;
                 else
                 {
-                    dataGridView1.Rows[FilterStatistics[ia]].Cells[2].Value = (int)dataGridView1.Rows[FilterStatistics[ia]].Cells[2].Value + 1;
+                    dataGridView1.Rows[_filterStatistics[ia]].Cells[2].Value = (int)dataGridView1.Rows[_filterStatistics[ia]].Cells[2].Value + 1;
                 }
             }
             MessageBox.Show("标记成功。", "确认", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -2832,23 +2882,23 @@ namespace WindowsFormsApplication1
             {
                 num = Convert.ToInt32(setNumberOut);
             }
-            for (int i = 0; i < totalData; i++)
+            for (int i = 0; i < _totalData; i++)
             {
-                if (FilterStatistics[i] >= num)
+                if (_filterStatistics[i] >= num)
                 {
-                    FilterStatistics[i] = 55;
+                    _filterStatistics[i] = 55;
                 }
             }
             richTextBox1.Text = "点击左边“查看”按钮显示结果";
             for (int i = 0; i < 55; i++)
                 dataGridView1.Rows[i].Cells[2].Value = 0;   //  全部先设成0
-            for (int ia = 0; ia < totalData; ia++)
+            for (int ia = 0; ia < _totalData; ia++)
             {
-                if (FilterStatistics[ia] >= 54)
+                if (_filterStatistics[ia] >= 54)
                     dataGridView1.Rows[54].Cells[2].Value = (int)dataGridView1.Rows[54].Cells[2].Value + 1;
                 else
                 {
-                    dataGridView1.Rows[FilterStatistics[ia]].Cells[2].Value = (int)dataGridView1.Rows[FilterStatistics[ia]].Cells[2].Value + 1;
+                    dataGridView1.Rows[_filterStatistics[ia]].Cells[2].Value = (int)dataGridView1.Rows[_filterStatistics[ia]].Cells[2].Value + 1;
                 }
             }
             MessageBox.Show("标记成功。", "确认", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -2875,13 +2925,13 @@ namespace WindowsFormsApplication1
                     }
                 }
                 richTextBox3.Text = "";
-                CurrentMarkforPrint = sort[tab];
+                _currentMarkforPrint = _sort[tab];
                 string text = "";
-                for (int ia = 0; ia < totalData; ia++)
+                for (int ia = 0; ia < _totalData; ia++)
                 {
-                    if (tab == 6 && DeleteMark[ia] >= tab)
+                    if (tab == 6 && _deleteMark[ia] >= tab)
                     {
-                        for (int i = 0; i < SelectNum; i++)
+                        for (int i = 0; i < _selectNum; i++)
                         {
                             if (l_totalDataBase[ia][i] < 10)
                                 text += " ";
@@ -2889,9 +2939,9 @@ namespace WindowsFormsApplication1
                         }
                         text += "\n";
                     }
-                    else if (DeleteMark[ia] == tab)
+                    else if (_deleteMark[ia] == tab)
                     {
-                        for (int i = 0; i < SelectNum; i++)
+                        for (int i = 0; i < _selectNum; i++)
                         {
                             if (l_totalDataBase[ia][i] < 10)
                                 text += " ";
@@ -2908,7 +2958,7 @@ namespace WindowsFormsApplication1
                 if (e.ColumnIndex == 4)    //datagrid---加删
                 {
                     DialogResult dr = MessageBox.Show("确定执行\"加删\"操作吗？", "警告", messButton);
-                    if (dr == DialogResult.Cancel) 
+                    if (dr == DialogResult.Cancel)
                         return;
                     result = AddDelete(2, tab);
                 }
@@ -2940,14 +2990,14 @@ namespace WindowsFormsApplication1
                     richTextBox3.Text = "点击左边“查看”按钮显示结果";
                     for (int i = 0; i < rowsLength; i++)
                         dataGridView4.Rows[i].Cells[2].Value = 0;
-                    for (int i = 0; i < totalData; i++)
+                    for (int i = 0; i < _totalData; i++)
                     {
-                        if (DeleteMark[i] >= rowsLength)
+                        if (_deleteMark[i] >= rowsLength)
                         {
                             dataGridView4.Rows[rowsLength - 1].Cells[2].Value = (int)dataGridView4.Rows[rowsLength - 1].Cells[2].Value + 1;
                         }
                         else
-                            dataGridView4.Rows[DeleteMark[i]].Cells[2].Value = (int)dataGridView4.Rows[DeleteMark[i]].Cells[2].Value + 1;
+                            dataGridView4.Rows[_deleteMark[i]].Cells[2].Value = (int)dataGridView4.Rows[_deleteMark[i]].Cells[2].Value + 1;
                     }
                     MessageBox.Show("标记成功。", "确认", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -2956,21 +3006,21 @@ namespace WindowsFormsApplication1
 
         private void button_Del_PrintSetting_Click(object sender, EventArgs e)
         {
-            CurrentPage = 0;
+            _currentPage = 0;
             this.pageSetupDialog3.Document = printDocument3;
-            this.pageSetupDialog3.ShowDialog(); 
+            this.pageSetupDialog3.ShowDialog();
         }
 
         private void button_Del_PrintPreview_Click(object sender, EventArgs e)
         {
-            CurrentPage = 0;
+            _currentPage = 0;
             this.printPreviewDialog3.Document = printDocument3;
             this.printPreviewDialog3.ShowDialog();
         }
 
         private void button_Del_Print_Click(object sender, EventArgs e)
         {
-            CurrentPage = 0;
+            _currentPage = 0;
             this.printDialog3.Document = printDocument3;
             if (this.printDialog3.ShowDialog() == DialogResult.OK)
             {
@@ -2981,20 +3031,20 @@ namespace WindowsFormsApplication1
         private void button_Del_Locate_Click(object sender, EventArgs e)
         {
             GetDeleteMarkNumbers();
-            if (Winning_Numbers == null)
+            if (_winningNumbers == null)
             {
                 return;
             }
             Dichotomy dd = new Dichotomy();
-            int local = dd.Find(Winning_Numbers, l_totalDataBase, totalData);
-            int targetNumber = DeleteMark[local];
-            if (targetNumber > ShowSpecialStar)
-                targetNumber = ShowSpecialStar + 1;
+            int local = dd.Find(_winningNumbers, l_totalDataBase, _totalData);
+            int targetNumber = _deleteMark[local];
+            if (targetNumber > _showSpecialStar)
+                targetNumber = _showSpecialStar + 1;
 
             string State = "";
             if (targetNumber == 0)
                 State = "0";
-            else if (targetNumber == ShowSpecialStar + 1)
+            else if (targetNumber == _showSpecialStar + 1)
                 State = "超出";
             else
             {
@@ -3014,8 +3064,8 @@ namespace WindowsFormsApplication1
             Font font = new Font("宋体", 14);
             Brush bru = Brushes.Blue;
             string[] line = richTextBox3.Text.Split(new string[] { "\n" }, StringSplitOptions.None);
-            string msg = CurrentMarkforPrint + " = " + (line.Length - 1) + "\n\n";
-            for (int i = CurrentPage * 135; i < (CurrentPage + 1) * 135; i++)             //135 = 45*3
+            string msg = _currentMarkforPrint + " = " + (line.Length - 1) + "\n\n";
+            for (int i = _currentPage * 135; i < (_currentPage + 1) * 135; i++)             //135 = 45*3
             {
                 if (i >= line.Length)
                 {
@@ -3041,7 +3091,22 @@ namespace WindowsFormsApplication1
             e.HasMorePages = !isEnd; //是否有下一页
         }
 
-        
+        private void 查看结果ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            button2_Click(this.button2, null);
+        }
+
+        private void 查看特殊ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            button2_Click(this.button3, null);
+        }
+
+        private void 查看删除ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            button2_Click(this.button15, null);
+        }
+
+
 
     }
 }

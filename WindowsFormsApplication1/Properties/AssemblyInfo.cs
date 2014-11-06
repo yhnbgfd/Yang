@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("缩水过滤分式一体化")]
 [assembly: AssemblyDescription("缩水过滤分式一体化")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("StoneAnt")]
+[assembly: AssemblyCompany("StoneAnt Lugia")]
 [assembly: AssemblyProduct("缩水过滤分式一体化")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.1.*")]
+[assembly: AssemblyVersion("2.2.*")]
 //[assembly: AssemblyFileVersion("1.1.0.0")]
