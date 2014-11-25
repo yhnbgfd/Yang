@@ -661,7 +661,8 @@ namespace WindowsFormsApplication1
                 string text = "";
                 for (int ia = 0; ia < _totalData; ia++)
                 {
-                    if (tab == 6 && _specialMark[ia] >= tab)
+                    //21:特殊标记超出那一列的行号
+                    if (tab == 21 && _specialMark[ia] >= tab)
                     {
                         for (int i = 0; i < _selectNum; i++)
                         {
@@ -2929,7 +2930,8 @@ namespace WindowsFormsApplication1
                 string text = "";
                 for (int ia = 0; ia < _totalData; ia++)
                 {
-                    if (tab == 6 && _deleteMark[ia] >= tab)
+                    //21:删除标记超出那一列的行号
+                    if (tab == 21 && _deleteMark[ia] >= tab)
                     {
                         for (int i = 0; i < _selectNum; i++)
                         {
