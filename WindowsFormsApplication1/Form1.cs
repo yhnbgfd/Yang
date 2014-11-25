@@ -2844,23 +2844,24 @@ namespace WindowsFormsApplication1
             }
             for (int i = 0; i < _totalData; i++)
             {
-                if (_filterStatistics[i] < 54 && _filterStatistics[i] != 1)
+                if (_filterStatistics[i] < 54)
                 {
                     _filterStatistics[i] = 0;
                 }
             }
-            richTextBox1.Text = "点击左边“查看”按钮显示结果";
-            for (int i = 0; i < 55; i++)
-                dataGridView1.Rows[i].Cells[2].Value = 0;   //  全部先设成0
-            for (int ia = 0; ia < _totalData; ia++)
-            {
-                if (_filterStatistics[ia] >= 54)
-                    dataGridView1.Rows[54].Cells[2].Value = (int)dataGridView1.Rows[54].Cells[2].Value + 1;
-                else
-                {
-                    dataGridView1.Rows[_filterStatistics[ia]].Cells[2].Value = (int)dataGridView1.Rows[_filterStatistics[ia]].Cells[2].Value + 1;
-                }
-            }
+            //richTextBox1.Text = "点击左边“查看”按钮显示结果";
+            button2_Click(this.button2, null);
+            //for (int i = 0; i < 55; i++)
+            //    dataGridView1.Rows[i].Cells[2].Value = 0;   //  全部先设成0
+            //for (int ia = 0; ia < _totalData; ia++)
+            //{
+            //    if (_filterStatistics[ia] >= 54)
+            //        dataGridView1.Rows[54].Cells[2].Value = (int)dataGridView1.Rows[54].Cells[2].Value + 1;
+            //    else
+            //    {
+            //        dataGridView1.Rows[_filterStatistics[ia]].Cells[2].Value = (int)dataGridView1.Rows[_filterStatistics[ia]].Cells[2].Value + 1;
+            //    }
+            //}
             MessageBox.Show("标记成功。", "确认", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
