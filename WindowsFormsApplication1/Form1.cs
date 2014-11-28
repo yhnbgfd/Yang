@@ -2844,7 +2844,8 @@ namespace WindowsFormsApplication1
             }
             for (int i = 0; i < _totalData; i++)
             {
-                if (_filterStatistics[i] < 54)
+                //id=1的不归零
+                if (_filterStatistics[i] < 54 && _filterStatistics[i] != 1)
                 {
                     _filterStatistics[i] = 0;
                 }
